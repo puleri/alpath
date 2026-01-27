@@ -59,9 +59,9 @@ export default function Home() {
           </div>
 
           <h1 className="hero-title">
-            Digital Solutions working
+            Experience digital solutions that
             <br />
-            as hard as your business
+            work as hard as your business
           </h1>
 
           <div className="hero-actions">

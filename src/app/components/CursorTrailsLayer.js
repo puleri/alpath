@@ -3,13 +3,13 @@
 import { useEffect, useRef } from "react";
 
 const MAX_TRAILS = 12;
-const LIFESPAN_MS = 8000;
+const LIFESPAN_MS = 12000;
 const TURN_WINDOW_MS = 100;
 const HUE_SPEED = 98;
-const SPAWN_MIN_MS = 3000;
-const SPAWN_MAX_MS = 6700;
+const SPAWN_MIN_MS = 2000;
+const SPAWN_MAX_MS = 6000;
 const SPAWN_BATCH = 4;
-const POINTER_SHIELD_RADIUS = 100;
+const POINTER_SHIELD_RADIUS = 55;
 
 const randomBetween = (min, max) => min + Math.random() * (max - min);
 
@@ -135,10 +135,10 @@ export default function CursorTrailsLayer() {
       ctx.save();
       ctx.strokeStyle = `hsl(${hue}, 80%, 60%)`;
       ctx.globalAlpha = opacity;
-      ctx.lineWidth = 2;
+      ctx.lineWidth = 4;
       ctx.lineJoin = "round";
       ctx.lineCap = "round";
-      ctx.setLineDash([1, 6]);
+      ctx.setLineDash([2, 20]);
 
       ctx.beginPath();
       trail.points.forEach((point, index) => {
@@ -150,6 +150,7 @@ export default function CursorTrailsLayer() {
       });
       ctx.stroke();
       ctx.restore();
+      ctx.globalAlpha = .5;
     };
 
     const drawPointerShield = () => {
@@ -157,7 +158,7 @@ export default function CursorTrailsLayer() {
       const shieldY = pointer.active ? pointer.y : window.innerHeight / 2;
 
       ctx.save();
-      ctx.fillStyle = "rgba(246, 246, 244, 0.92)";
+      ctx.fillStyle = "rgba(255, 255, 255, 1)";
       ctx.beginPath();
       ctx.arc(shieldX, shieldY, POINTER_SHIELD_RADIUS, 0, Math.PI * 2);
       ctx.fill();
