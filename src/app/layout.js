@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Anaheim } from "next/font/google";
+
+const anaheim = Anaheim({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata = {
   title: "Alpath",
@@ -8,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={anaheim.className}>{children}</body>
     </html>
   );
 }
