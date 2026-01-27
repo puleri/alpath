@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
+import CursorTrailsLayer from "../components/CursorTrailsLayer";
+
 const navItems = ["Services", "Use Cases", "Pricing", "Blog"];
 
 function CursorTrailsLayer() {
