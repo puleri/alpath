@@ -1,4 +1,9 @@
-const navItems = ["Services", "Use Cases", "Pricing", "Blog", "Blog"];
+const navItems = [
+  { label: "Services", href: "/services" },
+  { label: "Use Cases", href: "/use-cases" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog" },
+];
 
 export default function Home() {
   return (
@@ -16,8 +21,8 @@ export default function Home() {
         </div>
         <nav className="nav-links">
           {navItems.map((item) => (
-            <a key={item} href="#" className="nav-link">
-              {item}
+            <a key={item.label} href={item.href} className="nav-link">
+              {item.label}
             </a>
           ))}
         </nav>
