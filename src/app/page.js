@@ -1,13 +1,15 @@
 import LeadershipRevenueDashboard from "./components/LeadershipRevenueDashboard";
+import CursorTrailsLayer from "./components/CursorTrailsLayer";
 
 export default function Home() {
   return (
     <main className="home">
+            <CursorTrailsLayer />
       <header className="top-bar">
         <div className="brand">
           <img
             className="brand-icon-nav"
-            src="/alpath/icon.svg"
+            src="/alpath/sign.svg"
             alt="Alpath Engineering brand mark"
           />
           <span className="brand-text">Alpath Engineering</span>
@@ -32,7 +34,7 @@ export default function Home() {
         <div className="hero-brand">
           <img
             className="brand-icon-hero"
-            src="/alpath/icon.svg"
+            src="/alpath/sign.svg"
             alt="Alpath Engineering brand mark"
           />
           <span className="hero-brand-text">Alpath Engineering</span>

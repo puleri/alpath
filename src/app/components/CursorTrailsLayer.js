@@ -158,7 +158,7 @@ export default function CursorTrailsLayer() {
       const shieldY = pointer.active ? pointer.y : window.innerHeight / 2;
 
       ctx.save();
-      ctx.fillStyle = "rgba(255, 255, 255, 1)";
+      ctx.fillStyle = "rgba(255, 255, 255, 0)";
       ctx.beginPath();
       ctx.arc(shieldX, shieldY, POINTER_SHIELD_RADIUS, 0, Math.PI * 2);
       ctx.fill();
