@@ -8,6 +8,8 @@ const TURN_WINDOW_MS = 100;
 const HUE_SPEED = 98;
 const SPAWN_MIN_MS = 800;
 const SPAWN_MAX_MS = 1000;
+const SPAWN_BATCH = 6;
+const POINTER_SHIELD_RADIUS = 25;
 
 const randomBetween = (min, max) => min + Math.random() * (max - min);
 
@@ -80,6 +82,12 @@ export default function CursorTrailsLayer() {
       });
     };
 
+    const spawnTrailBatch = (now, count) => {
+      for (let i = 0; i < count; i += 1) {
+        spawnTrail(now);
+      }
+    };
+
     const updateTrail = (trail, now) => {
       if (now >= trail.nextTurnAt) {
         const turnAngle = randomBetween(-1.9, 1.9);
@@ -132,11 +140,25 @@ export default function CursorTrailsLayer() {
       ctx.globalAlpha = 1;
     };
 
+    const drawPointerShield = () => {
+      const shieldX = pointer.active ? pointer.x : window.innerWidth / 2;
+      const shieldY = pointer.active ? pointer.y : window.innerHeight / 2;
+
+      ctx.save();
+      ctx.fillStyle = "rgba(246, 246, 244, 0.92)";
+      ctx.beginPath();
+      ctx.arc(shieldX, shieldY, POINTER_SHIELD_RADIUS, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    };
+
     const tick = (now) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       if (now >= nextSpawnAt && trails.length < MAX_TRAILS) {
-        spawnTrail(now);
+        const availableSlots = MAX_TRAILS - trails.length;
+        const spawnCount = Math.min(SPAWN_BATCH, availableSlots);
+        spawnTrailBatch(now, spawnCount);
         nextSpawnAt = now + randomBetween(SPAWN_MIN_MS, SPAWN_MAX_MS);
       }
 
@@ -152,6 +174,8 @@ export default function CursorTrailsLayer() {
         updateTrail(trail, now);
         drawTrail(trail, now);
       }
+
+      drawPointerShield();
 
       animationFrame = window.requestAnimationFrame(tick);
     };
