@@ -12,6 +12,12 @@ body {
   margin: 0;
   background: #f6f6f4;
   color: inherit;
+  font-weight: 400;
+  font-synthesis: weight;
+}
+
+strong {
+  font-weight: 800;
 }
 
 .home {
@@ -107,6 +113,7 @@ body {
   font-size: clamp(36px, 5vw, 64px);
   line-height: 1.35;
   margin: 0;
+  font-weight: 800;
 }
 
 .hero-actions {
