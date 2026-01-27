@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const navItems = ["Services", "Use Cases", "Pricing", "Blog", "Blog"];
+const navItems = ["Services", "Use Cases", "Pricing", "Blog"];
 
 export default function Home() {
   return (
