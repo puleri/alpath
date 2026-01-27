@@ -6,7 +6,7 @@ export default function Home() {
       <header className="top-bar">
         <div className="brand">
           <img
-            src="/alpath/icon.svg"
+            src="/alpath/sign.svg"
             alt="Alpath Engineering icon"
             className="brand-icon"
           />
@@ -32,7 +32,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-brand">
           <img
-            src="/alpath/icon.svg"
+            src="/alpath/sign.svg"
             alt="Alpath Engineering icon"
             className="hero-icon"
           />

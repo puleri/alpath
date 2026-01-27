@@ -1,13 +1,15 @@
 :root {
   color-scheme: light;
-  background-color: #f6f6f4;
+  background-color: #ffffff;
   color: #222222;
 }
 
 * {
   box-sizing: border-box;
 }
-
+strong {
+  font-weight: 800;
+}
 body {
   margin: 0;
   background: #f6f6f4;
@@ -24,7 +26,7 @@ strong {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 32px 52px 120px;
+  padding: 12px 52px 120px;
   gap: 80px;
 }
 
@@ -112,8 +114,8 @@ strong {
 .hero-title {
   font-size: clamp(36px, 5vw, 64px);
   line-height: 1.35;
-  margin: 0;
   font-weight: 800;
+  margin: 60px 0;
 }
 
 .hero-actions {

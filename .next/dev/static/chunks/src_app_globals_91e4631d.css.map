@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/mattpuleri/Desktop/Alpath/src/app/globals.css"],"sourcesContent":[":root {\n  color-scheme: light;\n  font-family: \"Inter\", system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n    sans-serif;\n}\n\nbody {\n  margin: 0;\n  background: #f7f7fb;\n  color: #1f1f24;\n}\n\n.page {\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  text-align: center;\n  gap: 12px;\n  padding: 40px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAMA;;;;;;AAMA"}}]
+}
