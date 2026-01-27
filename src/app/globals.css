@@ -39,6 +39,28 @@ strong {
   gap: 80px;
 }
 
+.cursor-trails-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.cursor-trail-dot-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.cursor-trail-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(27, 27, 27, 0.2);
+  transform: translate3d(-50%, -50%, 0);
+}
+
 .top-bar {
   display: flex;
   align-items: center;
