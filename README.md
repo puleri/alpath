@@ -10,3 +10,17 @@ Install dependencies and start the dev server:
 npm install
 npm run dev
 ```
+
+## Quality Checks
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+Format the codebase with Prettier:
+
+```bash
+npm run format
+```
