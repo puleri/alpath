@@ -4,18 +4,18 @@ const navItems = ["Services", "Use Cases", "Pricing", "Blog"];
 
 export default function Home() {
   return (
-    <main className="home">
+    <main className="home container">
       <header className="top-bar">
         <div className="brand">
           <Image
             src="/alpath/sign.svg"
             alt="Alpath Engineering icon"
-            className="brand-icon"
+            className="brand-icon-nav"
             width={34}
             height={34}
           />
           <span className="brand-text">
-            <strong>Alpath</strong> Engineering
+            <span className="alpath-signature">Alpath</span> Engineering
           </span>
         </div>
         <nav className="nav-links">
@@ -38,12 +38,12 @@ export default function Home() {
           <Image
             src="/alpath/sign.svg"
             alt="Alpath Engineering icon"
-            className="hero-icon"
+            className="brand-icon-hero"
             width={32}
             height={32}
           />
           <span className="hero-brand-text">
-            <strong>Alpath</strong> Engineering
+            <span className="alpath-signature">Alpath</span> Engineering
           </span>
         </div>
 
