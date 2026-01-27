@@ -1,10 +1,13 @@
 import Image from "next/image";
 
+import CursorTrailsLayer from "../components/CursorTrailsLayer";
+
 const navItems = ["Services", "Use Cases", "Pricing", "Blog"];
 
 export default function Home() {
   return (
     <main className="home container">
+      <CursorTrailsLayer />
       <header className="top-bar">
         <div className="brand">
           <Image
