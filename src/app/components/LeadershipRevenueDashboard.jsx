@@ -162,7 +162,7 @@ export default function LeadershipRevenueDashboard() {
           </div>
         </section>
 
-        <section className="dashboard-row">
+        <section className="dashboard-row dashboard-row--halves">
           <div className="card">
             <header className="card-header">
               <h2>Leakage & Risk</h2>
