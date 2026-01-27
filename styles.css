@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --text-primary: #1e1e1e;
+  --text-muted: #5c5c5c;
+  --border: #e2e2e2;
+  --pill-dark: #1f1f1f;
+  --pill-light: #d8d8d8;
+  --bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", "Inter", system-ui, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.site-header {
+  width: 100%;
+  padding: 32px 56px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand,
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.brand-name {
+  display: flex;
+  gap: 6px;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.brand-name strong {
+  font-weight: 600;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  border: 1.5px dashed #bdbdbd;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.nav-cta {
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--pill-dark);
+  color: #ffffff;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 32px 24px 120px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 1.2;
+  max-width: 860px;
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: var(--pill-dark);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: var(--pill-light);
+  color: var(--text-primary);
+}
+
+@media (max-width: 960px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
