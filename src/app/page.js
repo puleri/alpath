@@ -1,56 +1,15 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import CursorTrailsLayer from "./components/CursorTrailsLayer";
 
-const navItems = ["Services", "Use Cases", "Pricing", "Blog"];
-
-function CursorTrailsLayer() {
-  const targetPosition = useRef({ x: 0, y: 0 });
-  const currentPosition = useRef({ x: 0, y: 0 });
-  const dotWrapperRef = useRef(null);
-  const animationFrameRef = useRef(null);
-
-  useEffect(() => {
-    const handlePointerMove = (event) => {
-      targetPosition.current = { x: event.clientX, y: event.clientY };
-    };
-
-    const animate = () => {
-      const { x: targetX, y: targetY } = targetPosition.current;
-      const current = currentPosition.current;
-
-      current.x += (targetX - current.x) * 0.1;
-      current.y += (targetY - current.y) * 0.1;
-
-      if (dotWrapperRef.current) {
-        dotWrapperRef.current.style.transform = `translate3d(${current.x}px, ${current.y}px, 0)`;
-      }
-
-      animationFrameRef.current = window.requestAnimationFrame(animate);
-    };
-
-    window.addEventListener("pointermove", handlePointerMove, { passive: true });
-    animationFrameRef.current = window.requestAnimationFrame(animate);
-
-    return () => {
-      window.removeEventListener("pointermove", handlePointerMove);
-      if (animationFrameRef.current) {
-        window.cancelAnimationFrame(animationFrameRef.current);
-      }
-    };
-  }, []);
-
-  return (
-    <div className="cursor-trails-layer" aria-hidden="true">
-      <div className="cursor-trail-dot-wrapper" ref={dotWrapperRef}>
-        <div className="cursor-trail-dot" />
-      </div>
-    </div>
-  );
-}
+const navItems = [
+  { label: "Services", href: "#services" },
+  { label: "Use Cases", href: "#use-cases" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Blog", href: "#blog" },
+];
 
 export default function Home() {
   return (
