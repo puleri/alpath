@@ -1,10 +1,5 @@
+import "@fontsource-variable/anaheim";
 import "./globals.css";
-import { Anaheim } from "next/font/google";
-
-const anaheim = Anaheim({
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 export const metadata = {
   title: {
@@ -45,7 +40,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="apple-mobile-web-app-title" content="Alpath Engineering" />
       </head>
-      <body className={anaheim.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
