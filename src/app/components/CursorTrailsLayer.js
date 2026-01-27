@@ -60,15 +60,7 @@ export default function CursorTrailsLayer() {
       pointer.active = true;
     };
 
-    const spawnTrail = (now) => {
-      const origin = {
-        x: pointer.active
-          ? pointer.x
-          : window.innerWidth / 2 + randomBetween(-120, 120),
-        y: pointer.active
-          ? pointer.y
-          : window.innerHeight / 2 + randomBetween(-120, 120),
-      };
+    const spawnTrail = (now, origin) => {
       const hueOffset = Math.random() * 360;
       const direction = createDirection();
       trails.push({
@@ -83,8 +75,26 @@ export default function CursorTrailsLayer() {
     };
 
     const spawnTrailBatch = (now, count) => {
+      if (pointer.active) {
+        const baseAngle = Math.random() * Math.PI * 2;
+        const angleStep = (Math.PI * 2) / count;
+        for (let i = 0; i < count; i += 1) {
+          const angle = baseAngle + angleStep * i;
+          const origin = {
+            x: pointer.x + Math.cos(angle) * POINTER_SHIELD_RADIUS,
+            y: pointer.y + Math.sin(angle) * POINTER_SHIELD_RADIUS,
+          };
+          spawnTrail(now, origin);
+        }
+        return;
+      }
+
       for (let i = 0; i < count; i += 1) {
-        spawnTrail(now);
+        const origin = {
+          x: window.innerWidth / 2 + randomBetween(-120, 120),
+          y: window.innerHeight / 2 + randomBetween(-120, 120),
+        };
+        spawnTrail(now, origin);
       }
     };
 
