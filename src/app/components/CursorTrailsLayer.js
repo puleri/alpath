@@ -6,10 +6,10 @@ const MAX_TRAILS = 12;
 const LIFESPAN_MS = 8000;
 const TURN_WINDOW_MS = 100;
 const HUE_SPEED = 98;
-const SPAWN_MIN_MS = 800;
-const SPAWN_MAX_MS = 1000;
-const SPAWN_BATCH = 6;
-const POINTER_SHIELD_RADIUS = 25;
+const SPAWN_MIN_MS = 3000;
+const SPAWN_MAX_MS = 6700;
+const SPAWN_BATCH = 4;
+const POINTER_SHIELD_RADIUS = 100;
 
 const randomBetween = (min, max) => min + Math.random() * (max - min);
 
