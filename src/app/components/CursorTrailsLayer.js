@@ -132,11 +132,13 @@ export default function CursorTrailsLayer() {
           : 1;
 
       const hue = ((now / 1000) * HUE_SPEED + trail.hueOffset) % 360;
+      ctx.save();
       ctx.strokeStyle = `hsl(${hue}, 80%, 60%)`;
       ctx.globalAlpha = opacity;
       ctx.lineWidth = 2;
       ctx.lineJoin = "round";
       ctx.lineCap = "round";
+      ctx.setLineDash([1, 6]);
 
       ctx.beginPath();
       trail.points.forEach((point, index) => {
@@ -147,7 +149,7 @@ export default function CursorTrailsLayer() {
         }
       });
       ctx.stroke();
-      ctx.globalAlpha = 1;
+      ctx.restore();
     };
 
     const drawPointerShield = () => {
