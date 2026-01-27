@@ -1,19 +1,18 @@
-const navItems = [
-  { label: "Services", href: "/services" },
-  { label: "Use Cases", href: "/use-cases" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Blog", href: "/blog" },
-];
+import Image from "next/image";
+
+const navItems = ["Services", "Use Cases", "Pricing", "Blog", "Blog"];
 
 export default function Home() {
   return (
     <main className="home">
       <header className="top-bar">
         <div className="brand">
-          <img
+          <Image
             src="/alpath/sign.svg"
             alt="Alpath Engineering icon"
             className="brand-icon"
+            width={34}
+            height={34}
           />
           <span className="brand-text">
             <strong>Alpath</strong> Engineering
@@ -36,10 +35,12 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-brand">
-          <img
+          <Image
             src="/alpath/sign.svg"
             alt="Alpath Engineering icon"
             className="hero-icon"
+            width={32}
+            height={32}
           />
           <span className="hero-brand-text">
             <strong>Alpath</strong> Engineering
