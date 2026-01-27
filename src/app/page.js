@@ -20,8 +20,8 @@ export default function Home() {
         </div>
         <nav className="nav-links">
           {navItems.map((item) => (
-            <a key={item} href="#" className="nav-link">
-              {item}
+            <a key={item.label} href={item.href} className="nav-link">
+              {item.label}
             </a>
           ))}
         </nav>
