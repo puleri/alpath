@@ -1,69 +1,64 @@
-import Image from "next/image";
-
-const navItems = ["Services", "Use Cases", "Pricing", "Blog"];
+import LeadershipRevenueDashboard from "./components/LeadershipRevenueDashboard";
+import CursorTrailsLayer from "./components/CursorTrailsLayer";
 
 export default function Home() {
   return (
-    <main className="home container">
+    <main className="home">
+            <CursorTrailsLayer />
       <header className="top-bar">
         <div className="brand">
-          <Image
-            src="/alpath/sign.svg"
-            alt="Alpath Engineering icon"
+          <img
             className="brand-icon-nav"
-            width={34}
-            height={34}
+            src="/alpath/sign.svg"
+            alt="Alpath Engineering brand mark"
           />
-          <span className="brand-text">
-            <span className="alpath-signature">Alpath</span> Engineering
-          </span>
+          <span className="brand-text">Alpath Engineering</span>
         </div>
         <nav className="nav-links">
-          {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="nav-link">
-              {item.label}
-            </a>
-          ))}
+          <a className="nav-link" href="#services">
+            Services
+          </a>
+          <a className="nav-link" href="#work">
+            Work
+          </a>
+          <a className="nav-link" href="#insights">
+            Insights
+          </a>
         </nav>
         <button className="contact-button" type="button">
-          Contact
-          <span className="contact-icon" aria-hidden="true">
-            ✉
-          </span>
+          Contact us <span className="contact-icon-nav">→</span>
         </button>
       </header>
 
       <section className="hero">
         <div className="hero-brand">
-          <Image
-            src="/alpath/sign.svg"
-            alt="Alpath Engineering icon"
+          <img
             className="brand-icon-hero"
-            width={32}
-            height={32}
+            src="/alpath/sign.svg"
+            alt="Alpath Engineering brand mark"
           />
-          <span className="hero-brand-text">
-            <span className="alpath-signature">Alpath</span> Engineering
-          </span>
+          <span className="hero-brand-text">Alpath Engineering</span>
         </div>
-
         <h1 className="hero-title">
-          Digital Solutions working
-          <br />
-          as hard as your business
+          Digital systems that keep revenue visible, trusted, and ready to scale.
         </h1>
-
+        <p>
+          We blend strategy, design, and engineering to build the infrastructure ambitious
+          teams need to lead with clarity.
+        </p>
         <div className="hero-actions">
           <button className="primary-button" type="button">
-            Contact
-            <span className="contact-icon" aria-hidden="true">
-              ✉
-            </span>
+            Book a strategy call
           </button>
           <button className="secondary-button" type="button">
-            Explore Use Cases
+            Explore the playbook
           </button>
         </div>
+        <p className="alpath-signature">— Alpath Engineering</p>
+      </section>
+
+      <section className="dashboard-page">
+        <LeadershipRevenueDashboard />
       </section>
     </main>
   );
