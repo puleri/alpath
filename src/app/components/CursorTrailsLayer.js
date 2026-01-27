@@ -2,12 +2,12 @@
 
 import { useEffect, useRef } from "react";
 
-const MAX_TRAILS = 6;
+const MAX_TRAILS = 12;
 const LIFESPAN_MS = 8000;
-const TURN_WINDOW_MS = 1000;
-const HUE_SPEED = 28;
-const SPAWN_MIN_MS = 600;
-const SPAWN_MAX_MS = 1400;
+const TURN_WINDOW_MS = 100;
+const HUE_SPEED = 98;
+const SPAWN_MIN_MS = 800;
+const SPAWN_MAX_MS = 1000;
 
 const randomBetween = (min, max) => min + Math.random() * (max - min);
 
@@ -75,14 +75,14 @@ export default function CursorTrailsLayer() {
         points: [origin],
         hueOffset,
         direction,
-        nextTurnAt: now + randomBetween(400, 1400),
+        nextTurnAt: now + randomBetween(200, 800),
         lifespanMs: LIFESPAN_MS,
       });
     };
 
     const updateTrail = (trail, now) => {
       if (now >= trail.nextTurnAt) {
-        const turnAngle = randomBetween(-0.6, 0.6);
+        const turnAngle = randomBetween(-1.9, 1.9);
         const cos = Math.cos(turnAngle);
         const sin = Math.sin(turnAngle);
         const { x, y } = trail.direction;
@@ -110,7 +110,7 @@ export default function CursorTrailsLayer() {
       const fadeStart = trail.lifespanMs - TURN_WINDOW_MS;
       const opacity =
         age >= fadeStart
-          ? Math.max(0, 1 - (age - fadeStart) / TURN_WINDOW_MS)
+          ? Math.max(0, .7 - (age - fadeStart) / TURN_WINDOW_MS)
           : 1;
 
       const hue = ((now / 1000) * HUE_SPEED + trail.hueOffset) % 360;
