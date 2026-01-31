@@ -259,6 +259,82 @@ body {
   font-size: 18px;
 }
 
+.web-services-page {
+  padding: 52px 24px 96px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.web-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.web-services-hero {
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px;
+  border-radius: 24px;
+  background: #f5f5f4;
+}
+
+.web-services-hero h1 {
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.web-services-hero p {
+  margin: 0;
+  color: #2b2b2b;
+}
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b4b4b;
+  margin: 0;
+}
+
+.web-services-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.web-services-card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.web-services-card p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.placeholder-image {
+  border-radius: 16px;
+  border: 1px dashed #cbd5f5;
+  background: #eef2ff;
+  padding: 18px;
+  font-size: 13px;
+  color: #4338ca;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+}
+
 
 .dashboard-page {
   padding: 52px 24px 88px;
@@ -677,5 +753,13 @@ tbody tr:hover td {
 
   .hero-actions {
     flex-direction: column;
+  }
+
+  .web-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .web-services-hero {
+    grid-column: auto;
   }
 }
