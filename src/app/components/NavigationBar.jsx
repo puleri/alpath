@@ -22,8 +22,8 @@ export default function NavigationBar() {
               <a className="nav-dropdown-link" href="#integrations" role="menuitem">
                 Integrations
               </a>
-              <a className="nav-dropdown-link" href="#web-systems" role="menuitem">
-                Web Systems
+              <a className="nav-dropdown-link" href="/web-services" role="menuitem">
+                Web Strategy
               </a>
             </div>
           </div>
