@@ -2,14 +2,14 @@ export default function NavigationBar() {
   return (
     <header className="top-bar">
       <div className="top-bar-content container">
-        <div className="brand">
+        <a className="brand" href="/">
           <img
             className="brand-icon-nav"
             src="/alpath/sign.svg"
             alt="Alpath Engineering brand mark"
           />
           <span className="brand-text"><span className="alpath-weight">Alpath</span> Engineering</span>
-        </div>
+        </a>
         <nav className="nav-links">
           <div className="nav-item nav-dropdown">
             <button className="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true">

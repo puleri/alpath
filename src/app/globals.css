@@ -206,6 +206,11 @@ body {
   margin-top: 40px;
 }
 
+.brand {
+  text-decoration: none;
+  color: black;
+}
+
 .brand-icon-nav {
   width: 18px;
   height: 18px;
