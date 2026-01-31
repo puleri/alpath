@@ -90,6 +90,70 @@ body {
   text-decoration: none;
   color: inherit;
   opacity: 0.9;
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.nav-dropdown-toggle {
+  opacity: 0.9;
+}
+
+.nav-dropdown-icon {
+  font-size: 10px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(34, 34, 34, 0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 180px;
+  box-shadow: 0 12px 24px rgba(17, 17, 17, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 10;
+}
+
+.nav-dropdown-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.nav-dropdown-link:hover,
+.nav-dropdown-link:focus {
+  background: rgba(27, 27, 27, 0.08);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .contact-button {
