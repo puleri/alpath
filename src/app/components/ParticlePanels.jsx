@@ -10,6 +10,10 @@ const createParticles = (count, seedOffset = 0) =>
     left: Math.random() * 100,
     top: Math.random() * 100,
     delay: Math.random() * 2,
+    duration: 6 + Math.random() * 6,
+    hue: Math.floor(Math.random() * 360),
+    driftX: (Math.random() * 2 - 1) * 8,
+    driftY: (Math.random() * 2 - 1) * 8,
   }));
 
 const useParticleField = (seedOffset = 0) => {
@@ -56,7 +60,11 @@ export default function ParticlePanels() {
               style={{
                 left: `${particle.left}%`,
                 top: `${particle.top}%`,
-                animationDelay: `${particle.delay}s`,
+                "--particle-delay": `${particle.delay}s`,
+                "--particle-duration": `${particle.duration}s`,
+                "--particle-hue": particle.hue,
+                "--particle-drift-x": `${particle.driftX}px`,
+                "--particle-drift-y": `${particle.driftY}px`,
               }}
             />
           ))}
@@ -98,7 +106,11 @@ export default function ParticlePanels() {
               style={{
                 left: `${particle.left}%`,
                 top: `${particle.top}%`,
-                animationDelay: `${particle.delay}s`,
+                "--particle-delay": `${particle.delay}s`,
+                "--particle-duration": `${particle.duration}s`,
+                "--particle-hue": particle.hue,
+                "--particle-drift-x": `${particle.driftX}px`,
+                "--particle-drift-y": `${particle.driftY}px`,
               }}
             />
           ))}

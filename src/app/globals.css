@@ -552,14 +552,20 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
-  background: rgba(24, 24, 24, 0.4);
+  --particle-scale: 1;
+  --particle-scale-breathe: 1.4;
+  background: hsl(var(--particle-hue, 210) 90% 60% / 0.85);
+  box-shadow: 0 0 12px hsl(var(--particle-hue, 210) 90% 65% / 0.45);
   border-radius: 999px;
-  transform: translate(-50%, -50%);
-  transition: transform 0.4s ease;
+  transform: translate(-50%, -50%) scale(var(--particle-scale));
+  animation: particle-breathe var(--particle-duration, 8s) ease-in-out infinite;
+  animation-delay: var(--particle-delay, 0s);
+  transition: opacity 0.4s ease;
 }
 
 .particle-dot--tiny {
-  transform: translate(-50%, -50%) scale(0.5);
+  --particle-scale: 0.5;
+  --particle-scale-breathe: 0.75;
 }
 
 .particle-panel__content {
@@ -694,6 +700,22 @@ body {
 
 .particle-panel--active .particle-brace--right {
   transform: translateX(0);
+}
+
+@keyframes particle-breathe {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(var(--particle-scale));
+    opacity: 0.65;
+  }
+  50% {
+    transform: translate(
+        calc(-50% + var(--particle-drift-x, 0px)),
+        calc(-50% + var(--particle-drift-y, 0px))
+      )
+      scale(var(--particle-scale-breathe));
+    opacity: 1;
+  }
 }
 
 @media (max-width: 900px) {
