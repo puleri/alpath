@@ -531,9 +531,11 @@ body {
 .particle-panel {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
-  padding: 36px 32px;
-  min-height: 260px;
+  background: #ffffff;
+  padding: 30px 0;
+  border-top: 1px solid rgba(229, 229, 229, 0.664);
+  border-bottom: 1px solid rgba(229, 229, 229, 0.664);
+  min-height: 660px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -550,8 +552,8 @@ body {
 
 .particle-dot {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 2px;
+  height: 2px;
   --particle-scale: 1;
   --particle-scale-breathe: 1.4;
   background: hsl(var(--particle-hue, 210) 90% 60% / 0.85);
