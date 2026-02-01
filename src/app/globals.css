@@ -559,10 +559,17 @@ body {
   background: hsl(var(--particle-hue, 210) 90% 60% / 0.85);
   box-shadow: 0 0 12px hsl(var(--particle-hue, 210) 90% 65% / 0.45);
   border-radius: 999px;
+  left: var(--particle-left, 50%);
+  top: var(--particle-top, 50%);
   transform: translate(-50%, -50%) scale(var(--particle-scale));
   animation: particle-breathe var(--particle-duration, 8s) ease-in-out infinite;
   animation-delay: var(--particle-delay, 0s);
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, left 0.9s ease, top 0.9s ease;
+}
+
+.particle-panel--active .particle-dot {
+  left: var(--particle-magnet-left, 50%);
+  top: var(--particle-magnet-top, 50%);
 }
 
 .particle-dot--tiny {
@@ -617,91 +624,28 @@ body {
   transform: scaleX(1);
 }
 
-.particle-triangles,
-.particle-braces {
+.particle-shapes {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
-.particle-panel--active .particle-triangles,
-.particle-panel--active .particle-braces {
+.particle-panel--active .particle-shapes {
   opacity: 1;
 }
 
-.particle-triangle {
-  position: absolute;
-  width: 60px;
-  height: 50px;
-  background: rgba(20, 20, 20, 0.12);
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  transition: transform 0.5s ease;
+.particle-shape--fill {
+  fill: rgba(20, 20, 20, 0.12);
 }
 
-.particle-triangle--top {
-  top: 24%;
-  left: 50%;
-  transform: translateX(-50%) scale(0.6);
-}
-
-.particle-triangle--left {
-  left: 18%;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg) scale(0.6);
-}
-
-.particle-triangle--right {
-  right: 18%;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg) scale(0.6);
-}
-
-.particle-panel--active .particle-triangle--top {
-  transform: translateX(-50%) scale(1);
-}
-
-.particle-panel--active .particle-triangle--left {
-  transform: translateY(-50%) rotate(-90deg) scale(1);
-}
-
-.particle-panel--active .particle-triangle--right {
-  transform: translateY(-50%) rotate(90deg) scale(1);
-}
-
-.particle-brace {
-  position: absolute;
-  font-size: 96px;
-  font-weight: 500;
-  color: rgba(20, 20, 20, 0.18);
-  line-height: 1;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
-}
-
-.particle-panel--active .particle-brace {
-  opacity: 1;
-}
-
-.particle-brace--left {
-  left: 22%;
-  transform: translateX(-10px);
-}
-
-.particle-brace--right {
-  right: 22%;
-  transform: translateX(10px);
-}
-
-.particle-panel--active .particle-brace--left {
-  transform: translateX(0);
-}
-
-.particle-panel--active .particle-brace--right {
-  transform: translateX(0);
+.particle-shape--stroke {
+  fill: none;
+  stroke: rgba(20, 20, 20, 0.18);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 @keyframes particle-breathe {
