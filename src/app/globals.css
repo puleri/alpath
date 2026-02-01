@@ -550,6 +550,22 @@ body {
   pointer-events: none;
 }
 
+.particle-field__layer {
+  position: absolute;
+  inset: 0;
+}
+
+.particle-field__layer--pulse {
+  opacity: 0;
+  transform: scale(1);
+  clip-path: circle(0% at 50% 50%);
+  mix-blend-mode: screen;
+}
+
+.particle-panel--active .particle-field__layer--pulse {
+  animation: particle-pulse 1.4s ease-out forwards;
+}
+
 .particle-dot {
   position: absolute;
   width: 1px;
@@ -661,6 +677,24 @@ body {
       )
       scale(var(--particle-scale-breathe));
     opacity: 1;
+  }
+}
+
+@keyframes particle-pulse {
+  0% {
+    opacity: 0.75;
+    transform: scale(1.08);
+    clip-path: circle(0% at 50% 50%);
+  }
+  70% {
+    opacity: 0.35;
+    transform: scale(1.04);
+    clip-path: circle(55% at 50% 50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+    clip-path: circle(100% at 50% 50%);
   }
 }
 

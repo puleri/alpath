@@ -3,6 +3,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const PARTICLE_COUNT = 320;
+const MAGNET_DISTANCE = 18;
+
+const isWithinMagnetRange = (left, top, magnetLeft, magnetTop) => {
+  const dx = left - magnetLeft;
+  const dy = top - magnetTop;
+  return Math.hypot(dx, dy) <= MAGNET_DISTANCE;
+};
 
 const createParticles = (count, seedOffset = 0, magnets = []) => {
   const resolvedMagnets =
@@ -13,18 +20,29 @@ const createParticles = (count, seedOffset = 0, magnets = []) => {
           magnetTop: Math.random() * 100,
         }));
 
-  return Array.from({ length: count }, (_, index) => ({
-    id: `${seedOffset}-${index}`,
-    left: Math.random() * 100,
-    top: Math.random() * 100,
-    delay: Math.random() * 2,
-    duration: 6 + Math.random() * 6,
-    hue: Math.floor(Math.random() * 360),
-    driftX: (Math.random() * 2 - 1) * 8,
-    driftY: (Math.random() * 2 - 1) * 8,
-    magnetLeft: resolvedMagnets[index % resolvedMagnets.length].magnetLeft,
-    magnetTop: resolvedMagnets[index % resolvedMagnets.length].magnetTop,
-  }));
+  return Array.from({ length: count }, (_, index) => {
+    const left = Math.random() * 100;
+    const top = Math.random() * 100;
+    const magnetTarget = resolvedMagnets[index % resolvedMagnets.length];
+    const withinRange = isWithinMagnetRange(
+      left,
+      top,
+      magnetTarget.magnetLeft,
+      magnetTarget.magnetTop
+    );
+    return {
+      id: `${seedOffset}-${index}`,
+      left,
+      top,
+      delay: Math.random() * 2,
+      duration: 6 + Math.random() * 6,
+      hue: Math.floor(Math.random() * 360),
+      driftX: (Math.random() * 2 - 1) * 8,
+      driftY: (Math.random() * 2 - 1) * 8,
+      magnetLeft: withinRange ? magnetTarget.magnetLeft : left,
+      magnetTop: withinRange ? magnetTarget.magnetTop : top,
+    };
+  });
 };
 
 const useParticleField = (seedOffset = 0, magnets = []) => {
@@ -199,6 +217,25 @@ export default function ParticlePanels() {
     useParticleField(1, braceMagnets);
   const [activePanel, setActivePanel] = useState(null);
 
+  const renderParticleDots = (particles, shrinkStates) =>
+    particles.map((particle, index) => (
+      <span
+        key={particle.id}
+        className={`particle-dot ${shrinkStates[index] ? "particle-dot--tiny" : ""}`}
+        style={{
+          "--particle-left": `${particle.left}%`,
+          "--particle-top": `${particle.top}%`,
+          "--particle-magnet-left": `${particle.magnetLeft}%`,
+          "--particle-magnet-top": `${particle.magnetTop}%`,
+          "--particle-delay": `${particle.delay}s`,
+          "--particle-duration": `${particle.duration}s`,
+          "--particle-hue": particle.hue,
+          "--particle-drift-x": `${particle.driftX}px`,
+          "--particle-drift-y": `${particle.driftY}px`,
+        }}
+      />
+    ));
+
   return (
     <section className="particle-panels">
       <div
@@ -207,46 +244,51 @@ export default function ParticlePanels() {
         }`}
       >
         <div className="particle-field">
-          {leftParticles.map((particle, index) => (
-            <span
-              key={particle.id}
-              className={`particle-dot ${
-                leftShrink[index] ? "particle-dot--tiny" : ""
-              }`}
-              style={{
-                "--particle-left": `${particle.left}%`,
-                "--particle-top": `${particle.top}%`,
-                "--particle-magnet-left": `${particle.magnetLeft}%`,
-                "--particle-magnet-top": `${particle.magnetTop}%`,
-                "--particle-delay": `${particle.delay}s`,
-                "--particle-duration": `${particle.duration}s`,
-                "--particle-hue": particle.hue,
-                "--particle-drift-x": `${particle.driftX}px`,
-                "--particle-drift-y": `${particle.driftY}px`,
-              }}
-            />
-          ))}
-          <svg
-            className="particle-shapes particle-shapes--triangles"
-            viewBox="0 0 100 100"
-            aria-hidden="true"
-          >
-            <path
-              ref={triangleTopRef}
-              className="particle-shape particle-shape--fill"
-              d={trianglePaths.top}
-            />
-            <path
-              ref={triangleLeftRef}
-              className="particle-shape particle-shape--fill"
-              d={trianglePaths.left}
-            />
-            <path
-              ref={triangleRightRef}
-              className="particle-shape particle-shape--fill"
-              d={trianglePaths.right}
-            />
-          </svg>
+          <div className="particle-field__layer particle-field__layer--base">
+            {renderParticleDots(leftParticles, leftShrink)}
+            <svg
+              className="particle-shapes particle-shapes--triangles"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
+              <path
+                ref={triangleTopRef}
+                className="particle-shape particle-shape--fill"
+                d={trianglePaths.top}
+              />
+              <path
+                ref={triangleLeftRef}
+                className="particle-shape particle-shape--fill"
+                d={trianglePaths.left}
+              />
+              <path
+                ref={triangleRightRef}
+                className="particle-shape particle-shape--fill"
+                d={trianglePaths.right}
+              />
+            </svg>
+          </div>
+          <div className="particle-field__layer particle-field__layer--pulse">
+            {renderParticleDots(leftParticles, leftShrink)}
+            <svg
+              className="particle-shapes particle-shapes--triangles"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
+              <path
+                className="particle-shape particle-shape--fill"
+                d={trianglePaths.top}
+              />
+              <path
+                className="particle-shape particle-shape--fill"
+                d={trianglePaths.left}
+              />
+              <path
+                className="particle-shape particle-shape--fill"
+                d={trianglePaths.right}
+              />
+            </svg>
+          </div>
         </div>
         <div className="particle-panel__content">
           <p className="particle-copy">
@@ -271,41 +313,42 @@ export default function ParticlePanels() {
         }`}
       >
         <div className="particle-field">
-          {rightParticles.map((particle, index) => (
-            <span
-              key={particle.id}
-              className={`particle-dot ${
-                rightShrink[index] ? "particle-dot--tiny" : ""
-              }`}
-              style={{
-                "--particle-left": `${particle.left}%`,
-                "--particle-top": `${particle.top}%`,
-                "--particle-magnet-left": `${particle.magnetLeft}%`,
-                "--particle-magnet-top": `${particle.magnetTop}%`,
-                "--particle-delay": `${particle.delay}s`,
-                "--particle-duration": `${particle.duration}s`,
-                "--particle-hue": particle.hue,
-                "--particle-drift-x": `${particle.driftX}px`,
-                "--particle-drift-y": `${particle.driftY}px`,
-              }}
-            />
-          ))}
-          <svg
-            className="particle-shapes particle-shapes--braces"
-            viewBox="0 0 100 100"
-            aria-hidden="true"
-          >
-            <path
-              ref={braceLeftRef}
-              className="particle-shape particle-shape--stroke"
-              d={bracePaths.left}
-            />
-            <path
-              ref={braceRightRef}
-              className="particle-shape particle-shape--stroke"
-              d={bracePaths.right}
-            />
-          </svg>
+          <div className="particle-field__layer particle-field__layer--base">
+            {renderParticleDots(rightParticles, rightShrink)}
+            <svg
+              className="particle-shapes particle-shapes--braces"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
+              <path
+                ref={braceLeftRef}
+                className="particle-shape particle-shape--stroke"
+                d={bracePaths.left}
+              />
+              <path
+                ref={braceRightRef}
+                className="particle-shape particle-shape--stroke"
+                d={bracePaths.right}
+              />
+            </svg>
+          </div>
+          <div className="particle-field__layer particle-field__layer--pulse">
+            {renderParticleDots(rightParticles, rightShrink)}
+            <svg
+              className="particle-shapes particle-shapes--braces"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
+              <path
+                className="particle-shape particle-shape--stroke"
+                d={bracePaths.left}
+              />
+              <path
+                className="particle-shape particle-shape--stroke"
+                d={bracePaths.right}
+              />
+            </svg>
+          </div>
         </div>
         <div className="particle-panel__content">
           <p className="particle-copy">
