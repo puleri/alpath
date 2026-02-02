@@ -2,6 +2,7 @@ import LeadershipRevenueDashboard from "./components/LeadershipRevenueDashboard"
 import CursorTrailsLayer from "./components/CursorTrailsLayer";
 import NavigationBar from "./components/NavigationBar";
 import ParticlePanels from "./components/ParticlePanels";
+import RippleCircleRow from "./components/RippleCircleRow";
 
 export default function Home() {
   return (
@@ -33,6 +34,8 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+          <RippleCircleRow />
 
           <ParticlePanels />
 

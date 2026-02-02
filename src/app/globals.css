@@ -943,3 +943,48 @@ tbody tr:hover td {
     grid-column: auto;
   }
 }
+
+.ripple-row {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px;
+  overflow: visible;
+}
+
+.ripple-row__track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  transform: translateX(-50%);
+  will-change: transform;
+}
+
+.ripple-row__circle {
+  width: 125px;
+  height: 125px;
+  border-radius: 999px;
+  background: #f6f6f6;
+  border: 1px solid rgba(27, 27, 27, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rippleFloat 8s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.ripple-row__label {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+@keyframes rippleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
