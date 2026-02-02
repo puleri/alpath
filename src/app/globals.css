@@ -559,6 +559,7 @@ body {
   background: hsl(var(--particle-hue, 210) 90% 60% / 0.85);
   box-shadow: 0 0 12px hsl(var(--particle-hue, 210) 90% 65% / 0.45);
   border-radius: 999px;
+  filter: brightness(.9);
   left: var(--particle-left, 50%);
   top: var(--particle-top, 50%);
   transform: translate(-50%, -50%) scale(var(--particle-scale));

@@ -20,8 +20,8 @@ const createParticles = (count, seedOffset = 0, magnets = []) => {
     delay: Math.random() * 2,
     duration: 6 + Math.random() * 6,
     hue: Math.floor(Math.random() * 360),
-    driftX: (Math.random() * 2 - 1) * 8,
-    driftY: (Math.random() * 2 - 1) * 8,
+    driftX: (Math.random() * 2 - 1) * 15,
+    driftY: (Math.random() * 2 - 1) * 15,
     magnetLeft: resolvedMagnets[index % resolvedMagnets.length].magnetLeft,
     magnetTop: resolvedMagnets[index % resolvedMagnets.length].magnetTop,
   }));
