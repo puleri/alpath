@@ -36,7 +36,7 @@ export default function HeroVideo() {
         className={`hero-video${isVisible ? " is-visible" : ""}`}
       >
         <video
-          poster="/videos/hero-poster.jpg"
+          poster="/videos/poster.png"
           muted
           playsInline
           loop
