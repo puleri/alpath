@@ -1,4 +1,3 @@
-import LeadershipRevenueDashboard from "./components/LeadershipRevenueDashboard";
 import CursorTrailsLayer from "./components/CursorTrailsLayer";
 import HeroVideo from "./components/HeroVideo";
 import NavigationBar from "./components/NavigationBar";
@@ -39,9 +38,13 @@ export default function Home() {
         </section>
         <HeroVideo />
         <RippleCircleRow />
-          <h2>
+        
+        <div className="container">
+                    <h2>
             We design and build revenue-driven software for growing businesses
           </h2>
+
+        </div>
 
         <section className="welcome-wrapper">
             <ParticlePanels />
