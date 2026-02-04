@@ -3,19 +3,29 @@
 import { useEffect, useRef, useState } from "react";
 
 const circleIcons = [
-  { src: "/icons/add.png", alt: "Add" },
-  { src: "/icons/ai-search.png", alt: "AI search" },
-  { src: "/icons/ai.png", alt: "AI" },
-  { src: "/icons/cloud-data.png", alt: "Cloud data" },
-  { src: "/icons/database.png", alt: "Database" },
-  { src: "/icons/file.png", alt: "File" },
-  { src: "/icons/git.png", alt: "Git" },
-  { src: "/icons/line-chart.png", alt: "Line chart" },
-  { src: "/icons/outgoing-data.png", alt: "Outgoing data" },
-  { src: "/icons/relation.png", alt: "Relation" },
-  { src: "/icons/undo.png", alt: "Undo" },
-  { src: "/icons/verification.png", alt: "Verification" },
-  { src: "/icons/web.png", alt: "Web" },
+  { src: "/icons/add.png", alt: "Add", width: 46, height: 46 },
+  { src: "/icons/ai-search.png", alt: "AI search", width: 46, height: 46 },
+  { src: "/icons/ai.png", alt: "AI", width: 46, height: 46 },
+  { src: "/icons/cloud-data.png", alt: "Cloud data", width: 46, height: 46 },
+  { src: "/icons/database.png", alt: "Database", width: 46, height: 46 },
+  { src: "/icons/file.png", alt: "File", width: 46, height: 46 },
+  { src: "/icons/git.png", alt: "Git", width: 46, height: 46 },
+  { src: "/icons/line-chart.png", alt: "Line chart", width: 46, height: 46 },
+  {
+    src: "/icons/outgoing-data.png",
+    alt: "Outgoing data",
+    width: 46,
+    height: 46,
+  },
+  { src: "/icons/relation.png", alt: "Relation", width: 46, height: 46 },
+  { src: "/icons/undo.png", alt: "Undo", width: 46, height: 46 },
+  {
+    src: "/icons/verification.png",
+    alt: "Verification",
+    width: 46,
+    height: 46,
+  },
+  { src: "/icons/web.png", alt: "Web", width: 46, height: 46 },
 ];
 
 export default function RippleCircleRow() {
@@ -72,6 +82,12 @@ export default function RippleCircleRow() {
               className="ripple-row__icon"
               src={icon.src}
               alt={icon.alt}
+              width={icon.width}
+              height={icon.height}
+              style={{
+                width: icon.width ? `${icon.width}px` : undefined,
+                height: icon.height ? `${icon.height}px` : undefined,
+              }}
             />
           </div>
         ))}
