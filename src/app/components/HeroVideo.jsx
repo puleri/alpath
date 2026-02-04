@@ -14,10 +14,7 @@ export default function HeroVideo() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.35 }
     );
@@ -33,23 +30,26 @@ export default function HeroVideo() {
     <section className="hero-video-section">
       <div
         ref={wrapperRef}
-        className={`hero-video${isVisible ? " is-visible" : ""}`}
+        className={`hero-video-shell${isVisible ? " is-visible" : ""}`}
       >
-        <video
-          poster="/videos/hero-poster.jpg"
-          muted
-          playsInline
-          loop
-          autoPlay
-          preload="none"
-        >
-          {isVisible && (
-            <>
-              <source src="/videos/hero.webm" type="video/webm" />
-              <source src="/videos/hero.mp4" type="video/mp4" />
-            </>
-          )}
-        </video>
+        <div className="hero-video-backdrop" />
+        <div className="hero-video">
+          <video
+            poster="/videos/hero-poster.jpg"
+            muted
+            playsInline
+            loop
+            autoPlay
+            preload="none"
+          >
+            {isVisible && (
+              <>
+                <source src="/videos/hero.webm" type="video/webm" />
+                <source src="/videos/hero.mp4" type="video/mp4" />
+              </>
+            )}
+          </video>
+        </div>
       </div>
     </section>
   );
