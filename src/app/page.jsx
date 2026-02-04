@@ -37,6 +37,9 @@ export default function Home() {
 
         </section>
           <RippleCircleRow />
+          <h2>
+            We design and build revenue-driven software for growing businesses
+          </h2>
 
         <section className="welcome-wrapper">
             <ParticlePanels />

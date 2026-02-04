@@ -3,29 +3,35 @@
 import { useEffect, useRef, useState } from "react";
 
 const circleIcons = [
-  { src: "/icons/add.png", alt: "Add", width: 46, height: 46 },
-  { src: "/icons/ai-search.png", alt: "AI search", width: 46, height: 46 },
-  { src: "/icons/ai.png", alt: "AI", width: 46, height: 46 },
-  { src: "/icons/cloud-data.png", alt: "Cloud data", width: 46, height: 46 },
-  { src: "/icons/database.png", alt: "Database", width: 46, height: 46 },
-  { src: "/icons/file.png", alt: "File", width: 46, height: 46 },
-  { src: "/icons/git.png", alt: "Git", width: 46, height: 46 },
-  { src: "/icons/line-chart.png", alt: "Line chart", width: 46, height: 46 },
+  { src: "/icons/add.png", alt: "Add", width: 30, height: 30 },
+  { src: "/icons/ai-search.png", alt: "AI search", width: 30, height: 30 },
+  { src: "/icons/ai.png", alt: "AI", width: 25, height: 25 },
+  { src: "/icons/cloud-data.png", alt: "Cloud data", width: 35, height: 55 },
+  { src: "/icons/database.png", alt: "Database", width: 35, height: 50 },
+  { src: "/icons/file.png", alt: "File", width: 30, height: 30 },
+  { src: "/icons/git.png", alt: "Git", width: 30, height: 30 },
+  { src: "/icons/line-chart.png", alt: "Line chart", width: 30, height: 40 },
   {
     src: "/icons/outgoing-data.png",
     alt: "Outgoing data",
-    width: 46,
-    height: 46,
+    width: 30,
+    height: 30,
   },
-  { src: "/icons/relation.png", alt: "Relation", width: 46, height: 46 },
-  { src: "/icons/undo.png", alt: "Undo", width: 46, height: 46 },
+  { src: "/icons/relation.png", alt: "Relation", width: 32, height: 50 },
+  { src: "/icons/undo.png", alt: "Undo", width: 30, height: 30 },
   {
     src: "/icons/verification.png",
     alt: "Verification",
-    width: 46,
-    height: 46,
+    width: 30,
+    height: 45,
   },
-  { src: "/icons/web.png", alt: "Web", width: 46, height: 46 },
+  { src: "/icons/web.png", alt: "Web", width: 30, height: 50 },
+    { src: "/icons/add.png", alt: "Add", width: 30, height: 30 },
+  { src: "/icons/ai-search.png", alt: "AI search", width: 30, height: 30 },
+  { src: "/icons/ai.png", alt: "AI", width: 25, height: 25 },
+  { src: "/icons/cloud-data.png", alt: "Cloud data", width: 35, height: 55 },
+  { src: "/icons/database.png", alt: "Database", width: 35, height: 50 },
+  { src: "/icons/file.png", alt: "File", width: 30, height: 30 },
 ];
 
 export default function RippleCircleRow() {
@@ -40,7 +46,7 @@ export default function RippleCircleRow() {
         1
       );
       const progress = Math.min(Math.max(scrollTop / scrollable, 0), 1);
-      setScrollOffset(-50 * progress);
+      setScrollOffset(-110 * progress);
     };
 
     const handleScroll = () => {
