@@ -974,10 +974,10 @@ tbody tr:hover td {
   animation-delay: var(--delay, 0s);
 }
 
-.ripple-row__label {
-  font-size: 24px;
-  font-weight: 600;
-  color: #2b2b2b;
+.ripple-row__icon {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
 }
 
 @keyframes rippleFloat {
