@@ -2,22 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const circleLabels = [
-  "A",
-  "A",
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
+const circleIcons = [
+  { src: "/icons/add.png", alt: "Add" },
+  { src: "/icons/ai-search.png", alt: "AI search" },
+  { src: "/icons/ai.png", alt: "AI" },
+  { src: "/icons/cloud-data.png", alt: "Cloud data" },
+  { src: "/icons/database.png", alt: "Database" },
+  { src: "/icons/file.png", alt: "File" },
+  { src: "/icons/git.png", alt: "Git" },
+  { src: "/icons/line-chart.png", alt: "Line chart" },
+  { src: "/icons/outgoing-data.png", alt: "Outgoing data" },
+  { src: "/icons/relation.png", alt: "Relation" },
+  { src: "/icons/undo.png", alt: "Undo" },
+  { src: "/icons/verification.png", alt: "Verification" },
+  { src: "/icons/web.png", alt: "Web" },
 ];
 
 export default function RippleCircleRow() {
@@ -64,13 +62,17 @@ export default function RippleCircleRow() {
         className="ripple-row__track"
         style={{ transform: `translateX(calc(${scrollOffset}px))` }}
       >
-        {circleLabels.map((label, index) => (
+        {circleIcons.map((icon, index) => (
           <div
             className="ripple-row__circle"
-            key={label}
+            key={icon.src}
             style={{ "--delay": `${index * 0.45}s` }}
           >
-            <span className="ripple-row__label">{label}</span>
+            <img
+              className="ripple-row__icon"
+              src={icon.src}
+              alt={icon.alt}
+            />
           </div>
         ))}
       </div>
