@@ -35,7 +35,7 @@ export default function HeroVideo() {
         <div className="hero-video-backdrop" />
         <div className="hero-video">
           <video
-            poster="/videos/hero-poster.jpg"
+            poster="/videos/poster.png"
             muted
             playsInline
             loop
