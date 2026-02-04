@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 const circleLabels = [
   "A",
+  "A",
+  "A",
   "B",
   "C",
   "D",
@@ -60,7 +62,7 @@ export default function RippleCircleRow() {
     <div className="ripple-row" aria-hidden="true">
       <div
         className="ripple-row__track"
-        style={{ transform: `translateX(calc(-50% + ${scrollOffset}px))` }}
+        style={{ transform: `translateX(calc(${scrollOffset}px))` }}
       >
         {circleLabels.map((label, index) => (
           <div

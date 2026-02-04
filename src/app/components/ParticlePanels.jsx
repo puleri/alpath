@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const PARTICLE_COUNT = 320;
+const PARTICLE_COUNT = 120;
 
 const createParticles = (count, seedOffset = 0, magnets = []) => {
   const resolvedMagnets =

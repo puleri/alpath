@@ -35,11 +35,14 @@ export default function Home() {
             </div>
           </div>
 
+        </section>
           <RippleCircleRow />
 
-          <ParticlePanels />
+        <section className="welcome-wrapper">
+            <ParticlePanels />
 
         </section>
+
 
       </main>
 

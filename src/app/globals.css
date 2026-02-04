@@ -552,8 +552,8 @@ body {
 
 .particle-dot {
   position: absolute;
-  width: 1px;
-  height: 2px;
+  width: 2px;
+  height: 4px;
   --particle-scale: 1;
   --particle-scale-breathe: 1.4;
   background: hsl(var(--particle-hue, 210) 90% 60% / 0.85);
@@ -565,7 +565,7 @@ body {
   transform: translate(-50%, -50%) scale(var(--particle-scale));
   animation: particle-breathe var(--particle-duration, 8s) ease-in-out infinite;
   animation-delay: var(--particle-delay, 0s);
-  transition: opacity 0.4s ease, left 0.9s ease, top 0.9s ease;
+  transition: all 0.4s ease, left 0.9s ease, top 0.9s ease;
 }
 
 .particle-panel--active .particle-dot {
@@ -955,18 +955,18 @@ tbody tr:hover td {
 
 .ripple-row__track {
   display: flex;
-  gap: 24px;
+  gap: 14px;
   width: max-content;
   transform: translateX(-50%);
   will-change: transform;
 }
 
 .ripple-row__circle {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   border-radius: 999px;
   background: #f6f6f6;
-  border: 1px solid rgba(27, 27, 27, 0.12);
+  border: 1px solid rgba(115, 115, 115, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -986,6 +986,6 @@ tbody tr:hover td {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-18px);
+    transform: translateY(-58px);
   }
 }
