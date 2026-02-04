@@ -1009,7 +1009,7 @@ tbody tr:hover td {
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin: 0 0 40px;
+  margin: 120px 0;
   overflow: visible;
 }
 
