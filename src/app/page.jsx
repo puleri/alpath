@@ -1,5 +1,6 @@
 import LeadershipRevenueDashboard from "./components/LeadershipRevenueDashboard";
 import CursorTrailsLayer from "./components/CursorTrailsLayer";
+import HeroVideo from "./components/HeroVideo";
 import NavigationBar from "./components/NavigationBar";
 import ParticlePanels from "./components/ParticlePanels";
 import RippleCircleRow from "./components/RippleCircleRow";
@@ -36,20 +37,8 @@ export default function Home() {
           </div>
 
         </section>
-        <section className="hero-video-section">
-          <video
-            className="hero-video"
-            poster="/videos/hero-poster.jpg"
-            muted
-            playsInline
-            loop
-            autoPlay
-          >
-            <source src="/videos/hero.webm" type="video/webm" />
-            <source src="/videos/hero.mp4" type="video/mp4" />
-          </video>
-        </section>
-          <RippleCircleRow />
+        <HeroVideo />
+        <RippleCircleRow />
           <h2>
             We design and build revenue-driven software for growing businesses
           </h2>
