@@ -27,9 +27,7 @@ export default function Footer() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsRaised(true);
-        }
+        setIsRaised(entry.isIntersecting);
       },
       { threshold: 0.6 }
     );
