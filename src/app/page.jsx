@@ -1,4 +1,5 @@
 import CursorTrailsLayer from "./components/CursorTrailsLayer";
+import CallToAction from "./components/CallToAction";
 import HeroVideo from "./components/HeroVideo";
 import NavigationBar from "./components/NavigationBar";
 import ParticlePanels from "./components/ParticlePanels";
@@ -102,6 +103,8 @@ export default function Home() {
             <ParticlePanels />
 
         </section>
+
+        <CallToAction />
 
 
       </main>
