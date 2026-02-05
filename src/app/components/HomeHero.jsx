@@ -5,17 +5,24 @@ import CursorTrailsLayer from "./CursorTrailsLayer";
 
 const HERO_TEXT =
   "Digital systems that keep revenue visible, trusted, and ready to scale.";
-const TYPING_DELAY_MS = 350;
+const CURSOR_BLINK_DURATION_MS = 1000;
 const TYPING_SPEED_MS = 35;
 
 export default function HomeHero() {
   const [typedText, setTypedText] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
+  const [isTyping, setIsTyping] = useState(false);
+  const [isBlinking, setIsBlinking] = useState(true);
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
     let index = 0;
     let timeoutId;
+
+    const startTyping = () => {
+      setIsBlinking(false);
+      setIsTyping(true);
+      timeoutId = window.setTimeout(typeNext, TYPING_SPEED_MS);
+    };
 
     const typeNext = () => {
       index += 1;
@@ -30,7 +37,7 @@ export default function HomeHero() {
       setIsComplete(true);
     };
 
-    timeoutId = window.setTimeout(typeNext, TYPING_DELAY_MS);
+    timeoutId = window.setTimeout(startTyping, CURSOR_BLINK_DURATION_MS);
 
     return () => {
       window.clearTimeout(timeoutId);
@@ -55,8 +62,11 @@ export default function HomeHero() {
           </div>
           <h1 className="hero-title hero-title-typing" aria-label={HERO_TEXT}>
             <span className="hero-title-text">{typedText}</span>
-            {isTyping ? (
-              <span className="hero-cursor is-typing" aria-hidden="true">
+            {isTyping || isBlinking ? (
+              <span
+                className={`hero-cursor ${isBlinking ? "is-anticipation" : "is-typing"}`}
+                aria-hidden="true"
+              >
                 |
               </span>
             ) : null}
