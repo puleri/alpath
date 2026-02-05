@@ -46,7 +46,7 @@ export default function RippleCircleRow() {
         1
       );
       const progress = Math.min(Math.max(scrollTop / scrollable, 0), 1);
-      setScrollOffset(-110 * progress);
+      setScrollOffset(-250 * progress);
     };
 
     const handleScroll = () => {

@@ -13,9 +13,9 @@ strong {
 
 .container {
   position: relative;
-  max-width: 1320px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 74px;
 }
 
 body {
@@ -110,6 +110,12 @@ body {
   border-radius: 999px;
   transition: border-radius 900ms ease-in-out;
 }
+
+.home {
+  overflow: hidden;
+}
+
+
 
 .hero-video {
   position: relative;
@@ -375,11 +381,11 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 35px;
   height: 18px;
   align-items: flex-end;
-  padding-left: 20px;
-  font-size: 12px;
+  padding-left: 30px;
+  font-size: 14px;
 }
 
 .nav-link {
@@ -525,8 +531,8 @@ body {
 }
 
 .brand-icon-nav {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 .hero-brand-text {
@@ -545,7 +551,7 @@ body {
 }
 
 .brand-text {
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.2px;
 }
 
@@ -779,6 +785,15 @@ body {
   margin: 0;
   font-size: 20px;
   color: #111827;
+}
+
+.home-h2 {
+  font-size: clamp(48px, 4vw, 68px);
+  line-height: 1.2;
+  margin: 0;
+  max-width: 800px;
+  font-weight: 500;
+  text-wrap: balance;
 }
 
 .card-grid {

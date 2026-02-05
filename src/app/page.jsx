@@ -14,10 +14,10 @@ export default function Home() {
         <HomeHero />
         <HeroVideo />
         <RippleCircleRow />
-        
+
         <div className="container">
-          <h2 className="home-section-title">
-            We design and build revenue-driven software for growing businesses
+          <h2 className="home-h2">
+            Designing and building revenue-driven software for growing businesses.
           </h2>
           <div className="home-service-grid">
             <article className="home-service-row">
@@ -75,7 +75,7 @@ export default function Home() {
         </div>
 
         <section className="welcome-wrapper">
-            <ParticlePanels />
+          <ParticlePanels />
 
         </section>
 
