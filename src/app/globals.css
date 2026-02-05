@@ -127,6 +127,78 @@ body {
   display: block;
 }
 
+.cta-section {
+  padding: 40px 0 120px;
+}
+
+.cta-card {
+  width: 100%;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  border-radius: 999px;
+  padding: clamp(32px, 5vw, 56px);
+  transition: border-radius 700ms ease, transform 700ms ease;
+  transform: scaleX(0.92);
+  overflow: hidden;
+}
+
+.cta-card.is-visible {
+  border-radius: 28px;
+  transform: scaleX(1);
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.cta-title {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.15;
+  margin: 0;
+  max-width: 780px;
+  letter-spacing: -0.02em;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cta-button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cta-button-primary {
+  background: #f5f5f5;
+  color: #121212;
+}
+
+.cta-button-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-button-primary:hover {
+  background: #ffffff;
+}
+
+.cta-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 
 .hero-title {
   font-size: clamp(34px, 4.5vw, 70px);
