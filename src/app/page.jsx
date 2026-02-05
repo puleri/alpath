@@ -4,6 +4,7 @@ import HeroVideo from "./components/HeroVideo";
 import NavigationBar from "./components/NavigationBar";
 import ParticlePanels from "./components/ParticlePanels";
 import RippleCircleRow from "./components/RippleCircleRow";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -105,6 +106,7 @@ export default function Home() {
         </section>
 
         <CallToAction />
+        <Footer />
 
 
       </main>
