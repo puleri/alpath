@@ -61,15 +61,19 @@ export default function HomeHero() {
             </span>
           </div>
           <h1 className="hero-title hero-title-typing" aria-label={HERO_TEXT}>
-            <span className="hero-title-text">{typedText}</span>
-            {isTyping || isBlinking ? (
-              <span
-                className={`hero-cursor ${isBlinking ? "is-anticipation" : "is-typing"}`}
-                aria-hidden="true"
-              >
-                |
-              </span>
-            ) : null}
+            <span className="hero-title-frame hero-title-measure" aria-hidden="true">
+              {HERO_TEXT}
+            </span>
+            <span className="hero-title-frame hero-title-reveal" aria-hidden="true">
+              <span className="hero-title-text">{typedText}</span>
+              {isTyping || isBlinking ? (
+                <span
+                  className={`hero-cursor ${isBlinking ? "is-anticipation" : "is-typing"}`}
+                >
+                  |
+                </span>
+              ) : null}
+            </span>
           </h1>
 
           <div className="hero-actions hero-reveal">
