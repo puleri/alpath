@@ -237,6 +237,10 @@ body {
   display: inline-block;
 }
 
+.hero-title-typing.is-typing .hero-title-reveal {
+  animation: hero-title-reveal var(--hero-reveal-duration, 1200ms) linear forwards;
+}
+
 .hero-title-frame {
   display: inline-block;
 }
@@ -252,6 +256,8 @@ body {
   display: inline-block;
   overflow: hidden;
   white-space: normal;
+  max-width: 0;
+  clip-path: inset(0 100% 0 0);
 }
 
 .hero-title-text {
@@ -293,6 +299,17 @@ body {
   50.01%,
   100% {
     opacity: 0.2;
+  }
+}
+
+@keyframes hero-title-reveal {
+  from {
+    max-width: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    max-width: 100%;
+    clip-path: inset(0 0 0 0);
   }
 }
 

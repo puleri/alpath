@@ -6,41 +6,28 @@ import CursorTrailsLayer from "./CursorTrailsLayer";
 const HERO_TEXT =
   "Digital systems that keep revenue visible, trusted, and ready to scale.";
 const CURSOR_BLINK_DURATION_MS = 1000;
-const TYPING_SPEED_MS = 35;
+const REVEAL_SPEED_MS = 35;
+const REVEAL_DURATION_MS = HERO_TEXT.length * REVEAL_SPEED_MS;
 
 export default function HomeHero() {
-  const [typedText, setTypedText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [isBlinking, setIsBlinking] = useState(true);
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    let index = 0;
-    let timeoutId;
-
-    const startTyping = () => {
+    const startTyping = window.setTimeout(() => {
       setIsBlinking(false);
       setIsTyping(true);
-      timeoutId = window.setTimeout(typeNext, TYPING_SPEED_MS);
-    };
+    }, CURSOR_BLINK_DURATION_MS);
 
-    const typeNext = () => {
-      index += 1;
-      setTypedText(HERO_TEXT.slice(0, index));
-
-      if (index < HERO_TEXT.length) {
-        timeoutId = window.setTimeout(typeNext, TYPING_SPEED_MS);
-        return;
-      }
-
+    const finishTyping = window.setTimeout(() => {
       setIsTyping(false);
       setIsComplete(true);
-    };
-
-    timeoutId = window.setTimeout(startTyping, CURSOR_BLINK_DURATION_MS);
+    }, CURSOR_BLINK_DURATION_MS + REVEAL_DURATION_MS);
 
     return () => {
-      window.clearTimeout(timeoutId);
+      window.clearTimeout(startTyping);
+      window.clearTimeout(finishTyping);
     };
   }, []);
 
@@ -60,12 +47,16 @@ export default function HomeHero() {
               <span className="alpath-weight">Alpath</span> Engineering
             </span>
           </div>
-          <h1 className="hero-title hero-title-typing" aria-label={HERO_TEXT}>
+          <h1
+            className={`hero-title hero-title-typing${isTyping ? " is-typing" : ""}`}
+            aria-label={HERO_TEXT}
+            style={{ "--hero-reveal-duration": `${REVEAL_DURATION_MS}ms` }}
+          >
             <span className="hero-title-frame hero-title-measure" aria-hidden="true">
               {HERO_TEXT}
             </span>
             <span className="hero-title-frame hero-title-reveal" aria-hidden="true">
-              <span className="hero-title-text">{typedText}</span>
+              <span className="hero-title-text">{HERO_TEXT}</span>
               {isTyping || isBlinking ? (
                 <span
                   className={`hero-cursor ${isBlinking ? "is-anticipation" : "is-typing"}`}
