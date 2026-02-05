@@ -233,20 +233,19 @@ body {
 }
 
 .hero-title-typing {
-  display: inline-flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 6px;
+  display: inline;
 }
 
 .hero-title-text {
-  display: inline-block;
+  display: inline;
 }
 
 .hero-cursor {
   display: inline-block;
   font-weight: 400;
   opacity: 1;
+  margin-left: 4px;
+  vertical-align: baseline;
 }
 
 .hero-cursor.is-idle {
@@ -271,7 +270,7 @@ body {
   }
   50.01%,
   100% {
-    opacity: 0;
+    opacity: 0.2;
   }
 }
 
