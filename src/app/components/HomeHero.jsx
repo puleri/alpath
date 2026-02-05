@@ -55,12 +55,11 @@ export default function HomeHero() {
           </div>
           <h1 className="hero-title hero-title-typing" aria-label={HERO_TEXT}>
             <span className="hero-title-text">{typedText}</span>
-            <span
-              className={`hero-cursor${isTyping ? " is-typing" : " is-idle"}`}
-              aria-hidden="true"
-            >
-              |
-            </span>
+            {isTyping ? (
+              <span className="hero-cursor is-typing" aria-hidden="true">
+                |
+              </span>
+            ) : null}
           </h1>
 
           <div className="hero-actions hero-reveal">
