@@ -65,17 +65,23 @@ body {
 
 .hero-video-shell {
   position: relative;
-  width: min(900px, 90vw);
-  height: 520px;
+  --shell-width: clamp(280px, 90vw, 900px);
+  --shell-height: calc(var(--shell-width) * 520 / 900);
+  --backdrop-scale: 1.12;
+  --video-min-scale: 0.24;
+  --video-max-scale: 0.92;
+  width: var(--shell-width);
+  height: var(--shell-height);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 900ms ease-in-out;
 }
 
 .hero-video-backdrop {
   position: absolute;
-  width: 1000px;
-  height: 550px;
+  width: calc(var(--shell-width) * var(--backdrop-scale));
+  height: calc(var(--shell-height) * var(--backdrop-scale));
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -87,8 +93,8 @@ body {
 
 .hero-video {
   position: relative;
-  width: 220px;
-  height: 120px;
+  width: calc(var(--shell-width) * var(--video-min-scale));
+  height: calc(var(--shell-height) * var(--video-min-scale));
   border-radius: 999px;
   overflow: hidden;
   transition: all 900ms ease-in-out;
@@ -100,13 +106,18 @@ body {
 }
 
 .hero-video-shell.is-visible .hero-video {
-  width: min(900px, 90vw);
-  height: 480px;
+  width: calc(var(--shell-width) * var(--video-max-scale));
+  height: calc(var(--shell-height) * var(--video-max-scale));
   border-radius: 32px;
+  transform: scale(1.02);
 }
 
 .hero-video-shell.is-visible .hero-video-backdrop {
   border-radius: 32px;
+}
+
+.hero-video-shell.is-visible {
+  transform: scale(1.03);
 }
 
 .hero-video video {
