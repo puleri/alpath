@@ -81,7 +81,7 @@ export default function RippleCircleRow() {
         {circleIcons.map((icon, index) => (
           <div
             className="ripple-row__circle"
-            key={icon.src}
+            key={`${icon.src}-${index}`}
             style={{ "--delay": `${index * 0.45}s` }}
           >
             <img
