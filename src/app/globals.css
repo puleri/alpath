@@ -233,7 +233,25 @@ body {
 }
 
 .hero-title-typing {
-  display: inline;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title-frame {
+  display: inline-block;
+}
+
+.hero-title-measure {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-title-reveal {
+  position: absolute;
+  inset: 0;
+  display: inline-block;
+  overflow: hidden;
+  white-space: normal;
 }
 
 .hero-title-text {
