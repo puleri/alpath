@@ -154,15 +154,15 @@ body {
 }
 
 .cta-section {
-  padding: 40px 0 120px;
+  padding: 40px 10px 120px;
 }
 
 .cta-card {
   width: 100%;
-  background: #0a0a0a;
+  background: #121212;
   color: #f5f5f5;
   border-radius: 999px;
-  padding: clamp(32px, 5vw, 56px);
+  padding: clamp(52px, 10vw, 86px);
   transition: border-radius 700ms ease, transform 700ms ease;
   transform: scaleX(0.92);
   overflow: hidden;

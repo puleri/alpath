@@ -30,7 +30,7 @@ export default function CallToAction() {
 
   return (
     <section className="cta-section">
-      <div className="container">
+      <div className="">
         <div
           ref={cardRef}
           className={`cta-card${hasAnimated ? " is-visible" : ""}`}
