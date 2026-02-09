@@ -1446,11 +1446,11 @@ tbody tr:hover td {
 .footer-wordmark-prefix {
   display: inline-block;
   transform: translateY(0);
-  transition: transform 600ms ease;
+  transition: transform 1200ms ease-in-out;
 }
 
 .footer-wordmark-prefix.is-raised {
-  transform: translateY(-12px);
+  transform: translateY(-20px);
 }
 
 .footer-meta {

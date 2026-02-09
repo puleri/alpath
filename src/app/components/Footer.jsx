@@ -31,7 +31,7 @@ export default function Footer() {
       ([entry]) => {
         setIsRaised(entry.isIntersecting);
       },
-      { threshold: 0.6 }
+      { threshold: 0.5 }
     );
 
     observer.observe(wordmark);
