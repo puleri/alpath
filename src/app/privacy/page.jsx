@@ -9,7 +9,7 @@ export default function PrivacyPage() {
         <header className="privacy-hero">
           <p className="section-kicker">Privacy Policy</p>
           <h1>Privacy Policy</h1>
-          <p className="privacy-effective-date">Effective date: [Insert date]</p>
+          <p className="privacy-effective-date">Effective date: Feb. 15, 2026</p>
           <p>
             This Privacy Policy explains how Alpath Engineering (“Alpath,” “we,”
             or “us”) collects, uses, and protects information when you visit our
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
         <section className="privacy-section">
           <h2>8. Children’s Privacy</h2>
           <p>
-            Our website and services are not directed to children under 13, and
+            Our website and services are not directed to children, and
             we do not knowingly collect personal information from children.
           </p>
         </section>

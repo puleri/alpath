@@ -45,7 +45,7 @@ export default function Footer() {
     <footer className="footer-section">
       <div className="container footer-grid">
         <div className="footer-intro">
-          <p className="footer-kicker">Experience liftoff</p>
+          <p className="footer-kicker">Experience momentum</p>
           <p className="footer-subtitle">
             Keep your revenue systems coordinated, visible, and ready for the
             next stage.

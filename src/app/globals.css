@@ -635,7 +635,7 @@ body {
 .placeholder-image {
   border-radius: 16px;
   border: 1px dashed #cbd5f5;
-  background: #eef2ff;
+  background: #ffffff;
   padding: 18px;
   font-size: 13px;
   color: #4338ca;
@@ -659,7 +659,7 @@ body {
   gap: 16px;
   padding: 32px;
   border-radius: 24px;
-  background: #f8f7f4;
+  background: #ffffff;
   box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
 }
 
