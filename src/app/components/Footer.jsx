@@ -15,6 +15,8 @@ const secondaryLinks = ["Blog", "Pricing", "Use Cases"];
 
 const legalLinks = ["About Alpath", "Client Stories", "Privacy", "Terms"];
 
+const toEndpoint = (label) => `/${label.toLowerCase().replace(/\s+/g, "-")}`;
+
 export default function Footer() {
   const wordmarkRef = useRef(null);
   const [isRaised, setIsRaised] = useState(false);
@@ -52,16 +54,16 @@ export default function Footer() {
         <div className="footer-links">
           <div className="footer-column">
             {primaryLinks.map((link) => (
-              <button key={link} className="footer-link" type="button">
+              <a key={link} className="footer-link" href={toEndpoint(link)}>
                 {link}
-              </button>
+              </a>
             ))}
           </div>
           <div className="footer-column">
             {secondaryLinks.map((link) => (
-              <button key={link} className="footer-link" type="button">
+              <a key={link} className="footer-link" href={toEndpoint(link)}>
                 {link}
-              </button>
+              </a>
             ))}
           </div>
         </div>
@@ -80,9 +82,9 @@ export default function Footer() {
         <span className="footer-brand">Alpath</span>
         <div className="footer-legal">
           {legalLinks.map((link) => (
-            <button key={link} className="footer-legal-link" type="button">
+            <a key={link} className="footer-legal-link" href={toEndpoint(link)}>
               {link}
-            </button>
+            </a>
           ))}
         </div>
       </div>
