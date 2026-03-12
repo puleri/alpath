@@ -9,9 +9,9 @@ const CTA_VARIANTS = {
     secondaryAction: "See recent wins",
   },
   websiteAudit: {
-    title: "Start with a quick evaluation",
-    primaryAction: "Schedule a Website Audit",
-    secondaryAction: "See How It Works",
+    title: "Start with a free evaluation",
+    primaryAction: "Schedule a website audit",
+    secondaryAction: "See how it works",
   },
 };
 
