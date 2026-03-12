@@ -2,9 +2,23 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function CallToAction() {
+const CTA_VARIANTS = {
+  default: {
+    title: "Ready to turn your revenue system into a predictable growth engine?",
+    primaryAction: "Schedule a consult",
+    secondaryAction: "See recent wins",
+  },
+  websiteAudit: {
+    title: "Start with a quick evaluation",
+    primaryAction: "Schedule a Website Audit",
+    secondaryAction: "See How It Works",
+  },
+};
+
+export default function CallToAction({ variant = "default" }) {
   const cardRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const selectedVariant = CTA_VARIANTS[variant] ?? CTA_VARIANTS.default;
 
   useEffect(() => {
     const card = cardRef.current;
@@ -36,15 +50,13 @@ export default function CallToAction() {
           className={`cta-card${hasAnimated ? " is-visible" : ""}`}
         >
           <div className="cta-content">
-            <h2 className="cta-title">
-              Ready to turn your revenue system into a predictable growth engine?
-            </h2>
+            <h2 className="cta-title">{selectedVariant.title}</h2>
             <div className="cta-actions">
               <button className="cta-button cta-button-primary" type="button">
-                Schedule a consult
+                {selectedVariant.primaryAction}
               </button>
               <button className="cta-button cta-button-secondary" type="button">
-                See recent wins
+                {selectedVariant.secondaryAction}
               </button>
             </div>
           </div>
