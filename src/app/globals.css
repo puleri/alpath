@@ -1422,6 +1422,8 @@ tbody tr:hover td {
   color: inherit;
   cursor: pointer;
   text-align: left;
+    text-decoration: none;
+
 }
 
 .footer-link {
