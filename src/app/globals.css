@@ -613,6 +613,133 @@ body {
   display: block;
 }
 
+.web-services-insights-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.architecture-panel,
+.lighthouse-panel {
+  background: #1a1a1a;
+  border-radius: 24px;
+  color: #fff;
+}
+
+.architecture-panel {
+  grid-column: span 2;
+  padding: 46px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 420px;
+}
+
+.architecture-panel h2 {
+  margin: 0;
+  font-size: clamp(40px, 4vw, 72px);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.architecture-panel p {
+  margin: 0;
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(20px, 1.6vw, 24px);
+  line-height: 1.35;
+}
+
+.architecture-panel-dots {
+  margin-top: auto;
+  min-height: 180px;
+  border-radius: 8px;
+  background-image: radial-gradient(circle, #ffffff 2px, transparent 2.6px);
+  background-size: 32px 32px;
+  background-position: 0 0;
+  opacity: 0.85;
+}
+
+.lighthouse-panel {
+  padding: 32px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.lighthouse-score-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 20px;
+}
+
+.lighthouse-score-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lighthouse-score-item h3 {
+  margin: 0;
+  font-size: clamp(16px, 1.45vw, 24px);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.lighthouse-score-circle {
+  width: clamp(82px, 8vw, 126px);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  background: conic-gradient(from 86deg, #1a1a1a calc(100% - var(--score, 99%)), #f3f4f6 0);
+  display: grid;
+  place-items: center;
+}
+
+.lighthouse-score-circle span {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #0f1012;
+  display: grid;
+  place-items: center;
+  font-size: clamp(16px, 1.6vw, 38px);
+}
+
+.lighthouse-progress-wrap {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lighthouse-progress-track {
+  height: 16px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #a3a3a3;
+}
+
+.lighthouse-progress-fill {
+  width: 85%;
+  height: 100%;
+  border-radius: inherit;
+  background: #f5f5f5;
+}
+
+.lighthouse-progress-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lighthouse-progress-caption p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: clamp(12px, 1vw, 16px);
+}
+
 .section-kicker {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -1311,6 +1438,26 @@ tbody tr:hover td {
   .web-services-hero {
     grid-column: auto;
     grid-template-columns: 1fr;
+  }
+
+  .web-services-insights-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .architecture-panel {
+    grid-column: auto;
+    min-height: 360px;
+    padding: 30px 24px;
+  }
+
+  .architecture-panel-dots {
+    min-height: 136px;
+    background-size: 26px 26px;
+  }
+
+  .lighthouse-panel {
+    padding: 24px;
   }
 
   .home-service-row {
