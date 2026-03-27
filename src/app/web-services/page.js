@@ -1,6 +1,13 @@
 import NavigationBar from "../components/NavigationBar";
 
 export default function WebServicesPage() {
+  const lighthouseScores = [
+    { label: "Performance", score: 99 },
+    { label: "SEO", score: 100 },
+    { label: "Best Practices", score: 97 },
+    { label: "Accessibility", score: 99 },
+  ];
+
   return (
     <>
       <NavigationBar />
@@ -29,6 +36,47 @@ export default function WebServicesPage() {
                 alt="Website and mobile UI mockups"
               />
             </div>
+          </div>
+
+          <div className="web-services-insights-row">
+            <article className="architecture-panel">
+              <h2>Modern Architecture</h2>
+              <p>
+                Fast, secure, and scalable web solutions built on cutting-edge
+                stacks that ensure your platform evolves with your traffic.
+              </p>
+              <div
+                className="architecture-panel-dots"
+                aria-hidden="true"
+              />
+            </article>
+
+            <aside className="lighthouse-panel" aria-label="Lighthouse scores">
+              <div className="lighthouse-score-grid">
+                {lighthouseScores.map((item) => (
+                  <div key={item.label} className="lighthouse-score-item">
+                    <h3>{item.label}</h3>
+                    <div
+                      className="lighthouse-score-circle"
+                      style={{ "--score": `${item.score}%` }}
+                      aria-label={`${item.label} score ${item.score}%`}
+                    >
+                      <span>{item.score}%</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="lighthouse-progress-wrap" aria-hidden="true">
+                <div className="lighthouse-progress-track">
+                  <div className="lighthouse-progress-fill" />
+                </div>
+                <div className="lighthouse-progress-caption">
+                  <p>85% Improved Engagement Rate</p>
+                  <p>*A Real Client</p>
+                </div>
+              </div>
+            </aside>
           </div>
 
           <div className="web-services-card">
