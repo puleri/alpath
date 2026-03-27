@@ -49,7 +49,7 @@ export default function Home() {
               </div>
               <div className="home-service-visual">
                 <img
-                  src="/placeholders/revenue-dashboard.svg"
+                  src="/placeholders/revenue-dashboard.png"
                   alt="Revenue system dashboard cards"
                 />
               </div>
@@ -66,18 +66,31 @@ export default function Home() {
               </div>
               <div className="home-service-visual">
                 <img
-                  src="/placeholders/revenue-automation.svg"
+                  src="/placeholders/revenue-system-heading.png"
                   alt="Stacked application screens in perspective"
                 />
               </div>
             </article>
+
+            <article className="home-service-row">
+              <div className="home-service-copy">
+                <h3>Small Projects</h3>
+                <p>
+                  Website builds, migrations, maintenance, and one-off landing pages.
+                </p>
+              </div>
+              <div className="home-service-visual">
+                <img
+                  src="/placeholders/small-projects.svg"
+                  alt="Stacked application screens in perspective"
+                />
+              </div>
+            </article>
+
+
           </div>
         </div>
 
-        <section className="welcome-wrapper">
-          <ParticlePanels />
-
-        </section>
 
         <CallToAction variant="websiteAudit"/>
         <Footer />
