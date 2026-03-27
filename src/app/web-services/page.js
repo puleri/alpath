@@ -79,6 +79,26 @@ export default function WebServicesPage() {
             </aside>
           </div>
 
+          <div className="web-services-third-row" aria-label="Web service value points">
+            <article className="web-services-third-card">
+              <p>
+                Build brand authority through a refined digital experience.
+              </p>
+            </article>
+            <article className="web-services-third-card">
+              <p>
+                Building a custom site means: the sky is the limit. Use your
+                designs or work with our designers.
+              </p>
+            </article>
+            <article className="web-services-third-card">
+              <p>Did you know: Bounce rates reach 90% due to slow sites?</p>
+            </article>
+            <article className="web-services-third-card">
+              <p>Make your site performant. Even on a 5 year old phone.</p>
+            </article>
+          </div>
+
           <div className="web-services-card">
             <h2>Launch &amp; refresh</h2>
             <p>
