@@ -5,13 +5,24 @@ import { useEffect, useRef, useState } from "react";
 const CTA_VARIANTS = {
   default: {
     title: "Ready to turn your revenue system into a predictable growth engine?",
+    description: "",
     primaryAction: "Schedule a consult",
     secondaryAction: "See recent wins",
+    tone: "dark",
   },
   websiteAudit: {
     title: "Start with a free evaluation",
+    description: "",
     primaryAction: "Schedule a website audit",
     secondaryAction: "See how it works",
+    tone: "dark",
+  },
+  webServicesBottom: {
+    title: "Ready to engineer a high-performance web presence?",
+    description:
+      "Our audits reveal the technical bottlenecks preventing your website from scaling.",
+    primaryAction: "Request a Web Audit",
+    tone: "light",
   },
 };
 
@@ -47,17 +58,22 @@ export default function CallToAction({ variant = "default" }) {
       <div className="">
         <div
           ref={cardRef}
-          className={`cta-card${hasAnimated ? " is-visible" : ""}`}
+          className={`cta-card cta-card-${selectedVariant.tone}${hasAnimated ? " is-visible" : ""}`}
         >
           <div className="cta-content">
             <h2 className="cta-title">{selectedVariant.title}</h2>
+            {selectedVariant.description ? (
+              <p className="cta-description">{selectedVariant.description}</p>
+            ) : null}
             <div className="cta-actions">
               <button className="cta-button cta-button-primary" type="button">
                 {selectedVariant.primaryAction}
               </button>
-              <button className="cta-button cta-button-secondary" type="button">
-                {selectedVariant.secondaryAction}
-              </button>
+              {selectedVariant.secondaryAction ? (
+                <button className="cta-button cta-button-secondary" type="button">
+                  {selectedVariant.secondaryAction}
+                </button>
+              ) : null}
             </div>
           </div>
         </div>

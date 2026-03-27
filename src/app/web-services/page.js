@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import CallToAction from "../components/CallToAction";
 import NavigationBar from "../components/NavigationBar";
 
 const SCORE_ANIMATION_MS = 1700;
@@ -253,6 +254,7 @@ export default function WebServicesPage() {
             </div>
           </div>
         </section>
+        <CallToAction variant="webServicesBottom" />
       </main>
     </>
   );
