@@ -583,12 +583,10 @@ body {
 
 .web-services-hero {
   grid-column: 1 / span 2;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 32px;
-  border-radius: 24px;
-  background: #f5f5f4;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+  align-items: center;
 }
 
 .web-services-hero h1 {
@@ -601,6 +599,18 @@ body {
 .web-services-hero p {
   margin: 0;
   color: #2b2b2b;
+}
+
+.web-services-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.web-services-hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .section-kicker {
@@ -616,10 +626,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 24px;
-  border-radius: 20px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
 }
 
 .web-services-card h2 {
@@ -633,12 +639,9 @@ body {
 }
 
 .placeholder-image {
-  border-radius: 16px;
-  border: 1px dashed #cbd5f5;
-  background: #ffffff;
-  padding: 18px;
+  padding: 0;
   font-size: 13px;
-  color: #4338ca;
+  color: #6b7280;
   min-height: 96px;
   display: flex;
   align-items: center;
@@ -1307,6 +1310,7 @@ tbody tr:hover td {
 
   .web-services-hero {
     grid-column: auto;
+    grid-template-columns: 1fr;
   }
 
   .home-service-row {

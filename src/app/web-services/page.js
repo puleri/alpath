@@ -7,18 +7,27 @@ export default function WebServicesPage() {
       <main className="web-services-page">
         <section className="web-services-grid">
           <div className="web-services-hero">
-            <p className="section-kicker">Web services</p>
-            <h1>
-              Your website, finally working as hard as your business.
-            </h1>
-            <p>
-              Placeholder copy: Think of this as the short, confident promise that
-              tells visitors exactly how you keep their site fast, reliable, and
-              ready to turn clicks into customers.
-            </p>
-            <div className="placeholder-image">
-              Placeholder image: A modern storefront glowing at dusk, representing
-              a website that stays open for business 24/7.
+            <div className="web-services-hero-copy">
+              <h1>Your website, finally working as hard as your business</h1>
+              <p>
+                We build high-performance, conversion-optimized web platforms
+                that integrate seamlessly with your core engineering and revenue
+                systems.
+              </p>
+              <div className="hero-actions">
+                <button className="primary-button" type="button">
+                  Request a Web Audit
+                </button>
+                <button className="secondary-button" type="button">
+                  View Expertise
+                </button>
+              </div>
+            </div>
+            <div className="web-services-hero-visual">
+              <img
+                src="/placeholders/small-projects.svg"
+                alt="Website and mobile UI mockups"
+              />
             </div>
           </div>
 
