@@ -16,10 +16,10 @@ export default function NavigationBar() {
               Services <span className="nav-dropdown-icon">▾</span>
             </a>
             <div className="nav-dropdown-menu" role="menu">
-              <a className="nav-dropdown-link" href="#revenue-systems" role="menuitem">
+              <a className="nav-dropdown-link" href="/services/revenue-automation" role="menuitem">
                 Revenue Systems
               </a>
-              <a className="nav-dropdown-link" href="#integrations" role="menuitem">
+              <a className="nav-dropdown-link" href="/docs/business-intelligence" role="menuitem">
                 Integrations
               </a>
               <a className="nav-dropdown-link" href="/services/web-services" role="menuitem">
@@ -27,17 +27,16 @@ export default function NavigationBar() {
               </a>
             </div>
           </div>
-          <a className="nav-link" href="#work">
-            Work
+          <a className="nav-link" href="/case-studies">
+            Case Studies
           </a>
-          <a className="nav-link" href="#insights">
-            Insights
+          <a className="nav-link" href="/about">
+            About
           </a>
         </nav>
         <button className="contact-button" type="button">
           Contact us <span className="contact-icon-nav">→</span>
         </button>
-
       </div>
     </header>
   );
