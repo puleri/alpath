@@ -1993,7 +1993,7 @@ tbody tr:hover td {
 }
 
 .revenue-automation-page {
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 45%, #f7f7fb 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #eef2ff 45%, #f7f7fb 100%);
   color: #111827;
   min-height: 100vh;
   padding: 6.5rem 0 5rem;
@@ -2048,6 +2048,22 @@ tbody tr:hover td {
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
   padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.revenue-hero::after,
+.revenue-section::after,
+.revenue-conversion::after {
+  content: "";
+  position: absolute;
+  top: 0.95rem;
+  right: 0.95rem;
+  width: 34px;
+  height: 34px;
+  opacity: 0.06;
+  pointer-events: none;
+  background: center/contain no-repeat url("/alpath/sign.svg");
 }
 
 .revenue-hero {
@@ -2179,6 +2195,11 @@ tbody tr:hover td {
 
 .revenue-doc-card {
   text-decoration: none;
+  color: #111827;
+}
+
+.revenue-doc-card:visited {
+  color: #111827;
 }
 
 .revenue-doc-card:hover {
