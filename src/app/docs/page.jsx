@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import NavigationBar from "../components/NavigationBar";
 
 const systems = [
   {
@@ -178,7 +176,6 @@ function DocsCTA() {
 export default function DocsHubPage() {
   return (
     <>
-      <NavigationBar />
       <main className="docs-page">
         <DocsHero />
         <SystemCardGrid />
@@ -187,7 +184,6 @@ export default function DocsHubPage() {
         <SystemFlowDiagram />
         <DocsCTA />
       </main>
-      <Footer />
     </>
   );
 }

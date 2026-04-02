@@ -1,4 +1,3 @@
-import NavigationBar from "../components/NavigationBar";
 
 const serviceLayers = [
   {
@@ -91,7 +90,6 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <NavigationBar />
       <main className="services-page">
         <section className="services-hero container">
           <div className="services-eyebrow-wrap">

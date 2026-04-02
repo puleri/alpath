@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import NavigationBar from "../../components/NavigationBar";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/caseStudies";
 
 export function generateStaticParams() {
@@ -28,7 +27,6 @@ export default function CaseStudyDetailPage({ params }) {
 
   return (
     <>
-      <NavigationBar />
       <main className="case-study-detail-page container">
         <header className="case-study-detail-hero">
           <p className="case-studies-eyebrow">{study.industry}</p>

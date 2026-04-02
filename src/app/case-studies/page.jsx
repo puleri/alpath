@@ -1,4 +1,3 @@
-import NavigationBar from "../components/NavigationBar";
 import { caseStudies } from "@/lib/caseStudies";
 
 export const metadata = {
@@ -10,7 +9,6 @@ export const metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
-      <NavigationBar />
       <main className="case-studies-page container">
         <header className="case-studies-hero">
           <p className="case-studies-eyebrow">Case Studies</p>

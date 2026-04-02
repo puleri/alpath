@@ -1,4 +1,3 @@
-import NavigationBar from "../../components/NavigationBar";
 
 const problemPoints = [
   "Leads come in, but nothing happens next",
@@ -118,7 +117,6 @@ const faqItems = [
 export default function RevenueAutomationPage() {
   return (
     <>
-      <NavigationBar />
       <main className="revenue-automation-page">
         <div className="revenue-automation-layout">
           <aside className="revenue-sticky-rail" aria-label="Page navigation and actions">

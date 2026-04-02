@@ -1,4 +1,3 @@
-import NavigationBar from "../components/NavigationBar";
 
 export const metadata = {
   title: "About | Alpath Engineering",
@@ -27,7 +26,6 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
-      <NavigationBar />
       <main className="about-page container">
         <header className="about-hero">
           <p className="case-studies-eyebrow">About</p>
