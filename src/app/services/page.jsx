@@ -36,7 +36,7 @@ const services = [
       "You’re preparing for growth but lack confidence in your foundation",
     ],
     cta: "Get a System Audit",
-    href: "#start-with-audit",
+    href: "/contact",
   },
   {
     number: "2",
@@ -83,7 +83,7 @@ const services = [
       "You want to scale with confidence",
     ],
     cta: "Build Executive Dashboard",
-    href: "#start-with-audit",
+    href: "/contact",
   },
 ];
 
@@ -191,7 +191,7 @@ export default function ServicesPage() {
         <section className="services-final-cta container">
           <h2>Understand your system. Then improve it.</h2>
           <div className="services-final-links">
-            <a className="primary-button" href="#start-with-audit">
+            <a className="primary-button" href="/contact">
               → Start with an Audit
             </a>
             <a className="secondary-button" href="/docs">

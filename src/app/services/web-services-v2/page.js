@@ -130,12 +130,12 @@ export default function WebServicesPage() {
                 systems.
               </p>
               <div className="hero-actions">
-                <button className="primary-button" type="button">
+                <a className="primary-button" href="/contact">
                   Request a Web Audit
-                </button>
-                <button className="secondary-button" type="button">
+                </a>
+                <a className="secondary-button" href="/docs/web-consulting">
                   View Expertise
-                </button>
+                </a>
               </div>
             </div>
             <div className="web-services-hero-visual">

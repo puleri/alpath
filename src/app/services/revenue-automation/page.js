@@ -120,7 +120,7 @@ export default function RevenueAutomationPage() {
       <main className="revenue-automation-page">
         <div className="revenue-automation-layout">
           <aside className="revenue-sticky-rail" aria-label="Page navigation and actions">
-            <a className="primary-button" href="#conversion">
+            <a className="primary-button" href="/contact">
               → Design My Revenue System
             </a>
             <nav>
@@ -142,7 +142,7 @@ export default function RevenueAutomationPage() {
                   automatically—so opportunities don’t slip through the cracks.
                 </p>
                 <div className="revenue-hero-actions">
-                  <a className="primary-button" href="#conversion">
+                  <a className="primary-button" href="/contact">
                     → Design My Revenue System
                   </a>
                   <a className="secondary-button" href="/docs">

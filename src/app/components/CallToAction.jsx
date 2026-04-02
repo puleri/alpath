@@ -8,6 +8,8 @@ const CTA_VARIANTS = {
     description: "",
     primaryAction: "Schedule a consult",
     secondaryAction: "See recent wins",
+    primaryHref: "/contact",
+    secondaryHref: "/case-studies",
     tone: "dark",
   },
   websiteAudit: {
@@ -15,6 +17,8 @@ const CTA_VARIANTS = {
     description: "",
     primaryAction: "Schedule a website audit",
     secondaryAction: "See how it works",
+    primaryHref: "/contact",
+    secondaryHref: "/services/web-services",
     tone: "dark",
   },
   webServicesBottom: {
@@ -22,6 +26,7 @@ const CTA_VARIANTS = {
     description:
       "Our audits reveal the technical bottlenecks preventing your website from scaling.",
     primaryAction: "Request a Web Audit",
+    primaryHref: "/contact",
     tone: "light",
   },
 };
@@ -66,13 +71,13 @@ export default function CallToAction({ variant = "default" }) {
               <p className="cta-description">{selectedVariant.description}</p>
             ) : null}
             <div className="cta-actions">
-              <button className="cta-button cta-button-primary" type="button">
+              <a className="cta-button cta-button-primary" href={selectedVariant.primaryHref}>
                 {selectedVariant.primaryAction}
-              </button>
+              </a>
               {selectedVariant.secondaryAction ? (
-                <button className="cta-button cta-button-secondary" type="button">
+                <a className="cta-button cta-button-secondary" href={selectedVariant.secondaryHref}>
                   {selectedVariant.secondaryAction}
-                </button>
+                </a>
               ) : null}
             </div>
           </div>
