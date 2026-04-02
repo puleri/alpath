@@ -77,12 +77,12 @@ export default function HomeHero() {
           </h1>
 
           <div className="hero-actions hero-reveal">
-            <button className="primary-button" type="button">
+            <a className="primary-button" href="/contact">
               Book a strategy call
-            </button>
-            <button className="secondary-button" type="button">
+            </a>
+            <a className="secondary-button" href="/docs">
               Explore the playbook
-            </button>
+            </a>
           </div>
         </div>
       </section>
