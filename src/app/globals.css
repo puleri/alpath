@@ -154,13 +154,14 @@ body {
 }
 
 .cta-section {
-  padding: 40px 10px 120px;
+  margin-top: 60px;
 }
 
 .cta-card {
   width: 100%;
+  text-align: center;
   border-radius: 999px;
-  padding: clamp(202px, 25vw, 206px) 60px;
+  padding: clamp(48px, 9vw, 92px);
   transition: border-radius 700ms ease, transform 700ms ease;
   transform: scaleX(0.92);
   overflow: hidden;
@@ -172,11 +173,10 @@ body {
 }
 
 .cta-card-light {
-  background: #dfdfdf;
+  background: #F7F7F7;
   color: #111111;
-  border: 1px solid #c9c9c9;
+  border: 1px solid #CDCDCD;
   border-radius: 24px;
-  padding: clamp(48px, 9vw, 92px) clamp(20px, 4vw, 64px);
   transform: none;
 }
 
@@ -197,25 +197,25 @@ body {
 }
 
 .cta-title {
+  text-wrap: balance;
   font-size: clamp(30px, 4vw, 48px);
   line-height: 1.15;
   margin: 0;
-  max-width: 780px;
   letter-spacing: -0.02em;
 }
 
 .cta-description {
   margin: 0;
-  font-size: clamp(18px, 1.7vw, 34px);
+  font-size: clamp(18px, 1.8vw, 36px);
   line-height: 1.35;
 }
 
 .cta-card-light .cta-title {
-  max-width: 800px;
+  
 }
 
 .cta-card-light .cta-description {
-  font-size: clamp(20px, 1.8vw, 34px);
+  font-size: clamp(14px, 1vw, 24px);
   max-width: 860px;
 }
 
@@ -232,7 +232,7 @@ body {
   padding: 12px 28px;
   border-radius: 999px;
   font-size: 15px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -258,15 +258,18 @@ body {
 }
 
 .cta-card-light .cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 16px;
 }
 
 .cta-card-light .cta-button-primary {
   background: #111111;
   color: #f5f5f5;
-  min-width: 246px;
-  min-height: 68px;
-  font-size: clamp(18px, 2.1vw, 34px);
+  min-width: 206px;
+  min-height: 48px;
+  font-size: clamp(14px, 1vw, 16px);
   font-weight: 400;
   letter-spacing: -0.02em;
 }
@@ -635,8 +638,10 @@ body {
   grid-column: 1 / span 2;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 28px;
+  gap: 40px;
+  margin-bottom: 60px;
   align-items: center;
+  grid-row-end: auto
 }
 
 .web-services-hero h1 {
@@ -658,15 +663,28 @@ body {
 }
 
 .web-services-hero-visual img {
-  width: 100%;
+  margin-left: 10%;
+  width: 90%;
   height: auto;
+  border-radius: 15px;
   display: block;
+  filter: drop-shadow(0 12px 4px rgba(15, 23, 42, 0.06));
+}
+
+/* on tabled and mobile the margin goes away */
+@media (max-width: 768px) {
+
+  
+  .web-services-hero-visual img {
+    margin-left: 25%;
+    width: 50%;
+  }
 }
 
 .web-services-insights-row {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -678,8 +696,8 @@ body {
 }
 
 .architecture-panel {
-  grid-column: span 2;
-  padding: 46px 48px 40px;
+  grid-column: span 3;
+  padding: 70px 60px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -688,7 +706,7 @@ body {
 
 .architecture-panel h2 {
   margin: 0;
-  font-size: clamp(40px, 4vw, 72px);
+  font-size: clamp(20px, 3vw, 48px);
   letter-spacing: -0.02em;
   line-height: 1.05;
 }
@@ -697,48 +715,57 @@ body {
   margin: 0;
   max-width: 560px;
   color: rgba(255, 255, 255, 0.82);
-  font-size: clamp(20px, 1.6vw, 24px);
+  font-size: clamp(18px, 1vw, 22px);
   line-height: 1.35;
 }
 
 .architecture-panel-dots {
   margin-top: auto;
-  min-height: 180px;
+  min-height: 140px;
+  margin: 0 -10px;
   border-radius: 8px;
-  background-image: radial-gradient(circle, #ffffff 2px, transparent 2.6px);
+  margin: none;
+  background-image: radial-gradient(circle, #ffffff 2px, transparent 2px);
   background-size: 32px 32px;
   background-position: 0 0;
+  background-repeat: repeat;
   opacity: 0.85;
 }
 
 .lighthouse-panel {
-  padding: 32px 28px 24px;
+    grid-column: span 2;
+
+  padding: 60px 40px 50px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 38px;
 }
 
 .lighthouse-score-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px 20px;
+  gap: 44px 90px;
 }
 
 .lighthouse-score-item {
   display: flex;
+  text-align: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: end;
   gap: 12px;
 }
 
 .lighthouse-score-item h3 {
   margin: 0;
-  font-size: clamp(16px, 1.45vw, 24px);
+  width: 100%;
+  font-size: clamp(14px, 1.3vw, 18px);
   line-height: 1.1;
   font-weight: 500;
 }
 
 .lighthouse-score-circle {
-  width: clamp(82px, 8vw, 126px);
+  width: clamp(52px, 5vw, 90px);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   background: conic-gradient(from 86deg, #1a1a1a calc(100% - var(--score, 0%)), #f3f4f6 0);
@@ -789,16 +816,15 @@ body {
 .lighthouse-progress-caption p {
   margin: 0;
   color: rgba(255, 255, 255, 0.94);
-  font-size: clamp(12px, 1vw, 16px);
+  font-size: clamp(10px, 1vw, 10px);
 }
 
 .section-kicker {
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   color: #4b4b4b;
-  margin: 0;
 }
 
 .web-services-card {
@@ -808,16 +834,17 @@ body {
 }
 
 .web-services-third-row {
+  margin-top: 30px;
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
+  gap: 100px;
 }
 
 .web-services-third-card {
   min-height: 340px;
   border-radius: 14px;
-  background: #cecece;
+  background: #D9D9D9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -827,8 +854,8 @@ body {
 .web-services-third-card p {
   margin: 0;
   text-align: center;
-  font-size: clamp(22px, 1.7vw, 36px);
-  line-height: 1.35;
+  font-size: clamp(18px, 1vw, 26px);
+  line-height: 1.55;
   color: #1a1a1a;
 }
 
