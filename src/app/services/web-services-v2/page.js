@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import CallToAction from "../../components/CallToAction";
+import { caseStudies } from "@/lib/caseStudies";
 
 const SCORE_ANIMATION_MS = 1700;
 const PROGRESS_ANIMATION_MS = 1800;
@@ -63,6 +64,7 @@ export default function WebServicesPage() {
   const hasAnimatedRef = useRef(false);
   const [animateMetrics, setAnimateMetrics] = useState(false);
   const [engagementScore, setEngagementScore] = useState(0);
+  const featuredUseCases = caseStudies.slice(0, 3);
 
   useEffect(() => {
     const metricNode = metricsRef.current;
@@ -201,6 +203,48 @@ export default function WebServicesPage() {
               <p>Make your site performant. Even on a 5 year old phone.</p>
             </article>
           </div>
+
+          <section aria-label="Web service use cases and proof">
+            <article className="web-services-card">
+              <h2>Proven use cases</h2>
+              <p>
+                We apply the same performance and conversion architecture across
+                growth-stage teams, regional operators, and service businesses.
+                These examples show measurable outcomes tied directly to system
+                decisions.
+              </p>
+              <ul>
+                {featuredUseCases.map((study) => (
+                  <li key={study.slug}>
+                    <a className="services-cta-link" href={`/case-studies/${study.slug}`}>
+                      → {study.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a className="services-cta-link" href="/case-studies">
+                → Browse all case studies
+              </a>
+            </article>
+
+            <article className="web-services-card">
+              <h2>Trust and execution standards</h2>
+              <p>
+                Every engagement is grounded in measurable KPIs, transparent
+                implementation milestones, and documentation your internal team
+                can maintain after launch.
+              </p>
+              <ul>
+                <li>Technical audits before build to reduce rework risk</li>
+                <li>Core Web Vitals and Lighthouse targets tracked per release</li>
+                <li>Conversion event instrumentation for full-funnel visibility</li>
+                <li>Handoff documentation for developers and operators</li>
+              </ul>
+              <a className="services-cta-link" href="/docs">
+                → Review technical documentation
+              </a>
+            </article>
+          </section>
 
         </section>
         <CallToAction variant="webServicesBottom" />
