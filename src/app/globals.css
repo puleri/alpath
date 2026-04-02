@@ -1968,8 +1968,8 @@ tbody tr:hover td {
 }
 
 .revenue-automation-page {
-  background: radial-gradient(circle at top, #161722 0%, #080910 56%, #050508 100%);
-  color: #f6f8ff;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 45%, #f7f7fb 100%);
+  color: #111827;
   min-height: 100vh;
   padding: 6.5rem 0 5rem;
 }
@@ -1986,9 +1986,10 @@ tbody tr:hover td {
   position: sticky;
   top: 88px;
   align-self: start;
-  border: 1px solid rgba(140, 148, 174, 0.32);
+  border: 1px solid rgba(148, 163, 184, 0.38);
   border-radius: 1rem;
-  background: rgba(14, 17, 31, 0.76);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
   padding: 1rem;
   display: grid;
   gap: 1rem;
@@ -2000,13 +2001,13 @@ tbody tr:hover td {
 }
 
 .revenue-sticky-rail nav a {
-  color: #b8bfda;
+  color: #334155;
   text-decoration: none;
   font-size: 0.95rem;
 }
 
 .revenue-sticky-rail nav a:hover {
-  color: #ffffff;
+  color: #0f172a;
 }
 
 .revenue-automation-content {
@@ -2017,9 +2018,10 @@ tbody tr:hover td {
 .revenue-hero,
 .revenue-section,
 .revenue-conversion {
-  border: 1px solid rgba(140, 148, 174, 0.32);
+  border: 1px solid rgba(148, 163, 184, 0.38);
   border-radius: 1rem;
-  background: rgba(13, 17, 34, 0.8);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
   padding: 1.5rem;
 }
 
@@ -2031,7 +2033,7 @@ tbody tr:hover td {
 }
 
 .revenue-eyebrow {
-  color: #8f96b2;
+  color: #475569;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.8rem;
@@ -2046,7 +2048,7 @@ tbody tr:hover td {
 }
 
 .revenue-hero p {
-  color: #d3d8eb;
+  color: #334155;
   margin: 0;
   max-width: 56ch;
 }
@@ -2086,15 +2088,15 @@ tbody tr:hover td {
 .revenue-module-card,
 .revenue-fit-grid article,
 .revenue-doc-card {
-  border: 1px solid rgba(153, 162, 191, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.36);
   border-radius: 0.8rem;
-  background: rgba(22, 27, 48, 0.68);
+  background: rgba(248, 250, 252, 0.95);
   padding: 1rem;
 }
 
 .revenue-closing-line,
 .revenue-why-line {
-  color: #e9ecf8;
+  color: #0f172a;
   margin-top: 1rem;
   font-weight: 600;
 }
@@ -2120,14 +2122,14 @@ tbody tr:hover td {
 .revenue-section li,
 .revenue-conversion p,
 .revenue-faq-list p {
-  color: #d3d8eb;
+  color: #334155;
   margin: 0;
 }
 
 .revenue-flow-step small {
   display: block;
   margin-top: 0.65rem;
-  color: #9ea6c8;
+  color: #64748b;
 }
 
 .revenue-compare-grid {
@@ -2137,10 +2139,10 @@ tbody tr:hover td {
 }
 
 .revenue-compare-grid article {
-  border: 1px solid rgba(153, 162, 191, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.36);
   border-radius: 0.8rem;
   padding: 1rem;
-  background: rgba(22, 27, 48, 0.68);
+  background: rgba(248, 250, 252, 0.95);
 }
 
 .revenue-example-list {
@@ -2155,7 +2157,7 @@ tbody tr:hover td {
 }
 
 .revenue-doc-card:hover {
-  border-color: rgba(197, 206, 240, 0.58);
+  border-color: rgba(59, 130, 246, 0.45);
 }
 
 .revenue-conversion {
@@ -2173,10 +2175,10 @@ tbody tr:hover td {
 }
 
 .revenue-faq-list details {
-  border: 1px solid rgba(153, 162, 191, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.36);
   border-radius: 0.8rem;
   padding: 0.85rem 1rem;
-  background: rgba(22, 27, 48, 0.68);
+  background: rgba(248, 250, 252, 0.95);
 }
 
 .revenue-faq-list summary {
