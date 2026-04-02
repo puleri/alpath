@@ -34,9 +34,9 @@ export default function NavigationBar() {
             About
           </a>
         </nav>
-        <button className="contact-button" type="button">
+        <a className="contact-button" href="/contact">
           Contact us <span className="contact-icon-nav">→</span>
-        </button>
+        </a>
       </div>
     </header>
   );

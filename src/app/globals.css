@@ -537,8 +537,8 @@ html {
   gap: 8px;
   font-size: 12px;
   opacity: 0.9;
-              margin-left: auto;
-
+  margin-left: auto;
+  text-decoration: none;
 }
 
 .primary-button,
@@ -2669,6 +2669,161 @@ tbody tr:hover td {
   margin: 0 0 10px;
 }
 
+.contact-page {
+  min-height: 100vh;
+  padding: 6.5rem 0 5rem;
+  background:
+    radial-gradient(circle at 10% 10%, #f6f8fc 0%, transparent 35%),
+    radial-gradient(circle at 90% 8%, #eef2ff 0%, transparent 26%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.contact-shell {
+  max-width: 1040px;
+}
+
+.contact-hero {
+  margin-bottom: 1.5rem;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+}
+
+.contact-hero p {
+  max-width: 64ch;
+  line-height: 1.7;
+  color: #3d3d3d;
+}
+
+.contact-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-bento-card {
+  border: 1px solid var(--bento-border);
+  border-radius: 22px;
+  padding: 1.4rem;
+  background: linear-gradient(160deg, #ffffff 0%, var(--bento-surface) 100%);
+  box-shadow: var(--bento-shadow);
+}
+
+.contact-bento-intro {
+  grid-column: span 4;
+}
+
+.contact-bento-form-wrap {
+  grid-column: span 8;
+}
+
+.contact-bento-prep {
+  grid-column: span 12;
+}
+
+.contact-bento-card h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
+}
+
+.contact-bento-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.contact-direct-line {
+  margin: 1rem 0 0;
+  color: #323232;
+}
+
+.contact-direct-line a {
+  color: #111111;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact-form-row {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact-form-row label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3b3b3b;
+}
+
+.contact-form-row input,
+.contact-form-row textarea {
+  width: 100%;
+  border: 1px solid #d8dce3;
+  border-radius: 12px;
+  padding: 0.72rem 0.85rem;
+  font: inherit;
+  color: #191919;
+  background: #ffffff;
+}
+
+.contact-form-row textarea {
+  resize: vertical;
+  min-height: 128px;
+}
+
+.contact-form-row input:focus,
+.contact-form-row textarea:focus {
+  outline: 2px solid rgba(58, 103, 230, 0.25);
+  outline-offset: 1px;
+  border-color: rgba(58, 103, 230, 0.5);
+}
+
+.contact-submit {
+  margin-top: 0.25rem;
+  width: fit-content;
+}
+
+.thank-you-page {
+  min-height: 80vh;
+  padding: 8rem 0 5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.thank-you-card {
+  max-width: 760px;
+  border: 1px solid var(--bento-border);
+  border-radius: 24px;
+  padding: clamp(1.4rem, 4vw, 2.25rem);
+  background: linear-gradient(160deg, #ffffff 0%, var(--bento-surface) 100%);
+  box-shadow: var(--bento-shadow);
+}
+
+.thank-you-card h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: -0.02em;
+}
+
+.thank-you-card p {
+  color: #3a3a3a;
+  line-height: 1.7;
+}
+
+.thank-you-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
 @media (max-width: 900px) {
   .services-cards,
   .case-studies-grid {
@@ -2689,5 +2844,15 @@ tbody tr:hover td {
   .case-study-before-after,
   .about-principles-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-bento-intro,
+  .contact-bento-form-wrap,
+  .contact-bento-prep {
+    grid-column: auto;
   }
 }
