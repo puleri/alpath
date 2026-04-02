@@ -12,9 +12,9 @@ export default function NavigationBar() {
         </a>
         <nav className="nav-links">
           <div className="nav-item nav-dropdown">
-            <button className="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true">
+            <a className="nav-link nav-dropdown-toggle" href="/services" aria-haspopup="true">
               Services <span className="nav-dropdown-icon">▾</span>
-            </button>
+            </a>
             <div className="nav-dropdown-menu" role="menu">
               <a className="nav-dropdown-link" href="#revenue-systems" role="menuitem">
                 Revenue Systems
@@ -22,7 +22,7 @@ export default function NavigationBar() {
               <a className="nav-dropdown-link" href="#integrations" role="menuitem">
                 Integrations
               </a>
-              <a className="nav-dropdown-link" href="/web-services" role="menuitem">
+              <a className="nav-dropdown-link" href="/services/web-services" role="menuitem">
                 Web Strategy
               </a>
             </div>

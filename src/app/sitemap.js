@@ -12,13 +12,26 @@ function getBaseUrl() {
 
 export default function sitemap() {
   const baseUrl = getBaseUrl();
+  const lastModified = new Date();
 
   return [
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/web-services`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.85,
     },
   ];
 }
