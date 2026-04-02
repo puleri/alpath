@@ -1,8 +1,7 @@
 import Footer from "../../components/Footer";
 import NavigationBar from "../../components/NavigationBar";
-import { webConsultingDocLinks } from "../../../lib/webConsultingDocs";
 
-export default function DocsDetailTemplate({ doc }) {
+export default function DocsDetailTemplate({ doc, sectionTitle, docLinks }) {
   return (
     <>
       <NavigationBar />
@@ -41,9 +40,9 @@ export default function DocsDetailTemplate({ doc }) {
         </section>
 
         <section className="docs-block container docs-cta-shell">
-          <h2>Web Consulting Documentation</h2>
+          <h2>{sectionTitle}</h2>
           <div className="docs-detail-link-list">
-            {webConsultingDocLinks.map((link) => (
+            {docLinks.map((link) => (
               <a key={link.href} href={link.href}>
                 → {link.label}
               </a>

@@ -1,6 +1,12 @@
 import DocsDetailTemplate from "../../_components/DocsDetailTemplate";
-import { webConsultingDocs } from "../../../../lib/webConsultingDocs";
+import { webConsultingDocLinks, webConsultingDocs } from "../../../../lib/webConsultingDocs";
 
 export default function ConversionPrinciplesPage() {
-  return <DocsDetailTemplate doc={webConsultingDocs.conversionPrinciples} />;
+  return (
+    <DocsDetailTemplate
+      doc={webConsultingDocs.conversionPrinciples}
+      sectionTitle="Web Consulting Documentation"
+      docLinks={webConsultingDocLinks}
+    />
+  );
 }
