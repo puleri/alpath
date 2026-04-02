@@ -91,7 +91,9 @@ export default function ServicesPage() {
       <NavigationBar />
       <main className="services-page">
         <section className="services-hero container">
-          <p className="services-eyebrow">Services Hub</p>
+          <div className="services-eyebrow-wrap">
+            <p className="services-eyebrow">Services Hub</p>
+          </div>
           <h1>Systems that turn your digital presence into a revenue engine</h1>
           <p className="services-subheadline">
             We design and build integrated systems that attract, convert, and
