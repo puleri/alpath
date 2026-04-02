@@ -1,6 +1,12 @@
 import DocsDetailTemplate from "../_components/DocsDetailTemplate";
-import { webConsultingDocs } from "../../../lib/webConsultingDocs";
+import { webConsultingDocLinks, webConsultingDocs } from "../../../lib/webConsultingDocs";
 
 export default function WebConsultingDocsPage() {
-  return <DocsDetailTemplate doc={webConsultingDocs.overview} />;
+  return (
+    <DocsDetailTemplate
+      doc={webConsultingDocs.overview}
+      sectionTitle="Web Consulting Documentation"
+      docLinks={webConsultingDocLinks}
+    />
+  );
 }
