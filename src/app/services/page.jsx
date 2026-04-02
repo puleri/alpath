@@ -18,6 +18,7 @@ const serviceLayers = [
 const services = [
   {
     number: "1",
+    id: "web-consulting",
     title: "Web Consulting",
     kicker: "Diagnose and strengthen your foundation",
     intro:
@@ -40,6 +41,7 @@ const services = [
   },
   {
     number: "2",
+    id: "revenue-automation",
     title: "Revenue Automation",
     kicker: "Turn traffic into consistent revenue",
     intro:
@@ -59,10 +61,11 @@ const services = [
       "Your funnel feels fragmented",
     ],
     cta: "Design My Revenue System",
-    href: "#start-with-audit",
+    href: "/services/revenue-automation",
   },
   {
     number: "3",
+    id: "business-intelligence",
     title: "Business Intelligence",
     kicker: "Gain clarity and control at the executive level",
     intro:
@@ -131,7 +134,7 @@ export default function ServicesPage() {
 
         <section className="services-cards container" aria-label="Core services">
           {services.map((service) => (
-            <article key={service.title} className="service-card">
+            <article key={service.title} id={service.id} className="service-card">
               <p className="service-number">{service.number}. {service.title}</p>
               <h3>{service.kicker}</h3>
               <p>{service.intro}</p>

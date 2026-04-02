@@ -1892,3 +1892,245 @@ tbody tr:hover td {
   justify-content: center;
   gap: 0.75rem;
 }
+
+.revenue-automation-page {
+  background: radial-gradient(circle at top, #161722 0%, #080910 56%, #050508 100%);
+  color: #f6f8ff;
+  min-height: 100vh;
+  padding: 6.5rem 0 5rem;
+}
+
+.revenue-automation-layout {
+  width: min(1200px, calc(100% - 3rem));
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.revenue-sticky-rail {
+  position: sticky;
+  top: 88px;
+  align-self: start;
+  border: 1px solid rgba(140, 148, 174, 0.32);
+  border-radius: 1rem;
+  background: rgba(14, 17, 31, 0.76);
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.revenue-sticky-rail nav {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.revenue-sticky-rail nav a {
+  color: #b8bfda;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.revenue-sticky-rail nav a:hover {
+  color: #ffffff;
+}
+
+.revenue-automation-content {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.revenue-hero,
+.revenue-section,
+.revenue-conversion {
+  border: 1px solid rgba(140, 148, 174, 0.32);
+  border-radius: 1rem;
+  background: rgba(13, 17, 34, 0.8);
+  padding: 1.5rem;
+}
+
+.revenue-hero {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+}
+
+.revenue-eyebrow {
+  color: #8f96b2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.revenue-hero h1 {
+  margin: 0.4rem 0 0.8rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.08;
+  max-width: 16ch;
+}
+
+.revenue-hero p {
+  color: #d3d8eb;
+  margin: 0;
+  max-width: 56ch;
+}
+
+.revenue-hero-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.revenue-hero-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.revenue-section h2,
+.revenue-conversion h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.45rem;
+}
+
+.revenue-problem-grid,
+.revenue-outcome-grid,
+.revenue-fit-grid,
+.revenue-doc-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.revenue-problem-card,
+.revenue-outcome-card,
+.revenue-flow-step,
+.revenue-module-card,
+.revenue-fit-grid article,
+.revenue-doc-card {
+  border: 1px solid rgba(153, 162, 191, 0.3);
+  border-radius: 0.8rem;
+  background: rgba(22, 27, 48, 0.68);
+  padding: 1rem;
+}
+
+.revenue-closing-line,
+.revenue-why-line {
+  color: #e9ecf8;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.revenue-flow-grid,
+.revenue-module-stack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.revenue-flow-step h3,
+.revenue-module-card h3,
+.revenue-doc-card h3,
+.revenue-fit-grid h3,
+.revenue-compare-grid h3 {
+  margin: 0 0 0.5rem;
+}
+
+.revenue-flow-step p,
+.revenue-module-card p,
+.revenue-doc-card p,
+.revenue-fit-grid p,
+.revenue-section li,
+.revenue-conversion p,
+.revenue-faq-list p {
+  color: #d3d8eb;
+  margin: 0;
+}
+
+.revenue-flow-step small {
+  display: block;
+  margin-top: 0.65rem;
+  color: #9ea6c8;
+}
+
+.revenue-compare-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.revenue-compare-grid article {
+  border: 1px solid rgba(153, 162, 191, 0.3);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: rgba(22, 27, 48, 0.68);
+}
+
+.revenue-example-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.revenue-doc-card {
+  text-decoration: none;
+}
+
+.revenue-doc-card:hover {
+  border-color: rgba(197, 206, 240, 0.58);
+}
+
+.revenue-conversion {
+  text-align: center;
+}
+
+.revenue-conversion p {
+  margin: 0 auto;
+  max-width: 62ch;
+}
+
+.revenue-faq-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.revenue-faq-list details {
+  border: 1px solid rgba(153, 162, 191, 0.3);
+  border-radius: 0.8rem;
+  padding: 0.85rem 1rem;
+  background: rgba(22, 27, 48, 0.68);
+}
+
+.revenue-faq-list summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.revenue-faq-list details p {
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 1040px) {
+  .revenue-automation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-sticky-rail {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .revenue-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
