@@ -2333,10 +2333,75 @@ tbody tr:hover td {
   gap: 18px;
 }
 
+.docs-detail-page h1 {
+  max-width: 18ch;
+}
+
+.docs-detail-page .docs-subheadline {
+  max-width: 70ch;
+}
+
+.docs-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.docs-detail-card,
+.docs-detail-section-card {
+  background: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+}
+
+.docs-detail-card {
+  padding: 24px;
+}
+
+.docs-detail-card p,
+.docs-detail-section-card p,
+.docs-detail-section-card li {
+  color: #3f3f3f;
+  line-height: 1.55;
+}
+
+.docs-detail-sections {
+  display: grid;
+  gap: 20px;
+}
+
+.docs-detail-section-card {
+  padding: 28px;
+}
+
+.docs-detail-section-card h2 {
+  font-size: clamp(24px, 3.5vw, 34px);
+  margin-bottom: 14px;
+}
+
+.docs-detail-section-card p {
+  margin: 0;
+}
+
+.docs-detail-section-card ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.docs-detail-link-list {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
 @media (max-width: 1050px) {
   .docs-card-grid,
   .docs-link-columns,
-  .docs-usage-grid {
+  .docs-usage-grid,
+  .docs-detail-grid {
     grid-template-columns: 1fr;
   }
 
