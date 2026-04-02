@@ -1,10 +1,7 @@
-import Footer from "../../components/Footer";
-import NavigationBar from "../../components/NavigationBar";
 
 export default function DocsDetailTemplate({ doc, sectionTitle, docLinks }) {
   return (
     <>
-      <NavigationBar />
       <main className="docs-page docs-detail-page">
         <section className="docs-block container docs-detail-hero">
           <p className="docs-eyebrow">{doc.eyebrow}</p>
@@ -50,7 +47,6 @@ export default function DocsDetailTemplate({ doc, sectionTitle, docLinks }) {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

@@ -1,15 +1,12 @@
 import CallToAction from "./components/CallToAction";
 import HeroVideo from "./components/HeroVideo";
 import HomeHero from "./components/HomeHero";
-import NavigationBar from "./components/NavigationBar";
 import ParticlePanels from "./components/ParticlePanels";
 import RippleCircleRow from "./components/RippleCircleRow";
-import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
-      <NavigationBar />
       <main className="home">
         <HomeHero />
         <HeroVideo />
@@ -93,8 +90,7 @@ export default function Home() {
 
 
         <CallToAction variant="websiteAudit"/>
-        <Footer />
-
+  
 
       </main>
 

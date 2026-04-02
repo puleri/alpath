@@ -1,10 +1,7 @@
-import NavigationBar from "../components/NavigationBar";
-import Footer from "../components/Footer";
 
 export default function PrivacyPage() {
   return (
     <>
-      <NavigationBar />
       <main className="privacy-page">
         <header className="privacy-hero">
           <p className="section-kicker">Privacy Policy</p>
@@ -171,7 +168,6 @@ export default function PrivacyPage() {
           <p className="privacy-contact">Alpath Engineering</p>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

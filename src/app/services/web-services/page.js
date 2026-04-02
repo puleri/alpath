@@ -1,8 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import CallToAction from "../../components/CallToAction";
-import NavigationBar from "../../components/NavigationBar";
-import Footer from "../../components/Footer";
 
 const SCORE_ANIMATION_MS = 1700;
 const PROGRESS_ANIMATION_MS = 1800;
@@ -119,7 +117,6 @@ export default function WebServicesPage() {
 
   return (
     <>
-      <NavigationBar />
       <main className="web-services-page">
         <section className="web-services-grid">
           <div className="web-services-hero">
@@ -208,7 +205,6 @@ export default function WebServicesPage() {
         </section>
         <CallToAction variant="webServicesBottom" />
       </main>
-      <Footer />
     </>
   );
 }
