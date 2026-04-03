@@ -85,10 +85,10 @@ const outcomes = [
 ];
 
 const deepDiveLinks = [
-  { title: "Lead Capture Systems", href: "/docs/lead-capture-systems" },
-  { title: "Lead Routing Logic", href: "/docs/lead-routing-logic" },
-  { title: "Follow-Up Automation", href: "/docs/follow-up-automation" },
-  { title: "CRM Integration", href: "/docs/crm-integration" },
+  { title: "Lead Capture Systems", href: "/docs/revenue-automation/lead-capture-systems" },
+  { title: "Lead Routing Logic", href: "/docs/revenue-automation/lead-routing-logic" },
+  { title: "Follow-Up Automation", href: "/docs/revenue-automation/follow-up-automation" },
+  { title: "CRM Integration", href: "/docs/revenue-automation/crm-integration" },
 ];
 
 const faqItems = [
