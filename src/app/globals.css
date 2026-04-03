@@ -2693,10 +2693,7 @@ tbody tr:hover td {
 .contact-page {
   min-height: 100vh;
   padding: 6.5rem 0 5rem;
-  background:
-    radial-gradient(circle at 10% 10%, #f6f8fc 0%, transparent 35%),
-    radial-gradient(circle at 90% 8%, #eef2ff 0%, transparent 26%),
-    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background:white;
 }
 
 .contact-shell {

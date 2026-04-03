@@ -13,7 +13,7 @@ const primaryLinks = [
 
 const secondaryLinks = ["Blog", "Pricing", "Use Cases"];
 
-const legalLinks = ["About Alpath", "Client Stories", "Privacy", "Terms"];
+const legalLinks = ["About", "Client Stories", "Privacy", "Terms"];
 
 const toEndpoint = (label) => `/${label.toLowerCase().replace(/\s+/g, "-")}`;
 
