@@ -283,7 +283,7 @@ export default function UseCasesPage() {
           <a className="primary-button" href="/contact">
             → Start with an Audit
           </a>
-          <a className="secondary-button" href="/contact">
+          <a className="secondary-button" href="/case-studies">
             → Talk Through Your System
           </a>
         </div>
