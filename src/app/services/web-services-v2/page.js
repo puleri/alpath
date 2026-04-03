@@ -123,6 +123,7 @@ export default function WebServicesPage() {
         <section className="web-services-grid">
           <div className="web-services-hero">
             <div className="web-services-hero-copy">
+              <p className="web-services-eyebrow">Web Services</p>
               <h1>Your website, finally working as hard as your business</h1>
               <p>
                 We build high-performance, conversion-optimized web platforms
