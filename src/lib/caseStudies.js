@@ -126,6 +126,44 @@ export const caseStudies = [
       'Reduced repeat-incident risk through targeted code and process changes',
       'Clear technical narrative for leadership during a high-stakes period',
     ],
+    detailPage: {
+      heroTitle:
+        'How we executed a rapid startup codebase audit during a business-critical outage',
+      heroSummary:
+        'When product stability broke at the worst possible moment, we delivered a focused technical audit and a practical recovery system leadership could execute immediately.',
+      keyMetrics: [
+        { label: 'Initial triage window', value: '48 hours' },
+        { label: 'Recovery roadmap horizon', value: '30-60-90 day plan' },
+        { label: 'Primary objective', value: 'Stabilize releases + rebuild confidence' },
+      ],
+      challenge:
+        'The startup faced a production outage during a high-stakes valuation period. Engineering teams were operating under intense pressure with unclear root causes, inconsistent safeguards, and limited confidence in release reliability.',
+      implementationPhases: [
+        {
+          title: 'Phase 1: Incident containment and architecture triage',
+          description:
+            'Audited critical services, deployment paths, and failure domains to identify the most likely instability vectors and immediate containment actions.',
+        },
+        {
+          title: 'Phase 2: Root-cause map and risk-ranked backlog',
+          description:
+            'Reconstructed the incident timeline, mapped systemic contributors, and translated findings into a risk-ranked remediation backlog with ownership and sequencing.',
+        },
+        {
+          title: 'Phase 3: Reliability operating model',
+          description:
+            'Implemented a 30-60-90 day execution plan covering test hardening, release gates, rollback standards, and incident response workflows for sustained stability.',
+        },
+      ],
+      techStack: [
+        'Next.js / Node.js application layer',
+        'Cloud deployment + CI/CD workflows',
+        'Observability and incident diagnostics',
+        'Release governance and QA safeguards',
+      ],
+      nextStep:
+        'If your product is carrying unseen reliability risk, we can run a focused audit, isolate your highest-impact failure points, and deliver a practical stabilization plan fast.',
+    },
   },
 ];
 
