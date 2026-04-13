@@ -6,8 +6,9 @@ export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const study = getCaseStudyBySlug(params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const study = getCaseStudyBySlug(slug);
 
   if (!study) {
     return { title: 'Case Study Not Found | Alpath Engineering' };
@@ -19,8 +20,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function CaseStudyDetailPage({ params }) {
-  const study = getCaseStudyBySlug(params.slug);
+export default async function CaseStudyDetailPage({ params }) {
+  const { slug } = await params;
+  const study = getCaseStudyBySlug(slug);
 
   if (!study) {
     notFound();
