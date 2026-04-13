@@ -26,7 +26,7 @@ body {
   margin: 0;
   background: #ffffff;
   color: inherit;
-  font-family: "Inter", "Anaheim Variable", "Anaheim", system-ui, sans-serif;
+  font-family: 'Inter', 'Anaheim Variable', 'Anaheim', system-ui, sans-serif;
   font-weight: 400;
   font-synthesis: weight;
 }
@@ -127,8 +127,6 @@ html {
   overflow: hidden;
 }
 
-
-
 .hero-video {
   position: relative;
   width: calc(var(--shell-width) * var(--video-min-scale));
@@ -174,7 +172,9 @@ html {
   text-align: center;
   border-radius: 999px;
   padding: clamp(48px, 9vw, 92px);
-  transition: border-radius 700ms ease, transform 700ms ease;
+  transition:
+    border-radius 700ms ease,
+    transform 700ms ease;
   transform: scaleX(0.92);
   overflow: hidden;
 }
@@ -185,9 +185,9 @@ html {
 }
 
 .cta-card-light {
-  background: #F7F7F7;
+  background: #f7f7f7;
   color: #111111;
-  border: 1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
   border-radius: 24px;
   transform: none;
 }
@@ -223,7 +223,6 @@ html {
 }
 
 .cta-card-light .cta-title {
-  
 }
 
 .cta-card-light .cta-description {
@@ -290,7 +289,6 @@ html {
   background: #1f1f1f;
 }
 
-
 .hero-title {
   font-size: clamp(34px, 4.5vw, 70px);
   line-height: 1.15;
@@ -348,7 +346,9 @@ html {
 .hero-reveal {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 700ms ease, transform 700ms ease;
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
 }
 
 .hero-viewport.is-complete .hero-reveal {
@@ -439,10 +439,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 24px;  
+  gap: 24px;
 }
-
-
 
 .nav-links {
   display: flex;
@@ -498,7 +496,10 @@ html {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
   z-index: 10;
 }
 
@@ -620,8 +621,6 @@ html {
   letter-spacing: 0.2px;
 }
 
-
-
 .hero-actions {
   display: flex;
   gap: 20px;
@@ -653,7 +652,7 @@ html {
   gap: 40px;
   margin-bottom: 60px;
   align-items: center;
-  grid-row-end: auto
+  grid-row-end: auto;
 }
 
 .web-services-hero h1 {
@@ -693,8 +692,6 @@ html {
 
 /* on tabled and mobile the margin goes away */
 @media (max-width: 768px) {
-
-  
   .web-services-hero-visual img {
     margin-left: 25%;
     width: 42%;
@@ -753,7 +750,7 @@ html {
 }
 
 .lighthouse-panel {
-    grid-column: span 2;
+  grid-column: span 2;
 
   padding: 60px 40px 50px;
   display: flex;
@@ -788,7 +785,11 @@ html {
   width: clamp(52px, 5vw, 90px);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
-  background: conic-gradient(from 86deg, #1a1a1a calc(100% - var(--score, 0%)), #f3f4f6 0);
+  background: conic-gradient(
+    from 86deg,
+    #1a1a1a calc(100% - var(--score, 0%)),
+    #f3f4f6 0
+  );
   display: grid;
   place-items: center;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
@@ -864,7 +865,7 @@ html {
 .web-services-third-card {
   min-height: 340px;
   border-radius: 14px;
-  background: #D9D9D9;
+  background: #d9d9d9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -921,7 +922,7 @@ html {
 }
 
 .privacy-hero::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 24px;
   top: 20px;
@@ -929,7 +930,7 @@ html {
   height: 42px;
   opacity: 0.08;
   pointer-events: none;
-  background: center/contain no-repeat url("/alpath/sign.svg");
+  background: center/contain no-repeat url('/alpath/sign.svg');
 }
 
 .privacy-hero h1 {
@@ -990,7 +991,6 @@ html {
 .privacy-contact {
   font-weight: 600;
 }
-
 
 .dashboard-page {
   padding: 52px 24px 88px;
@@ -1087,7 +1087,9 @@ html {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .kpi-card:hover {
@@ -1140,7 +1142,9 @@ html {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .card:hover {
@@ -1194,13 +1198,16 @@ html {
   background: hsl(var(--particle-hue, 210) 90% 60% / 0.85);
   box-shadow: 0 0 12px hsl(var(--particle-hue, 210) 90% 65% / 0.45);
   border-radius: 999px;
-  filter: brightness(.9);
+  filter: brightness(0.9);
   left: var(--particle-left, 50%);
   top: var(--particle-top, 50%);
   transform: translate(-50%, -50%) scale(var(--particle-scale));
   animation: particle-breathe var(--particle-duration, 8s) ease-in-out infinite;
   animation-delay: var(--particle-delay, 0s);
-  transition: all 0.4s ease, left 0.9s ease, top 0.9s ease;
+  transition:
+    all 0.4s ease,
+    left 0.9s ease,
+    top 0.9s ease;
 }
 
 .particle-panel--active .particle-dot {
@@ -1243,7 +1250,7 @@ html {
 }
 
 .particle-link::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -1732,8 +1739,7 @@ tbody tr:hover td {
   color: inherit;
   cursor: pointer;
   text-align: left;
-    text-decoration: none;
-
+  text-decoration: none;
 }
 
 .footer-link {
@@ -1814,7 +1820,6 @@ tbody tr:hover td {
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
   .lighthouse-score-circle {
     transition: none;
@@ -1867,14 +1872,14 @@ tbody tr:hover td {
 }
 
 .services-hero::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 10px;
   top: 4px;
   width: 34px;
   height: 34px;
   opacity: 0.09;
-  background: center/contain no-repeat url("/alpath/sign.svg");
+  background: center/contain no-repeat url('/alpath/sign.svg');
   pointer-events: none;
 }
 
@@ -1918,7 +1923,11 @@ tbody tr:hover td {
   border: 1px solid var(--bento-border);
   border-radius: 1rem;
   padding: 1rem;
-  background: linear-gradient(180deg, #ffffff 0%, var(--bento-surface-strong) 100%);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    var(--bento-surface-strong) 100%
+  );
 }
 
 .services-cards {
@@ -1935,7 +1944,9 @@ tbody tr:hover td {
   padding: 1.35rem;
   background: linear-gradient(165deg, #ffffff 0%, var(--bento-surface) 100%);
   box-shadow: var(--bento-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .service-card:nth-child(1) {
@@ -2039,7 +2050,9 @@ tbody tr:hover td {
   font-size: 0.95rem;
   padding: 0.42rem 0.55rem;
   border-radius: 0.5rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .revenue-sticky-rail nav a:hover {
@@ -2072,7 +2085,7 @@ tbody tr:hover td {
 .revenue-hero::after,
 .revenue-section::after,
 .revenue-conversion::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0.95rem;
   right: 0.95rem;
@@ -2080,7 +2093,7 @@ tbody tr:hover td {
   height: 34px;
   opacity: 0.06;
   pointer-events: none;
-  background: center/contain no-repeat url("/alpath/sign.svg");
+  background: center/contain no-repeat url('/alpath/sign.svg');
 }
 
 .revenue-hero {
@@ -2291,7 +2304,7 @@ tbody tr:hover td {
 }
 
 .docs-hero::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   top: 8px;
@@ -2299,7 +2312,7 @@ tbody tr:hover td {
   height: 36px;
   opacity: 0.08;
   pointer-events: none;
-  background: center/contain no-repeat url("/alpath/sign.svg");
+  background: center/contain no-repeat url('/alpath/sign.svg');
 }
 
 .docs-eyebrow {
@@ -2580,7 +2593,7 @@ tbody tr:hover td {
 .case-studies-hero::after,
 .case-study-detail-hero::after,
 .about-hero::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   top: 6px;
@@ -2588,7 +2601,7 @@ tbody tr:hover td {
   height: 34px;
   opacity: 0.08;
   pointer-events: none;
-  background: center/contain no-repeat url("/alpath/sign.svg");
+  background: center/contain no-repeat url('/alpath/sign.svg');
 }
 
 .case-studies-eyebrow {
@@ -2678,6 +2691,79 @@ tbody tr:hover td {
   line-height: 1.7;
 }
 
+.case-study-metrics-grid {
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.case-study-metric-card {
+  border: 1px solid var(--bento-border);
+  border-radius: 16px;
+  padding: 18px;
+  background: linear-gradient(160deg, #ffffff 0%, var(--bento-surface) 100%);
+}
+
+.case-study-metric-value {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.case-study-metric-label {
+  margin: 8px 0 0;
+  color: #4a4a4a;
+}
+
+.case-study-phases-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.case-study-phases-list h3 {
+  margin: 0 0 6px;
+}
+
+.case-study-phases-list p {
+  margin: 0;
+}
+
+.case-study-tag-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.case-study-tag-list li {
+  border: 1px solid var(--bento-border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #ffffff;
+}
+
+.case-study-detail-cta {
+  max-width: 920px;
+  border-radius: 20px;
+  border: 1px solid var(--bento-border);
+  background: linear-gradient(135deg, #f9fbff 0%, #ffffff 100%);
+  padding: 28px;
+  box-shadow: var(--bento-shadow);
+}
+
+.case-study-detail-cta h2 {
+  margin-top: 0;
+}
+
+.case-study-detail-cta p {
+  margin-bottom: 18px;
+}
 .case-study-detail-section,
 .about-section {
   max-width: 920px;
@@ -2710,7 +2796,7 @@ tbody tr:hover td {
 .contact-page {
   min-height: 100vh;
   padding: 6.5rem 0 5rem;
-  background:white;
+  background: white;
 }
 
 .contact-shell {
@@ -2877,7 +2963,8 @@ tbody tr:hover td {
   }
 
   .case-study-before-after,
-  .about-principles-grid {
+  .about-principles-grid,
+  .case-study-metrics-grid {
     grid-template-columns: 1fr;
   }
 
