@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 
 const problemPoints = [
   "Leads come in, but nothing happens next",
@@ -115,6 +118,35 @@ const faqItems = [
 ];
 
 export default function RevenueAutomationPage() {
+  const [activeSection, setActiveSection] = useState("problem");
+
+  useEffect(() => {
+    const sectionIds = ["problem", "overview", "breakdown", "outcomes", "faq"];
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleEntries[0]?.target?.id) {
+          setActiveSection(visibleEntries[0].target.id);
+        }
+      },
+      {
+        rootMargin: "-30% 0px -55% 0px",
+        threshold: [0.2, 0.35, 0.5, 0.75],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <main className="revenue-automation-page">
@@ -124,11 +156,21 @@ export default function RevenueAutomationPage() {
               → Design My Revenue System
             </a>
             <nav>
-              <a href="#problem">Problem</a>
-              <a href="#overview">System Overview</a>
-              <a href="#breakdown">Breakdown</a>
-              <a href="#outcomes">Outcomes</a>
-              <a href="#faq">FAQ</a>
+              <a className={activeSection === "problem" ? "active" : ""} href="#problem">
+                Problem
+              </a>
+              <a className={activeSection === "overview" ? "active" : ""} href="#overview">
+                System Overview
+              </a>
+              <a className={activeSection === "breakdown" ? "active" : ""} href="#breakdown">
+                Breakdown
+              </a>
+              <a className={activeSection === "outcomes" ? "active" : ""} href="#outcomes">
+                Outcomes
+              </a>
+              <a className={activeSection === "faq" ? "active" : ""} href="#faq">
+                FAQ
+              </a>
             </nav>
           </aside>
 
@@ -139,7 +181,7 @@ export default function RevenueAutomationPage() {
                 <h1>Turn interest into predictable revenue</h1>
                 <p>
                   We design systems that capture, qualify, and convert leads
-                  automatically—so opportunities don’t slip through the cracks.
+                  automatically, so opportunities don’t slip through the cracks.
                 </p>
                 <div className="revenue-hero-actions">
                   <a className="primary-button" href="/contact">
@@ -168,7 +210,7 @@ export default function RevenueAutomationPage() {
                 ))}
               </div>
               <p className="revenue-closing-line">
-                Most businesses don’t have a lead problem—they have a system
+                Most businesses don’t have a lead problem, they have a system
                 problem.
               </p>
             </section>

@@ -25,7 +25,7 @@ export default function LeadershipRevenueDashboard() {
     <section className="revenue-dashboard">
       <header className="dashboard-header">
         <div>
-          <p className="dashboard-eyebrow">Revenue System — Live Status</p>
+          <p className="dashboard-eyebrow">Revenue System: Live Status</p>
           <p className="dashboard-subtitle">
             All figures are simulated for sandbox monitoring. No funds moved.
           </p>

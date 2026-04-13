@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Alpath Engineering",
     description:
-      "Digital solutions working as hard as your business—partner with Alpath Engineering for strategy, design, and product engineering.",
+      "Digital solutions working as hard as your business, partner with Alpath Engineering for strategy, design, and product engineering.",
     url: "/",
     siteName: "Alpath Engineering",
     type: "website",
@@ -31,7 +31,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Alpath Engineering",
     description:
-      "Digital solutions working as hard as your business—partner with Alpath Engineering for strategy, design, and product engineering.",
+      "Digital solutions working as hard as your business, partner with Alpath Engineering for strategy, design, and product engineering.",
     images: ["/web-app-manifest-512x512.png"],
   },
 };

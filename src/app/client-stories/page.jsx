@@ -25,7 +25,7 @@ const stories = [
       "Clear call-to-action placement",
     ],
     outcome: "300+ leads generated within the first year.",
-    quote: "The website finally works for us—it brings in business.",
+    quote: "The website finally works for us, it brings in business.",
   },
   {
     title: "Pro3 Accounting",
