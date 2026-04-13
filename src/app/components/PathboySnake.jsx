@@ -47,6 +47,7 @@ export default function PathboySnake() {
   const directionRef = useRef(INITIAL_DIRECTION);
   const [food, setFood] = useState(() => randomFood(INITIAL_SNAKE));
   const [isGameOver, setIsGameOver] = useState(false);
+  const [isStarted, setIsStarted] = useState(false);
   const [score, setScore] = useState(0);
 
   const changeDirection = useCallback((nextDirection) => {
@@ -66,8 +67,17 @@ export default function PathboySnake() {
     directionRef.current = INITIAL_DIRECTION;
     setDirection(INITIAL_DIRECTION);
     setIsGameOver(false);
+    setIsStarted(true);
     setScore(0);
   }, []);
+
+  const move = useCallback(
+    (nextDirection) => {
+      setIsStarted(true);
+      changeDirection(nextDirection);
+    },
+    [changeDirection],
+  );
 
   useEffect(() => {
     const onKeyDown = (event) => {
@@ -76,6 +86,11 @@ export default function PathboySnake() {
       if (["arrowup", "arrowdown", "arrowleft", "arrowright", "w", "a", "s", "d"].includes(key)) {
         event.preventDefault();
       }
+
+      if (key === "arrowup") setIsStarted(true);
+      if (key === "arrowdown") setIsStarted(true);
+      if (key === "arrowleft") setIsStarted(true);
+      if (key === "arrowright") setIsStarted(true);
 
       if (key === "arrowup" || key === "w") changeDirection(DIRECTIONS.up);
       if (key === "arrowdown" || key === "s") changeDirection(DIRECTIONS.down);
@@ -89,7 +104,7 @@ export default function PathboySnake() {
   }, [changeDirection, resetGame]);
 
   useEffect(() => {
-    if (isGameOver) return undefined;
+    if (isGameOver || !isStarted) return undefined;
 
     const gameLoop = window.setInterval(() => {
       setSnake((currentSnake) => {
@@ -126,7 +141,7 @@ export default function PathboySnake() {
     }, TICK_MS);
 
     return () => window.clearInterval(gameLoop);
-  }, [food, isGameOver]);
+  }, [food, isGameOver, isStarted]);
 
   const cells = useMemo(() => {
     const snakeSet = new Set(snake.map((segment) => `${segment.x}-${segment.y}`));
@@ -174,7 +189,9 @@ export default function PathboySnake() {
             </div>
 
             <p className={styles.screenHint}>
-              Move with WASD / arrow keys or the D-pad.
+              {isStarted
+                ? "Move with WASD / arrow keys or the D-pad."
+                : "Press an arrow key to start. Then use WASD / arrow keys or the D-pad."}
             </p>
             {isGameOver ? (
               <button type="button" className={styles.resetButton} onClick={resetGame}>
@@ -190,7 +207,7 @@ export default function PathboySnake() {
               type="button"
               aria-label="Move up"
               className={`${styles.arrowButton} ${styles.up}`}
-              onClick={() => changeDirection(DIRECTIONS.up)}
+              onClick={() => move(DIRECTIONS.up)}
             >
               ▲
             </button>
@@ -198,7 +215,7 @@ export default function PathboySnake() {
               type="button"
               aria-label="Move left"
               className={`${styles.arrowButton} ${styles.left}`}
-              onClick={() => changeDirection(DIRECTIONS.left)}
+              onClick={() => move(DIRECTIONS.left)}
             >
               ◀
             </button>
@@ -206,7 +223,7 @@ export default function PathboySnake() {
               type="button"
               aria-label="Move right"
               className={`${styles.arrowButton} ${styles.right}`}
-              onClick={() => changeDirection(DIRECTIONS.right)}
+              onClick={() => move(DIRECTIONS.right)}
             >
               ▶
             </button>
@@ -214,7 +231,7 @@ export default function PathboySnake() {
               type="button"
               aria-label="Move down"
               className={`${styles.arrowButton} ${styles.down}`}
-              onClick={() => changeDirection(DIRECTIONS.down)}
+              onClick={() => move(DIRECTIONS.down)}
             >
               ▼
             </button>
