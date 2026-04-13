@@ -8,11 +8,9 @@ const filterGroups = [
     label: "By Challenge",
     options: [
       "All",
-      "Increase lead volume",
       "Improve conversion rate",
-      "Automate follow-up",
-      "Unify systems",
-      "Gain visibility",
+      "Improve pipeline efficiency",
+      "Reduce reliability risk",
     ],
   },
   {
@@ -20,10 +18,9 @@ const filterGroups = [
     label: "By Business Type",
     options: [
       "All",
-      "Professional services",
-      "Local service businesses",
-      "SaaS / tech-enabled",
-      "Growth-stage companies",
+      "Established services company",
+      "Private cybersecurity SaaS",
+      "Startup tech company",
     ],
   },
   {
@@ -35,85 +32,63 @@ const filterGroups = [
 
 const useCases = [
   {
-    title: "Turning Website Traffic into Qualified Leads",
-    context: "For firms with steady traffic but low conversion",
-    problem: "Visitors leave without taking action.",
-    systemApplied: "Web Consulting + Revenue Automation",
-    outcome: "Increased conversions, clearer lead flow.",
+    title: "WordPress to Next.js Migration Without Losing Trusted Brand Feel",
+    context: "For an established company with strong traffic but underperforming web scores and lead conversion",
+    problem:
+      "Their WordPress site was slowing performance and conversion, but leadership could not risk changing the familiar experience their users trusted.",
+    systemApplied: "Web Consulting",
+    outcome:
+      "Completed a migration from WordPress to Next.js while preserving the visual identity users already knew, improving web scores and lead conversion.",
     challenge: "Improve conversion rate",
-    businessType: "Professional services",
-    systems: ["Web Consulting", "Revenue Automation"],
+    businessType: "Established services company",
+    systems: ["Web Consulting"],
   },
   {
-    title: "Building Consistent Lead Flow for Local Operators",
-    context: "For local teams relying on referrals and inconsistent demand",
-    problem: "Lead volume spikes and drops with no predictable pattern.",
-    systemApplied: "Web Consulting + Revenue Automation",
-    outcome: "Reliable weekly pipeline and fewer missed opportunities.",
-    challenge: "Increase lead volume",
-    businessType: "Local service businesses",
-    systems: ["Web Consulting", "Revenue Automation"],
-  },
-  {
-    title: "Automating Follow-Up After Demo Requests",
-    context: "For SaaS teams losing momentum after initial inquiry",
-    problem: "High-intent leads go cold before sales responds.",
-    systemApplied: "Revenue Automation",
-    outcome: "Faster response time and stronger demo-to-close rate.",
-    challenge: "Automate follow-up",
-    businessType: "SaaS / tech-enabled",
-    systems: ["Revenue Automation"],
-  },
-  {
-    title: "Connecting Disconnected Tools Into One System",
-    context: "For growth-stage companies juggling multiple platforms",
-    problem: "Teams duplicate work because systems do not communicate.",
+    title: "Salesforce + Snowflake Dashboards for Cybersecurity SaaS Leaders",
+    context:
+      "For a private cybersecurity SaaS company that needed clearer executive visibility into pipeline performance",
+    problem:
+      "Sales data lived in Salesforce but lacked a unified dashboard view for pipeline health, top-performing regions, and high-performing sales reps.",
     systemApplied: "Revenue Automation + Business Intelligence",
-    outcome: "Unified workflows and cleaner operational handoffs.",
-    challenge: "Unify systems",
-    businessType: "Growth-stage companies",
+    outcome:
+      "Built dashboards powered by Salesforce data through the Snowflake API, helping executives optimize pipeline decisions across regions and sales teams.",
+    challenge: "Improve pipeline efficiency",
+    businessType: "Private cybersecurity SaaS",
     systems: ["Revenue Automation", "Business Intelligence"],
   },
   {
-    title: "Creating Clarity with Executive Dashboards",
-    context: "For leadership teams managing growth without visibility",
-    problem: "Decisions depend on fragmented reports and guesswork.",
-    systemApplied: "Business Intelligence",
-    outcome: "Clear performance visibility and faster strategic decisions.",
-    challenge: "Gain visibility",
-    businessType: "Growth-stage companies",
-    systems: ["Business Intelligence"],
-  },
-  {
-    title: "Fixing Conversion Friction in Service Funnels",
-    context: "For professional firms with strong offers but weak conversion flow",
-    problem: "Prospects stall between interest and consultation booking.",
-    systemApplied: "Web Consulting",
-    outcome: "Higher booking rates without increasing ad spend.",
-    challenge: "Improve conversion rate",
-    businessType: "Professional services",
-    systems: ["Web Consulting"],
+    title: "Critical Product Audit During a High-Stakes Outage",
+    context:
+      "For a startup tech company whose fast-moving product went down at a crucial valuation moment",
+    problem:
+      "The team needed immediate technical clarity on systemic codebase weaknesses contributing to instability and downtime risk.",
+    systemApplied: "Web Consulting + Business Intelligence",
+    outcome:
+      "Delivered a focused codebase audit with prioritized reliability findings so leadership could stabilize the platform and protect momentum.",
+    challenge: "Reduce reliability risk",
+    businessType: "Startup tech company",
+    systems: ["Web Consulting", "Business Intelligence"],
   },
 ];
 
 const featuredCases = [
   {
-    title: "Inconsistent Lead Flow",
-    problem: "Leads are unpredictable.",
-    solution: "Capture + routing + follow-up system.",
-    outcome: "Stable pipeline.",
+    title: "Modern Web Migration, Familiar Experience",
+    problem: "A legacy WordPress stack limited performance and conversion.",
+    solution: "Migrated to Next.js while keeping the trusted site experience intact.",
+    outcome: "Improved web scores and lead conversion.",
   },
   {
-    title: "High Traffic, Low Conversion",
-    problem: "Website traffic is not translating into opportunities.",
-    solution: "Audit + conversion architecture.",
-    outcome: "More leads without more traffic.",
+    title: "Pipeline Visibility for Executive Sales Decisions",
+    problem: "Salesforce data was too fragmented for leadership insight.",
+    solution: "Built Snowflake API-powered dashboards for regions and rep performance.",
+    outcome: "Sharper pipeline optimization across the sales organization.",
   },
   {
-    title: "No Visibility Into Performance",
-    problem: "Decisions are based on guesswork.",
-    solution: "BI dashboards + reporting.",
-    outcome: "Clear decision-making.",
+    title: "Outage Response Through Codebase Audit",
+    problem: "A valuation-critical outage exposed hidden reliability risks.",
+    solution: "Performed a rapid technical audit with prioritized remediation.",
+    outcome: "Clear stabilization plan for a fast-moving product team.",
   },
 ];
 
