@@ -122,29 +122,28 @@ export default function RevenueAutomationPage() {
 
   useEffect(() => {
     const sectionIds = ["problem", "overview", "breakdown", "outcomes", "faq"];
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter(Boolean);
+    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const updateActiveSection = () => {
+      const activationLine = window.innerHeight * 0.35;
 
-        if (visibleEntries[0]?.target?.id) {
-          setActiveSection(visibleEntries[0].target.id);
-        }
-      },
-      {
-        rootMargin: "-30% 0px -55% 0px",
-        threshold: [0.2, 0.35, 0.5, 0.75],
-      },
-    );
+      const currentSection = sections
+        .filter((section) => section.getBoundingClientRect().top <= activationLine)
+        .sort((a, b) => b.getBoundingClientRect().top - a.getBoundingClientRect().top)[0];
 
-    sections.forEach((section) => observer.observe(section));
+      if (currentSection?.id) {
+        setActiveSection(currentSection.id);
+      }
+    };
 
-    return () => observer.disconnect();
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   return (
