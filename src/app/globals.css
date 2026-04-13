@@ -23,6 +23,7 @@ strong {
 }
 
 body {
+  text-wrap: pretty;
   margin: 0;
   background: #ffffff;
   color: inherit;
