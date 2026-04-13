@@ -21,7 +21,7 @@ const services = [
     title: "Web Consulting",
     kicker: "Diagnose and strengthen your foundation",
     intro:
-      "Your website should be more than a brochure—it should be a high-performing system.",
+      "Your website should be more than a brochure. It should be a high-performing system.",
     points: [
       "Structure and clarity",
       "Conversion paths",
@@ -53,7 +53,7 @@ const services = [
       "Conversion-focused funnels",
     ],
     outcome:
-      "A system that captures, nurtures, and converts leads—automatically.",
+      "A system that captures, nurtures, and converts leads automatically.",
     when: [
       "Leads are inconsistent or lost",
       "Follow-up is manual or unreliable",
@@ -98,14 +98,14 @@ export default function ServicesPage() {
           <h1>Systems that turn your digital presence into a revenue engine</h1>
           <p className="services-subheadline">
             We design and build integrated systems that attract, convert, and
-            inform—so your business doesn’t just exist online, it performs.
+            inform, so your business doesn’t just exist online, it performs.
           </p>
         </section>
 
         <section className="services-section container">
           <h2>Overview</h2>
           <p>
-            Most businesses don’t have a website problem—they have a system
+            Most businesses don’t have a website problem, they have a system
             problem.
           </p>
           <ul>
@@ -165,7 +165,7 @@ export default function ServicesPage() {
 
         <section className="services-section container">
           <h2>How It Fits Together</h2>
-          <p>These are not separate services—they are a connected system:</p>
+          <p>These are not separate services. They are a connected system:</p>
           <ul>
             <li>A strong foundation enables effective automation</li>
             <li>Automation generates data</li>

@@ -23,7 +23,7 @@ export default function Home() {
                 <p>
                   Eliminate manual handoffs between marketing, sales, and
                   billing. We design systems that capture leads, move deals
-                  forward, and convert activity into revenue—without adding
+                  forward, and convert activity into revenue, without adding
                   headcount.
                 </p>
               </div>
@@ -58,7 +58,7 @@ export default function Home() {
                 <p>
                   Give leadership the visibility they need with real-time
                   reporting that stays consistent across the entire customer
-                  journey—from first touch to renewal.
+                  journey, from first touch to renewal.
                 </p>
               </div>
               <div className="home-service-visual">

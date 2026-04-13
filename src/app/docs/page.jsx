@@ -40,15 +40,15 @@ const systems = [
 
 const usageSteps = [
   {
-    title: "Step 1 — Start with your problem",
+    title: "Step 1: Start with your problem",
     description: "Choose the system that matches where you are.",
   },
   {
-    title: "Step 2 — Understand the framework",
+    title: "Step 2: Understand the framework",
     description: "Review how the system is structured and why.",
   },
   {
-    title: "Step 3 — Apply or engage",
+    title: "Step 3: Apply or engage",
     description: "Use it internally or work with us to implement it.",
   },
 ];
@@ -62,7 +62,7 @@ function DocsHero() {
         This is how we think, design, and build systems that drive measurable business outcomes.
       </p>
       <p className="docs-supporting-text">
-        Most digital work focuses on outputs—pages, features, campaigns. We focus on systems:
+        Most digital work focuses on outputs (pages, features, campaigns). We focus on systems:
         how things connect, how they perform, and how they scale.
       </p>
       <p className="docs-supporting-text">

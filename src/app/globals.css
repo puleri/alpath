@@ -2037,10 +2037,19 @@ tbody tr:hover td {
   color: #334155;
   text-decoration: none;
   font-size: 0.95rem;
+  padding: 0.42rem 0.55rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .revenue-sticky-rail nav a:hover {
   color: #0f172a;
+  background: #f8fafc;
+}
+
+.revenue-sticky-rail nav a.active {
+  color: #0f172a;
+  background: #f3f4f6;
 }
 
 .revenue-automation-content {

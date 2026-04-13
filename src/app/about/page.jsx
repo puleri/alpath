@@ -42,7 +42,7 @@ export default function AboutPage() {
           <p>
             Many firms deliver websites, automations, or dashboards as separate
             projects. We build across all three so your organization runs as one
-            coordinated system—not a collection of tools.
+            coordinated system, not a collection of tools.
           </p>
           <ul>
             <li>
