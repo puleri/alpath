@@ -1,0 +1,80 @@
+.notFoundPage {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  padding: 56px 0 72px;
+}
+
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+
+.messageColumn {
+  max-width: 480px;
+}
+
+.code {
+  margin: 0;
+  font-size: clamp(74px, 11vw, 140px);
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: #111827;
+}
+
+.title {
+  margin: 16px 0 10px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.description {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.homeButton {
+  margin-top: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+  background: #111827;
+  transition: transform 200ms ease;
+}
+
+.homeButton:hover {
+  transform: translateY(-1px);
+}
+
+.gameColumn {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .messageColumn {
+    max-width: none;
+    text-align: center;
+  }
+
+  .homeButton {
+    margin-inline: auto;
+  }
+}

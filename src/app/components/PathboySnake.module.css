@@ -1,0 +1,156 @@
+.pathboyWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pathboyShell {
+  width: min(460px, 100%);
+  background: linear-gradient(180deg, #4f5f79 0%, #3f4c63 100%);
+  border-radius: 24px;
+  padding: 22px 22px 30px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 24px 40px rgba(15, 23, 42, 0.25);
+  border: 2px solid rgba(17, 24, 39, 0.35);
+}
+
+.topBadge {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #e7edf7;
+  margin-bottom: 14px;
+}
+
+.screenArea {
+  background: #202c3f;
+  border-radius: 16px;
+  padding: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+}
+
+.screenFrame {
+  background: #8ca690;
+  border-radius: 10px;
+  border: 3px solid #15221f;
+  padding: 12px;
+}
+
+.screenHeader {
+  display: flex;
+  justify-content: space-between;
+  color: #15221f;
+  font-family: "Anaheim Variable", "Anaheim", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2px;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #6a7f6e;
+  border: 2px solid #1f2f26;
+  padding: 6px;
+}
+
+.cell {
+  background: #728b76;
+  border-radius: 1px;
+}
+
+.cellSnake {
+  background: #1f2f26;
+}
+
+.cellHead {
+  background: #101a13;
+}
+
+.cellFood {
+  background: #d44343;
+}
+
+.screenHint {
+  margin: 10px 0 0;
+  font-size: 0.82rem;
+  color: #15221f;
+}
+
+.resetButton {
+  margin-top: 10px;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 700;
+  background: #1f2f26;
+  color: #dff3e2;
+  cursor: pointer;
+}
+
+.controlsRow {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.dpad {
+  width: 132px;
+  height: 132px;
+  position: relative;
+}
+
+.arrowButton {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: #181b25;
+  color: #f1f5f9;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(3, 7, 18, 0.45);
+}
+
+.arrowButton:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 rgba(3, 7, 18, 0.45);
+}
+
+.up {
+  top: 0;
+  left: 44px;
+}
+
+.left {
+  top: 44px;
+  left: 0;
+}
+
+.right {
+  top: 44px;
+  right: 0;
+}
+
+.down {
+  bottom: 0;
+  left: 44px;
+}
+
+.restartButton {
+  border: 0;
+  border-radius: 999px;
+  background: #d54956;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 12px 18px;
+  cursor: pointer;
+}
