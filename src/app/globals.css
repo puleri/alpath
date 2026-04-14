@@ -2912,6 +2912,17 @@ tbody tr:hover td {
   width: fit-content;
 }
 
+.contact-submit-feedback {
+  margin: 0;
+  color: #a52828;
+  font-size: 0.9rem;
+}
+
+.contact-submit[disabled] {
+  opacity: 0.75;
+  cursor: wait;
+}
+
 .thank-you-page {
   min-height: 80vh;
   padding: 8rem 0 5rem;
