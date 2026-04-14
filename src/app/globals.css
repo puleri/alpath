@@ -2299,9 +2299,11 @@ tbody tr:hover td {
 }
 
 .docs-hero {
-  max-width: 860px;
+  max-width: 960px;
   position: relative;
+  text-align: center;
   padding-right: 56px;
+  z-index: 1;
 }
 
 .docs-hero::after {
@@ -2309,11 +2311,12 @@ tbody tr:hover td {
   position: absolute;
   right: 0;
   top: 8px;
-  width: 36px;
-  height: 36px;
+  width: 836px;
+  height: 836px;
   opacity: 0.08;
   pointer-events: none;
   background: center/contain no-repeat url('/alpath/sign.svg');
+  z-index: -1;
 }
 
 .docs-eyebrow {

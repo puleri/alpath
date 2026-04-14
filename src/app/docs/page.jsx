@@ -65,9 +65,6 @@ function DocsHero() {
         Most digital work focuses on outputs (pages, features, campaigns). We focus on systems:
         how things connect, how they perform, and how they scale.
       </p>
-      <p className="docs-supporting-text">
-        This documentation outlines the frameworks behind everything we build.
-      </p>
     </section>
   );
 }
