@@ -1,15 +1,16 @@
+import Image from 'next/image';
 import ContactForm from './ContactForm';
 
 export const metadata = {
   title: 'Contact',
   description:
-    'Start a conversation with Alpath Engineering about your revenue systems, web strategy, and business intelligence goals.',
+    'Tell us where your process is breaking and we’ll map a practical plan to fix it.',
 };
 
 const prepChecklist = [
-  'Set NEXT_PUBLIC_EMAILJS_SERVICE_ID in your local and production env.',
-  'Set NEXT_PUBLIC_EMAILJS_TEMPLATE_ID to the template mapped to this form.',
-  'Set NEXT_PUBLIC_EMAILJS_PUBLIC_KEY so the client-side send can authenticate.',
+  'Your top priority for the next quarter.',
+  'Where work is currently getting stuck.',
+  'The tools and teams this project touches.',
 ];
 
 export default function ContactPage() {
@@ -17,24 +18,36 @@ export default function ContactPage() {
     <main className="contact-page">
       <section className="contact-shell container">
         <header className="contact-hero">
-          <p className="case-studies-eyebrow">Contact</p>
-          <h1>Build your next system with a bento-lunch-box brief</h1>
-          <p>
-            Share your goals below and we will map the best first step. This
-            form now sends through EmailJS using your configured keys.
-          </p>
+          <div>
+            <p className="case-studies-eyebrow">Contact</p>
+            <h1>Let’s fix the systems slowing your team down</h1>
+            <p>
+              Share a few details about your goals and constraints. We’ll reply
+              with clear next steps, realistic scope, and a plan your team can
+              execute.
+            </p>
+          </div>
+          <div className="contact-hero-art">
+            <Image
+              src="/heros/systems.png"
+              alt="System architecture illustration"
+              width={460}
+              height={320}
+              priority
+            />
+          </div>
         </header>
 
         <div className="contact-bento-grid">
           <aside className="contact-bento-card contact-bento-intro">
             <h2>What to include</h2>
             <ul>
-              <li>What outcome you need in the next 90 days.</li>
-              <li>The biggest bottleneck in your current workflow.</li>
-              <li>Any existing tools we should work with.</li>
+              <li>The business result you need, not just the feature list.</li>
+              <li>What is blocking progress today.</li>
+              <li>Any timelines, dependencies, or technical constraints.</li>
             </ul>
             <p className="contact-direct-line">
-              Prefer direct email? Reach out at{' '}
+              Prefer direct email? Reach us at{' '}
               <a href="mailto:matt@alpathengineering.com">
                 matt@alpathengineering.com
               </a>
@@ -43,12 +56,12 @@ export default function ContactPage() {
           </aside>
 
           <section className="contact-bento-card contact-bento-form-wrap">
-            <h2>Project intake form</h2>
+            <h2>Project brief</h2>
             <ContactForm />
           </section>
 
           <aside className="contact-bento-card contact-bento-prep">
-            <h2>EmailJS handoff notes</h2>
+            <h2>Helpful context before we start</h2>
             <ul>
               {prepChecklist.map((item) => (
                 <li key={item}>{item}</li>

@@ -2808,6 +2808,10 @@ tbody tr:hover td {
 }
 
 .contact-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+  align-items: end;
   margin-bottom: 1.5rem;
 }
 
@@ -2823,6 +2827,20 @@ tbody tr:hover td {
   max-width: 64ch;
   line-height: 1.7;
   color: #3d3d3d;
+}
+
+.contact-hero-art {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.contact-hero-art img {
+  width: min(100%, 420px);
+  height: auto;
+  transform: rotate(-12deg);
+  transform-origin: 70% 80%;
+  filter: drop-shadow(0 20px 35px rgba(16, 24, 40, 0.28));
 }
 
 .contact-bento-grid {
@@ -2985,6 +3003,18 @@ tbody tr:hover td {
 
   .contact-bento-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero-art {
+    justify-content: flex-start;
+  }
+
+  .contact-hero-art img {
+    width: min(92%, 340px);
   }
 
   .contact-bento-intro,
