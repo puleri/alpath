@@ -29,7 +29,7 @@ export default function ContactPage() {
           </div>
           <div className="contact-hero-art">
             <Image
-              src="/heros/systems.png"
+              src="/heros/contact.svg"
               alt="System architecture illustration"
               width={460}
               height={320}

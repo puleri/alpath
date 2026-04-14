@@ -39,6 +39,7 @@ export default function ContactForm() {
       requestBody.append('template_id', EMAILJS_TEMPLATE_ID);
       requestBody.append('user_id', EMAILJS_PUBLIC_KEY);
 
+
       const response = await fetch(
         'https://api.emailjs.com/api/v1.0/email/send-form',
         {

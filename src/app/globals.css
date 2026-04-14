@@ -2391,6 +2391,7 @@ tbody tr:hover td {
 .docs-link-column,
 .docs-usage-step {
   padding: 26px;
+  z-index: 1;
 }
 
 .docs-system-card:nth-child(1) {
@@ -2831,16 +2832,17 @@ tbody tr:hover td {
 
 .contact-hero-art {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
 }
 
 .contact-hero-art img {
-  width: min(100%, 420px);
+  width: min(70%, 280px);
   height: auto;
-  transform: rotate(-12deg);
-  transform-origin: 70% 80%;
-  filter: drop-shadow(0 20px 35px rgba(16, 24, 40, 0.28));
+  opacity: .2;
+  margin: 0 0 100px ;
+  transform: rotate(12deg);
+  transform-origin: 0% 80%;
 }
 
 .contact-bento-grid {
