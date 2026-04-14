@@ -1,13 +1,15 @@
+import ContactForm from './ContactForm';
+
 export const metadata = {
-  title: "Contact",
+  title: 'Contact',
   description:
-    "Start a conversation with Alpath Engineering about your revenue systems, web strategy, and business intelligence goals.",
+    'Start a conversation with Alpath Engineering about your revenue systems, web strategy, and business intelligence goals.',
 };
 
 const prepChecklist = [
-  "Form IDs and name attributes are ready for EmailJS template mapping.",
-  "Submit flow currently posts to a thank-you route for no-backend testing.",
-  "Replace the action with your EmailJS client handler when you are ready.",
+  'Set NEXT_PUBLIC_EMAILJS_SERVICE_ID in your local and production env.',
+  'Set NEXT_PUBLIC_EMAILJS_TEMPLATE_ID to the template mapped to this form.',
+  'Set NEXT_PUBLIC_EMAILJS_PUBLIC_KEY so the client-side send can authenticate.',
 ];
 
 export default function ContactPage() {
@@ -19,7 +21,7 @@ export default function ContactPage() {
           <h1>Build your next system with a bento-lunch-box brief</h1>
           <p>
             Share your goals below and we will map the best first step. This
-            placeholder form is set up so EmailJS can be wired in later.
+            form now sends through EmailJS using your configured keys.
           </p>
         </header>
 
@@ -32,7 +34,7 @@ export default function ContactPage() {
               <li>Any existing tools we should work with.</li>
             </ul>
             <p className="contact-direct-line">
-              Prefer direct email? Reach out at{" "}
+              Prefer direct email? Reach out at{' '}
               <a href="mailto:matt@alpathengineering.com">
                 matt@alpathengineering.com
               </a>
@@ -42,56 +44,7 @@ export default function ContactPage() {
 
           <section className="contact-bento-card contact-bento-form-wrap">
             <h2>Project intake form</h2>
-            <form
-              className="contact-form"
-              action="/thank-you"
-              method="get"
-              data-emailjs-ready="true"
-            >
-              <input type="hidden" name="contact_source" value="website" />
-              <div className="contact-form-row">
-                <label htmlFor="contact_name">Name</label>
-                <input
-                  id="contact_name"
-                  name="contact_name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                />
-              </div>
-              <div className="contact-form-row">
-                <label htmlFor="contact_email">Email</label>
-                <input
-                  id="contact_email"
-                  name="contact_email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                />
-              </div>
-              <div className="contact-form-row">
-                <label htmlFor="company_name">Company</label>
-                <input
-                  id="company_name"
-                  name="company_name"
-                  type="text"
-                  autoComplete="organization"
-                />
-              </div>
-              <div className="contact-form-row">
-                <label htmlFor="project_scope">Project brief</label>
-                <textarea
-                  id="project_scope"
-                  name="project_scope"
-                  rows={6}
-                  placeholder="Tell us what you are trying to improve."
-                  required
-                />
-              </div>
-              <button className="primary-button contact-submit" type="submit">
-                Send brief <span aria-hidden="true">→</span>
-              </button>
-            </form>
+            <ContactForm />
           </section>
 
           <aside className="contact-bento-card contact-bento-prep">
