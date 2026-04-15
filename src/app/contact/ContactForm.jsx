@@ -12,6 +12,23 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+  const buildSendFailureMessage = ({ status, details }) => {
+    const normalizedDetails =
+      typeof details === 'string' ? details.trim() : '';
+
+    if (
+      normalizedDetails &&
+      /service|template|user|public key|api key|forbidden|unauthorized|origin/i.test(
+        normalizedDetails,
+      )
+    ) {
+      return `We could not send your brief because EmailJS rejected the request (${normalizedDetails}). Double-check NEXT_PUBLIC_EMAILJS_SERVICE_ID, NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, NEXT_PUBLIC_EMAILJS_PUBLIC_KEY in .env.local, then restart the dev server.`;
+    }
+
+    const statusSuffix = Number.isInteger(status) ? ` (HTTP ${status})` : '';
+    return `We could not send your brief right now${statusSuffix}. Please try again in a moment or email matt@alpathengineering.com.`;
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -48,7 +65,13 @@ export default function ContactForm() {
       );
 
       if (!response.ok) {
-        throw new Error('EmailJS request failed');
+        const responseText = await response.text();
+        throw new Error(
+          buildSendFailureMessage({
+            status: response.status,
+            details: responseText,
+          }),
+        );
       }
 
       formRef.current.reset();
@@ -57,10 +80,13 @@ export default function ContactForm() {
           ? `/thank-you?email=${encodeURIComponent(contactEmail)}`
           : '/thank-you';
       router.push(thankYouHref);
-    } catch {
-      setErrorMessage(
-        'We could not send your brief right now. Please try again in a moment or email matt@alpathengineering.com.',
-      );
+    } catch (error) {
+      if (error instanceof Error && error.message) {
+        setErrorMessage(error.message);
+        return;
+      }
+
+      setErrorMessage(buildSendFailureMessage({}));
     } finally {
       setIsSubmitting(false);
     }
