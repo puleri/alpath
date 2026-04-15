@@ -24,6 +24,9 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
+> Important: Next.js does **not** load `.local.env`. Use `.env.local` and restart
+> `npm run dev` after changing environment variables.
+
 Keep the existing field names in your EmailJS template mapping:
 
 - `contact_name`
