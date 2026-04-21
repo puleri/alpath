@@ -25,6 +25,9 @@ export default function NavigationBar() {
               <a className="nav-dropdown-link" href="/services/web-services" role="menuitem">
                 Web Strategy
               </a>
+              <a className="nav-dropdown-link" href="/services/custom" role="menuitem">
+                Custom
+              </a>
             </div>
           </div>
           <a className="nav-link" href="/case-studies">

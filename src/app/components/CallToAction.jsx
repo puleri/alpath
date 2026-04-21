@@ -29,6 +29,16 @@ const CTA_VARIANTS = {
     primaryHref: "/contact",
     tone: "light",
   },
+  customBottom: {
+    title: "Have a product idea that needs real execution?",
+    description:
+      "We can help you scope, design, and build a practical MVP or deliver the full production system.",
+    primaryAction: "Talk to an Engineer",
+    secondaryAction: "See Related Services",
+    primaryHref: "/contact",
+    secondaryHref: "/services",
+    tone: "light",
+  },
 };
 
 export default function CallToAction({ variant = "default" }) {
