@@ -85,6 +85,30 @@ const services = [
     cta: "Build Executive Dashboard",
     href: "/contact",
   },
+  {
+    number: "4",
+    id: "custom",
+    title: "Custom",
+    kicker: "Build exactly what your business needs next",
+    intro:
+      "Need something beyond a standard website or funnel? We design and engineer custom products from concept to launch.",
+    points: [
+      "Specialized web applications",
+      "Custom websites and customer portals",
+      "MVP development for inventors and founders",
+      "Product architecture and implementation",
+      "Scalable handoff or long-term engineering support",
+    ],
+    outcome:
+      "A tailored digital product built around your goals, users, and execution timeline.",
+    when: [
+      "You have an idea but need an engineering partner",
+      "Off-the-shelf tools cannot support your workflow",
+      "You need to move quickly from concept to functional MVP",
+    ],
+    cta: "Explore Custom Services",
+    href: "/services/custom",
+  },
 ];
 
 export default function ServicesPage() {

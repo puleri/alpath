@@ -3528,3 +3528,157 @@ tbody tr:hover td {
     display: none;
   }
 }
+
+.custom-services-page {
+  padding: 48px 0 100px;
+}
+
+.custom-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.custom-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b6370;
+  margin: 0 0 14px;
+}
+
+.custom-hero-copy h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.custom-hero-copy p {
+  margin: 0;
+  color: #444c59;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 62ch;
+}
+
+.custom-hero-actions {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.custom-hero-graphic {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-graphic-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 22px;
+  border: 1px solid #d6dbe5;
+  background: linear-gradient(145deg, #f7f9fd 0%, #eef2fa 100%);
+  box-shadow: 0 16px 34px rgba(39, 60, 99, 0.13);
+  padding: 30px 18px;
+}
+
+.custom-graphic-node {
+  min-width: 88px;
+  text-align: center;
+  padding: 14px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.custom-node-idea {
+  background: #ffffff;
+  border: 1px solid #d7deea;
+}
+
+.custom-node-mvp {
+  background: #ecf4ff;
+  border: 1px solid #b6d4fb;
+}
+
+.custom-node-launch {
+  background: #e8faef;
+  border: 1px solid #b9ebcb;
+}
+
+.custom-graphic-arrow {
+  color: #60697a;
+  font-size: 1.25rem;
+}
+
+.custom-section {
+  margin-top: 56px;
+}
+
+.custom-section h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  letter-spacing: -0.02em;
+}
+
+.custom-section > p {
+  margin: 0;
+  color: #465061;
+}
+
+.custom-use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.custom-use-case-card {
+  border: 1px solid #dfe3eb;
+  background: #fcfdff;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.custom-use-case-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.custom-use-case-card p {
+  margin: 0;
+  color: #4a5466;
+  line-height: 1.6;
+}
+
+.custom-process-list {
+  margin: 18px 0 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+  color: #333c4a;
+}
+
+.custom-fit-list {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+  color: #333c4a;
+}
+
+@media (max-width: 900px) {
+  .custom-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-use-case-grid {
+    grid-template-columns: 1fr;
+  }
+}
