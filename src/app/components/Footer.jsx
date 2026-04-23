@@ -2,16 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const primaryLinks = [
-  "Download",
-  "Product",
-  "Docs",
-  "Changelog",
-  "Press",
-  "Releases",
-];
+const primaryLinks = ["Docs"];
 
-const secondaryLinks = ["Blog", "Pricing", "Use Cases"];
+const secondaryLinks = ["Use Cases"];
 
 const legalLinks = ["About", "Client Stories", "Privacy", "Terms"];
 
