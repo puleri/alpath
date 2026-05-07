@@ -48,8 +48,8 @@ export default function ContactPage() {
             </ul>
             <p className="contact-direct-line">
               Prefer direct email? Reach us at{' '}
-              <a href="mailto:matt@alpathengineering.com">
-                matt@alpathengineering.com
+              <a href="mailto:contact@alpathengineering.com">
+                contact@alpathengineering.com
               </a>
               .
             </p>

@@ -26,7 +26,7 @@ export default function ContactForm() {
     }
 
     const statusSuffix = Number.isInteger(status) ? ` (HTTP ${status})` : '';
-    return `We could not send your brief right now${statusSuffix}. Please try again in a moment or email matt@alpathengineering.com.`;
+    return `We could not send your brief right now${statusSuffix}. Please try again in a moment or email contact@alpathengineering.com.`;
   };
 
   const handleSubmit = async (event) => {
