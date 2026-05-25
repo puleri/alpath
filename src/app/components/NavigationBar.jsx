@@ -30,6 +30,9 @@ export default function NavigationBar() {
               </a>
             </div>
           </div>
+          <a className="nav-link" href="/our-work">
+            Portfolio
+          </a>
           <a className="nav-link" href="/case-studies">
             Case Studies
           </a>
