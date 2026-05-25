@@ -294,11 +294,12 @@ html {
   font-size: clamp(34px, 4.5vw, 70px);
   line-height: 1.15;
   padding: 0;
-  width: clamp(280px, 90vw, 900px);
+  text-align: center;
+  width: clamp(280px, 80vw, 800px);
   margin: 0;
   letter-spacing: -0.03em;
   font-weight: 500;
-  margin: 40px 0 60px;
+  margin: 20px auto
 }
 
 .hero-title-typing {
@@ -683,6 +684,8 @@ html {
 }
 
 .web-services-hero-visual img {
+  display: flex;
+  justify-content: flex-end;
   margin-left: 10%;
   width: 80%;
   height: auto;
@@ -3862,4 +3865,17 @@ tbody tr:hover td {
   .our-work-subnav-wrap {
     top: 64px;
   }
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+}
+
+@media (max-width: 640px) {
+
+.flex-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 }

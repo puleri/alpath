@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import CursorTrailsLayer from "./CursorTrailsLayer";
 
 const HERO_TEXT =
-  "Digital systems that keep revenue visible, trusted, and ready to scale.";
+  "Software Consulting & Software Development.";
 const CURSOR_BLINK_DURATION_MS = 1000;
 const TYPING_SPEED_MS = 35;
 

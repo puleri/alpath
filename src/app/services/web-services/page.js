@@ -136,7 +136,7 @@ export default function WebServicesPage() {
                 </a>
               </div>
             </div>
-            <div className="web-services-hero-visual">
+            <div className="web-services-hero-visual flex-end">
               <img
                 src="/placeholders/small-projects.svg"
                 alt="Website and mobile UI mockups"
