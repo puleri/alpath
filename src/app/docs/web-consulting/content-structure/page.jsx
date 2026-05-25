@@ -1,6 +1,10 @@
 import DocsDetailTemplate from "../../_components/DocsDetailTemplate";
 import { webConsultingDocLinks, webConsultingDocs } from "../../../../lib/webConsultingDocs";
 
+export const metadata = {
+  title: "Content Structure Guide | Alpath",
+};
+
 export default function ContentStructurePage() {
   return (
     <DocsDetailTemplate

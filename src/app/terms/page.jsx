@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Terms of Service | Alpath",
+};
+
 export default function TermsPage() {
   return (
     <main className="privacy-page">

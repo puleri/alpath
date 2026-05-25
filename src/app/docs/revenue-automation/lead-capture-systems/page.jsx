@@ -1,5 +1,9 @@
 import DocsDetailTemplate from "../../_components/DocsDetailTemplate";
 import {
+export const metadata = {
+  title: "Lead Capture Systems Guide | Alpath",
+};
+
   revenueAutomationDocLinks,
   revenueAutomationDocs,
 } from "../../../../lib/revenueAutomationDocs";

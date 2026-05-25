@@ -1,4 +1,8 @@
 
+export const metadata = {
+  title: "Privacy Policy | Alpath",
+};
+
 export default function PrivacyPage() {
   return (
     <>

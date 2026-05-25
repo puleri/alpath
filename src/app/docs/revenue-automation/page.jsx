@@ -1,5 +1,9 @@
 import DocsDetailTemplate from "../_components/DocsDetailTemplate";
 import {
+export const metadata = {
+  title: "Revenue Automation Guides | Alpath",
+};
+
   revenueAutomationDocLinks,
   revenueAutomationDocs,
 } from "../../../lib/revenueAutomationDocs";

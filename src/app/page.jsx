@@ -4,6 +4,10 @@ import HomeHero from "./components/HomeHero";
 import ParticlePanels from "./components/ParticlePanels";
 import RippleCircleRow from "./components/RippleCircleRow";
 
+export const metadata = {
+  title: "Software Consulting & Development | Alpath",
+};
+
 export default function Home() {
   return (
     <>

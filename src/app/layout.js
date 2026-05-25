@@ -5,14 +5,14 @@ import Footer from "./components/Footer";
 
 export const metadata = {
   title: {
-    default: "Alpath Engineering",
-    template: "%s | Alpath Engineering",
+    default: "Alpath",
+    template: "%s",
   },
   description:
     "Alpath Engineering delivers digital solutions that work as hard as your business, blending strategy, design, and engineering for ambitious teams.",
   metadataBase: new URL("https://alpath.engineering"),
   openGraph: {
-    title: "Alpath Engineering",
+    title: "Alpath",
     description:
       "Digital solutions working as hard as your business, partner with Alpath Engineering for strategy, design, and product engineering.",
     url: "/",
@@ -29,7 +29,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alpath Engineering",
+    title: "Alpath",
     description:
       "Digital solutions working as hard as your business, partner with Alpath Engineering for strategy, design, and product engineering.",
     images: ["/web-app-manifest-512x512.png"],
