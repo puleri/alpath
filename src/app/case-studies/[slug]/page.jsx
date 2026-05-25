@@ -11,11 +11,11 @@ export async function generateMetadata({ params }) {
   const study = getCaseStudyBySlug(slug);
 
   if (!study) {
-    return { title: 'Case Study Not Found | Alpath Engineering' };
+    return { title: 'Case Study Not Found | Alpath' };
   }
 
   return {
-    title: `${study.title} | Case Study | Alpath Engineering`,
+    title: `${study.title} | Case Study | Alpath`,
     description: study.summary,
   };
 }

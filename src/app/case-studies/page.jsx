@@ -1,7 +1,7 @@
 import { caseStudies } from "@/lib/caseStudies";
 
 export const metadata = {
-  title: "Case Studies | Alpath Engineering",
+  title: "Case Studies & Outcomes | Alpath",
   description:
     "See how system-first engagements improved revenue operations, conversion performance, and leadership visibility.",
 };

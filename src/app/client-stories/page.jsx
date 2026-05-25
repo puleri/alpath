@@ -219,7 +219,7 @@ function ClientStoriesCTA() {
 }
 
 export const metadata = {
-  title: "Client Stories | Alpath Engineering",
+  title: "Client Stories & Testimonials | Alpath",
   description:
     "Structured client stories showing the system, the changes made, and the measurable outcomes achieved.",
 };

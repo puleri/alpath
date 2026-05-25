@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Thank You",
+  title: "Thank You | Alpath",
   description:
-    "Thank you for reaching out to Alpath Engineering. We will follow up soon.",
+    "Thank you for reaching out to Alpath. We will follow up soon.",
 };
 
 export default function ThankYouPage() {

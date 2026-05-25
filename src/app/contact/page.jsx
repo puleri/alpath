@@ -2,7 +2,7 @@ import Image from 'next/image';
 import ContactForm from './ContactForm';
 
 export const metadata = {
-  title: 'Contact',
+  title: 'Contact Alpath | Alpath',
   description:
     'Tell us where your process is breaking and we’ll map a practical plan to fix it.',
 };

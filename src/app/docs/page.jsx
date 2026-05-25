@@ -1,4 +1,8 @@
 
+export const metadata = {
+  title: "Guides & Framework Documentation | Alpath",
+};
+
 const systems = [
   {
     title: "Web Consulting",

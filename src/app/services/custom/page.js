@@ -1,5 +1,9 @@
 import CallToAction from "../../components/CallToAction";
 
+export const metadata = {
+  title: "Custom Software Development Services | Alpath",
+};
+
 const useCases = [
   {
     title: "Specialized Web Applications",

@@ -1,8 +1,8 @@
 
 export const metadata = {
-  title: "About | Alpath Engineering",
+  title: "About Alpath | Alpath",
   description:
-    "Learn about Alpath Engineering's system-builder approach to web performance, revenue operations, and business intelligence.",
+    "Learn about Alpath's system-builder approach to web performance, revenue operations, and business intelligence.",
 };
 
 const principles = [
@@ -31,7 +31,7 @@ export default function AboutPage() {
           <p className="case-studies-eyebrow">About</p>
           <h1>Principal system builder for revenue-focused operations</h1>
           <p>
-            Alpath Engineering partners with growth teams to design the systems
+            Alpath partners with growth teams to design the systems
             behind reliable performance: acquisition flow, conversion logic,
             and executive visibility.
           </p>

@@ -1,4 +1,8 @@
 
+export const metadata = {
+  title: "Consulting & Development Services | Alpath",
+};
+
 const serviceLayers = [
   {
     title: "Foundation",
