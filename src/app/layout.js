@@ -2,6 +2,7 @@ import "@fontsource-variable/anaheim";
 import "./globals.css";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
+import StyleSwitcher from "./components/StyleSwitcher";
 
 export const metadata = {
   title: {
@@ -42,10 +43,11 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="apple-mobile-web-app-title" content="Alpath Engineering" />
       </head>
-      <body>
+      <body data-theme="blank-paper-simple">
         <NavigationBar />
         {children}
         <Footer />
+        <StyleSwitcher />
       </body>
     </html>
   );
