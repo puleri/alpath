@@ -3879,3 +3879,103 @@ tbody tr:hover td {
   align-items: center;
 }
 }
+.style-switcher {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 150;
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #d7dce6;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.style-switcher-button {
+  border: 1px solid #cfd5e2;
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  padding: 8px 12px;
+  text-transform: lowercase;
+}
+
+.style-switcher-button.is-active {
+  background: #111827;
+  color: #f8fafc;
+  border-color: #111827;
+}
+
+body[data-theme="graph-paper-core"] {
+  background-color: #f7f8fc;
+  background-image:
+    linear-gradient(rgba(59, 79, 130, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 79, 130, 0.11) 1px, transparent 1px),
+    linear-gradient(rgba(59, 79, 130, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 79, 130, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px, 112px 112px, 112px 112px;
+  background-position: -1px -1px;
+}
+
+body[data-theme="graph-paper-core"] .hero-video-backdrop,
+body[data-theme="graph-paper-core"] .cta-card-dark,
+body[data-theme="graph-paper-core"] .portfolio-card,
+body[data-theme="graph-paper-core"] .service-card,
+body[data-theme="graph-paper-core"] .case-study-feature,
+body[data-theme="graph-paper-core"] .contact-panel,
+body[data-theme="graph-paper-core"] .docs-card,
+body[data-theme="graph-paper-core"] .dashboard-card,
+body[data-theme="graph-paper-core"] .web-services-card,
+body[data-theme="graph-paper-core"] .bento-card {
+  background-image:
+    linear-gradient(rgba(61, 88, 146, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 88, 146, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+  border-style: solid;
+  border-color: rgba(74, 102, 162, 0.45);
+}
+
+body[data-theme="graph-paper-core"] section,
+body[data-theme="graph-paper-core"] article,
+body[data-theme="graph-paper-core"] .cta-card,
+body[data-theme="graph-paper-core"] .our-work-subnav-wrap,
+body[data-theme="graph-paper-core"] .footer {
+  position: relative;
+}
+
+body[data-theme="graph-paper-core"] section::after,
+body[data-theme="graph-paper-core"] article::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(48, 72, 130, 0.45);
+  background: rgba(255, 255, 255, 0.85);
+  top: -6px;
+  right: 6%;
+  pointer-events: none;
+}
+
+body[data-theme="graph-paper-core"] article:nth-of-type(3n)::after,
+body[data-theme="graph-paper-core"] section:nth-of-type(4n)::after {
+  width: 24px;
+  height: 4px;
+  border-width: 0;
+  background: rgba(48, 72, 130, 0.6);
+}
+
+@media (max-width: 720px) {
+  .style-switcher {
+    right: 14px;
+    left: 14px;
+    bottom: 14px;
+    justify-content: center;
+  }
+}
