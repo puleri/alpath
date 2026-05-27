@@ -3688,11 +3688,7 @@ tbody tr:hover td {
 
 .our-work-page {
   padding: 140px 0 90px;
-  background:
-    linear-gradient(to right, rgba(39, 39, 42, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(39, 39, 42, 0.08) 1px, transparent 1px),
-    #fbfbfc;
-  background-size: 34px 34px, 34px 34px, auto;
+  background: #fbfbfc;
 }
 
 .our-work-hero {
@@ -3761,11 +3757,7 @@ tbody tr:hover td {
   padding: 24px;
   border: 2px solid #1f2937;
   position: relative;
-  background:
-    linear-gradient(to right, rgba(31, 41, 55, 0.17) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(31, 41, 55, 0.17) 1px, transparent 1px),
-    #ffffff;
-  background-size: 24px 24px;
+  background: #ffffff;
   overflow: hidden;
   isolation: isolate;
 }
@@ -3922,6 +3914,23 @@ body[data-theme="graph-paper-core"] {
     linear-gradient(90deg, rgba(59, 79, 130, 0.18) 1px, transparent 1px);
   background-size: 28px 28px, 28px 28px, 112px 112px, 112px 112px;
   background-position: -1px -1px;
+}
+
+
+body[data-theme="graph-paper-core"] .our-work-page {
+  background:
+    linear-gradient(to right, rgba(39, 39, 42, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(39, 39, 42, 0.08) 1px, transparent 1px),
+    #fbfbfc;
+  background-size: 34px 34px, 34px 34px, auto;
+}
+
+body[data-theme="graph-paper-core"] .portfolio-card {
+  background:
+    linear-gradient(to right, rgba(31, 41, 55, 0.17) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 41, 55, 0.17) 1px, transparent 1px),
+    #ffffff;
+  background-size: 24px 24px;
 }
 
 body[data-theme="graph-paper-core"] .hero-video-backdrop,
