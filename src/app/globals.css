@@ -3954,9 +3954,12 @@ body[data-theme="graph-paper-core"] .bento-card {
 body[data-theme="graph-paper-core"] section,
 body[data-theme="graph-paper-core"] article,
 body[data-theme="graph-paper-core"] .cta-card,
-body[data-theme="graph-paper-core"] .our-work-subnav-wrap,
 body[data-theme="graph-paper-core"] .footer {
   position: relative;
+}
+
+body[data-theme="graph-paper-core"] .our-work-subnav-wrap {
+  position: sticky;
 }
 
 body[data-theme="graph-paper-core"] section::after,
