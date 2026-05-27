@@ -1,12 +1,12 @@
 import DocsDetailTemplate from "../_components/DocsDetailTemplate";
 import {
+  revenueAutomationDocLinks,
+  revenueAutomationDocs,
+} from "../../../lib/revenueAutomationDocs";
 export const metadata = {
   title: "Revenue Automation Guides | Alpath",
 };
 
-  revenueAutomationDocLinks,
-  revenueAutomationDocs,
-} from "../../../lib/revenueAutomationDocs";
 
 export default function RevenueAutomationDocsPage() {
   return (
