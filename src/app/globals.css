@@ -431,7 +431,7 @@ html {
 }
 
 .top-bar {
-  background: #ffffff;
+  background: transparent;
   position: relative;
   z-index: 20;
 }
@@ -3926,11 +3926,7 @@ body[data-theme="graph-paper-core"] .our-work-page {
 }
 
 body[data-theme="graph-paper-core"] .top-bar {
-  background:
-    linear-gradient(rgba(59, 79, 130, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 79, 130, 0.12) 1px, transparent 1px),
-    #f8faff;
-  background-size: 22px 22px;
+  background: transparent;
   border-bottom: 1px solid rgba(74, 102, 162, 0.35);
 }
 
