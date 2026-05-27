@@ -1,12 +1,12 @@
 import DocsDetailTemplate from "../_components/DocsDetailTemplate";
 import {
+  businessIntelligenceDocLinks,
+  businessIntelligenceDocs,
+} from "../../../lib/businessIntelligenceDocs";
 export const metadata = {
   title: "Business Intelligence Guides | Alpath",
 };
 
-  businessIntelligenceDocLinks,
-  businessIntelligenceDocs,
-} from "../../../lib/businessIntelligenceDocs";
 
 export default function BusinessIntelligenceDocsPage() {
   return (
