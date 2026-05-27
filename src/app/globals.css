@@ -3925,6 +3925,51 @@ body[data-theme="graph-paper-core"] .our-work-page {
   background-size: 34px 34px, 34px 34px, auto;
 }
 
+body[data-theme="graph-paper-core"] .top-bar {
+  background:
+    linear-gradient(rgba(59, 79, 130, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 79, 130, 0.12) 1px, transparent 1px),
+    #f8faff;
+  background-size: 22px 22px;
+  border-bottom: 1px solid rgba(74, 102, 162, 0.35);
+}
+
+body[data-theme="graph-paper-core"] .nav-link,
+body[data-theme="graph-paper-core"] .brand,
+body[data-theme="graph-paper-core"] .brand:visited,
+body[data-theme="graph-paper-core"] .nav-dropdown-link {
+  color: #203a6f;
+}
+
+body[data-theme="graph-paper-core"] .nav-link:hover,
+body[data-theme="graph-paper-core"] .nav-link:focus-visible {
+  color: #172c54;
+}
+
+body[data-theme="graph-paper-core"] .nav-dropdown-menu {
+  background:
+    linear-gradient(rgba(61, 88, 146, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 88, 146, 0.08) 1px, transparent 1px),
+    #ffffff;
+  background-size: 18px 18px;
+  border-color: rgba(74, 102, 162, 0.4);
+  box-shadow: 0 12px 24px rgba(28, 54, 108, 0.14);
+}
+
+body[data-theme="graph-paper-core"] .nav-dropdown-link:hover,
+body[data-theme="graph-paper-core"] .nav-dropdown-link:focus {
+  background: rgba(40, 68, 124, 0.14);
+}
+
+body[data-theme="graph-paper-core"] .contact-button {
+  background: #203a6f;
+  color: #f8fbff;
+}
+
+body[data-theme="graph-paper-core"] .contact-button:hover {
+  background: #172c54;
+}
+
 body[data-theme="graph-paper-core"] .portfolio-card {
   background:
     linear-gradient(to right, rgba(31, 41, 55, 0.17) 1px, transparent 1px),
