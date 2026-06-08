@@ -329,6 +329,16 @@ html {
   display: inline;
 }
 
+.hero-supporting-copy {
+  width: clamp(280px, 72vw, 720px);
+  margin: -4px auto 0;
+  color: #4f4f4f;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.55;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
 .hero-cursor {
   display: inline-block;
   font-weight: 400;

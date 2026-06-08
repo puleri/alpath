@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main className="home">
-        <HomeHero />
+        <HomeHero variant="rebrand" />
         <HeroVideo />
         <RippleCircleRow />
 
