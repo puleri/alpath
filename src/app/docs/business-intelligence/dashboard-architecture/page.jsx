@@ -1,12 +1,12 @@
-import DocsDetailTemplate from "../../_components/DocsDetailTemplate";
+import DocsDetailTemplate from '../../_components/DocsDetailTemplate';
 import {
-export const metadata = {
-  title: "Dashboard Architecture Guide | Alpath",
-};
-
   businessIntelligenceDocLinks,
   businessIntelligenceDocs,
-} from "../../../../lib/businessIntelligenceDocs";
+} from '../../../../lib/businessIntelligenceDocs';
+
+export const metadata = {
+  title: 'Dashboard Architecture Guide | Alpath',
+};
 
 export default function DashboardArchitecturePage() {
   return (
