@@ -21,6 +21,14 @@ const CTA_VARIANTS = {
     secondaryHref: "/services/web-services",
     tone: "dark",
   },
+  rebrandReadiness: {
+    title: "Planning a rebrand? Make sure the website is ready before launch.",
+    description:
+      "We’ll review your current site, portfolio structure, redirects, lead capture, and launch risks so the new brand goes live without losing trust or inquiries.",
+    primaryAction: "Book a rebrand readiness call",
+    primaryHref: "/contact",
+    tone: "dark",
+  },
   webServicesBottom: {
     title: "Ready to engineer a high-performance web presence?",
     description:

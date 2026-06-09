@@ -168,7 +168,7 @@ export default function Home() {
           </div>
         </div>
 
-        <CallToAction variant="websiteAudit" />
+        <CallToAction variant="rebrandReadiness" />
         <div className="container">
           <a className="home-proof-link" href="/client-stories">
             Want proof first? Read client stories.
