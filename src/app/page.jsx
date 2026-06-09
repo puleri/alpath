@@ -2,7 +2,6 @@ import CallToAction from './components/CallToAction';
 import ClientLogoStrip from './components/ClientLogoStrip';
 import HeroVideo from './components/HeroVideo';
 import HomeHero from './components/HomeHero';
-import ParticlePanels from './components/ParticlePanels';
 import RippleCircleRow from './components/RippleCircleRow';
 import { caseStudies } from '@/lib/caseStudies';
 

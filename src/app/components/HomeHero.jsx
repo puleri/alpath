@@ -14,9 +14,9 @@ const HERO_CONTENT = {
   },
   rebrand: {
     heroText:
-      "Modern websites for firms whose brand needs to match the quality of their work.",
+      "Modern Branding. Print & Digital.",
     supportingText:
-      "We help construction and architecture firms preserve trust during a rebrand, modernize their website, showcase project portfolios, and keep inquiries, redirects, and lead capture working through launch.",
+      "We help construction and architecture firms preserve trust during a rebrand, modernize their digital experience, and showcase project portfolios.",
     primaryCta: "Plan a rebrand launch",
     secondaryCta: "View client outcomes",
     secondaryHref: "/client-stories",
