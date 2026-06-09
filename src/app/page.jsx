@@ -35,7 +35,7 @@ export default function Home() {
                 positioning, and websites built to perform long after launch.
               </p>
               <a className="home-proof-link" href="/client-stories">
-                Read more client stories →
+                Read client stories →
               </a>
             </div>
 
@@ -155,6 +155,11 @@ export default function Home() {
         </div>
 
         <CallToAction variant="websiteAudit" />
+        <div className="container">
+          <a className="home-proof-link" href="/client-stories">
+            Want proof first? Read client stories.
+          </a>
+        </div>
       </main>
     </>
   );
