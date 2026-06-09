@@ -1,6 +1,7 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-import CallToAction from "../../components/CallToAction";
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import CallToAction from '../../components/CallToAction';
+import { caseStudies } from '@/lib/caseStudies';
 
 const SCORE_ANIMATION_MS = 1700;
 const PROGRESS_ANIMATION_MS = 1800;
@@ -42,7 +43,7 @@ function LighthouseMetricCircle({ label, score, shouldAnimate }) {
       <h3>{label}</h3>
       <div
         className="lighthouse-score-circle"
-        style={{ "--score": `${displayedScore}%` }}
+        style={{ '--score': `${displayedScore}%` }}
         aria-label={`${label} score ${displayedScore}%`}
       >
         <span>{displayedScore}%</span>
@@ -52,11 +53,15 @@ function LighthouseMetricCircle({ label, score, shouldAnimate }) {
 }
 
 export default function WebServicesPage() {
+  const featuredRebrandStudy = caseStudies.find(
+    (study) => study.slug === 'architecture-firm-rebrand-web-system',
+  );
+
   const lighthouseScores = [
-    { label: "Performance", score: 99 },
-    { label: "SEO", score: 100 },
-    { label: "Best Practices", score: 97 },
-    { label: "Accessibility", score: 99 },
+    { label: 'Performance', score: 99 },
+    { label: 'SEO', score: 100 },
+    { label: 'Best Practices', score: 97 },
+    { label: 'Accessibility', score: 99 },
   ];
 
   const metricsRef = useRef(null);
@@ -78,7 +83,7 @@ export default function WebServicesPage() {
       },
       {
         threshold: 0.35,
-      }
+      },
     );
 
     observer.observe(metricNode);
@@ -89,7 +94,9 @@ export default function WebServicesPage() {
   useEffect(() => {
     if (!animateMetrics) return;
 
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
     if (reducedMotion) {
       setEngagementScore(85);
       return;
@@ -170,7 +177,7 @@ export default function WebServicesPage() {
                 <div className="lighthouse-progress-track">
                   <div
                     className="lighthouse-progress-fill"
-                    style={{ "--engagement-score": `${engagementScore}%` }}
+                    style={{ '--engagement-score': `${engagementScore}%` }}
                   />
                 </div>
                 <div className="lighthouse-progress-caption">
@@ -202,6 +209,28 @@ export default function WebServicesPage() {
             </article>
           </div>
 
+          {featuredRebrandStudy ? (
+            <section aria-label="Built-environment rebrand proof">
+              <article className="web-services-card">
+                <p className="case-study-industry">
+                  {featuredRebrandStudy.industry}
+                </p>
+                <h2>{featuredRebrandStudy.title}</h2>
+                <p>{featuredRebrandStudy.summary}</p>
+                <ul>
+                  {featuredRebrandStudy.outcomes.map((outcome) => (
+                    <li key={outcome}>{outcome}</li>
+                  ))}
+                </ul>
+                <a
+                  className="services-cta-link"
+                  href={`/case-studies/${featuredRebrandStudy.slug}`}
+                >
+                  → View architecture rebrand case study
+                </a>
+              </article>
+            </section>
+          ) : null}
         </section>
         <CallToAction variant="webServicesBottom" />
       </main>
