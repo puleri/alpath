@@ -1,4 +1,5 @@
 import CallToAction from './components/CallToAction';
+import ClientLogoStrip from './components/ClientLogoStrip';
 import HeroVideo from './components/HeroVideo';
 import HomeHero from './components/HomeHero';
 import ParticlePanels from './components/ParticlePanels';
@@ -15,6 +16,7 @@ export default function Home() {
         <HomeHero variant="rebrand" />
         <HeroVideo />
         <RippleCircleRow />
+        <ClientLogoStrip />
 
         <section
           className="home-proof-section container"
