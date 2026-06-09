@@ -1,5 +1,74 @@
 export const caseStudies = [
   {
+    slug: 'architecture-firm-rebrand-web-system',
+    title: 'Architecture Firm Rebrand and Web System Launch',
+    industry: 'Architecture & Built Environment',
+    summary:
+      'Refreshed an architecture firm’s digital brand presentation, migrated its project portfolio, and launched a faster site with cleaner inquiry paths and preserved search equity.',
+    problem:
+      'The firm had outgrown a dated web presence that no longer reflected the quality of its work. Its project portfolio was difficult to update, page performance lagged, and leadership needed a rebrand launch that would not disrupt existing SEO value or inbound inquiries.',
+    systemApplied: [
+      'Brand presentation refresh across visual hierarchy, messaging structure, and portfolio storytelling',
+      'Project portfolio migration into reusable case study and sector templates for easier content management',
+      'Performance-focused rebuild with optimized media, page structure, and mobile-first project browsing',
+      'Inquiry flow redesign with clearer service paths, contact prompts, and analytics-ready conversion points',
+      'SEO preservation plan covering legacy route mapping, redirects, metadata, and launch QA',
+    ],
+    beforeState: [
+      'Dated brand presentation did not match the firm’s current project quality or market position',
+      'Portfolio updates required too much manual editing and slowed down new project publishing',
+      'Slow pages, unclear inquiry paths, and SEO migration risk threatened the rebrand launch',
+    ],
+    afterState: [
+      'Modernized brand system with stronger project storytelling across desktop and mobile',
+      'Structured portfolio migration that made featured work easier to manage and expand',
+      'Faster website experience with cleaner navigation, clearer inquiry flow, and preserved redirect structure',
+    ],
+    outcomes: [
+      'Rebrand launched with a more credible, contemporary presentation for architecture buyers and partners',
+      'Project portfolio moved into a maintainable content system for faster publishing by the internal team',
+      'Improved site performance and inquiry clarity while protecting existing SEO value through redirects',
+    ],
+    detailPage: {
+      heroTitle:
+        'How an architecture firm relaunched its brand with a faster portfolio-driven web system',
+      heroSummary:
+        'The engagement paired a built-environment brand refresh with a practical web rebuild: portfolio migration, faster pages, easier content management, better inquiry flow, and SEO-safe launch planning.',
+      keyMetrics: [
+        { label: 'Brand presentation', value: 'Modernized' },
+        { label: 'Portfolio workflow', value: 'Easier to manage' },
+        { label: 'SEO launch plan', value: 'Redirects preserved' },
+      ],
+      challenge:
+        'Architecture and construction-adjacent firms rely on project credibility. The existing site made that credibility harder to see, harder to update, and riskier to relaunch without a structured migration and redirect plan.',
+      implementationPhases: [
+        {
+          title: 'Phase 1: Rebrand and portfolio system planning',
+          description:
+            'Translated the updated brand direction into web-ready page patterns, project taxonomy, portfolio templates, and content migration requirements.',
+        },
+        {
+          title: 'Phase 2: Performance and content management rebuild',
+          description:
+            'Rebuilt key pages around optimized media, reusable project components, and a maintainable content model that reduced publishing friction.',
+        },
+        {
+          title: 'Phase 3: Inquiry and SEO-safe launch',
+          description:
+            'Improved calls to action, contact paths, metadata, and legacy URL redirects so the new brand could launch without sacrificing search visibility or inbound momentum.',
+        },
+      ],
+      techStack: [
+        'Next.js',
+        'React',
+        'Reusable portfolio components',
+        'Redirect and metadata migration plan',
+      ],
+      nextStep:
+        'If your architecture, construction, or contractor brand is preparing for a refresh, we can help migrate your portfolio, preserve SEO, and launch a faster site your team can manage.',
+    },
+  },
+  {
     slug: 'wordpress-to-nextjs-migration',
     title: 'WordPress to Next.js Conversion Lift',
     industry: 'Professional Services',
@@ -134,7 +203,10 @@ export const caseStudies = [
       keyMetrics: [
         { label: 'Initial triage window', value: '48 hours' },
         { label: 'Recovery roadmap horizon', value: '30-60-90 day plan' },
-        { label: 'Primary objective', value: 'Stabilize releases + rebuild confidence' },
+        {
+          label: 'Primary objective',
+          value: 'Stabilize releases + rebuild confidence',
+        },
       ],
       challenge:
         'The startup faced a production outage during a high-stakes valuation period. Engineering teams were operating under intense pressure with unclear root causes, inconsistent safeguards, and limited confidence in release reliability.',

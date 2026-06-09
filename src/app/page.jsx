@@ -4,12 +4,17 @@ import HeroVideo from './components/HeroVideo';
 import HomeHero from './components/HomeHero';
 import ParticlePanels from './components/ParticlePanels';
 import RippleCircleRow from './components/RippleCircleRow';
+import { caseStudies } from '@/lib/caseStudies';
 
 export const metadata = {
   title: 'Software Consulting & Development | Alpath',
 };
 
 export default function Home() {
+  const featuredRebrandStudy = caseStudies.find(
+    (study) => study.slug === 'architecture-firm-rebrand-web-system',
+  );
+
   return (
     <>
       <main className="home">
@@ -40,20 +45,29 @@ export default function Home() {
             </div>
 
             <article className="home-proof-card">
-              <p className="home-proof-card-label">Architecture Firm</p>
+              <p className="home-proof-card-label">
+                {featuredRebrandStudy?.industry || 'Architecture Firm'}
+              </p>
               <blockquote className="home-proof-quote">
                 &ldquo;The new site finally reflects the quality of our
                 work.&rdquo;
               </blockquote>
               <p className="home-proof-outcome">
-                <strong>Outcome:</strong> High-performance site aligned with
-                brand and easier to maintain.
+                <strong>Outcome:</strong> Modernized brand presentation,
+                migrated project portfolio, faster pages, and clearer inquiry
+                flow.
               </p>
               <p className="home-proof-context">
-                Pulled from the Architect Firm Owner story: a web migration and
-                system rebuild created a modern, fast site with a structured
-                portfolio system and improved content management.
+                Featured case study: {featuredRebrandStudy?.title}. The rebrand
+                launch paired reusable portfolio templates with easier content
+                management and an SEO-safe redirect structure.
               </p>
+              <a
+                className="home-proof-link"
+                href={`/case-studies/${featuredRebrandStudy?.slug}`}
+              >
+                Read the rebrand case study →
+              </a>
             </article>
           </div>
         </section>
