@@ -13,8 +13,7 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const buildSendFailureMessage = ({ status, details }) => {
-    const normalizedDetails =
-      typeof details === 'string' ? details.trim() : '';
+    const normalizedDetails = typeof details === 'string' ? details.trim() : '';
 
     if (
       normalizedDetails &&
@@ -55,7 +54,6 @@ export default function ContactForm() {
       requestBody.append('service_id', EMAILJS_SERVICE_ID);
       requestBody.append('template_id', EMAILJS_TEMPLATE_ID);
       requestBody.append('user_id', EMAILJS_PUBLIC_KEY);
-
 
       const response = await fetch(
         'https://api.emailjs.com/api/v1.0/email/send-form',
@@ -131,12 +129,12 @@ export default function ContactForm() {
         />
       </div>
       <div className="contact-form-row">
-        <label htmlFor="project_scope">Project brief</label>
+        <label htmlFor="project_scope">Brand / website brief</label>
         <textarea
           id="project_scope"
           name="project_scope"
           rows={6}
-          placeholder="Tell us what you are trying to improve."
+          placeholder="Tell us how your brand or website needs to communicate value, build trust, or generate better opportunities."
           required
         />
       </div>

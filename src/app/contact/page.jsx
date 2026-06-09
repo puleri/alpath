@@ -2,15 +2,15 @@ import Image from 'next/image';
 import ContactForm from './ContactForm';
 
 export const metadata = {
-  title: 'Contact Alpath | Alpath',
+  title: 'Contact Alpath | Brand & Website Strategy',
   description:
-    'Tell us where your process is breaking and we’ll map a practical plan to fix it.',
+    'Start a conversation about brand positioning, website strategy, and digital experiences built to create trust and generate qualified opportunities.',
 };
 
 const prepChecklist = [
-  'Your top priority for the next quarter.',
-  'Where work is currently getting stuck.',
-  'The tools and teams this project touches.',
+  'What your current brand or website is not communicating clearly.',
+  'The audiences, offers, and buying decisions the experience needs to support.',
+  'Any launch dates, internal stakeholders, or systems the work must connect with.',
 ];
 
 export default function ContactPage() {
@@ -20,17 +20,20 @@ export default function ContactPage() {
         <header className="contact-hero">
           <div>
             <p className="case-studies-eyebrow">Contact</p>
-            <h1>Let’s fix the systems slowing your team down</h1>
+            <h1>
+              Let’s build a brand and website that make your value obvious
+            </h1>
             <p>
-              Share a few details about your goals and constraints. We’ll reply
-              with clear next steps, realistic scope, and a plan your team can
-              execute.
+              Share where your positioning, messaging, or website is falling
+              short. We’ll respond with practical next steps for creating a
+              sharper digital presence that builds trust, explains your value,
+              and turns qualified visitors into real conversations.
             </p>
           </div>
           <div className="contact-hero-art">
             <Image
               src="/heros/contact.svg"
-              alt="System architecture illustration"
+              alt="Brand and website strategy illustration"
               width={460}
               height={320}
               priority
@@ -42,9 +45,16 @@ export default function ContactPage() {
           <aside className="contact-bento-card contact-bento-intro">
             <h2>What to include</h2>
             <ul>
-              <li>The business result you need, not just the feature list.</li>
-              <li>What is blocking progress today.</li>
-              <li>Any timelines, dependencies, or technical constraints.</li>
+              <li>
+                The growth outcome you want your brand or website to support.
+              </li>
+              <li>
+                Where prospects are confused, hesitating, or dropping off today.
+              </li>
+              <li>
+                Any messaging, visual identity, content, or technical
+                constraints.
+              </li>
             </ul>
             <p className="contact-direct-line">
               Prefer direct email? Reach us at{' '}
@@ -56,7 +66,7 @@ export default function ContactPage() {
           </aside>
 
           <section className="contact-bento-card contact-bento-form-wrap">
-            <h2>Project brief</h2>
+            <h2>Brand and website brief</h2>
             <ContactForm />
           </section>
 
