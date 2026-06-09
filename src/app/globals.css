@@ -3040,12 +3040,8 @@ tbody tr:hover td {
   box-shadow: var(--bento-shadow);
 }
 
-.contact-bento-intro {
-  grid-column: span 4;
-}
-
 .contact-bento-form-wrap {
-  grid-column: span 8;
+  grid-column: span 12;
 }
 
 .contact-bento-prep {
@@ -3064,9 +3060,18 @@ tbody tr:hover td {
   color: #333333;
 }
 
+.contact-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
 .contact-direct-line {
-  margin: 1rem 0 0;
+  margin: 0;
   color: #323232;
+  line-height: 1.5;
 }
 
 .contact-direct-line a {
@@ -3113,7 +3118,6 @@ tbody tr:hover td {
 }
 
 .contact-submit {
-  margin-top: 0.25rem;
   width: fit-content;
 }
 
@@ -3200,7 +3204,6 @@ tbody tr:hover td {
     width: min(92%, 340px);
   }
 
-  .contact-bento-intro,
   .contact-bento-form-wrap,
   .contact-bento-prep {
     grid-column: auto;

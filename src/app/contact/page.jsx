@@ -42,29 +42,6 @@ export default function ContactPage() {
         </header>
 
         <div className="contact-bento-grid">
-          <aside className="contact-bento-card contact-bento-intro">
-            <h2>What to include</h2>
-            <ul>
-              <li>
-                The growth outcome you want your brand or website to support.
-              </li>
-              <li>
-                Where prospects are confused, hesitating, or dropping off today.
-              </li>
-              <li>
-                Any messaging, visual identity, content, or technical
-                constraints.
-              </li>
-            </ul>
-            <p className="contact-direct-line">
-              Prefer direct email? Reach us at{' '}
-              <a href="mailto:contact@alpathengineering.com">
-                contact@alpathengineering.com
-              </a>
-              .
-            </p>
-          </aside>
-
           <section className="contact-bento-card contact-bento-form-wrap">
             <h2>Brand and website brief</h2>
             <ContactForm />
