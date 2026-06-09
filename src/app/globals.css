@@ -387,6 +387,50 @@ html {
   letter-spacing: -0.02em;
 }
 
+.client-logo-strip {
+  margin: 24px auto 72px;
+  text-align: center;
+}
+
+.client-logo-strip-heading {
+  margin: 0 0 22px;
+  color: #656b75;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.client-logo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.client-logo-card {
+  min-height: 118px;
+  border: 1px solid var(--bento-border);
+  border-radius: 22px;
+  background: rgba(248, 249, 251, 0.82);
+  box-shadow: var(--bento-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.client-logo-image {
+  display: block;
+  width: auto;
+  max-width: min(210px, 100%);
+  max-height: 58px;
+  object-fit: contain;
+}
+
 .home-service-grid {
   display: grid;
   gap: 72px;
@@ -4013,5 +4057,29 @@ tbody tr:hover td {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .client-logo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .client-logo-card {
+    min-height: 104px;
+  }
+}
+
+@media (max-width: 640px) {
+  .client-logo-strip {
+    margin: 8px auto 52px;
+  }
+
+  .client-logo-card {
+    padding: 20px;
+  }
+
+  .client-logo-image {
+    max-height: 48px;
   }
 }
