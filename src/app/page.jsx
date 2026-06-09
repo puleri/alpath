@@ -1,11 +1,11 @@
-import CallToAction from "./components/CallToAction";
-import HeroVideo from "./components/HeroVideo";
-import HomeHero from "./components/HomeHero";
-import ParticlePanels from "./components/ParticlePanels";
-import RippleCircleRow from "./components/RippleCircleRow";
+import CallToAction from './components/CallToAction';
+import HeroVideo from './components/HeroVideo';
+import HomeHero from './components/HomeHero';
+import ParticlePanels from './components/ParticlePanels';
+import RippleCircleRow from './components/RippleCircleRow';
 
 export const metadata = {
-  title: "Software Consulting & Development | Alpath",
+  title: 'Software Consulting & Development | Alpath',
 };
 
 export default function Home() {
@@ -18,9 +18,29 @@ export default function Home() {
 
         <div className="container">
           <h2 className="home-h2">
-            Designing and building revenue-driven software for growing businesses.
+            Designing and building revenue-driven software for growing
+            businesses.
           </h2>
           <div className="home-service-grid">
+            <article className="home-service-row">
+              <div className="home-service-copy">
+                <h3>Branding Built for Construction &amp; Architecture</h3>
+                <p>
+                  Rebrands for construction and architecture firms need more
+                  than a new look. We support brand transitions with portfolio
+                  and project showcase structure, content migration, SEO
+                  redirects, and a launch plan that keeps the new site fast,
+                  maintainable, and easy to build on.
+                </p>
+              </div>
+              <div className="home-service-visual">
+                <img
+                  src="/placeholders/small-projects.svg"
+                  alt="Layered portfolio cards for project showcase planning"
+                />
+              </div>
+            </article>
+
             <article className="home-service-row">
               <div className="home-service-copy">
                 <h3>Revenue Automation</h3>
@@ -75,29 +95,25 @@ export default function Home() {
 
             <article className="home-service-row">
               <div className="home-service-copy">
-                <h3>Small Projects</h3>
+                <h3>Website Support &amp; Iteration</h3>
                 <p>
-                  Website builds, migrations, maintenance, and one-off landing pages.
+                  Keep critical website systems moving after launch with focused
+                  improvements, migration cleanup, maintenance, and landing page
+                  support that fit into a larger growth roadmap.
                 </p>
               </div>
               <div className="home-service-visual">
                 <img
                   src="/placeholders/small-projects.svg"
-                  alt="Stacked application screens in perspective"
+                  alt="Stacked website support and iteration screens"
                 />
               </div>
             </article>
-
-
           </div>
         </div>
 
-
-        <CallToAction variant="websiteAudit"/>
-  
-
+        <CallToAction variant="websiteAudit" />
       </main>
-
     </>
   );
 }
