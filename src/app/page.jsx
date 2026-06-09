@@ -16,6 +16,46 @@ export default function Home() {
         <HeroVideo />
         <RippleCircleRow />
 
+        <section
+          className="home-proof-section container"
+          aria-labelledby="home-proof-heading"
+        >
+          <div className="home-proof-grid">
+            <div className="home-proof-copy">
+              <p className="home-proof-eyebrow">Client proof</p>
+              <h2 id="home-proof-heading">
+                Trusted by service businesses, architects, and operators
+                modernizing their web presence.
+              </h2>
+              <p>
+                Our client stories show the same pattern across service brands,
+                startups, and architecture firms: cleaner systems, stronger
+                positioning, and websites built to perform long after launch.
+              </p>
+              <a className="home-proof-link" href="/client-stories">
+                Read more client stories →
+              </a>
+            </div>
+
+            <article className="home-proof-card">
+              <p className="home-proof-card-label">Architecture Firm</p>
+              <blockquote className="home-proof-quote">
+                &ldquo;The new site finally reflects the quality of our
+                work.&rdquo;
+              </blockquote>
+              <p className="home-proof-outcome">
+                <strong>Outcome:</strong> High-performance site aligned with
+                brand and easier to maintain.
+              </p>
+              <p className="home-proof-context">
+                Pulled from the Architect Firm Owner story: a web migration and
+                system rebuild created a modern, fast site with a structured
+                portfolio system and improved content management.
+              </p>
+            </article>
+          </div>
+        </section>
+
         <div className="container">
           <h2 className="home-h2">
             Designing and building revenue-driven software for growing
