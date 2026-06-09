@@ -1,12 +1,12 @@
-import DocsDetailTemplate from "../../_components/DocsDetailTemplate";
+import DocsDetailTemplate from '../../_components/DocsDetailTemplate';
 import {
-export const metadata = {
-  title: "CRM Integration Guide | Alpath",
-};
-
   revenueAutomationDocLinks,
   revenueAutomationDocs,
-} from "../../../../lib/revenueAutomationDocs";
+} from '../../../../lib/revenueAutomationDocs';
+
+export const metadata = {
+  title: 'CRM Integration Guide | Alpath',
+};
 
 export default function CrmIntegrationPage() {
   return (

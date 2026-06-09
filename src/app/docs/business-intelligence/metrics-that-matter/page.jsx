@@ -1,12 +1,12 @@
-import DocsDetailTemplate from "../../_components/DocsDetailTemplate";
+import DocsDetailTemplate from '../../_components/DocsDetailTemplate';
 import {
-export const metadata = {
-  title: "Metrics That Matter Guide | Alpath",
-};
-
   businessIntelligenceDocLinks,
   businessIntelligenceDocs,
-} from "../../../../lib/businessIntelligenceDocs";
+} from '../../../../lib/businessIntelligenceDocs';
+
+export const metadata = {
+  title: 'Metrics That Matter Guide | Alpath',
+};
 
 export default function MetricsThatMatterPage() {
   return (
