@@ -143,14 +143,23 @@ export default function ContactForm() {
           {errorMessage}
         </p>
       ) : null}
-      <button
-        className="primary-button contact-submit"
-        type="submit"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? 'Sending...' : 'Send brief'}{' '}
-        <span aria-hidden="true">→</span>
-      </button>
+      <div className="contact-submit-row">
+        <button
+          className="primary-button contact-submit"
+          type="submit"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Send brief'}{' '}
+          <span aria-hidden="true">→</span>
+        </button>
+        <p className="contact-direct-line">
+          Prefer direct email? Reach us at{' '}
+          <a href="mailto:contact@alpathengineering.com">
+            contact@alpathengineering.com
+          </a>
+          .
+        </p>
+      </div>
     </form>
   );
 }
