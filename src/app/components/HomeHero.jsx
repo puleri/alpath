@@ -14,12 +14,12 @@ const HERO_CONTENT = {
   },
   rebrand: {
     heroText:
-      "Modern Branding. Print & Digital.",
+      "Your Bellevue digital marketing agency",
     supportingText:
-      "We help construction and architecture firms preserve trust during a rebrand, modernize their digital experience, and showcase project portfolios.",
+      "We help construction, architecture, and small businesses preserve trust during a rebrand, modernize their digital experience, and showcase project portfolios.",
     primaryCta: "Plan a rebrand launch",
     secondaryCta: "View client outcomes",
-    secondaryHref: "/client-stories",
+    secondaryHref: "/our-work",
   },
 };
 const CURSOR_BLINK_DURATION_MS = 1000;

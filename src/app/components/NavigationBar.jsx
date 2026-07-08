@@ -13,7 +13,7 @@ export default function NavigationBar() {
           </span>
         </a>
         <nav className="nav-links">
-          <div className="nav-item nav-dropdown">
+          {/* <div className="nav-item nav-dropdown">
             <a
               className="nav-link nav-dropdown-toggle"
               href="/services"
@@ -51,13 +51,13 @@ export default function NavigationBar() {
                 Custom
               </a>
             </div>
-          </div>
+          </div> */}
           <a className="nav-link" href="/our-work">
             Portfolio
           </a>
-          <a className="nav-link" href="/client-stories">
+          {/* <a className="nav-link" href="/client-stories">
             Client Stories
-          </a>
+          </a> */}
           <a className="nav-link" href="/case-studies">
             Case Studies
           </a>

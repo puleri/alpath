@@ -5,6 +5,18 @@ export const metadata = {
 
 const systems = [
   {
+    title: "Brand System",
+    description:
+      "Clarify how your business should be understood, remembered, and trusted before you ask your website or marketing to carry the whole weight.",
+    links: [
+      { label: "/docs/brand-system", href: "/docs/brand-system" },
+      { label: "Positioning Foundation", href: "/docs/brand-system/positioning-foundation" },
+      { label: "Messaging System", href: "/docs/brand-system/messaging-system" },
+      { label: "Visual Identity", href: "/docs/brand-system/visual-identity" },
+      { label: "Brand Launch", href: "/docs/brand-system/brand-launch" },
+    ],
+  },
+  {
     title: "Web Consulting",
     description:
       "Diagnose and strengthen your digital foundation. Understand what’s working, what’s not, and what to fix.",
@@ -140,6 +152,11 @@ function SystemFlowDiagram() {
       <h2>Cross-System Framing</h2>
       <div className="docs-flow-shell" aria-label="Foundation flows into automation and visibility">
         <div>
+          <p className="docs-flow-label">Clarity</p>
+          <h3>Brand</h3>
+        </div>
+        <span aria-hidden="true">→</span>
+        <div>
           <p className="docs-flow-label">Foundation</p>
           <h3>Web</h3>
         </div>
@@ -155,8 +172,8 @@ function SystemFlowDiagram() {
         </div>
       </div>
       <p className="docs-flow-copy">
-        Each system builds on the last. You can enter anywhere, but the full system creates the
-        most leverage.
+        Each system builds on the last. Brand clarity shapes the message, the website carries it,
+        automation moves opportunities forward, and visibility shows what is working.
       </p>
     </section>
   );

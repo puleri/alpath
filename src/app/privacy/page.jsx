@@ -167,7 +167,7 @@ export default function PrivacyPage() {
           <h2>10. Contact</h2>
           <p>
             If you have questions or concerns about this Privacy Policy or how
-            your information is handled, you may contact us at:
+            your information is handled, you may contact us at: contact@alpathengineering.com
           </p>
           <p className="privacy-contact">Alpath Engineering</p>
         </section>

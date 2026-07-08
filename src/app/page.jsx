@@ -3,6 +3,7 @@ import ClientLogoStrip from './components/ClientLogoStrip';
 import HeroVideo from './components/HeroVideo';
 import HomeHero from './components/HomeHero';
 import RippleCircleRow from './components/RippleCircleRow';
+import WhoWeAre from './components/WhoWeAre';
 import { caseStudies } from '@/lib/caseStudies';
 
 export const metadata = {
@@ -18,57 +19,15 @@ export default function Home() {
     <>
       <main className="home">
         <HomeHero variant="rebrand" />
-        <HeroVideo />
+        {/* <HeroVideo /> */}
         <RippleCircleRow />
         <ClientLogoStrip />
+        <WhoWeAre />
 
         <section
           className="home-proof-section container"
           aria-labelledby="home-proof-heading"
         >
-          <div className="home-proof-grid">
-            <div className="home-proof-copy">
-              <p className="home-proof-eyebrow">Client proof</p>
-              <h2 id="home-proof-heading">
-                Trusted by service businesses, architects, and operators
-                modernizing their web presence.
-              </h2>
-              <p>
-                Our client stories show the same pattern across service brands,
-                startups, and architecture firms: cleaner systems, stronger
-                positioning, and websites built to perform long after launch.
-              </p>
-              <a className="home-proof-link" href="/client-stories">
-                Read client stories →
-              </a>
-            </div>
-
-            <article className="home-proof-card">
-              <p className="home-proof-card-label">
-                {featuredRebrandStudy?.industry || 'Architecture Firm'}
-              </p>
-              <blockquote className="home-proof-quote">
-                &ldquo;The new site finally reflects the quality of our
-                work.&rdquo;
-              </blockquote>
-              <p className="home-proof-outcome">
-                <strong>Outcome:</strong> Modernized brand presentation,
-                migrated project portfolio, faster pages, and clearer inquiry
-                flow.
-              </p>
-              <p className="home-proof-context">
-                Featured case study: {featuredRebrandStudy?.title}. The rebrand
-                launch paired reusable portfolio templates with easier content
-                management and an SEO-safe redirect structure.
-              </p>
-              <a
-                className="home-proof-link"
-                href={`/case-studies/${featuredRebrandStudy?.slug}`}
-              >
-                Read the rebrand case study →
-              </a>
-            </article>
-          </div>
         </section>
 
         <div className="container">
@@ -79,71 +38,73 @@ export default function Home() {
           <div className="home-service-grid">
             <article className="home-service-row">
               <div className="home-service-copy">
-                <h3>Branding Built for Construction &amp; Architecture</h3>
+                <h3>Seattle Architecture Firm Marketing</h3>
                 <p>
-                  Rebrands for construction and architecture firms need more
-                  than a new look. We support brand transitions with portfolio
-                  and project showcase structure, content migration, SEO
-                  redirects, and a launch plan that keeps the new site fast,
-                  maintainable, and easy to build on.
+                  We help prominent Seattle architecture firms present their
+                  work with the clarity their projects deserve. From portfolio
+                  structure and project storytelling to brand polish and SEO
+                  migration, we build sites that make technical credibility easy
+                  for clients and partners to understand.
                 </p>
               </div>
               <div className="home-service-visual">
                 <img
-                  src="/placeholders/small-projects.svg"
-                  alt="Layered portfolio cards for project showcase planning"
+                  src="/photos/home/architecture.png"
+                  alt="Architecture firm portfolio project"
                 />
               </div>
             </article>
 
             <article className="home-service-row">
               <div className="home-service-copy">
-                <h3>Revenue Automation</h3>
+                <h3>Construction Company Websites</h3>
                 <p>
-                  Eliminate manual handoffs between marketing, sales, and
-                  billing. We design systems that capture leads, move deals
-                  forward, and convert activity into revenue, without adding
-                  headcount.
+                  Construction companies need websites that build trust before a
+                  first call. We organize services, project experience, safety
+                  signals, and inquiry paths into a professional web presence
+                  that supports bids, referrals, and long-term growth.
                 </p>
               </div>
               <div className="home-service-visual">
                 <img
-                  src="/placeholders/revenue-automation.svg"
-                  alt="Layered product interface tiles"
+                  src="/photos/home/climate-pledge.png"
+                  alt="Climate Pledge Arena website project"
                 />
               </div>
             </article>
 
             <article className="home-service-row">
               <div className="home-service-copy">
-                <h3>Decision-Ready Business Intelligence</h3>
+                <h3>Interior Design Business Growth</h3>
                 <p>
-                  Align every team on the same numbers with dashboards that
-                  explain what is happening, why it matters, and what comes
-                  next. Your data stays clear, current, and built for action.
+                  Interior design businesses sell taste, process, and trust at
+                  once. We shape portfolios, service pages, and lead paths so
+                  prospective clients can see your style, understand how you
+                  work, and feel ready to start a conversation.
                 </p>
               </div>
               <div className="home-service-visual">
                 <img
-                  src="/placeholders/revenue-dashboard.png"
-                  alt="Revenue system dashboard cards"
+                  src="/photos/home/interior-design.png"
+                  alt="Interior design website project"
                 />
               </div>
             </article>
 
             <article className="home-service-row">
               <div className="home-service-copy">
-                <h3>Executive Visibility</h3>
+                <h3>Local Service Business Leads</h3>
                 <p>
-                  Give leadership the visibility they need with real-time
-                  reporting that stays consistent across the entire customer
-                  journey, from first touch to renewal.
+                  Small businesses like window cleaners, bookkeepers, and local
+                  service teams need practical marketing that turns searches
+                  into calls. We build clear websites, local SEO foundations,
+                  and conversion paths that help the right customers find you.
                 </p>
               </div>
               <div className="home-service-visual">
                 <img
-                  src="/placeholders/revenue-system-heading.png"
-                  alt="Stacked application screens in perspective"
+                  src="/photos/home/window-wash.png"
+                  alt="Window washing service website project"
                 />
               </div>
             </article>
@@ -159,8 +120,8 @@ export default function Home() {
               </div>
               <div className="home-service-visual">
                 <img
-                  src="/placeholders/small-projects.svg"
-                  alt="Stacked website support and iteration screens"
+                  src="/photos/home/web-design.png"
+                  alt="Web design project interface"
                 />
               </div>
             </article>
@@ -168,11 +129,6 @@ export default function Home() {
         </div>
 
         <CallToAction variant="rebrandReadiness" />
-        <div className="container">
-          <a className="home-proof-link" href="/client-stories">
-            Want proof first? Read client stories.
-          </a>
-        </div>
       </main>
     </>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import Spline from "@splinetool/react-spline";
 import { useEffect, useRef, useState } from "react";
 
 const CTA_VARIANTS = {
@@ -22,10 +23,10 @@ const CTA_VARIANTS = {
     tone: "dark",
   },
   rebrandReadiness: {
-    title: "Planning a rebrand? Make sure the website is ready before launch.",
+    title: "Your next client may already be looking.",
     description:
-      "We’ll review your current site, portfolio structure, redirects, lead capture, and launch risks so the new brand goes live without losing trust or inquiries.",
-    primaryAction: "Book a rebrand readiness call",
+      "Make sure your brand and website are ready when they find you. We help local service businesses and creative firms build credible, modern digital experiences that turn interest into real inquiries.",
+    primaryAction: "Let’s improve your digital presence",
     primaryHref: "/contact",
     tone: "dark",
   },
@@ -84,19 +85,30 @@ export default function CallToAction({ variant = "default" }) {
           className={`cta-card cta-card-${selectedVariant.tone}${hasAnimated ? " is-visible" : ""}`}
         >
           <div className="cta-content">
-            <h2 className="cta-title">{selectedVariant.title}</h2>
-            {selectedVariant.description ? (
-              <p className="cta-description">{selectedVariant.description}</p>
-            ) : null}
-            <div className="cta-actions">
-              <a className="cta-button cta-button-primary" href={selectedVariant.primaryHref}>
-                {selectedVariant.primaryAction}
-              </a>
-              {selectedVariant.secondaryAction ? (
-                <a className="cta-button cta-button-secondary" href={selectedVariant.secondaryHref}>
-                  {selectedVariant.secondaryAction}
-                </a>
+            <div className="cta-copy">
+              <h2 className="cta-title">{selectedVariant.title}</h2>
+              {selectedVariant.description ? (
+                <p className="cta-description">{selectedVariant.description}</p>
               ) : null}
+              <div className="cta-actions">
+                <a
+                  className="cta-button cta-button-primary"
+                  href={selectedVariant.primaryHref}
+                >
+                  {selectedVariant.primaryAction}
+                </a>
+                {selectedVariant.secondaryAction ? (
+                  <a
+                    className="cta-button cta-button-secondary"
+                    href={selectedVariant.secondaryHref}
+                  >
+                    {selectedVariant.secondaryAction}
+                  </a>
+                ) : null}
+              </div>
+            </div>
+            <div className="cta-spline" aria-hidden="true">
+              <Spline scene="https://prod.spline.design/lrLVuvkLtMkkzivc/scene.splinecode" />
             </div>
           </div>
         </div>
