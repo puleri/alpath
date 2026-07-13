@@ -20,14 +20,10 @@ export default function ContactPage() {
         <header className="contact-hero">
           <div>
             <p className="case-studies-eyebrow">Contact</p>
-            <h1>
-              Let’s build a brand and website that make your value obvious
-            </h1>
+            <h1>Time to build.</h1>
             <p>
-              Share where your positioning, messaging, or website is falling
-              short. We’ll respond with practical next steps for creating a
-              sharper digital presence that builds trust, explains your value,
-              and turns qualified visitors into real conversations.
+              Tell us about your business.
+              Then we will email you to set up a real conversation. Let's strategize how to get from where you are to where you want to be. 
             </p>
           </div>
           <div className="contact-hero-art">

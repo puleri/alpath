@@ -7,7 +7,7 @@ import WhoWeAre from './components/WhoWeAre';
 import { caseStudies } from '@/lib/caseStudies';
 
 export const metadata = {
-  title: 'Software Consulting & Development | Alpath',
+  title: 'Brand & Web Design | Alpath',
 };
 
 export default function Home() {
@@ -32,8 +32,8 @@ export default function Home() {
 
         <div className="container">
           <h2 className="home-h2">
-            Designing and building revenue-driven software for growing
-            businesses.
+            Building clear brands and websites that help growing businesses earn
+            trust.
           </h2>
           <div className="home-service-grid">
             <article className="home-service-row">

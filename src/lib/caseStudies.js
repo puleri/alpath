@@ -1,71 +1,105 @@
 export const caseStudies = [
   {
     slug: 'architecture-firm-rebrand-web-system',
-    title: 'Architecture Firm Rebrand and Web System Launch',
+    title: 'Lockhart Suver WordPress to Next.js Migration',
     industry: 'Architecture & Built Environment',
     summary:
-      'Refreshed an architecture firm’s digital brand presentation, migrated its project portfolio, and launched a faster site with cleaner inquiry paths and preserved search equity.',
+      'Migrated Lockhart Suver from WordPress to Next.js with a true 1:1 transition, preserving the existing experience while lifting Google Lighthouse performance from 74/100 to 99/100.',
     problem:
-      'The firm had outgrown a dated web presence that no longer reflected the quality of its work. Its project portfolio was difficult to update, page performance lagged, and leadership needed a rebrand launch that would not disrupt existing SEO value or inbound inquiries.',
+      'Lockhart Suver needed an exact 1:1 move off WordPress without losing the site experience, code, or media assets. WordPress did not provide a practical batch export path for the code and media, so a normal migration would have left gaps, missing files, or a rebuilt approximation.',
     systemApplied: [
-      'Brand presentation refresh across visual hierarchy, messaging structure, and portfolio storytelling',
-      'Project portfolio migration into reusable case study and sector templates for easier content management',
-      'Performance-focused rebuild with optimized media, page structure, and mobile-first project browsing',
-      'Inquiry flow redesign with clearer service paths, contact prompts, and analytics-ready conversion points',
-      'SEO preservation plan covering legacy route mapping, redirects, metadata, and launch QA',
+      '1:1 WordPress-to-Next.js migration that preserved the existing site experience',
+      'Custom web-scraper bot built by Alpath\'s principal engineer and founder to crawl the full site',
+      'Individual media extraction for every asset WordPress could not batch export cleanly',
+      'Next.js rebuild with optimized assets, routing, and page structure',
+      'Ownership handoff so Lockhart Suver retained control of its codebase and media library',
     ],
     beforeState: [
-      'Dated brand presentation did not match the firm’s current project quality or market position',
-      'Portfolio updates required too much manual editing and slowed down new project publishing',
-      'Slow pages, unclear inquiry paths, and SEO migration risk threatened the rebrand launch',
+      'WordPress kept the site tied to a platform Lockhart Suver did not fully control',
+      'No reliable batch export path for code and media created migration risk',
+      'Google Lighthouse score sat at 74/100 before the rebuild',
     ],
     afterState: [
-      'Modernized brand system with stronger project storytelling across desktop and mobile',
-      'Structured portfolio migration that made featured work easier to manage and expand',
-      'Faster website experience with cleaner navigation, clearer inquiry flow, and preserved redirect structure',
+      'Exact 1:1 Next.js transition preserved the client\'s site experience',
+      'Custom crawler recovered the media library one asset at a time',
+      'Google Lighthouse score increased to 99/100, and Lockhart Suver now owns its code and media',
     ],
     outcomes: [
-      'Rebrand launched with a more credible, contemporary presentation for architecture buyers and partners',
-      'Project portfolio moved into a maintainable content system for faster publishing by the internal team',
-      'Improved site performance and inquiry clarity while protecting existing SEO value through redirects',
+      'Moved Lockhart Suver off WordPress without compromising the familiar website experience',
+      'Recovered site media through a custom scraper instead of accepting WordPress export limits',
+      'Improved Lighthouse performance from 74/100 to 99/100 on the rebuilt Next.js site',
+      'Delivered a client-owned codebase and media library for long-term control',
     ],
     detailPage: {
       heroTitle:
-        'How an architecture firm relaunched its brand with a faster portfolio-driven web system',
+        'How Bellevue\'s premier architecture firm moved from WordPress to Next.js',
       heroSummary:
-        'The engagement paired a built-environment brand refresh with a practical web rebuild: portfolio migration, faster pages, easier content management, better inquiry flow, and SEO-safe launch planning.',
+        'Lockhart Suver needed a true 1:1 migration from WordPress to Next.js. When WordPress could not batch export the code and media cleanly, Alpath built a custom crawler to recover the site asset by asset, then rebuilt the experience on a faster client-owned stack.',
+      heroTags: [
+        'Bellevue architecture',
+        'WordPress to Next.js',
+        '1:1 migration',
+        'Custom scraper',
+      ],
+      heroImage: {
+        src: '/photos/portfolio/lockhart-suver/seattle-architecture.png',
+        alt: 'Modern Bellevue architecture project with an angular roofline and glass entry',
+      },
+      overview: {
+        title: 'A precise migration for a firm whose digital presence already had equity',
+        body:
+          'Lockhart Suver is Bellevue\'s premier architecture firm, so the goal was not to reinvent the site for the sake of change. The project preserved the existing experience, recovered the media WordPress would not export cleanly, and moved the firm to a faster Next.js foundation they could truly own.',
+        points: [
+          'Preserve the client-facing site experience without visual drift',
+          'Recover code and media from a restrictive WordPress environment',
+          'Improve performance while handing ownership back to the client',
+        ],
+      },
+      ctaVariant: 'rebrandReadiness',
       keyMetrics: [
-        { label: 'Brand presentation', value: 'Modernized' },
-        { label: 'Portfolio workflow', value: 'Easier to manage' },
-        { label: 'SEO launch plan', value: 'Redirects preserved' },
+        {
+          label: 'Migration fidelity',
+          value: '1:1 transition',
+          icon: '/icons/web.png',
+        },
+        {
+          label: 'Lighthouse score',
+          value: '74 -> 99',
+          icon: '/icons/upgrade.svg',
+        },
+        {
+          label: 'Asset recovery',
+          value: 'Custom crawler',
+          icon: '/icons/verification.png',
+        },
       ],
       challenge:
-        'Architecture and construction-adjacent firms rely on project credibility. The existing site made that credibility harder to see, harder to update, and riskier to relaunch without a structured migration and redirect plan.',
+        'The client wanted the site to feel exactly the same after launch, but the underlying WordPress setup made that difficult. There was no clean batch export for the code or media library, so a standard migration would have missed assets, broken content, or forced a visual rebuild the client did not ask for.',
       implementationPhases: [
         {
-          title: 'Phase 1: Rebrand and portfolio system planning',
+          title: 'Phase 1: 1:1 migration map',
           description:
-            'Translated the updated brand direction into web-ready page patterns, project taxonomy, portfolio templates, and content migration requirements.',
+            'Audited the WordPress site page by page, mapped the existing experience, and defined the Next.js structure needed to preserve the design and user flow exactly.',
         },
         {
-          title: 'Phase 2: Performance and content management rebuild',
+          title: 'Phase 2: Custom scraper and media recovery',
           description:
-            'Rebuilt key pages around optimized media, reusable project components, and a maintainable content model that reduced publishing friction.',
+            'Alpath\'s principal engineer and founder built a custom web-scraper bot to crawl the full WordPress site and download every media asset individually. Take that, WordPress.',
         },
         {
-          title: 'Phase 3: Inquiry and SEO-safe launch',
+          title: 'Phase 3: Next.js rebuild and performance lift',
           description:
-            'Improved calls to action, contact paths, metadata, and legacy URL redirects so the new brand could launch without sacrificing search visibility or inbound momentum.',
+            'Rebuilt the site in Next.js, optimized the recovered media and page delivery, and raised the Google Lighthouse score from 74/100 to 99/100.',
         },
       ],
       techStack: [
         'Next.js',
         'React',
-        'Reusable portfolio components',
-        'Redirect and metadata migration plan',
+        'Custom web-scraper bot',
+        'WordPress migration tooling',
+        'Media recovery pipeline',
+        'Lighthouse performance optimization',
       ],
-      nextStep:
-        'If your architecture, construction, or contractor brand is preparing for a refresh, we can help migrate your portfolio, preserve SEO, and launch a faster site your team can manage.',
     },
   },
   {

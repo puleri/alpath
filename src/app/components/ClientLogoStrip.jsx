@@ -20,6 +20,11 @@ const clientLogos = [
     alt: 'Roots logo',
   },
   {
+    name: 'Vector Ventures',
+    src: '/client-logos/vector-ventures.png',
+    alt: 'Vector Ventures logo',
+  },
+  {
     name: 'Lennon Window Cleaning',
     src: '/client-logos/lennonwc.png',
     alt: 'Lennon Window Cleaning logo',

@@ -210,7 +210,7 @@ export default function WebServicesPage() {
           </div>
 
           {featuredRebrandStudy ? (
-            <section aria-label="Built-environment rebrand proof">
+            <section aria-label="WordPress to Next.js migration proof">
               <article className="web-services-card">
                 <p className="case-study-industry">
                   {featuredRebrandStudy.industry}
@@ -226,7 +226,7 @@ export default function WebServicesPage() {
                   className="services-cta-link"
                   href={`/case-studies/${featuredRebrandStudy.slug}`}
                 >
-                  → View architecture rebrand case study
+                  → View WordPress migration case study
                 </a>
               </article>
             </section>

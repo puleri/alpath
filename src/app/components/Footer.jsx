@@ -13,6 +13,7 @@ const toEndpoint = (label) => `/${label.toLowerCase().replace(/\s+/g, "-")}`;
 export default function Footer() {
   const wordmarkRef = useRef(null);
   const [isRaised, setIsRaised] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const wordmark = wordmarkRef.current;
@@ -72,7 +73,12 @@ export default function Footer() {
       </div>
 
       <div className="container footer-meta">
-        <span className="footer-brand">Alpath</span>
+        <div className="footer-brand-wrap">
+          <span className="footer-brand">Alpath Engineering</span>
+          <span className="footer-rights">
+            © {currentYear} All Rights Reserved.
+          </span>
+        </div>
         <div className="footer-legal">
           {legalLinks.map((link) => (
             <a key={link} className="footer-legal-link" href={toEndpoint(link)}>
