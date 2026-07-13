@@ -3290,6 +3290,9 @@ tbody tr:hover td {
 }
 
 .case-study-overview-section {
+  --case-corner-extension: 76px;
+  --case-corner-overlap: 34px;
+  position: relative;
   max-width: 1120px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
@@ -3300,6 +3303,37 @@ tbody tr:hover td {
   border-radius: 8px;
   padding: 28px;
   background: #ffffff;
+}
+
+.case-study-overview-section::before,
+.case-study-overview-section::after,
+.case-study-detail-page-featured .case-study-detail-section::before,
+.case-study-detail-page-featured .case-study-detail-section::after,
+.case-study-detail-page-featured .case-study-metric-card::before,
+.case-study-detail-page-featured .case-study-metric-card::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background: #111111;
+}
+
+.case-study-overview-section::before,
+.case-study-detail-page-featured .case-study-detail-section::before,
+.case-study-detail-page-featured .case-study-metric-card::before {
+  top: -1px;
+  left: calc(var(--case-corner-extension) * -1);
+  width: calc(var(--case-corner-extension) + var(--case-corner-overlap));
+  height: 1px;
+}
+
+.case-study-overview-section::after,
+.case-study-detail-page-featured .case-study-detail-section::after,
+.case-study-detail-page-featured .case-study-metric-card::after {
+  top: calc(var(--case-corner-extension) * -1);
+  left: -1px;
+  width: 1px;
+  height: calc(var(--case-corner-extension) + var(--case-corner-overlap));
 }
 
 .case-study-overview-section h2 {
@@ -3359,10 +3393,19 @@ tbody tr:hover td {
 
 .case-study-detail-page-featured .case-study-detail-section,
 .case-study-detail-page-featured .case-study-metric-card {
+  --case-corner-extension: 42px;
+  --case-corner-overlap: 26px;
+  position: relative;
+  overflow: visible;
   border-color: #111111;
   border-radius: 8px;
   background: #ffffff;
   box-shadow: none;
+}
+
+.case-study-detail-page-featured .case-study-metric-card {
+  --case-corner-extension: 26px;
+  --case-corner-overlap: 20px;
 }
 
 .case-study-detail-page-featured .case-study-detail-section h2,
@@ -3828,8 +3871,16 @@ tbody tr:hover td {
   }
 
   .case-study-overview-section {
+    --case-corner-extension: 18px;
+    --case-corner-overlap: 18px;
     grid-template-columns: 1fr;
     padding: 22px;
+  }
+
+  .case-study-detail-page-featured .case-study-detail-section,
+  .case-study-detail-page-featured .case-study-metric-card {
+    --case-corner-extension: 18px;
+    --case-corner-overlap: 18px;
   }
 
   .contact-bento-grid {
