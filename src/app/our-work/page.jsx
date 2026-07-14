@@ -18,7 +18,7 @@ const highlightedStudies = [
     href: '/case-studies/architecture-firm-rebrand-web-system',
   },
   {
-    title: 'Lennon Window Cleaning',
+    title: 'Greater Seattle Window Cleaning Company',
     category: 'Web design, local SEO, conversion',
     logo: '/client-logos/lennonwc.png',
     image: '/photos/portfolio/lennonwc.png',
@@ -30,7 +30,7 @@ const highlightedStudies = [
       'A simpler path from landing page to estimate request',
       'More than 300 leads generated in the first year',
     ],
-    href: '/case-studies/lennon-window-cleaning-lead-generation',
+    href: '/case-studies/greater-seattle-window-cleaning-lead-generation',
   },
   {
     title: 'Distinctive Glass',

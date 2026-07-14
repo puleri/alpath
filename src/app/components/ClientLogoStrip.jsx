@@ -25,9 +25,9 @@ const clientLogos = [
     alt: 'Vector Ventures logo',
   },
   {
-    name: 'Lennon Window Cleaning',
+    name: 'Greater Seattle Window Cleaning Company',
     src: '/client-logos/lennonwc.png',
-    alt: 'Lennon Window Cleaning logo',
+    alt: 'Greater Seattle Window Cleaning Company logo',
   },
   {
     name: 'Pro3 Accounting',

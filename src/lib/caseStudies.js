@@ -103,13 +103,13 @@ export const caseStudies = [
     },
   },
   {
-    slug: 'lennon-window-cleaning-lead-generation',
-    title: 'Lennon Window Cleaning Lead Generation Website',
+    slug: 'greater-seattle-window-cleaning-lead-generation',
+    title: 'Greater Seattle Window Cleaning Company Lead Generation Website',
     industry: 'Local Service Business',
     summary:
-      'Rebuilt Lennon Window Cleaning’s service-business website around local search demand, clearer service pages, and a simpler estimate path that helped generate 300+ leads in the first year.',
+      'Rebuilt a Greater Seattle service-business website around local search demand, clearer service pages, and a simpler estimate path that helped generate 300+ leads in the first year.',
     problem:
-      'Lennon Window Cleaning had real demand in its market, but the website was not turning that demand into enough qualified conversations. Visitors needed to understand the services quickly, trust the company, and find a clear path to request an estimate.',
+      'As a new business with a  real demand in its market, they needed a website to turn that demand into qualified conversations. Visitors needed to understand the services quickly, trust the company, and find a clear path to request an estimate.',
     systemApplied: [
       'Local-service website strategy focused on high-intent search behavior',
       'Simplified booking and estimate flow to reduce friction from landing page to inquiry',
@@ -135,9 +135,9 @@ export const caseStudies = [
     ],
     detailPage: {
       heroTitle:
-        'How Lennon Window Cleaning turned local search demand into 300+ leads',
+        'How a Greater Seattle Window Cleaning Company turned local search demand into 300+ leads',
       heroSummary:
-        'Lennon Window Cleaning needed a website that worked like a real front door for the business. We simplified the service story, clarified the path to an estimate, and shaped the site around how local customers decide who to call.',
+        'Greater Seattle Window Cleaning Company needed a website that worked like a real front door for the business. We simplified the service story, clarified the path to an estimate, and shaped the site around how local customers decide who to call.',
       heroTags: [
         'Local Service Business',
         'Web Design',
@@ -151,7 +151,7 @@ export const caseStudies = [
       overview: {
         title: 'A clearer website for a service business customers already needed',
         body:
-          'The market demand was there. The opportunity was to make Lennon Window Cleaning easier to find, easier to understand, and easier to contact. The engagement focused on turning local intent into real estimate requests without overcomplicating the customer journey.',
+          'The market demand was there. The opportunity was to make a Greater Seattle Window Cleaning Company easier to find, easier to understand, and easier to contact. The engagement focused on turning local intent into real estimate requests without overcomplicating the customer journey.',
         points: [
           'Make window cleaning services easier to evaluate before a call',
           'Reduce friction between service-page visits and estimate requests',

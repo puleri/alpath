@@ -15,7 +15,7 @@ const stories = [
     quote: "Before, people visited the site. Now, they reach out.",
   },
   {
-    title: "Lennon Window Cleaning",
+    title: "Greater Seattle Window Cleaning Company",
     clientType: "Local Service Business",
     problem: "Low lead volume despite demand in the market.",
     systemApplied: "Web Consulting + Conversion Optimization",
