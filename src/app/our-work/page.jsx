@@ -30,7 +30,7 @@ const highlightedStudies = [
       'A simpler path from landing page to estimate request',
       'More than 300 leads generated in the first year',
     ],
-    href: '/client-stories',
+    href: '/case-studies/lennon-window-cleaning-lead-generation',
   },
   {
     title: 'Distinctive Glass',
@@ -75,12 +75,6 @@ const remainingStudies = [
     focus:
       'Web-services positioning, content hierarchy, and stronger conversion paths.',
     href: '/client-stories',
-  },
-  {
-    title: 'WordPress to Next.js Conversion Lift',
-    focus:
-      'A performance-focused rebuild that preserved brand familiarity while improving conversion foundations.',
-    href: '/case-studies/wordpress-to-nextjs-migration',
   },
 ];
 

@@ -36,10 +36,10 @@ export const caseStudies = [
       heroSummary:
         'Lockhart Suver needed a true 1:1 migration from WordPress to Next.js. When WordPress could not batch export the code and media cleanly, Alpath built a custom crawler to recover the site asset by asset, then rebuilt the experience on a faster client-owned stack.',
       heroTags: [
-        'Bellevue architecture',
-        'WordPress to Next.js',
-        '1:1 migration',
-        'Custom scraper',
+        'Architecture Firm',
+        'Legacy to Modern SEO',
+        '1:1 Migration',
+        'Custom Scraper',
       ],
       heroImage: {
         src: '/photos/portfolio/lockhart-suver/seattle-architecture.png',
@@ -103,71 +103,105 @@ export const caseStudies = [
     },
   },
   {
-    slug: 'wordpress-to-nextjs-migration',
-    title: 'WordPress to Next.js Conversion Lift',
-    industry: 'Professional Services',
+    slug: 'lennon-window-cleaning-lead-generation',
+    title: 'Lennon Window Cleaning Lead Generation Website',
+    industry: 'Local Service Business',
     summary:
-      'Migrated a legacy WordPress site to Next.js while preserving the trusted visual experience, improving web performance and lead conversion.',
+      'Rebuilt Lennon Window Cleaning’s service-business website around local search demand, clearer service pages, and a simpler estimate path that helped generate 300+ leads in the first year.',
     problem:
-      'The company had strong brand trust in its existing website design, but the WordPress stack created performance bottlenecks, inconsistent UX behavior, and lower-than-target lead conversion rates.',
+      'Lennon Window Cleaning had real demand in its market, but the website was not turning that demand into enough qualified conversations. Visitors needed to understand the services quickly, trust the company, and find a clear path to request an estimate.',
     systemApplied: [
-      'Full front-end migration from WordPress templates to a componentized Next.js architecture',
-      'Performance optimization across Core Web Vitals, asset loading, and page rendering',
-      'Preservation of brand-recognizable layout patterns and user navigation flows',
-      'Lead funnel instrumentation and conversion tracking across landing pages and forms',
+      'Local-service website strategy focused on high-intent search behavior',
+      'Simplified booking and estimate flow to reduce friction from landing page to inquiry',
+      'Service-page structure shaped around residential, commercial, and recurring cleaning needs',
+      'Clear call-to-action placement across the pages customers use before they book',
+      'Conversion-focused content hierarchy for faster scanning on mobile and desktop',
     ],
     beforeState: [
-      'Slow page loads and unstable performance scores on key pages',
-      'Lead form conversion below growth target',
-      'Marketing and engineering teams constrained by WordPress template limitations',
+      'Low lead volume despite local demand for window cleaning services',
+      'Service information and calls to action were not organized around booking behavior',
+      'Visitors had too much friction between researching the service and requesting an estimate',
     ],
     afterState: [
-      'Higher web performance scores across key user journeys',
-      'Improved lead conversion rate from the same traffic base',
-      'Faster release workflow with reusable Next.js components',
+      'Clearer service pages made it easier for local customers to understand and act',
+      'Simplified estimate path gave visitors a direct route from search intent to inquiry',
+      'More than 300 leads generated within the first year',
     ],
     outcomes: [
-      'Modernized stack without forcing users to relearn a new interface',
-      'More qualified leads generated from existing acquisition channels',
-      'Improved technical foundation for ongoing SEO and campaign iteration',
+      'Generated 300+ leads in the first year from a clearer web and conversion foundation',
+      'Made the site feel more useful for customers comparing local service providers',
+      'Improved the path from organic search or referral traffic to booked conversations',
+      'Gave the business a practical website system that supports ongoing local demand',
     ],
     detailPage: {
       heroTitle:
-        'How we migrated a trusted WordPress experience to a high-performance Next.js platform',
+        'How Lennon Window Cleaning turned local search demand into 300+ leads',
       heroSummary:
-        'This engagement focused on preserving what customers already trusted while rebuilding the full web experience for speed, maintainability, and stronger conversion performance.',
+        'Lennon Window Cleaning needed a website that worked like a real front door for the business. We simplified the service story, clarified the path to an estimate, and shaped the site around how local customers decide who to call.',
+      heroTags: [
+        'Local Service Business',
+        'Web Design',
+        'Local SEO',
+        'Conversion Optimization',
+      ],
+      heroImage: {
+        src: '/photos/portfolio/lennon-wc/seattle-window-cleaning.png',
+        alt: 'Window cleaner washing exterior glass on a brick building',
+      },
+      overview: {
+        title: 'A clearer website for a service business customers already needed',
+        body:
+          'The market demand was there. The opportunity was to make Lennon Window Cleaning easier to find, easier to understand, and easier to contact. The engagement focused on turning local intent into real estimate requests without overcomplicating the customer journey.',
+        points: [
+          'Make window cleaning services easier to evaluate before a call',
+          'Reduce friction between service-page visits and estimate requests',
+          'Create a practical foundation for more consistent local leads',
+        ],
+      },
+      ctaVariant: 'rebrandReadiness',
       keyMetrics: [
-        { label: 'Core Web Vitals health', value: 'Significantly improved' },
-        { label: 'Lead form conversion', value: 'Above prior baseline' },
-        { label: 'Release velocity', value: 'Faster with reusable components' },
+        {
+          label: 'First-year leads',
+          value: '300+',
+          icon: '/icons/line-chart.png',
+        },
+        {
+          label: 'Booking path',
+          value: 'Simplified',
+          icon: '/icons/upgrade.svg',
+        },
+        {
+          label: 'Service pages',
+          value: 'Optimized',
+          icon: '/icons/web.png',
+        },
       ],
       challenge:
-        'The existing WordPress implementation had grown difficult to maintain, and performance issues were increasing bounce risk. The team needed a modern architecture without disrupting familiar buyer journeys or damaging existing search equity.',
+        'Local service customers often arrive with a narrow question: can this company do the work, can I trust them, and how do I get a quote? The old experience did not answer those questions quickly enough, which made real demand harder to capture.',
       implementationPhases: [
         {
-          title: 'Phase 1: Migration architecture',
+          title: 'Phase 1: Local search and service-path planning',
           description:
-            'Mapped legacy templates into a reusable Next.js component system and aligned routes to preserve key indexing and campaign landing behavior.',
+            'Mapped the services customers were searching for, clarified the page structure, and identified the fastest route from landing page to estimate request.',
         },
         {
-          title: 'Phase 2: Performance hardening',
+          title: 'Phase 2: Service-page and CTA rebuild',
           description:
-            'Reduced render and asset bottlenecks through image optimization, component-level loading strategy updates, and tighter page composition patterns.',
+            'Reworked the core website experience around clear service descriptions, trust-building copy, and repeated calls to action where customers naturally make decisions.',
         },
         {
-          title: 'Phase 3: Conversion instrumentation',
+          title: 'Phase 3: Conversion cleanup and launch',
           description:
-            'Added event and form tracking throughout the funnel so marketing and leadership could monitor conversion gains with clear attribution.',
+            'Simplified the inquiry path, tightened mobile scanning, and launched the site with a clearer foundation for local SEO and ongoing lead generation.',
         },
       ],
       techStack: [
-        'Next.js',
-        'React',
-        'Componentized design system',
-        'Analytics instrumentation',
+        'Service-business website strategy',
+        'Local SEO page structure',
+        'Conversion-focused copy',
+        'Estimate-request flow',
+        'Responsive web design',
       ],
-      nextStep:
-        'If your current site can’t support your growth goals, we can map your existing funnel, migrate your stack, and ship a faster system without sacrificing brand trust.',
     },
   },
   {

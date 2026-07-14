@@ -1,3 +1,4 @@
+import CallToAction from '../components/CallToAction';
 import PricingEstimator from './PricingEstimator';
 
 const websitePlans = [
@@ -464,21 +465,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="pricing-band pricing-final-cta">
-        <div className="container pricing-final-cta-inner">
-          <div>
-            <p className="pricing-eyebrow">Next step</p>
-            <h2>Start with what fits your business.</h2>
-            <p>
-              We will help you compare the options, narrow the scope, and decide
-              whether the investment makes sense.
-            </p>
-          </div>
-          <a className="primary-button" href="/contact">
-            Start a conversation
-          </a>
-        </div>
-      </section>
+      <CallToAction variant="rebrandReadiness" />
     </main>
   );
 }

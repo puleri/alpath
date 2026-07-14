@@ -3378,6 +3378,10 @@ tbody tr:hover td {
   background: #111111;
 }
 
+.case-study-border-lines {
+  display: none;
+}
+
 .case-study-detail-page-featured {
   color: #111111;
 }
@@ -3426,6 +3430,11 @@ tbody tr:hover td {
   border-color: #111111;
   background: #ffffff;
   color: #111111;
+}
+
+.case-study-detail-page-featured .case-study-drawn-surface > :not(.case-study-border-lines) {
+  position: relative;
+  z-index: 2;
 }
 
 .case-studies-grid {
@@ -3560,10 +3569,113 @@ tbody tr:hover td {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .case-study-detail-page-featured .case-study-fade-in {
-    animation: caseStudyFadeIn 720ms ease both;
-    animation-delay: var(--case-study-delay, 0ms);
+@keyframes caseStudyDrawX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes caseStudyDrawY {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .case-study-detail-page-featured .case-study-fade-in {
+      animation: caseStudyFadeIn 1s ease both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+
+    .case-study-detail-page-featured .case-study-drawn-surface {
+      view-timeline-name: --case-study-surface;
+      view-timeline-axis: block;
+      border-color: transparent;
+    }
+
+    .case-study-detail-page-featured .case-study-drawn-surface::before {
+      transform: scaleX(0);
+      transform-origin: right center;
+      animation: caseStudyDrawX 1s linear both;
+      animation-timeline: --case-study-surface;
+      animation-range: entry 2% cover 34%;
+    }
+
+    .case-study-detail-page-featured .case-study-drawn-surface::after {
+      transform: scaleY(0);
+      transform-origin: bottom center;
+      animation: caseStudyDrawY 1s linear both;
+      animation-timeline: --case-study-surface;
+      animation-range: entry 8% cover 38%;
+    }
+
+    .case-study-detail-page-featured .case-study-border-lines {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: block;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .case-study-detail-page-featured .case-study-border-line {
+      position: absolute;
+      background: #111111;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --case-study-surface;
+    }
+
+    .case-study-detail-page-featured .case-study-border-line-top,
+    .case-study-detail-page-featured .case-study-border-line-bottom {
+      width: 100%;
+      height: 1px;
+      animation-name: caseStudyDrawX;
+    }
+
+    .case-study-detail-page-featured .case-study-border-line-left,
+    .case-study-detail-page-featured .case-study-border-line-right {
+      width: 1px;
+      height: 100%;
+      animation-name: caseStudyDrawY;
+    }
+
+    .case-study-detail-page-featured .case-study-border-line-top {
+      top: 0;
+      left: 0;
+      transform-origin: left center;
+      animation-range: entry 3% cover 32%;
+    }
+
+    .case-study-detail-page-featured .case-study-border-line-right {
+      top: 0;
+      right: 0;
+      transform-origin: top center;
+      animation-range: entry 10% cover 40%;
+    }
+
+    .case-study-detail-page-featured .case-study-border-line-bottom {
+      right: 0;
+      bottom: 0;
+      transform-origin: right center;
+      animation-range: entry 16% cover 48%;
+    }
+
+    .case-study-detail-page-featured .case-study-border-line-left {
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom center;
+      animation-range: entry 22% cover 54%;
+    }
   }
 }
 

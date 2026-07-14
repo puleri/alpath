@@ -4,12 +4,24 @@ function fadeStyle(delay = 0) {
   return { '--case-study-delay': `${delay}ms` };
 }
 
+function BorderLines() {
+  return (
+    <span className="case-study-border-lines" aria-hidden="true">
+      <span className="case-study-border-line case-study-border-line-top" />
+      <span className="case-study-border-line case-study-border-line-right" />
+      <span className="case-study-border-line case-study-border-line-bottom" />
+      <span className="case-study-border-line case-study-border-line-left" />
+    </span>
+  );
+}
+
 function Section({ title, children, delay = 0 }) {
   return (
     <section
-      className="case-study-detail-section case-study-fade-in"
+      className="case-study-detail-section case-study-fade-in case-study-drawn-surface"
       style={fadeStyle(delay)}
     >
+      <BorderLines />
       <h2>{title}</h2>
       {children}
     </section>
@@ -56,10 +68,11 @@ export default function CaseStudyDetailTemplate({ study }) {
 
         {detail?.overview ? (
           <section
-            className="case-study-overview-section case-study-fade-in"
+            className="case-study-overview-section case-study-fade-in case-study-drawn-surface"
             aria-labelledby="case-study-overview-title"
             style={fadeStyle(80)}
           >
+            <BorderLines />
             <div>
               <p className="case-studies-eyebrow">Overview</p>
               <h2 id="case-study-overview-title">{detail.overview.title}</h2>
@@ -84,9 +97,10 @@ export default function CaseStudyDetailTemplate({ study }) {
             {detail.keyMetrics.map((metric, index) => (
               <article
                 key={metric.label}
-                className="case-study-metric-card"
+                className="case-study-metric-card case-study-drawn-surface"
                 style={{ '--metric-delay': `${index * 220}ms` }}
               >
+                <BorderLines />
                 {metric.icon ? (
                   <span className="case-study-metric-icon" aria-hidden="true">
                     <img src={metric.icon} alt="" />
