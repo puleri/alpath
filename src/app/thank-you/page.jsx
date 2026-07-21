@@ -18,8 +18,8 @@ export default function ThankYouPage() {
           <a className="primary-button" href="/">
             Back to home
           </a>
-          <a className="secondary-button" href="/services">
-            Explore services
+          <a className="secondary-button" href="/portfolio">
+            View portfolio
           </a>
         </div>
       </section>

@@ -4,8 +4,6 @@ const highlightedStudies = [
   {
     title: 'Lockhart | Suver',
     category: 'WordPress migration, Next.js, performance',
-    logo: '/client-logos/lockhartsuver-white.webp',
-    logoBadgeTone: 'dark',
     image: '/photos/portfolio/lockhart-suver.png',
     imageAlt: 'Architecture plans being reviewed on a conference table',
     summary:
@@ -20,7 +18,6 @@ const highlightedStudies = [
   {
     title: 'Greater Seattle Window Cleaning Company',
     category: 'Web design, local SEO, conversion',
-    logo: '/client-logos/lennonwc.png',
     image: '/photos/portfolio/lennonwc.png',
     imageAlt: 'Window cleaner washing exterior glass on a brick building',
     summary:
@@ -35,8 +32,6 @@ const highlightedStudies = [
   {
     title: 'Distinctive Glass',
     category: 'Website, SEO, Google Ads',
-    logo: '/client-logos/distinctive-glass.png',
-    logoBadgeTone: 'dark',
     image: '/photos/portfolio/distinctive-glass.png',
     imageAlt: 'Gloved hand guiding glass during shop fabrication',
     summary:
@@ -95,15 +90,6 @@ function HighlightedStudyCard({ study, index }) {
           src={study.image}
           alt={study.imageAlt}
         />
-        <span
-          className={`work-feature-logo-badge${
-            study.logoBadgeTone === 'dark'
-              ? ' work-feature-logo-badge-dark'
-              : ''
-          }`}
-        >
-          <img src={study.logo} alt={`${study.title} logo`} />
-        </span>
       </figure>
 
       <div className="work-feature-body">

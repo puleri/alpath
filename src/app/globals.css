@@ -519,6 +519,11 @@ html {
   object-fit: contain;
 }
 
+.client-logo-image-stacked {
+  max-width: 140px;
+  max-height: 62px;
+}
+
 @keyframes client-logo-scroll {
   from {
     transform: translateX(0);
@@ -2220,7 +2225,11 @@ tbody tr:hover td {
 }
 
 .ripple-row {
+  position: relative;
+  z-index: 1000;
+  isolation: isolate;
   width: 100vw;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   margin: 120px 0;
@@ -2228,6 +2237,8 @@ tbody tr:hover td {
 }
 
 .ripple-row__track {
+  position: relative;
+  z-index: 1;
   display: flex;
   gap: 14px;
   width: max-content;
@@ -2236,6 +2247,7 @@ tbody tr:hover td {
 }
 
 .ripple-row__circle {
+  --ripple-float-distance: -58px;
   width: 100px;
   height: 100px;
   border-radius: 999px;
@@ -2253,13 +2265,36 @@ tbody tr:hover td {
   height: 40px;
 }
 
+@media (max-width: 640px) {
+  .ripple-row {
+    width: 100%;
+    margin: 72px 0;
+    padding-inline: 18px;
+    overflow: visible;
+  }
+
+  .ripple-row__track {
+    gap: 8px;
+  }
+
+  .ripple-row__circle {
+    --ripple-float-distance: -34px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .ripple-row__icon {
+    transform: scale(0.76);
+  }
+}
+
 @keyframes rippleFloat {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-58px);
+    transform: translateY(var(--ripple-float-distance));
   }
 }
 
@@ -4938,37 +4973,6 @@ tbody tr:hover td {
   transform: scale(1.035);
 }
 
-.work-feature-logo-badge {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 112px;
-  max-width: min(190px, calc(100% - 36px));
-  min-height: 44px;
-  border: 1px solid rgba(17, 17, 17, 0.12);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 9px 13px;
-  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18);
-  backdrop-filter: blur(10px);
-}
-
-.work-feature-logo-badge-dark {
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(17, 17, 17, 0.86);
-}
-
-.work-feature-logo-badge img {
-  display: block;
-  width: auto;
-  max-width: 150px;
-  max-height: 30px;
-  object-fit: contain;
-}
-
 .work-feature-body {
   display: flex;
   flex-direction: column;
@@ -5264,6 +5268,17 @@ a.work-study-row:hover p {
 @media (max-width: 640px) {
   .client-logo-strip {
     margin: 8px auto 52px;
+    padding-top: 28px;
+    text-align: center;
+  }
+
+  .client-logo-notification {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .client-logo-strip-heading {
+    margin-inline: auto;
   }
 
   .client-logo-card {
@@ -5273,6 +5288,11 @@ a.work-study-row:hover p {
 
   .client-logo-image {
     max-height: 45px;
+  }
+
+  .client-logo-image-stacked {
+    max-width: 124px;
+    max-height: 54px;
   }
 }
 

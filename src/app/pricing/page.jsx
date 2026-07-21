@@ -1,3 +1,5 @@
+import { redirect } from 'next/navigation';
+
 import CallToAction from '../components/CallToAction';
 import PricingEstimator from './PricingEstimator';
 
@@ -249,6 +251,8 @@ function NoteCard({ title, children }) {
 }
 
 export default function PricingPage() {
+  redirect('/');
+
   return (
     <main className="pricing-page">
       <section className="pricing-hero">

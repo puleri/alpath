@@ -11,7 +11,7 @@ const clientLogos = [
   },
   {
     name: 'Lockhart Suver',
-    src: '/client-logos/lockhartsuver-white.webp',
+    src: '/client-logos/lockhart-suver-logo.webp',
     alt: 'Lockhart Suver logo',
   },
   {
@@ -26,12 +26,13 @@ const clientLogos = [
   },
   {
     name: 'Greater Seattle Window Cleaning Company',
-    src: '/client-logos/lennonwc.png',
+    src: '/client-logos/greater-seattle-window-cleaning-logo.png',
     alt: 'Greater Seattle Window Cleaning Company logo',
+    fit: 'stacked',
   },
   {
     name: 'Pro3 Accounting',
-    src: '/client-logos/pro3.png',
+    src: '/client-logos/pro3-accounting-logo.png',
     alt: 'Pro3 Accounting logo',
   },
   {
@@ -70,7 +71,9 @@ export default function ClientLogoStrip() {
                   key={`${setIndex}-${logo.name}`}
                 >
                   <img
-                    className="client-logo-image"
+                    className={`client-logo-image${
+                      logo.fit ? ` client-logo-image-${logo.fit}` : ''
+                    }`}
                     src={logo.src}
                     alt={setIndex === 0 ? logo.alt : ''}
                     loading="lazy"
