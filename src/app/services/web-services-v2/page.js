@@ -1,7 +1,7 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-import CallToAction from "../../components/CallToAction";
-import { caseStudies } from "@/lib/caseStudies";
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import CallToAction from '../../components/CallToAction';
+import { caseStudies } from '@/lib/caseStudies';
 
 const SCORE_ANIMATION_MS = 1700;
 const PROGRESS_ANIMATION_MS = 1800;
@@ -43,7 +43,7 @@ function LighthouseMetricCircle({ label, score, shouldAnimate }) {
       <h3>{label}</h3>
       <div
         className="lighthouse-score-circle"
-        style={{ "--score": `${displayedScore}%` }}
+        style={{ '--score': `${displayedScore}%` }}
         aria-label={`${label} score ${displayedScore}%`}
       >
         <span>{displayedScore}%</span>
@@ -54,10 +54,10 @@ function LighthouseMetricCircle({ label, score, shouldAnimate }) {
 
 export default function WebServicesPage() {
   const lighthouseScores = [
-    { label: "Performance", score: 99 },
-    { label: "SEO", score: 100 },
-    { label: "Best Practices", score: 97 },
-    { label: "Accessibility", score: 99 },
+    { label: 'Performance', score: 99 },
+    { label: 'SEO', score: 100 },
+    { label: 'Best Practices', score: 97 },
+    { label: 'Accessibility', score: 99 },
   ];
 
   const metricsRef = useRef(null);
@@ -80,7 +80,7 @@ export default function WebServicesPage() {
       },
       {
         threshold: 0.35,
-      }
+      },
     );
 
     observer.observe(metricNode);
@@ -91,7 +91,9 @@ export default function WebServicesPage() {
   useEffect(() => {
     if (!animateMetrics) return;
 
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
     if (reducedMotion) {
       setEngagementScore(85);
       return;
@@ -123,12 +125,15 @@ export default function WebServicesPage() {
         <section className="web-services-grid">
           <div className="web-services-hero">
             <div className="web-services-hero-copy">
-              <p className="web-services-eyebrow">Web Services</p>
+              <div className="web-services-hero-topline">
+                <p className="web-services-eyebrow">Web design + development</p>
+                <img src="/alpath/sign.svg" alt="" />
+              </div>
               <h1>Your website, finally working as hard as your business</h1>
               <p>
-                We build high-performance, conversion-optimized web platforms
-                that integrate seamlessly with your core engineering and revenue
-                systems.
+                We design and build clear, high-performance websites that
+                strengthen your brand, earn trust, and turn the right visitors
+                into qualified inquiries.
               </p>
               <div className="hero-actions">
                 <a className="primary-button" href="/contact">
@@ -173,7 +178,7 @@ export default function WebServicesPage() {
                 <div className="lighthouse-progress-track">
                   <div
                     className="lighthouse-progress-fill"
-                    style={{ "--engagement-score": `${engagementScore}%` }}
+                    style={{ '--engagement-score': `${engagementScore}%` }}
                   />
                 </div>
                 <div className="lighthouse-progress-caption">
@@ -189,24 +194,39 @@ export default function WebServicesPage() {
             aria-label="Web service value points"
           >
             <article className="web-services-third-card">
+              <span aria-hidden="true">01</span>
               <p>Build brand authority through a refined digital experience.</p>
             </article>
             <article className="web-services-third-card">
+              <span aria-hidden="true">02</span>
               <p>
                 Building a custom site means: the sky is the limit. Use your
                 designs or work with our designers.
               </p>
             </article>
             <article className="web-services-third-card">
+              <span aria-hidden="true">03</span>
               <p>Did you know: Bounce rates reach 90% due to slow sites?</p>
             </article>
             <article className="web-services-third-card">
+              <span aria-hidden="true">04</span>
               <p>Make your site performant. Even on a 5 year old phone.</p>
             </article>
           </div>
 
-          <section aria-label="Web service use cases and proof">
+          <section
+            className="web-services-v2-proof"
+            aria-label="Web service use cases and proof"
+          >
             <article className="web-services-card">
+              <img
+                className="web-services-proof-mark"
+                src="/alpath/sign.svg"
+                alt=""
+              />
+              <span className="web-services-v2-card-index" aria-hidden="true">
+                01
+              </span>
               <h2>Proven use cases</h2>
               <p>
                 We apply the same performance and conversion architecture across
@@ -217,7 +237,10 @@ export default function WebServicesPage() {
               <ul>
                 {featuredUseCases.map((study) => (
                   <li key={study.slug}>
-                    <a className="services-cta-link" href={`/case-studies/${study.slug}`}>
+                    <a
+                      className="services-cta-link"
+                      href={`/case-studies/${study.slug}`}
+                    >
                       → {study.title}
                     </a>
                   </li>
@@ -229,6 +252,9 @@ export default function WebServicesPage() {
             </article>
 
             <article className="web-services-card">
+              <span className="web-services-v2-card-index" aria-hidden="true">
+                02
+              </span>
               <h2>Trust and execution standards</h2>
               <p>
                 Every engagement is grounded in measurable KPIs, transparent
@@ -237,8 +263,12 @@ export default function WebServicesPage() {
               </p>
               <ul>
                 <li>Technical audits before build to reduce rework risk</li>
-                <li>Core Web Vitals and Lighthouse targets tracked per release</li>
-                <li>Conversion event instrumentation for full-funnel visibility</li>
+                <li>
+                  Core Web Vitals and Lighthouse targets tracked per release
+                </li>
+                <li>
+                  Conversion event instrumentation for full-funnel visibility
+                </li>
                 <li>Handoff documentation for developers and operators</li>
               </ul>
               <a className="services-cta-link" href="/docs">
@@ -246,7 +276,6 @@ export default function WebServicesPage() {
               </a>
             </article>
           </section>
-
         </section>
         <CallToAction variant="webServicesBottom" />
       </main>

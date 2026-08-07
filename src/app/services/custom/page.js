@@ -1,37 +1,37 @@
-import CallToAction from "../../components/CallToAction";
+import CallToAction from '../../components/CallToAction';
 
 export const metadata = {
-  title: "Custom Software Development Services | Alpath",
+  title: 'Custom Software Development Services | Alpath',
 };
 
 const useCases = [
   {
-    title: "Specialized Web Applications",
+    title: 'Specialized Web Applications',
     detail:
-      "Internal tools, client portals, dashboards, and workflow systems designed around your operation.",
+      'Internal tools, client portals, dashboards, and workflow systems designed around your operation.',
   },
   {
-    title: "Custom Websites",
+    title: 'Custom Websites',
     detail:
-      "Marketing sites and conversion experiences built from scratch to match your brand, goals, and technical requirements.",
+      'Marketing sites and conversion experiences built from scratch to match your brand, goals, and technical requirements.',
   },
   {
-    title: "MVP for Inventors",
+    title: 'MVP for Inventors',
     detail:
-      "If you have an idea, we help you shape the technical scope, ship an MVP, and validate with real users.",
+      'If you have an idea, we help you shape the technical scope, ship an MVP, and validate with real users.',
   },
   {
-    title: "Full Product Engineering",
+    title: 'Full Product Engineering',
     detail:
-      "From roadmap to launch, we can build your entire product with production-ready architecture.",
+      'From roadmap to launch, we can build your entire product with production-ready architecture.',
   },
 ];
 
 const processSteps = [
-  "Clarify the idea and define scope around measurable outcomes",
-  "Design the architecture and user experience for version one",
-  "Build iteratively with milestone reviews and rapid feedback",
-  "Launch with support, analytics, and a path to scale",
+  'Clarify the idea and define scope around measurable outcomes',
+  'Design the architecture and user experience for version one',
+  'Build iteratively with milestone reviews and rapid feedback',
+  'Launch with support, analytics, and a path to scale',
 ];
 
 export default function CustomServicesPage() {
@@ -39,8 +39,13 @@ export default function CustomServicesPage() {
     <main className="custom-services-page">
       <section className="custom-hero container">
         <div className="custom-hero-copy">
-          <p className="custom-eyebrow">Custom Service</p>
-          <h1>From idea to engineered product, built for your exact use case</h1>
+          <div className="custom-hero-topline">
+            <p className="custom-eyebrow">Custom Service</p>
+            <img src="/alpath/sign.svg" alt="" />
+          </div>
+          <h1>
+            From idea to engineered product, built for your exact use case
+          </h1>
           <p>
             Custom solutions can be specialized web applications, websites, or
             full software products. If you are an inventor with an idea and need
@@ -60,9 +65,9 @@ export default function CustomServicesPage() {
         <div className="custom-hero-graphic" aria-hidden="true">
           <div className="custom-graphic-card">
             <div className="custom-graphic-node custom-node-idea">Idea</div>
-            <div className="custom-graphic-arrow">→</div>
+            <div className="custom-graphic-arrow">↓</div>
             <div className="custom-graphic-node custom-node-mvp">MVP</div>
-            <div className="custom-graphic-arrow">→</div>
+            <div className="custom-graphic-arrow">↓</div>
             <div className="custom-graphic-node custom-node-launch">Launch</div>
           </div>
         </div>
@@ -71,8 +76,11 @@ export default function CustomServicesPage() {
       <section className="custom-section container">
         <h2>What we can build</h2>
         <div className="custom-use-case-grid">
-          {useCases.map((item) => (
+          {useCases.map((item, index) => (
             <article key={item.title} className="custom-use-case-card">
+              <span aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
             </article>
@@ -96,9 +104,15 @@ export default function CustomServicesPage() {
       <section className="custom-section container">
         <h2>Who this is for</h2>
         <ul className="custom-fit-list">
-          <li>Founders and inventors with a strong concept but no engineering team</li>
-          <li>Businesses that need software tailored to unique internal workflows</li>
-          <li>Teams that need to move quickly from vision to a working product</li>
+          <li>
+            Founders and inventors with a strong concept but no engineering team
+          </li>
+          <li>
+            Businesses that need software tailored to unique internal workflows
+          </li>
+          <li>
+            Teams that need to move quickly from vision to a working product
+          </li>
         </ul>
       </section>
 

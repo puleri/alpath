@@ -1,147 +1,168 @@
-"use client";
+'use client';
 
-import { useMemo, useState } from "react";
+import { useMemo, useState } from 'react';
 
 const filterGroups = [
   {
-    id: "challenge",
-    label: "By Challenge",
+    id: 'challenge',
+    label: 'By Challenge',
     options: [
-      "All",
-      "Increase lead volume",
-      "Improve conversion rate",
-      "Automate follow-up",
-      "Unify systems",
-      "Gain visibility",
+      'All',
+      'Clarify positioning',
+      'Modernize visual identity',
+      'Rebuild the website',
+      'Improve conversion',
+      'Strengthen local visibility',
     ],
   },
   {
-    id: "businessType",
-    label: "By Business Type",
+    id: 'businessType',
+    label: 'By Business Type',
     options: [
-      "All",
-      "Professional services",
-      "Local service businesses",
-      "SaaS / tech-enabled",
-      "Growth-stage companies",
+      'All',
+      'Professional services',
+      'Local service businesses',
+      'SaaS / tech-enabled',
+      'Growth-stage companies',
     ],
   },
   {
-    id: "system",
-    label: "By System",
-    options: ["All", "Web Consulting", "Revenue Automation", "Business Intelligence"],
+    id: 'focus',
+    label: 'By Focus',
+    options: [
+      'All',
+      'Brand Strategy',
+      'Visual Identity',
+      'Web Design',
+      'SEO & Conversion',
+    ],
   },
 ];
 
 const useCases = [
   {
-    title: "Turning Website Traffic into Qualified Leads",
-    context: "For firms with steady traffic but low conversion",
-    problem: "Visitors leave without taking action.",
-    systemApplied: "Web Consulting + Revenue Automation",
-    outcome: "Increased conversions, clearer lead flow.",
-    challenge: "Improve conversion rate",
-    businessType: "Professional services",
-    systems: ["Web Consulting", "Revenue Automation"],
+    title: 'Repositioning an Established Service Business',
+    context: 'For firms whose reputation has outgrown the way they describe it',
+    problem:
+      'The business is credible, but its positioning sounds generic or dated.',
+    workApplied: 'Brand Strategy + Visual Identity',
+    outcome:
+      'A clearer market position and a brand people can understand quickly.',
+    challenge: 'Clarify positioning',
+    businessType: 'Professional services',
+    focusAreas: ['Brand Strategy', 'Visual Identity'],
   },
   {
-    title: "Building Consistent Lead Flow for Local Operators",
-    context: "For local teams relying on referrals and inconsistent demand",
-    problem: "Lead volume spikes and drops with no predictable pattern.",
-    systemApplied: "Web Consulting + Revenue Automation",
-    outcome: "Reliable weekly pipeline and fewer missed opportunities.",
-    challenge: "Increase lead volume",
-    businessType: "Local service businesses",
-    systems: ["Web Consulting", "Revenue Automation"],
+    title: 'Modernizing a Brand Without Losing Recognition',
+    context:
+      'For growing companies ready to look as capable as they have become',
+    problem:
+      'The existing identity no longer reflects the quality, maturity, or direction of the business.',
+    workApplied: 'Brand Strategy + Visual Identity',
+    outcome:
+      'A more distinctive, consistent identity built on what customers already trust.',
+    challenge: 'Modernize visual identity',
+    businessType: 'Growth-stage companies',
+    focusAreas: ['Brand Strategy', 'Visual Identity'],
   },
   {
-    title: "Automating Follow-Up After Demo Requests",
-    context: "For SaaS teams losing momentum after initial inquiry",
-    problem: "High-intent leads go cold before sales responds.",
-    systemApplied: "Revenue Automation",
-    outcome: "Faster response time and stronger demo-to-close rate.",
-    challenge: "Automate follow-up",
-    businessType: "SaaS / tech-enabled",
-    systems: ["Revenue Automation"],
+    title: 'Rebuilding a Website Around Buyer Decisions',
+    context:
+      'For firms with an outdated site and a strong real-world reputation',
+    problem:
+      'Visitors struggle to understand the offer, see proof, or know what to do next.',
+    workApplied: 'Web Design + Brand Strategy',
+    outcome:
+      'A focused website that communicates value and guides the right visitors toward action.',
+    challenge: 'Rebuild the website',
+    businessType: 'Professional services',
+    focusAreas: ['Web Design', 'Brand Strategy'],
   },
   {
-    title: "Connecting Disconnected Tools Into One System",
-    context: "For growth-stage companies juggling multiple platforms",
-    problem: "Teams duplicate work because systems do not communicate.",
-    systemApplied: "Revenue Automation + Business Intelligence",
-    outcome: "Unified workflows and cleaner operational handoffs.",
-    challenge: "Unify systems",
-    businessType: "Growth-stage companies",
-    systems: ["Revenue Automation", "Business Intelligence"],
+    title: 'Turning Local Search Demand Into Better Inquiries',
+    context: 'For local operators competing in crowded service markets',
+    problem:
+      'The business is discoverable, but the site does not turn enough searches into qualified conversations.',
+    workApplied: 'Web Design + SEO & Conversion',
+    outcome:
+      'Clearer service pages, stronger local relevance, and a shorter path to inquiry.',
+    challenge: 'Strengthen local visibility',
+    businessType: 'Local service businesses',
+    focusAreas: ['Web Design', 'SEO & Conversion'],
   },
   {
-    title: "Creating Clarity with Executive Dashboards",
-    context: "For leadership teams managing growth without visibility",
-    problem: "Decisions depend on fragmented reports and guesswork.",
-    systemApplied: "Business Intelligence",
-    outcome: "Clear performance visibility and faster strategic decisions.",
-    challenge: "Gain visibility",
-    businessType: "Growth-stage companies",
-    systems: ["Business Intelligence"],
+    title: 'Fixing Conversion Friction Across Key Pages',
+    context:
+      'For teams with traffic, credibility, and too few meaningful actions',
+    problem: 'Important pages bury the value proposition, proof, or next step.',
+    workApplied: 'Web Design + SEO & Conversion',
+    outcome:
+      'A clearer content hierarchy and stronger conversion path without adding more traffic.',
+    challenge: 'Improve conversion',
+    businessType: 'SaaS / tech-enabled',
+    focusAreas: ['Web Design', 'SEO & Conversion'],
   },
   {
-    title: "Fixing Conversion Friction in Service Funnels",
-    context: "For professional firms with strong offers but weak conversion flow",
-    problem: "Prospects stall between interest and consultation booking.",
-    systemApplied: "Web Consulting",
-    outcome: "Higher booking rates without increasing ad spend.",
-    challenge: "Improve conversion rate",
-    businessType: "Professional services",
-    systems: ["Web Consulting"],
+    title: 'Launching a New Offer With One Cohesive Story',
+    context: 'For growing companies introducing a new service or direction',
+    problem:
+      'The offer is strong, but the message, identity, and website experience do not yet feel connected.',
+    workApplied: 'Brand Strategy + Visual Identity + Web Design',
+    outcome:
+      'A unified launch that makes the new offer easier to recognize, trust, and choose.',
+    challenge: 'Rebuild the website',
+    businessType: 'Growth-stage companies',
+    focusAreas: ['Brand Strategy', 'Visual Identity', 'Web Design'],
   },
 ];
 
 const featuredCases = [
   {
-    title: "Inconsistent Lead Flow",
-    problem: "Leads are unpredictable.",
-    solution: "Capture + routing + follow-up system.",
-    outcome: "Stable pipeline.",
+    title: 'Strong Work, Unclear Brand',
+    problem: 'The business is respected, but its value is hard to explain.',
+    solution: 'Positioning, messaging, and identity direction.',
+    outcome: 'A brand that is easier to understand and trust.',
   },
   {
-    title: "High Traffic, Low Conversion",
-    problem: "Website traffic is not translating into opportunities.",
-    solution: "Audit + conversion architecture.",
-    outcome: "More leads without more traffic.",
+    title: 'Credible Business, Outdated Website',
+    problem: 'The digital presence undersells the quality of the real work.',
+    solution: 'Website strategy, content structure, and design.',
+    outcome: 'A site that matches the reputation behind it.',
   },
   {
-    title: "No Visibility Into Performance",
-    problem: "Decisions are based on guesswork.",
-    solution: "BI dashboards + reporting.",
-    outcome: "Clear decision-making.",
+    title: 'Traffic, but Too Few Inquiries',
+    problem: 'Visitors arrive without finding a compelling next step.',
+    solution: 'Conversion-focused content, proof, and page architecture.',
+    outcome: 'More qualified action from existing attention.',
   },
 ];
 
 const recognitionChecklist = [
-  "We get traffic, but not enough leads",
-  "We have leads, but they do not convert",
-  "Follow-up is manual or inconsistent",
-  "Our tools do not talk to each other",
-  "We do not trust our data",
+  'Our business has evolved, but our brand has not',
+  'People struggle to understand what makes us different',
+  'Our website no longer reflects the quality of our work',
+  'We get traffic, but not enough qualified inquiries',
+  'Our brand feels inconsistent across important touchpoints',
 ];
 
 export default function UseCasesPage() {
   const [filters, setFilters] = useState({
-    challenge: "All",
-    businessType: "All",
-    system: "All",
+    challenge: 'All',
+    businessType: 'All',
+    focus: 'All',
   });
 
   const filteredUseCases = useMemo(() => {
     return useCases.filter((useCase) => {
       const matchesChallenge =
-        filters.challenge === "All" || useCase.challenge === filters.challenge;
+        filters.challenge === 'All' || useCase.challenge === filters.challenge;
       const matchesBusinessType =
-        filters.businessType === "All" || useCase.businessType === filters.businessType;
-      const matchesSystem =
-        filters.system === "All" || useCase.systems.includes(filters.system);
+        filters.businessType === 'All' ||
+        useCase.businessType === filters.businessType;
+      const matchesFocus =
+        filters.focus === 'All' || useCase.focusAreas.includes(filters.focus);
 
-      return matchesChallenge && matchesBusinessType && matchesSystem;
+      return matchesChallenge && matchesBusinessType && matchesFocus;
     });
   }, [filters]);
 
@@ -149,21 +170,30 @@ export default function UseCasesPage() {
     <main className="use-cases-page">
       <section className="use-cases-hero container">
         <div className="use-cases-hero-content">
-          <p className="use-cases-eyebrow">Use Cases</p>
-          <h1>Systems built for real business problems</h1>
+          <div className="use-cases-hero-topline">
+            <p className="use-cases-eyebrow">Use Cases</p>
+            <img src="/alpath/sign.svg" alt="" />
+          </div>
+          <h1>Brand and web work for real moments of change.</h1>
           <p>
-            Explore how we design and implement systems that solve specific
-            challenges across industries and growth stages.
+            Explore how positioning, identity, and web design help established
+            businesses communicate their value, earn trust, and turn attention
+            into qualified action.
           </p>
           <a className="primary-button" href="/contact">
-            → Talk Through Your Use Case
+            <span>Talk through your project</span>
+            <span aria-hidden="true">→</span>
           </a>
         </div>
         <div className="use-cases-hero-visual" aria-hidden="true">
-          <div className="hero-visual-grid" />
-          <div className="hero-visual-node hero-visual-node-foundation">Foundation</div>
-          <div className="hero-visual-node hero-visual-node-flow">Flow</div>
-          <div className="hero-visual-node hero-visual-node-visibility">Visibility</div>
+          <img className="use-cases-hero-mark" src="/alpath/sign.svg" alt="" />
+          <div className="hero-visual-node hero-visual-node-foundation">
+            Positioning
+          </div>
+          <div className="hero-visual-node hero-visual-node-flow">Identity</div>
+          <div className="hero-visual-node hero-visual-node-visibility">
+            Website
+          </div>
         </div>
       </section>
 
@@ -194,97 +224,155 @@ export default function UseCasesPage() {
 
       <section className="use-cases-grid-section container">
         <div className="use-cases-grid-heading">
-          <h2>Use cases by challenge, business type, and system</h2>
+          <div>
+            <p className="use-cases-eyebrow">Find your starting point</p>
+            <h2>Use cases by challenge, business type, and focus</h2>
+          </div>
           <p>{filteredUseCases.length} scenarios matched your filters.</p>
         </div>
 
         <div className="use-cases-grid">
-          {filteredUseCases.map((useCase) => (
+          {filteredUseCases.map((useCase, index) => (
             <article key={useCase.title} className="use-case-card">
+              <p className="use-case-index" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </p>
               <h3>{useCase.title}</h3>
               <p className="use-case-context">{useCase.context}</p>
-              <p>
-                <strong>Problem:</strong> {useCase.problem}
-              </p>
-              <p>
-                <strong>System Applied:</strong> {useCase.systemApplied}
-              </p>
-              <p>
-                <strong>Outcome:</strong> {useCase.outcome}
-              </p>
-              <a href="/contact">→ Learn More</a>
+              <dl className="use-case-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>{useCase.problem}</dd>
+                </div>
+                <div>
+                  <dt>Work applied</dt>
+                  <dd>{useCase.workApplied}</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>{useCase.outcome}</dd>
+                </div>
+              </dl>
+              <a href="/contact">
+                <span>Discuss this use case</span>
+                <span aria-hidden="true">→</span>
+              </a>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="featured-use-cases container" aria-label="Featured use cases">
-        <h2>Featured use cases</h2>
-        <div className="featured-use-cases-grid">
-          {featuredCases.map((item) => (
-            <article key={item.title} className="featured-use-case-card">
-              <h3>{item.title}</h3>
-              <p>
-                <strong>Problem:</strong> {item.problem}
-              </p>
-              <p>
-                <strong>Solution:</strong> {item.solution}
-              </p>
-              <p>
-                <strong>Outcome:</strong> {item.outcome}
-              </p>
-            </article>
-          ))}
+      <section
+        className="featured-use-cases"
+        aria-labelledby="featured-use-cases-heading"
+      >
+        <div className="container">
+          <header className="use-cases-section-heading is-inverted">
+            <div>
+              <p className="use-cases-eyebrow">Common inflection points</p>
+              <h2 id="featured-use-cases-heading">Where the work begins.</h2>
+            </div>
+            <img src="/alpath/sign.svg" alt="" />
+          </header>
+          <div className="featured-use-cases-grid">
+            {featuredCases.map((item, index) => (
+              <article key={item.title} className="featured-use-case-card">
+                <p className="use-case-index" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                <h3>{item.title}</h3>
+                <dl className="use-case-details">
+                  <div>
+                    <dt>Problem</dt>
+                    <dd>{item.problem}</dd>
+                  </div>
+                  <div>
+                    <dt>Approach</dt>
+                    <dd>{item.solution}</dd>
+                  </div>
+                  <div>
+                    <dt>Outcome</dt>
+                    <dd>{item.outcome}</dd>
+                  </div>
+                </dl>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="system-mapping container">
-        <h2>Every use case maps to a system</h2>
-        <div className="system-mapping-rail" role="presentation">
+        <header className="use-cases-section-heading">
           <div>
-            <p>Foundation</p>
-            <span>(Web)</span>
+            <p className="use-cases-eyebrow">A connected practice</p>
+            <h2>Brand and web work should move as one.</h2>
+          </div>
+        </header>
+        <div className="system-mapping-rail">
+          <div>
+            <span aria-hidden="true">01</span>
+            <p>Positioning</p>
+            <small>Say the right thing</small>
           </div>
           <div>
-            <p>Flow</p>
-            <span>(Automation)</span>
+            <span aria-hidden="true">02</span>
+            <p>Identity</p>
+            <small>Look like the right choice</small>
           </div>
           <div>
-            <p>Visibility</p>
-            <span>(BI)</span>
+            <span aria-hidden="true">03</span>
+            <p>Website</p>
+            <small>Make the next step clear</small>
           </div>
         </div>
-        <p>
-          Different problems live in different parts of the system. We identify
-          where the issue exists, then design the right solution.
+        <p className="system-mapping-copy">
+          Positioning gives the story direction. Identity makes it recognizable.
+          The website turns both into an experience people can understand,
+          trust, and act on.
         </p>
       </section>
 
       <section className="recognition-section container">
-        <h2>Do you recognize your situation?</h2>
+        <header className="use-cases-section-heading">
+          <div>
+            <p className="use-cases-eyebrow">Recognize the moment</p>
+            <h2>Does this sound like your business?</h2>
+          </div>
+        </header>
         <ul>
-          {recognitionChecklist.map((item) => (
+          {recognitionChecklist.map((item, index) => (
             <li key={item}>
-              <span aria-hidden="true">☐</span>
-              {item}
+              <span aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <p>{item}</p>
             </li>
           ))}
         </ul>
-        <p>If any of these sound familiar, there&apos;s a system behind it.</p>
+        <p className="recognition-summary">
+          If one of these feels familiar, the next step is usually greater
+          clarity - not more disconnected marketing.
+        </p>
       </section>
 
       <section className="use-cases-conversion container">
-        <h2>Let&apos;s map your use case</h2>
-        <p>
-          We&apos;ll break down your current system, identify gaps, and show you
-          exactly where to improve.
-        </p>
+        <img src="/alpath/sign.svg" alt="" />
+        <div>
+          <p className="use-cases-eyebrow">Ready to move forward?</p>
+          <h2>Let&apos;s clarify the brand and build the right website.</h2>
+          <p>
+            We&apos;ll identify what is unclear, what the experience needs to
+            communicate, and where design can create the most meaningful change.
+          </p>
+        </div>
         <div className="use-cases-conversion-links">
           <a className="primary-button" href="/contact">
-            → Start with an Audit
+            <span>Start a conversation</span>
+            <span aria-hidden="true">→</span>
           </a>
-          <a className="secondary-button" href="/case-studies">
-            → Talk Through Your System
+          <a className="secondary-button" href="/our-work">
+            <span>View selected work</span>
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </section>

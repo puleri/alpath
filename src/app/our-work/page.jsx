@@ -31,16 +31,17 @@ const highlightedStudies = [
   },
   {
     title: 'Distinctive Glass',
-    category: 'Website, SEO, Google Ads',
+    category: 'Website support, content updates, affordable scope',
     image: '/photos/portfolio/distinctive-glass.png',
     imageAlt: 'Gloved hand guiding glass during shop fabrication',
     summary:
-      'A stronger digital foundation for a glass company that needed its web presence and paid campaigns to support real customer inquiries.',
+      'After its former developer was no longer available, Distinctive Glass needed a reliable partner to make a focused set of important website updates without overcomplicating the project.',
     details: [
-      'Clearer positioning for residential and commercial glass services',
-      'Lead-focused page structure for quote-driven traffic',
-      'Campaign-ready content paths for search and Google Ads',
+      'Alpath onboarded to the existing website and restored developer continuity',
+      'Minor but crucial content updates were completed without a redesign',
+      'The full engagement was delivered for under $1,000',
     ],
+    href: '/case-studies/distinctive-glass-affordable-website-content-updates',
   },
 ];
 
@@ -69,7 +70,6 @@ const remainingStudies = [
     title: 'VHS',
     focus:
       'Web-services positioning, content hierarchy, and stronger conversion paths.',
-    href: '/client-stories',
   },
 ];
 
@@ -111,7 +111,8 @@ function HighlightedStudyCard({ study, index }) {
 
         {study.href ? (
           <a href={study.href} className="work-card-link">
-            View case study
+            <span>View case study</span>
+            <span aria-hidden="true">→</span>
           </a>
         ) : null}
       </div>
@@ -119,11 +120,21 @@ function HighlightedStudyCard({ study, index }) {
   );
 }
 
-function RemainingStudyItem({ study }) {
+function RemainingStudyItem({ study, index }) {
   const content = (
     <>
-      <span>{study.title}</span>
-      <p>{study.focus}</p>
+      <span className="work-study-number" aria-hidden="true">
+        {String(index + 1).padStart(2, '0')}
+      </span>
+      <div>
+        <span className="work-study-title">{study.title}</span>
+        <p>{study.focus}</p>
+      </div>
+      {study.href ? (
+        <span className="work-study-arrow" aria-hidden="true">
+          →
+        </span>
+      ) : null}
     </>
   );
 
@@ -148,6 +159,7 @@ function BrandWorkCta() {
   return (
     <section className="work-brand-cta" aria-labelledby="work-brand-cta-title">
       <div className="work-brand-cta-inner container">
+        <img className="work-brand-cta-mark" src="/alpath/sign.svg" alt="" />
         <div>
           <p className="our-work-eyebrow">Brand work</p>
           <h2 id="work-brand-cta-title">
@@ -173,18 +185,23 @@ export default function OurWorkPage() {
   return (
     <main className="our-work-page">
       <section className="our-work-hero container">
-        <div className="our-work-hero-copy">
+        <div className="our-work-hero-topline">
           <p className="our-work-eyebrow">Selected work</p>
-          <h1>Selected work</h1>
-          <p>
-            A curated view of projects we are glad to stand behind, spanning web
-            design, search strategy, and Google Ads support for service
-            businesses around the Pacific Northwest. If one of these feels close
-            to where you want your business to go, that is usually the best
-            place to begin.
-          </p>
+          <img src="/alpath/sign.svg" alt="" />
         </div>
-        <LeadPulseBadge />
+        <div className="our-work-hero-layout">
+          <div className="our-work-hero-copy">
+            <h1>Selected work</h1>
+            <p>
+              A curated view of projects we are glad to stand behind, spanning
+              web design, search strategy, and Google Ads support for service
+              businesses around the Pacific Northwest. If one of these feels
+              close to where you want your business to go, that is usually the
+              best place to begin.
+            </p>
+          </div>
+          <LeadPulseBadge />
+        </div>
       </section>
 
       <section
@@ -208,19 +225,25 @@ export default function OurWorkPage() {
       </section>
 
       <section
-        className="work-remaining-section container"
+        className="work-remaining-section"
         aria-labelledby="remaining-work-heading"
       >
-        <div className="work-section-heading">
-          <p className="our-work-eyebrow">More case studies</p>
-          <h2 id="remaining-work-heading">Other work in the archive</h2>
-        </div>
+        <div className="container">
+          <div className="work-section-heading">
+            <p className="our-work-eyebrow">More case studies</p>
+            <h2 id="remaining-work-heading">Other work in the archive</h2>
+          </div>
 
-        <ul className="work-study-list">
-          {remainingStudies.map((study) => (
-            <RemainingStudyItem key={study.title} study={study} />
-          ))}
-        </ul>
+          <ul className="work-study-list">
+            {remainingStudies.map((study, index) => (
+              <RemainingStudyItem
+                key={study.title}
+                study={study}
+                index={index}
+              />
+            ))}
+          </ul>
+        </div>
       </section>
 
       <BrandWorkCta />

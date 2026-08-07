@@ -5,12 +5,54 @@ import { useRouter } from 'next/navigation';
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+const CONTACT_EMAIL = 'contact@alpathengineering.com';
 
 export default function ContactForm() {
   const formRef = useRef(null);
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [copyStatus, setCopyStatus] = useState('idle');
+
+  const copyEmailWithFallback = () => {
+    const copyField = document.createElement('textarea');
+    copyField.value = CONTACT_EMAIL;
+    copyField.setAttribute('readonly', '');
+    copyField.style.position = 'fixed';
+    copyField.style.opacity = '0';
+    document.body.appendChild(copyField);
+    copyField.select();
+
+    let didCopy = false;
+
+    try {
+      didCopy = document.execCommand('copy');
+    } finally {
+      copyField.remove();
+    }
+
+    if (!didCopy) {
+      throw new Error('Clipboard copy was unavailable.');
+    }
+  };
+
+  const handleCopyEmail = async () => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(CONTACT_EMAIL);
+        } catch {
+          copyEmailWithFallback();
+        }
+      } else {
+        copyEmailWithFallback();
+      }
+
+      setCopyStatus('copied');
+    } catch {
+      setCopyStatus('error');
+    }
+  };
 
   const buildSendFailureMessage = ({ status, details }) => {
     const normalizedDetails = typeof details === 'string' ? details.trim() : '';
@@ -152,13 +194,27 @@ export default function ContactForm() {
           {isSubmitting ? 'Sending...' : 'Send brief'}{' '}
           <span aria-hidden="true">→</span>
         </button>
-        <p className="contact-direct-line">
-          Prefer direct email? Reach us at{' '}
-          <a href="mailto:contact@alpathengineering.com">
-            contact@alpathengineering.com
-          </a>
-          .
-        </p>
+        <div className="contact-direct-line">
+          <span className="contact-direct-label">Prefer direct email?</span>
+          <button
+            className="contact-copy-button"
+            type="button"
+            data-copy-state={copyStatus}
+            onClick={handleCopyEmail}
+            aria-label={`${
+              copyStatus === 'copied' ? 'Copied' : 'Copy'
+            } ${CONTACT_EMAIL}`}
+          >
+            <span className="contact-copy-email">{CONTACT_EMAIL}</span>
+            <span className="contact-copy-state" aria-live="polite">
+              {copyStatus === 'copied'
+                ? 'Copied'
+                : copyStatus === 'error'
+                  ? 'Try again'
+                  : 'Copy'}
+            </span>
+          </button>
+        </div>
       </div>
     </form>
   );

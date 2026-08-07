@@ -1,135 +1,161 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const problemPoints = [
-  "Leads come in, but nothing happens next",
-  "Follow-up is inconsistent or manual",
-  "Sales processes are unclear or fragmented",
-  "You don’t know where revenue is leaking",
+  'Leads come in, but nothing happens next',
+  'Follow-up is inconsistent or manual',
+  'Sales processes are unclear or fragmented',
+  'You don’t know where revenue is leaking',
 ];
 
 const systemFlow = [
   {
-    title: "Traffic",
-    description: "Bring qualified visitors in from ads, search, and referrals.",
-    example: "Example: campaign traffic from Google Ads and SEO pages.",
+    title: 'Traffic',
+    description: 'Bring qualified visitors in from ads, search, and referrals.',
+    example: 'Example: campaign traffic from Google Ads and SEO pages.',
   },
   {
-    title: "Capture",
-    description: "Convert interest into structured lead data with clear capture points.",
-    example: "Example: high-intent forms on service landing pages.",
+    title: 'Capture',
+    description:
+      'Convert interest into structured lead data with clear capture points.',
+    example: 'Example: high-intent forms on service landing pages.',
   },
   {
-    title: "Qualification",
-    description: "Score and segment leads based on fit, intent, and urgency.",
-    example: "Example: routing high-intent submissions to priority pipeline stages.",
+    title: 'Qualification',
+    description: 'Score and segment leads based on fit, intent, and urgency.',
+    example:
+      'Example: routing high-intent submissions to priority pipeline stages.',
   },
   {
-    title: "Routing",
-    description: "Direct each lead to the right owner, queue, or workflow automatically.",
-    example: "Example: enterprise leads go to sales, small projects enter nurture.",
+    title: 'Routing',
+    description:
+      'Direct each lead to the right owner, queue, or workflow automatically.',
+    example:
+      'Example: enterprise leads go to sales, small projects enter nurture.',
   },
   {
-    title: "Follow-up",
-    description: "Trigger immediate and persistent follow-up so no lead is ignored.",
-    example: "Example: email + SMS sequence starts within minutes of submission.",
+    title: 'Follow-up',
+    description:
+      'Trigger immediate and persistent follow-up so no lead is ignored.',
+    example:
+      'Example: email + SMS sequence starts within minutes of submission.',
   },
   {
-    title: "Conversion",
-    description: "Move qualified prospects into booked calls, proposals, and closed deals.",
-    example: "Example: auto-booking links and stage updates in CRM.",
+    title: 'Conversion',
+    description:
+      'Move qualified prospects into booked calls, proposals, and closed deals.',
+    example: 'Example: auto-booking links and stage updates in CRM.',
   },
 ];
 
 const modules = [
   {
-    id: "lead-capture",
-    title: "Lead Capture Systems",
+    id: 'lead-capture',
+    title: 'Lead Capture Systems',
     description:
-      "Forms, landing pages, and gated content built around buyer intent and conversion quality.",
-    why: "Why it matters: Better capture quality means stronger opportunities downstream.",
+      'Forms, landing pages, and gated content built around buyer intent and conversion quality.',
+    why: 'Why it matters: Better capture quality means stronger opportunities downstream.',
   },
   {
-    id: "qualification-routing",
-    title: "Qualification & Routing",
+    id: 'qualification-routing',
+    title: 'Qualification & Routing',
     description:
-      "Rules-based routing that sends each lead to the right person at the right time.",
-    why: "Why it matters: Speed and relevance directly improve close rates.",
+      'Rules-based routing that sends each lead to the right person at the right time.',
+    why: 'Why it matters: Speed and relevance directly improve close rates.',
   },
   {
-    id: "automated-followup",
-    title: "Automated Follow-Up",
+    id: 'automated-followup',
+    title: 'Automated Follow-Up',
     description:
-      "Trigger-based email and SMS workflows that keep momentum without manual effort.",
-    why: "Why it matters: Consistent follow-up recovers opportunities that would otherwise go cold.",
+      'Trigger-based email and SMS workflows that keep momentum without manual effort.',
+    why: 'Why it matters: Consistent follow-up recovers opportunities that would otherwise go cold.',
   },
   {
-    id: "crm-pipeline",
-    title: "CRM & Pipeline Integration",
+    id: 'crm-pipeline',
+    title: 'CRM & Pipeline Integration',
     description:
-      "Centralized tracking with stage visibility so sales and operations share one source of truth.",
-    why: "Why it matters: Visibility reduces bottlenecks and improves forecasting confidence.",
+      'Centralized tracking with stage visibility so sales and operations share one source of truth.',
+    why: 'Why it matters: Visibility reduces bottlenecks and improves forecasting confidence.',
   },
   {
-    id: "conversion-layer",
-    title: "Conversion Layer",
+    id: 'conversion-layer',
+    title: 'Conversion Layer',
     description:
-      "Booking flows, funnel optimization, and closing support systems that remove friction.",
-    why: "Why it matters: Small conversion improvements compound into meaningful revenue growth.",
+      'Booking flows, funnel optimization, and closing support systems that remove friction.',
+    why: 'Why it matters: Small conversion improvements compound into meaningful revenue growth.',
   },
 ];
 
 const outcomes = [
-  "Increased lead-to-close rate",
-  "Faster response times",
-  "More consistent pipeline",
-  "Reduced operational overhead",
+  'Increased lead-to-close rate',
+  'Faster response times',
+  'More consistent pipeline',
+  'Reduced operational overhead',
 ];
 
 const deepDiveLinks = [
-  { title: "Lead Capture Systems", href: "/docs/revenue-automation/lead-capture-systems" },
-  { title: "Lead Routing Logic", href: "/docs/revenue-automation/lead-routing-logic" },
-  { title: "Follow-Up Automation", href: "/docs/revenue-automation/follow-up-automation" },
-  { title: "CRM Integration", href: "/docs/revenue-automation/crm-integration" },
+  {
+    title: 'Lead Capture Systems',
+    href: '/docs/revenue-automation/lead-capture-systems',
+  },
+  {
+    title: 'Lead Routing Logic',
+    href: '/docs/revenue-automation/lead-routing-logic',
+  },
+  {
+    title: 'Follow-Up Automation',
+    href: '/docs/revenue-automation/follow-up-automation',
+  },
+  {
+    title: 'CRM Integration',
+    href: '/docs/revenue-automation/crm-integration',
+  },
 ];
 
 const faqItems = [
   {
-    question: "Do I need a CRM already?",
+    question: 'Do I need a CRM already?',
     answer:
-      "Not necessarily. We can work with your current stack or help define the right CRM setup as part of the system design.",
+      'Not necessarily. We can work with your current stack or help define the right CRM setup as part of the system design.',
   },
   {
-    question: "Can this integrate with my current tools?",
+    question: 'Can this integrate with my current tools?',
     answer:
-      "Yes. We design around your environment first and only recommend changes where they create clear leverage.",
+      'Yes. We design around your environment first and only recommend changes where they create clear leverage.',
   },
   {
-    question: "How long does this take?",
+    question: 'How long does this take?',
     answer:
-      "Most projects start with an audit and design phase, then move into phased implementation based on complexity.",
+      'Most projects start with an audit and design phase, then move into phased implementation based on complexity.',
   },
   {
-    question: "Is this custom or templated?",
+    question: 'Is this custom or templated?',
     answer:
-      "The architecture is customized to your sales process, team structure, and goals. Reusable patterns are applied where useful.",
+      'The architecture is customized to your sales process, team structure, and goals. Reusable patterns are applied where useful.',
   },
 ];
 
 export default function RevenueAutomationPage() {
-  const [activeSection, setActiveSection] = useState("problem");
+  const [activeSection, setActiveSection] = useState('problem');
 
   useEffect(() => {
-    const sectionIds = ["problem", "overview", "breakdown", "outcomes", "faq"];
-    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+    const sectionIds = ['problem', 'overview', 'breakdown', 'outcomes', 'faq'];
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
     const updateActiveSection = () => {
       const activationLine = window.innerHeight * 0.35;
 
       const currentSection = sections
-        .filter((section) => section.getBoundingClientRect().top <= activationLine)
-        .sort((a, b) => b.getBoundingClientRect().top - a.getBoundingClientRect().top)[0];
+        .filter(
+          (section) => section.getBoundingClientRect().top <= activationLine,
+        )
+        .sort(
+          (a, b) =>
+            b.getBoundingClientRect().top - a.getBoundingClientRect().top,
+        )[0];
 
       if (currentSection?.id) {
         setActiveSection(currentSection.id);
@@ -137,12 +163,12 @@ export default function RevenueAutomationPage() {
     };
 
     updateActiveSection();
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
-    window.addEventListener("resize", updateActiveSection);
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
 
     return () => {
-      window.removeEventListener("scroll", updateActiveSection);
-      window.removeEventListener("resize", updateActiveSection);
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
     };
   }, []);
 
@@ -150,24 +176,42 @@ export default function RevenueAutomationPage() {
     <>
       <main className="revenue-automation-page">
         <div className="revenue-automation-layout">
-          <aside className="revenue-sticky-rail" aria-label="Page navigation and actions">
+          <aside
+            className="revenue-sticky-rail"
+            aria-label="Page navigation and actions"
+          >
             <a className="primary-button" href="/contact">
               → Design My Revenue System
             </a>
             <nav>
-              <a className={activeSection === "problem" ? "active" : ""} href="#problem">
+              <a
+                className={activeSection === 'problem' ? 'active' : ''}
+                href="#problem"
+              >
                 Problem
               </a>
-              <a className={activeSection === "overview" ? "active" : ""} href="#overview">
+              <a
+                className={activeSection === 'overview' ? 'active' : ''}
+                href="#overview"
+              >
                 System Overview
               </a>
-              <a className={activeSection === "breakdown" ? "active" : ""} href="#breakdown">
+              <a
+                className={activeSection === 'breakdown' ? 'active' : ''}
+                href="#breakdown"
+              >
                 Breakdown
               </a>
-              <a className={activeSection === "outcomes" ? "active" : ""} href="#outcomes">
+              <a
+                className={activeSection === 'outcomes' ? 'active' : ''}
+                href="#outcomes"
+              >
                 Outcomes
               </a>
-              <a className={activeSection === "faq" ? "active" : ""} href="#faq">
+              <a
+                className={activeSection === 'faq' ? 'active' : ''}
+                href="#faq"
+              >
                 FAQ
               </a>
             </nav>
@@ -176,7 +220,10 @@ export default function RevenueAutomationPage() {
           <div className="revenue-automation-content">
             <section className="revenue-hero" id="top">
               <div className="revenue-hero-copy">
-                <p className="revenue-eyebrow">Revenue Automation</p>
+                <div className="revenue-hero-topline">
+                  <p className="revenue-eyebrow">Revenue Automation</p>
+                  <img src="/alpath/sign.svg" alt="" />
+                </div>
                 <h1>Turn interest into predictable revenue</h1>
                 <p>
                   We design systems that capture, qualify, and convert leads
@@ -202,8 +249,11 @@ export default function RevenueAutomationPage() {
             <section className="revenue-section" id="problem">
               <h2>System friction is killing qualified demand</h2>
               <div className="revenue-problem-grid">
-                {problemPoints.map((point) => (
+                {problemPoints.map((point, index) => (
                   <article key={point} className="revenue-problem-card">
+                    <span aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
                     <p>{point}</p>
                   </article>
                 ))}
@@ -217,8 +267,11 @@ export default function RevenueAutomationPage() {
             <section className="revenue-section" id="overview">
               <h2>What we build</h2>
               <div className="revenue-flow-grid">
-                {systemFlow.map((step) => (
+                {systemFlow.map((step, index) => (
                   <article key={step.title} className="revenue-flow-step">
+                    <span aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
                     <h3>{step.title}</h3>
                     <p>{step.description}</p>
                     <small>{step.example}</small>
@@ -231,7 +284,11 @@ export default function RevenueAutomationPage() {
               <h2>System breakdown</h2>
               <div className="revenue-module-stack">
                 {modules.map((module) => (
-                  <article key={module.id} id={module.id} className="revenue-module-card">
+                  <article
+                    key={module.id}
+                    id={module.id}
+                    className="revenue-module-card"
+                  >
                     <h3>{module.title}</h3>
                     <p>{module.description}</p>
                     <p className="revenue-why-line">{module.why}</p>
@@ -267,8 +324,11 @@ export default function RevenueAutomationPage() {
             <section className="revenue-section" id="outcomes">
               <h2>Outcomes</h2>
               <div className="revenue-outcome-grid">
-                {outcomes.map((outcome) => (
+                {outcomes.map((outcome, index) => (
                   <article key={outcome} className="revenue-outcome-card">
+                    <span aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
                     <p>{outcome}</p>
                   </article>
                 ))}
@@ -291,7 +351,10 @@ export default function RevenueAutomationPage() {
                   <p>Enables decisions.</p>
                 </article>
               </div>
-              <a className="services-cta-link" href="/services#business-intelligence">
+              <a
+                className="services-cta-link"
+                href="/services#business-intelligence"
+              >
                 → See how this connects to Business Intelligence
               </a>
             </section>
@@ -312,7 +375,11 @@ export default function RevenueAutomationPage() {
               <h2>Deep dives</h2>
               <div className="revenue-doc-grid">
                 {deepDiveLinks.map((link) => (
-                  <a key={link.title} href={link.href} className="revenue-doc-card">
+                  <a
+                    key={link.title}
+                    href={link.href}
+                    className="revenue-doc-card"
+                  >
                     <h3>{link.title}</h3>
                     <p>Read technical breakdown</p>
                   </a>
@@ -330,7 +397,10 @@ export default function RevenueAutomationPage() {
                 <a className="primary-button" href="/contact">
                   → Design My Revenue System
                 </a>
-                <a className="secondary-button" href="/services#start-with-audit">
+                <a
+                  className="secondary-button"
+                  href="/services#start-with-audit"
+                >
                   → Start with an Audit
                 </a>
               </div>

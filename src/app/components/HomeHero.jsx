@@ -16,7 +16,7 @@ const HERO_CONTENT = {
     heroText:
       "Your Bellevue digital marketing agency",
     supportingText:
-      "We help construction, architecture, and small businesses preserve trust during a rebrand, modernize their digital experience, and showcase project portfolios.",
+      "We help construction, architecture, real estate, and small businesses preserve trust during a rebrand, modernize their digital experience, and showcase project portfolios.",
     primaryCta: "Plan a rebrand launch",
     secondaryCta: "View client outcomes",
     secondaryHref: "/our-work",

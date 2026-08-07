@@ -48,6 +48,14 @@ const CTA_VARIANTS = {
     secondaryHref: "/services",
     tone: "light",
   },
+  smallWebsiteUpdates: {
+    title: "Need a few important website updates handled?",
+    description:
+      "Bring us the punch list. We will help you scope the smallest practical engagement and get the right changes live.",
+    primaryAction: "Discuss Your Website Updates",
+    primaryHref: "/contact",
+    tone: "light",
+  },
 };
 
 export default function CallToAction({ variant = "default" }) {

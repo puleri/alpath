@@ -195,7 +195,7 @@ export default function PathboySnake() {
             </p>
             {isGameOver ? (
               <button type="button" className={styles.resetButton} onClick={resetGame}>
-                Game Over — Restart
+                Game Over - Restart
               </button>
             ) : null}
           </div>

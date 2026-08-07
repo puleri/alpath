@@ -6,7 +6,7 @@ const primaryLinks = ["Docs"];
 
 const secondaryLinks = ["Use Cases"];
 
-const legalLinks = ["About", "Client Stories", "Privacy", "Terms"];
+const legalLinks = ["About", "Privacy", "Terms"];
 
 const toEndpoint = (label) => `/${label.toLowerCase().replace(/\s+/g, "-")}`;
 
@@ -74,10 +74,22 @@ export default function Footer() {
 
       <div className="container footer-meta">
         <div className="footer-brand-wrap">
-          <span className="footer-brand">Alpath Engineering</span>
+          <div>
+                        <span className="footer-brand">Alpath Engineering </span>
           <span className="footer-rights">
             © {currentYear} All Rights Reserved.
           </span>
+
+          </div>
+          <div className="footer-contact-line">
+            <span className="footer-contact-label">Phone:</span>{" "}
+            <a className="footer-phone" href="tel:+13604478757">
+              (360) 447 8757
+            </a>
+          </div>
+          <div className="footer-contact-line">
+            <span className="footer-contact-label">Hours:</span> 8:00am - 5:00pm
+          </div>
         </div>
         <div className="footer-legal">
           {legalLinks.map((link) => (

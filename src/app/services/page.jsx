@@ -1,117 +1,138 @@
-
 export const metadata = {
-  title: "Consulting & Development Services | Alpath",
+  title: 'Consulting & Development Services | Alpath',
 };
 
 const serviceLayers = [
   {
-    title: "Foundation",
-    detail: "Is your digital presence working?",
+    title: 'Foundation',
+    detail: 'Is your digital presence working?',
   },
   {
-    title: "Flow",
-    detail: "Are leads turning into revenue?",
+    title: 'Flow',
+    detail: 'Are leads turning into revenue?',
   },
   {
-    title: "Visibility",
-    detail: "Do you know what’s actually happening?",
+    title: 'Visibility',
+    detail: 'Do you know what’s actually happening?',
   },
 ];
 
 const services = [
   {
-    number: "1",
-    id: "web-consulting",
-    title: "Web Consulting",
-    kicker: "Diagnose and strengthen your foundation",
+    number: '1',
+    id: 'web-consulting',
+    title: 'Web Consulting',
+    kicker: 'Diagnose and strengthen your foundation',
     intro:
-      "Your website should be more than a brochure. It should be a high-performing system.",
+      'Your website should be more than a brochure. It should be a high-performing system.',
     points: [
-      "Structure and clarity",
-      "Conversion paths",
-      "Performance and speed",
-      "Content hierarchy",
-      "User experience",
+      'Structure and clarity',
+      'Conversion paths',
+      'Performance and speed',
+      'Content hierarchy',
+      'User experience',
     ],
-    outcome: "A site that is clear, fast, and built to convert.",
+    outcome: 'A site that is clear, fast, and built to convert.',
     when: [
-      "Your site looks good but underperforms",
-      "You’re unsure where users drop off",
-      "You’re preparing for growth but lack confidence in your foundation",
+      'Your site looks good but underperforms',
+      'You’re unsure where users drop off',
+      'You’re preparing for growth but lack confidence in your foundation',
     ],
-    cta: "Get a System Audit",
-    href: "/contact",
+    cta: 'Get a System Audit',
+    href: '/contact',
   },
   {
-    number: "2",
-    id: "revenue-automation",
-    title: "Revenue Automation",
-    kicker: "Turn traffic into consistent revenue",
+    number: '2',
+    id: 'revenue-automation',
+    title: 'Revenue Automation',
+    kicker: 'Turn traffic into consistent revenue',
     intro:
-      "Once your foundation is strong, we build the system that actually drives revenue.",
+      'Once your foundation is strong, we build the system that actually drives revenue.',
     points: [
-      "Lead capture systems",
-      "Qualification and routing logic",
-      "Automated follow-up flows",
-      "CRM and pipeline integrations",
-      "Conversion-focused funnels",
+      'Lead capture systems',
+      'Qualification and routing logic',
+      'Automated follow-up flows',
+      'CRM and pipeline integrations',
+      'Conversion-focused funnels',
     ],
     outcome:
-      "A system that captures, nurtures, and converts leads automatically.",
+      'A system that captures, nurtures, and converts leads automatically.',
     when: [
-      "Leads are inconsistent or lost",
-      "Follow-up is manual or unreliable",
-      "Your funnel feels fragmented",
+      'Leads are inconsistent or lost',
+      'Follow-up is manual or unreliable',
+      'Your funnel feels fragmented',
     ],
-    cta: "Design My Revenue System",
-    href: "/services/revenue-automation",
+    cta: 'Design My Revenue System',
+    href: '/services/revenue-automation',
   },
   {
-    number: "3",
-    id: "business-intelligence",
-    title: "Business Intelligence",
-    kicker: "Gain clarity and control at the executive level",
-    intro:
-      "Most businesses operate without real visibility into performance.",
+    number: '3',
+    id: 'business-intelligence',
+    title: 'Business Intelligence',
+    kicker: 'Gain clarity and control at the executive level',
+    intro: 'Most businesses operate without real visibility into performance.',
     points: [
-      "Clear, actionable metrics",
-      "Unified data across tools",
-      "Executive dashboards",
-      "Reporting systems tied to outcomes",
+      'Clear, actionable metrics',
+      'Unified data across tools',
+      'Executive dashboards',
+      'Reporting systems tied to outcomes',
     ],
-    outcome:
-      "You understand what’s working, what isn’t, and where to act.",
+    outcome: 'You understand what’s working, what isn’t, and where to act.',
     when: [
-      "You rely on guesswork or scattered data",
-      "Reporting is manual or unclear",
-      "You want to scale with confidence",
+      'You rely on guesswork or scattered data',
+      'Reporting is manual or unclear',
+      'You want to scale with confidence',
     ],
-    cta: "Build Executive Dashboard",
-    href: "/contact",
+    cta: 'Build Executive Dashboard',
+    href: '/contact',
   },
   {
-    number: "4",
-    id: "custom",
-    title: "Custom",
-    kicker: "Build exactly what your business needs next",
+    number: '4',
+    id: 'custom',
+    title: 'Custom',
+    kicker: 'Build exactly what your business needs next',
     intro:
-      "Need something beyond a standard website or funnel? We design and engineer custom products from concept to launch.",
+      'Need something beyond a standard website or funnel? We design and engineer custom products from concept to launch.',
     points: [
-      "Specialized web applications",
-      "Custom websites and customer portals",
-      "MVP development for inventors and founders",
-      "Product architecture and implementation",
-      "Scalable handoff or long-term engineering support",
+      'Specialized web applications',
+      'Custom websites and customer portals',
+      'MVP development for inventors and founders',
+      'Product architecture and implementation',
+      'Scalable handoff or long-term engineering support',
     ],
     outcome:
-      "A tailored digital product built around your goals, users, and execution timeline.",
+      'A tailored digital product built around your goals, users, and execution timeline.',
     when: [
-      "You have an idea but need an engineering partner",
-      "Off-the-shelf tools cannot support your workflow",
-      "You need to move quickly from concept to functional MVP",
+      'You have an idea but need an engineering partner',
+      'Off-the-shelf tools cannot support your workflow',
+      'You need to move quickly from concept to functional MVP',
     ],
-    cta: "Explore Custom Services",
-    href: "/services/custom",
+    cta: 'Explore Custom Services',
+    href: '/services/custom',
+  },
+  {
+    number: '5',
+    id: 'ai-search-visibility',
+    title: 'AI Search Visibility',
+    kicker: 'Become a source search and AI systems can trust',
+    intro:
+      'We connect SEO, AEO, GEO, and LLMO so your expertise is easier to discover, understand, and cite.',
+    points: [
+      'Prompt and query benchmarking',
+      'Crawler and indexation review',
+      'Entity and structured-data clarity',
+      'Citation-ready expert content',
+      'AI visibility measurement',
+    ],
+    outcome:
+      'A prioritized path toward stronger visibility across search results and AI-generated answers.',
+    when: [
+      'Your buyers increasingly use AI to compare providers',
+      'Competitors appear in answers where your expertise belongs',
+      'Traditional rankings no longer show the full discovery picture',
+    ],
+    cta: 'Explore AI Search Visibility',
+    href: '/services/ai-search-visibility',
   },
 ];
 
@@ -122,6 +143,7 @@ export default function ServicesPage() {
         <section className="services-hero container">
           <div className="services-eyebrow-wrap">
             <p className="services-eyebrow">Services Hub</p>
+            <img src="/alpath/sign.svg" alt="" />
           </div>
           <h1>Systems that turn your digital presence into a revenue engine</h1>
           <p className="services-subheadline">
@@ -150,8 +172,11 @@ export default function ServicesPage() {
           <h2>Our Approach</h2>
           <p>We work across three layers of your business:</p>
           <div className="services-layer-grid">
-            {serviceLayers.map((layer) => (
+            {serviceLayers.map((layer, index) => (
               <article key={layer.title} className="services-layer-card">
+                <span aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
                 <h3>{layer.title}</h3>
                 <p>{layer.detail}</p>
               </article>
@@ -160,10 +185,19 @@ export default function ServicesPage() {
           <p>Each service builds on the last.</p>
         </section>
 
-        <section className="services-cards container" aria-label="Core services">
+        <section
+          className="services-cards container"
+          aria-label="Core services"
+        >
           {services.map((service) => (
-            <article key={service.title} id={service.id} className="service-card">
-              <p className="service-number">{service.number}. {service.title}</p>
+            <article
+              key={service.title}
+              id={service.id}
+              className="service-card"
+            >
+              <p className="service-number">
+                {service.number}. {service.title}
+              </p>
               <h3>{service.kicker}</h3>
               <p>{service.intro}</p>
 
@@ -217,6 +251,7 @@ export default function ServicesPage() {
         </section>
 
         <section className="services-final-cta container">
+          <img src="/alpath/sign.svg" alt="" />
           <h2>Understand your system. Then improve it.</h2>
           <div className="services-final-links">
             <a className="primary-button" href="/contact">

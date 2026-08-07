@@ -91,17 +91,9 @@ export default function NavigationBar() {
             setIsMenuOpen((current) => !current);
           }}
         >
-          {isMenuOpen ? (
-            <span className="nav-toggle-close" aria-hidden="true">
-              X
-            </span>
-          ) : (
-            <>
-              <span className="nav-toggle-line nav-toggle-line-top" />
-              <span className="nav-toggle-line nav-toggle-line-middle" />
-              <span className="nav-toggle-line nav-toggle-line-bottom" />
-            </>
-          )}
+          <span className="nav-toggle-line nav-toggle-line-top" />
+          <span className="nav-toggle-line nav-toggle-line-middle" />
+          <span className="nav-toggle-line nav-toggle-line-bottom" />
         </button>
         <div
           aria-hidden={!isMenuOpen}

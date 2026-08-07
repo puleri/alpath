@@ -34,7 +34,7 @@ export default function sitemap() {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/client-stories`,
+      url: `${baseUrl}/services/ai-search-visibility`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.85,

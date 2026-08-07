@@ -40,7 +40,7 @@ export default function Home() {
               <div className="home-service-copy">
                 <h3>Seattle Architecture Firm Marketing</h3>
                 <p>
-                  We help prominent Seattle architecture firms present their
+                  We help Seattle architecture firms present their
                   work with the clarity their projects deserve. From portfolio
                   structure and project storytelling to brand polish and SEO
                   migration, we build sites that make technical credibility easy
