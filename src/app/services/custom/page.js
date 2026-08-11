@@ -1,4 +1,5 @@
 import CallToAction from '../../components/CallToAction';
+import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs';
 
 export const metadata = {
   title: 'Custom Software Development Services | Alpath',
@@ -37,6 +38,11 @@ const processSteps = [
 export default function CustomServicesPage() {
   return (
     <main className="custom-services-page">
+      <ServiceBreadcrumbs
+        currentLabel="Custom"
+        currentPath="/services/custom"
+      />
+
       <section className="custom-hero container">
         <div className="custom-hero-copy">
           <div className="custom-hero-topline">

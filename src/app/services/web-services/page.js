@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import CallToAction from '../../components/CallToAction';
+import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs';
 import { caseStudies } from '@/lib/caseStudies';
 
 const SCORE_ANIMATION_MS = 1700;
@@ -125,6 +126,11 @@ export default function WebServicesPage() {
   return (
     <>
       <main className="web-services-page">
+        <ServiceBreadcrumbs
+          currentLabel="Web Consulting"
+          currentPath="/services/web-services"
+        />
+
         <section className="web-services-grid">
           <div className="web-services-hero">
             <div className="web-services-hero-copy">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs';
 
 const problemPoints = [
   'Leads come in, but nothing happens next',
@@ -175,6 +176,11 @@ export default function RevenueAutomationPage() {
   return (
     <>
       <main className="revenue-automation-page">
+        <ServiceBreadcrumbs
+          currentLabel="Revenue Automation"
+          currentPath="/services/revenue-automation"
+        />
+
         <div className="revenue-automation-layout">
           <aside
             className="revenue-sticky-rail"

@@ -1,4 +1,4 @@
 export const reviewSummary = {
-  totalReviews: 6,
+  totalReviews: 16,
   averageScore: 5,
 };

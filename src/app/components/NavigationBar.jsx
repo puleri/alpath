@@ -1,15 +1,19 @@
 'use client';
 
 import { useEffect, useId, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const navItems = [
   { href: '/our-work', label: 'Portfolio' },
+  { href: '/services', label: 'Services' },
   { href: '/about', label: 'About' },
 ];
 
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navId = useId();
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     if (!isMenuOpen) {
@@ -55,76 +59,121 @@ export default function NavigationBar() {
   };
 
   return (
-    <header className={`top-bar${isMenuOpen ? ' is-nav-open' : ''}`}>
-      <div className="top-bar-content container">
-        <a className="brand" href="/" onClick={closeMenu}>
-          <img
-            className="brand-icon-nav"
-            src="/alpath/sign.svg"
-            alt="Alpath Engineering brand mark"
-          />
-          <span className="brand-text">
-            <span className="alpath-weight">Alpath</span> Engineering
-          </span>
-        </a>
-        <div className="nav-menu nav-menu-desktop">
-          <nav className="nav-links" aria-label="Primary navigation">
-            {navItems.map((item) => (
-              <a className="nav-link" href={item.href} key={item.href}>
-                {item.label}
-              </a>
-            ))}
-          </nav>
-          <a className="contact-button" href="/contact">
-            Contact us <span className="contact-icon-nav">→</span>
-          </a>
-        </div>
-        <button
-          className={`nav-toggle${isMenuOpen ? ' is-open' : ''}`}
-          type="button"
-          aria-controls={navId}
-          aria-expanded={isMenuOpen}
-          aria-label={
-            isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
-          }
-          onClick={() => {
-            setIsMenuOpen((current) => !current);
-          }}
+    <>
+      {isHomePage ? (
+        <aside
+          className="ai-search-interrupter"
+          aria-label="AI Search Visibility"
         >
-          <span className="nav-toggle-line nav-toggle-line-top" />
-          <span className="nav-toggle-line nav-toggle-line-middle" />
-          <span className="nav-toggle-line nav-toggle-line-bottom" />
-        </button>
-        <div
-          aria-hidden={!isMenuOpen}
-          className={`mobile-nav-menu${isMenuOpen ? ' is-open' : ''}`}
-          data-menu-open={isMenuOpen}
-          id={navId}
-          style={mobileMenuStyle}
-        >
-          <nav className="nav-links" aria-label="Primary navigation">
-            {navItems.map((item, index) => (
-              <a
-                className="nav-link"
-                href={item.href}
-                key={item.href}
-                onClick={closeMenu}
-                style={mobileNavLinkStyle(index)}
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
           <a
-            className="contact-button"
-            href="/contact"
-            onClick={closeMenu}
-            style={mobileContactStyle}
+            className="ai-search-interrupter-link container"
+            href="/services/ai-search-visibility"
           >
-            Contact us <span className="contact-icon-nav">→</span>
+            <span className="ai-search-interrupter-mark" aria-hidden="true">
+              <svg viewBox="0 0 40 40" focusable="false">
+                <path d="M20 3c0 9.39 7.61 17 17 17-9.39 0-17 7.61-17 17 0-9.39-7.61-17-17-17 9.39 0 17-7.61 17-17Z" />
+              </svg>
+            </span>
+            <span className="ai-search-interrupter-label">
+              AI Search Visibility
+            </span>
+            <strong>Become the source AI recommends.</strong>
+            <span className="ai-search-interrupter-action">
+              Explore the service <span aria-hidden="true">→</span>
+            </span>
           </a>
+        </aside>
+      ) : null}
+
+      <header className={`top-bar${isMenuOpen ? ' is-nav-open' : ''}`}>
+        <div className="top-bar-content container">
+          <a className="brand" href="/" onClick={closeMenu}>
+            <img
+              className="brand-icon-nav"
+              src="/alpath/sign.svg"
+              alt="Alpath Engineering brand mark"
+            />
+            <span className="brand-text">
+              <span className="alpath-weight">Alpath</span> Engineering
+            </span>
+          </a>
+          <div className="nav-menu nav-menu-desktop">
+            <nav className="nav-links" aria-label="Primary navigation">
+              {navItems.map((item) => {
+                const isCurrent =
+                  pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`);
+
+                return (
+                  <a
+                    aria-current={isCurrent ? 'page' : undefined}
+                    className={`nav-link${isCurrent ? ' is-current' : ''}`}
+                    href={item.href}
+                    key={item.href}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
+            </nav>
+            <a className="contact-button" href="/contact">
+              Contact us <span className="contact-icon-nav">→</span>
+            </a>
+          </div>
+          <button
+            className={`nav-toggle${isMenuOpen ? ' is-open' : ''}`}
+            type="button"
+            aria-controls={navId}
+            aria-expanded={isMenuOpen}
+            aria-label={
+              isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
+            }
+            onClick={() => {
+              setIsMenuOpen((current) => !current);
+            }}
+          >
+            <span className="nav-toggle-line nav-toggle-line-top" />
+            <span className="nav-toggle-line nav-toggle-line-middle" />
+            <span className="nav-toggle-line nav-toggle-line-bottom" />
+          </button>
+          <div
+            aria-hidden={!isMenuOpen}
+            className={`mobile-nav-menu${isMenuOpen ? ' is-open' : ''}`}
+            data-menu-open={isMenuOpen}
+            id={navId}
+            style={mobileMenuStyle}
+          >
+            <nav className="nav-links" aria-label="Primary navigation">
+              {navItems.map((item, index) => {
+                const isCurrent =
+                  pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`);
+
+                return (
+                  <a
+                    aria-current={isCurrent ? 'page' : undefined}
+                    className={`nav-link${isCurrent ? ' is-current' : ''}`}
+                    href={item.href}
+                    key={item.href}
+                    onClick={closeMenu}
+                    style={mobileNavLinkStyle(index)}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
+            </nav>
+            <a
+              className="contact-button"
+              href="/contact"
+              onClick={closeMenu}
+              style={mobileContactStyle}
+            >
+              Contact us <span className="contact-icon-nav">→</span>
+            </a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }

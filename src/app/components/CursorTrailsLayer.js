@@ -1,26 +1,33 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
-const MAX_TRAILS = 12;
-const LIFESPAN_MS = 12000;
-const TURN_WINDOW_MS = 100;
-const HUE_SPEED = 98;
-const SPAWN_MIN_MS = 2500;
-const SPAWN_MAX_MS = 6000;
-const SPAWN_BATCH = 4;
-const POINTER_SHIELD_RADIUS = 55;
+const MAX_TRAILS = 8;
+const LIFESPAN_MS = 7000;
+const FADE_DURATION_MS = 1400;
+const SPAWN_MIN_MS = 1600;
+const SPAWN_MAX_MS = 3200;
+const SPAWN_BATCH = 2;
+const POINTER_SHIELD_RADIUS = 52;
+const MAX_POINTS = 120;
+const TRAIL_STEP = 1.65;
+const BRAND_ACCENTS = ['#0a77c6', '#0cb800', '#ff6f00'];
+const CARDINAL_DIRECTIONS = [
+  { x: 1, y: 0 },
+  { x: 0, y: 1 },
+  { x: -1, y: 0 },
+  { x: 0, y: -1 },
+];
 
 const randomBetween = (min, max) => min + Math.random() * (max - min);
 
 const createDirection = () => {
-  const angle = Math.random() * Math.PI * 2;
-  const magnitude = randomBetween(0.8, 1.6);
-  return {
-    x: Math.cos(angle) * magnitude,
-    y: Math.sin(angle) * magnitude,
-  };
+  const index = Math.floor(Math.random() * CARDINAL_DIRECTIONS.length);
+  return { ...CARDINAL_DIRECTIONS[index] };
 };
+
+const turnDirection = ({ x, y }) =>
+  Math.random() < 0.5 ? { x: -y, y: x } : { x: y, y: -x };
 
 export default function CursorTrailsLayer() {
   const canvasRef = useRef(null);
@@ -31,7 +38,15 @@ export default function CursorTrailsLayer() {
       return undefined;
     }
 
-    const ctx = canvas.getContext("2d");
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+    const finePointer = window.matchMedia('(pointer: fine)').matches;
+    if (reducedMotion || !finePointer) {
+      return undefined;
+    }
+
+    const ctx = canvas.getContext('2d');
     if (!ctx) {
       return undefined;
     }
@@ -42,7 +57,8 @@ export default function CursorTrailsLayer() {
       y: window.innerHeight / 2,
       active: false,
     };
-    let nextSpawnAt = performance.now() + randomBetween(SPAWN_MIN_MS, SPAWN_MAX_MS);
+    let nextSpawnAt =
+      performance.now() + randomBetween(SPAWN_MIN_MS, SPAWN_MAX_MS);
     let animationFrame;
 
     const resizeCanvas = () => {
@@ -61,15 +77,15 @@ export default function CursorTrailsLayer() {
     };
 
     const spawnTrail = (now, origin) => {
-      const hueOffset = Math.random() * 360;
       const direction = createDirection();
       trails.push({
         id: `trail-${now}-${Math.random().toString(16).slice(2)}`,
         startTime: now,
         points: [origin],
-        hueOffset,
+        nodes: [],
+        accent: BRAND_ACCENTS[Math.floor(Math.random() * BRAND_ACCENTS.length)],
         direction,
-        nextTurnAt: now + randomBetween(200, 800),
+        nextTurnAt: now + randomBetween(500, 1100),
         lifespanMs: LIFESPAN_MS,
       });
     };
@@ -100,45 +116,41 @@ export default function CursorTrailsLayer() {
 
     const updateTrail = (trail, now) => {
       if (now >= trail.nextTurnAt) {
-        const turnAngle = randomBetween(-1.9, 1.9);
-        const cos = Math.cos(turnAngle);
-        const sin = Math.sin(turnAngle);
-        const { x, y } = trail.direction;
-        trail.direction = {
-          x: x * cos - y * sin,
-          y: x * sin + y * cos,
-        };
-        trail.nextTurnAt = now + randomBetween(400, 1400);
+        const corner = trail.points[trail.points.length - 1];
+        trail.nodes.push({ ...corner });
+        if (trail.nodes.length > 6) {
+          trail.nodes.shift();
+        }
+        trail.direction = turnDirection(trail.direction);
+        trail.nextTurnAt = now + randomBetween(650, 1400);
       }
 
       const lastPoint = trail.points[trail.points.length - 1];
       const nextPoint = {
-        x: lastPoint.x + trail.direction.x * 2.4,
-        y: lastPoint.y + trail.direction.y * 2.4,
+        x: lastPoint.x + trail.direction.x * TRAIL_STEP,
+        y: lastPoint.y + trail.direction.y * TRAIL_STEP,
       };
       trail.points.push(nextPoint);
 
-      if (trail.points.length > 140) {
+      if (trail.points.length > MAX_POINTS) {
         trail.points.shift();
       }
     };
 
     const drawTrail = (trail, now) => {
       const age = now - trail.startTime;
-      const fadeStart = trail.lifespanMs - TURN_WINDOW_MS;
-      const opacity =
-        age >= fadeStart
-          ? Math.max(0, .7 - (age - fadeStart) / TURN_WINDOW_MS)
-          : 1;
+      const fadeIn = Math.min(age / 350, 1);
+      const fadeOut = Math.min((trail.lifespanMs - age) / FADE_DURATION_MS, 1);
+      const opacity = Math.max(0, Math.min(fadeIn, fadeOut));
 
-      const hue = ((now / 1000) * HUE_SPEED + trail.hueOffset) % 360;
       ctx.save();
-      ctx.strokeStyle = `hsl(${hue}, 80%, 60%)`;
-      ctx.globalAlpha = opacity;
-      ctx.lineWidth = 4;
-      ctx.lineJoin = "round";
-      ctx.lineCap = "round";
-      ctx.setLineDash([2, 20]);
+      ctx.strokeStyle = '#111111';
+      ctx.globalAlpha = opacity * 0.28;
+      ctx.lineWidth = 1.25;
+      ctx.lineJoin = 'miter';
+      ctx.lineCap = 'butt';
+      ctx.setLineDash([10, 7]);
+      ctx.lineDashOffset = -(age * 0.012);
 
       ctx.beginPath();
       trail.points.forEach((point, index) => {
@@ -149,19 +161,55 @@ export default function CursorTrailsLayer() {
         }
       });
       ctx.stroke();
+
+      ctx.setLineDash([]);
+      ctx.fillStyle = '#111111';
+      ctx.globalAlpha = opacity * 0.42;
+      trail.nodes.forEach((node) => {
+        ctx.fillRect(node.x - 1.5, node.y - 1.5, 3, 3);
+      });
+
+      const tail = trail.points[0];
+      ctx.fillRect(tail.x - 1.5, tail.y - 1.5, 3, 3);
+
+      const head = trail.points[trail.points.length - 1];
+      ctx.fillStyle = trail.accent;
+      ctx.globalAlpha = opacity * 0.9;
+      ctx.fillRect(head.x - 3, head.y - 3, 6, 6);
+      ctx.strokeStyle = '#111111';
+      ctx.globalAlpha = opacity * 0.7;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(head.x - 3.5, head.y - 3.5, 7, 7);
       ctx.restore();
-      ctx.globalAlpha = .5;
     };
 
-    const drawPointerShield = () => {
-      const shieldX = pointer.active ? pointer.x : window.innerWidth / 2;
-      const shieldY = pointer.active ? pointer.y : window.innerHeight / 2;
+    const drawPointerGuide = () => {
+      if (!pointer.active) {
+        return;
+      }
 
       ctx.save();
-      ctx.fillStyle = "rgba(255, 255, 255, 0)";
+      ctx.strokeStyle = '#111111';
+      ctx.globalAlpha = 0.16;
+      ctx.lineWidth = 1;
+      ctx.lineCap = 'butt';
+
+      const outer = 20;
+      const tick = 6;
       ctx.beginPath();
-      ctx.arc(shieldX, shieldY, POINTER_SHIELD_RADIUS, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.moveTo(pointer.x - outer, pointer.y - outer + tick);
+      ctx.lineTo(pointer.x - outer, pointer.y - outer);
+      ctx.lineTo(pointer.x - outer + tick, pointer.y - outer);
+      ctx.moveTo(pointer.x + outer - tick, pointer.y - outer);
+      ctx.lineTo(pointer.x + outer, pointer.y - outer);
+      ctx.lineTo(pointer.x + outer, pointer.y - outer + tick);
+      ctx.moveTo(pointer.x + outer, pointer.y + outer - tick);
+      ctx.lineTo(pointer.x + outer, pointer.y + outer);
+      ctx.lineTo(pointer.x + outer - tick, pointer.y + outer);
+      ctx.moveTo(pointer.x - outer + tick, pointer.y + outer);
+      ctx.lineTo(pointer.x - outer, pointer.y + outer);
+      ctx.lineTo(pointer.x - outer, pointer.y + outer - tick);
+      ctx.stroke();
       ctx.restore();
     };
 
@@ -188,23 +236,29 @@ export default function CursorTrailsLayer() {
         drawTrail(trail, now);
       }
 
-      drawPointerShield();
+      drawPointerGuide();
 
       animationFrame = window.requestAnimationFrame(tick);
     };
 
     resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('pointermove', handlePointerMove);
 
     animationFrame = window.requestAnimationFrame(tick);
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
-      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('pointermove', handlePointerMove);
       window.cancelAnimationFrame(animationFrame);
     };
   }, []);
 
-  return <canvas className="cursor-trails-layer" ref={canvasRef} aria-hidden="true" />;
+  return (
+    <canvas
+      className="cursor-trails-layer"
+      ref={canvasRef}
+      aria-hidden="true"
+    />
+  );
 }

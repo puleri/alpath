@@ -1,3 +1,7 @@
+import AiSearchDemo from './AiSearchDemo';
+import AiVisibilityRoiGraphic from './AiVisibilityRoiGraphic';
+import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs';
+
 const methodology = [
   {
     title: 'Be findable.',
@@ -100,6 +104,130 @@ const faqItems = [
   },
 ];
 
+const researchSources = [
+  {
+    id: 1,
+    publisher: 'Profound',
+    title: '10-step framework for generative engine optimization [2025 guide]',
+    url: 'https://www.tryprofound.com/articles/generative-engine-optimization-geo-guide-2025',
+  },
+  {
+    id: 2,
+    publisher: 'First Line Software',
+    title: 'AEO vs GEO vs SEO: Key Differences Explained',
+    url: 'https://firstlinesoftware.com/blog/aeo-vs-geo-vs-seo/',
+  },
+  {
+    id: 3,
+    publisher: 'SEO.com',
+    title: 'AEO vs. SEO: Key Differences and Importance in Digital Marketing',
+    url: 'https://www.seo.com/ai/aeo-vs-seo/',
+  },
+  {
+    id: 4,
+    publisher: 'Morningstar',
+    title:
+      'AI Search Engineers Identify Answer Engine Optimization as the Fastest-Growing Discipline in Professional Service Digital Marketing and Release the Complete AEO Definition Framework',
+    url: 'https://www.morningstar.com/news/accesswire/1180186msn/ai-search-engineers-identify-answer-engine-optimization-as-the-fastest-growing-discipline-in-professional-service-digital-marketing-and-release-the-complete-aeo-definition-framework',
+  },
+  {
+    id: 5,
+    publisher: 'HubSpot Blog',
+    title:
+      'Answer engine optimization vs. traditional SEO: What marketers need to know',
+    url: 'https://blog.hubspot.com/marketing/aeo-vs-seo',
+  },
+  {
+    id: 6,
+    publisher: 'Discovered Labs',
+    title: 'GEO content strategy: How to write for AI search and citations',
+    url: 'https://discoveredlabs.com/blog/geo-content-strategy-how-to-write-for-ai-search-and-citations',
+  },
+  {
+    id: 7,
+    publisher: 'Mention Network',
+    title:
+      'GEO for AI visibility: how generative engines cite and recommend your brand',
+    url: 'https://mention.network/learn/generative-engine-optimization-geo-ai-visibility/',
+  },
+  {
+    id: 8,
+    publisher: 'Princeton University',
+    title: 'GEO: Generative Engine Optimization',
+    url: 'https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization/',
+  },
+  {
+    id: 9,
+    publisher: 'Exposure Ninja',
+    title: 'Generative Engine Optimisation: How To Rank in AI Search',
+    url: 'https://exposureninja.com/blog/generative-engine-optimisation/',
+  },
+  {
+    id: 10,
+    publisher: 'AIThinkerLab',
+    title:
+      'Generative Engine Optimization (GEO) 2026: Princeton-Backed Playbook for AI Search',
+    url: 'https://aithinkerlab.com/generative-engine-optimization-2026/',
+  },
+  {
+    id: 11,
+    publisher: 'Omnibound',
+    title: 'Generative Engine Optimization Statistics (2026): 60+ Data Points',
+    url: 'https://www.omnibound.ai/blog/generative-engine-optimization-statistics',
+  },
+  {
+    id: 12,
+    publisher: 'KIME',
+    title: 'LLM-Powered Search vs. Traditional Search: 2025–2030 Forecast',
+    url: 'https://kime.ai/blog/llm-search-vs-traditional-search-forecast',
+  },
+  {
+    id: 13,
+    publisher: 'HawkSEM',
+    title: "LLMs vs. Traditional Search: What's Changing in SEO + How to Adapt",
+    url: 'https://hawksem.com/blog/llms-vs-traditional-search-results/',
+  },
+  {
+    id: 14,
+    publisher: 'Optimizely',
+    title: "SEO vs AEO: What's the difference and why it matters",
+    url: 'https://www.optimizely.com/field-notes/articles/seo-vs-aeo',
+  },
+  {
+    id: 15,
+    publisher: 'HubSpot Guide',
+    title: 'Show Up in AI Search with Answer Engine Optimization (AEO)',
+    url: 'https://www.hubspot.com/products/marketing/aeo-guide',
+  },
+  {
+    id: 16,
+    publisher: 'Internal synthesis',
+    title: 'The Paradigmatic Convergence of Search: An Analytical Blueprint',
+    note: 'Internal markdown document curated from the supplied industry analyses.',
+  },
+  {
+    id: 17,
+    publisher: 'DerivateX',
+    title:
+      'The Princeton GEO Paper in Plain English: 5 Tactics That Boost AI Citation by 40%',
+    url: 'https://derivatex.agency/blog/princeton-geo-paper-plain-english/',
+  },
+  {
+    id: 18,
+    publisher: 'Siteimprove',
+    title:
+      'What is Answer Engine Optimization, and Why Should Enterprise Marketers Care?',
+    url: 'https://www.siteimprove.com/blog/what-is-answer-engine-optimization/',
+  },
+  {
+    id: 19,
+    publisher: 'Jasper.ai',
+    title:
+      'What is Generative Engine Optimization? GEO vs AEO vs SEO Guide 2026',
+    url: 'https://www.jasper.ai/blog/geo-aeo',
+  },
+];
+
 export const metadata = {
   title: 'AI Search Visibility, GEO, AEO & SEO | Alpath',
   description:
@@ -135,31 +263,6 @@ export default function AiSearchVisibilityPage() {
         },
       },
       {
-        '@type': 'BreadcrumbList',
-        '@id':
-          'https://alpath.engineering/services/ai-search-visibility#breadcrumbs',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://alpath.engineering/',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Services',
-            item: 'https://alpath.engineering/services',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'AI Search Visibility',
-            item: 'https://alpath.engineering/services/ai-search-visibility',
-          },
-        ],
-      },
-      {
         '@type': 'FAQPage',
         '@id': 'https://alpath.engineering/services/ai-search-visibility#faq',
         mainEntity: faqItems.map((item) => ({
@@ -181,6 +284,11 @@ export default function AiSearchVisibilityPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
         }}
+      />
+
+      <ServiceBreadcrumbs
+        currentLabel="AI Search Visibility"
+        currentPath="/services/ai-search-visibility"
       />
 
       <section className="ai-search-hero" aria-labelledby="ai-search-heading">
@@ -206,143 +314,10 @@ export default function AiSearchVisibilityPage() {
         </div>
 
         <div className="ai-search-demo-wrap">
-          <figure
-            className="ai-search-demo"
-            aria-labelledby="ai-search-demo-label"
-          >
-            <figcaption className="ai-search-demo-bar">
-              <span className="ai-search-demo-product">
-                ChatGPT
-                <svg viewBox="0 0 16 16" aria-hidden="true">
-                  <path d="m4.5 6 3.5 3.5L11.5 6" />
-                </svg>
-              </span>
-              <span id="ai-search-demo-label">Illustrative example</span>
-              <span className="ai-search-demo-tools" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 16V4m0 0L8 8m4-4 4 4M6 12v6h12v-6" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <circle cx="5" cy="12" r="1.25" />
-                  <circle cx="12" cy="12" r="1.25" />
-                  <circle cx="19" cy="12" r="1.25" />
-                </svg>
-              </span>
-            </figcaption>
-
-            <div className="ai-search-thread">
-              <div className="ai-search-prompt">
-                <p>
-                  What is the best neighborhood for raising a family in Seattle?
-                </p>
-              </div>
-
-              <div className="ai-search-assistant-row">
-                <div className="ai-search-assistant-mark" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M12 2.8a4.1 4.1 0 0 1 3.6 2.1 4.1 4.1 0 0 1 4.7 5.9 4.1 4.1 0 0 1-1.1 6.9 4.1 4.1 0 0 1-6.3 4.8 4.1 4.1 0 0 1-7.1-3.8 4.1 4.1 0 0 1-2.5-6.4 4.1 4.1 0 0 1 2.5-6.4A4.1 4.1 0 0 1 12 2.8Z" />
-                    <path d="m8.1 9.2 3.9-2.3 3.9 2.3v4.6L12 16.1l-3.9-2.3V9.2Z" />
-                  </svg>
-                </div>
-
-                <div className="ai-search-assistant-content">
-                  <div className="ai-search-answer">
-                    <p>
-                      For families comparing parks, neighborhood amenities,
-                      commute options, and nearby schools, Green Lake is often a
-                      strong place to start.
-                      <a className="ai-search-citation" href="#ai-source-1">
-                        <span aria-hidden="true">Y</span> Your Company
-                      </a>
-                    </p>
-                    <p>
-                      Ballard and West Seattle are also worth comparing based on
-                      a household&apos;s priorities, commute, and budget.
-                      <a className="ai-search-citation" href="#ai-source-2">
-                        <span aria-hidden="true">S</span> Seattle.gov
-                      </a>
-                      <a className="ai-search-citation" href="#ai-source-3">
-                        <span aria-hidden="true">S</span> Schools
-                      </a>
-                    </p>
-                  </div>
-
-                  <div className="ai-search-sources">
-                    <div className="ai-search-sources-heading">
-                      <p className="ai-search-sources-label">Sources</p>
-                      <span>3</span>
-                    </div>
-                    <ol>
-                      <li id="ai-source-1" className="is-featured">
-                        <span className="ai-search-source-icon">Y</span>
-                        <div>
-                          <strong>Your Company</strong>
-                          <p>Seattle Neighborhood Guide</p>
-                        </div>
-                      </li>
-                      <li id="ai-source-2">
-                        <span className="ai-search-source-icon">S</span>
-                        <div>
-                          <strong>Seattle.gov</strong>
-                          <p>Neighborhood Resources</p>
-                        </div>
-                      </li>
-                      <li id="ai-source-3">
-                        <span className="ai-search-source-icon">S</span>
-                        <div>
-                          <strong>Seattle Public Schools</strong>
-                          <p>School Finder</p>
-                        </div>
-                      </li>
-                    </ol>
-                  </div>
-
-                  <div
-                    className="ai-search-response-actions"
-                    aria-hidden="true"
-                  >
-                    <svg viewBox="0 0 24 24">
-                      <rect x="8" y="8" width="11" height="11" rx="2" />
-                      <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
-                    </svg>
-                    <svg viewBox="0 0 24 24">
-                      <path d="M7 10v10M7 10l4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2l-1.2 7a2 2 0 0 1-2 1.7H7M3 10h4v10H3z" />
-                    </svg>
-                    <svg viewBox="0 0 24 24">
-                      <path d="M7 14V4m0 10-4-7a2 2 0 0 1 2-2h5V1m-3 13h10v6H7z" />
-                    </svg>
-                    <svg viewBox="0 0 24 24">
-                      <path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v6h-6" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div className="ai-search-composer" aria-hidden="true">
-                <p>Ask a follow-up</p>
-                <div>
-                  <span className="ai-search-composer-add">+</span>
-                  <span className="ai-search-composer-controls">
-                    <svg viewBox="0 0 24 24">
-                      <rect x="9" y="3" width="6" height="12" rx="3" />
-                      <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
-                    </svg>
-                    <span className="ai-search-composer-send">
-                      <svg viewBox="0 0 24 24">
-                        <path d="M12 19V5m0 0-5 5m5-5 5 5" />
-                      </svg>
-                    </span>
-                  </span>
-                </div>
-              </div>
-
-              <p className="ai-search-demo-outcome">
-                Your expertise becomes part of the answer.
-              </p>
-            </div>
-          </figure>
+          <AiSearchDemo />
         </div>
       </section>
+      <AiVisibilityRoiGraphic />
 
       <section
         className="ai-search-shift"
@@ -371,12 +346,8 @@ export default function AiSearchVisibilityPage() {
         aria-labelledby="ai-search-system-heading"
       >
         <header className="ai-search-section-heading">
-          <p>The category, made practical</p>
-          <h2 id="ai-search-system-heading">One visibility system.</h2>
-          <div className="ai-search-heading-intro">
-            Some call it GEO, AEO, or LLMO. We treat it as one connected program
-            built on a strong SEO foundation.
-          </div>
+          <p>GEO, AEO, and LLMO</p>
+          <h2 id="ai-search-system-heading">What do the acronyms stand for?</h2>
         </header>
         <div className="ai-search-layer-grid">
           {visibilityLayers.map((layer) => (
@@ -504,6 +475,48 @@ export default function AiSearchVisibilityPage() {
         <a className="ai-search-button is-light" href="/contact">
           Request an AI Visibility Audit
         </a>
+      </section>
+
+      <section
+        id="ai-search-references"
+        className="ai-search-references"
+        aria-labelledby="ai-search-references-heading"
+      >
+        <header>
+          <div>
+            <p className="ai-search-card-label">Research consulted</p>
+            <h2 id="ai-search-references-heading">Sources &amp; references.</h2>
+          </div>
+          <p>
+            Nineteen sources informed the research behind this page and its AI
+            visibility illustration. External references open in a new tab.
+          </p>
+        </header>
+
+        <ol className="ai-search-reference-list">
+          {researchSources.map((source) => (
+            <li id={`ai-research-source-${source.id}`} key={source.id}>
+              <span aria-hidden="true">
+                {String(source.id).padStart(2, '0')}
+              </span>
+              <div>
+                <p>{source.publisher}</p>
+                {source.url ? (
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {source.title} <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <strong>{source.title}</strong>
+                )}
+                {source.note ? <small>{source.note}</small> : null}
+              </div>
+            </li>
+          ))}
+        </ol>
       </section>
     </main>
   );

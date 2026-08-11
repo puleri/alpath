@@ -1,138 +1,50 @@
+import ServiceBreadcrumbs from '../components/ServiceBreadcrumbs';
+
 export const metadata = {
   title: 'Consulting & Development Services | Alpath',
 };
 
-const serviceLayers = [
-  {
-    title: 'Foundation',
-    detail: 'Is your digital presence working?',
-  },
-  {
-    title: 'Flow',
-    detail: 'Are leads turning into revenue?',
-  },
-  {
-    title: 'Visibility',
-    detail: 'Do you know what’s actually happening?',
-  },
-];
-
 const services = [
   {
-    number: '1',
-    id: 'web-consulting',
-    title: 'Web Consulting',
-    kicker: 'Diagnose and strengthen your foundation',
-    intro:
-      'Your website should be more than a brochure. It should be a high-performing system.',
-    points: [
-      'Structure and clarity',
-      'Conversion paths',
-      'Performance and speed',
-      'Content hierarchy',
-      'User experience',
-    ],
-    outcome: 'A site that is clear, fast, and built to convert.',
-    when: [
-      'Your site looks good but underperforms',
-      'You’re unsure where users drop off',
-      'You’re preparing for growth but lack confidence in your foundation',
-    ],
-    cta: 'Get a System Audit',
-    href: '/contact',
+    id: 'ai-search-visibility',
+    title: 'AI Search Visibility',
+    description:
+      'We connect SEO, AEO, GEO, and LLMO so your expertise is easier to discover, understand, and cite.',
+    cta: 'Explore AI Search Visibility',
+    href: '/services/ai-search-visibility',
+    featured: true,
   },
   {
-    number: '2',
+    id: 'web-consulting',
+    title: 'Web Consulting',
+    description:
+      'Your website should be more than a brochure. It should be a high-performing system.',
+    cta: 'Explore Web Consulting',
+    href: '/services/web-services',
+  },
+  {
     id: 'revenue-automation',
     title: 'Revenue Automation',
-    kicker: 'Turn traffic into consistent revenue',
-    intro:
+    description:
       'Once your foundation is strong, we build the system that actually drives revenue.',
-    points: [
-      'Lead capture systems',
-      'Qualification and routing logic',
-      'Automated follow-up flows',
-      'CRM and pipeline integrations',
-      'Conversion-focused funnels',
-    ],
-    outcome:
-      'A system that captures, nurtures, and converts leads automatically.',
-    when: [
-      'Leads are inconsistent or lost',
-      'Follow-up is manual or unreliable',
-      'Your funnel feels fragmented',
-    ],
     cta: 'Design My Revenue System',
     href: '/services/revenue-automation',
   },
   {
-    number: '3',
     id: 'business-intelligence',
     title: 'Business Intelligence',
-    kicker: 'Gain clarity and control at the executive level',
-    intro: 'Most businesses operate without real visibility into performance.',
-    points: [
-      'Clear, actionable metrics',
-      'Unified data across tools',
-      'Executive dashboards',
-      'Reporting systems tied to outcomes',
-    ],
-    outcome: 'You understand what’s working, what isn’t, and where to act.',
-    when: [
-      'You rely on guesswork or scattered data',
-      'Reporting is manual or unclear',
-      'You want to scale with confidence',
-    ],
-    cta: 'Build Executive Dashboard',
-    href: '/contact',
+    description:
+      'Connect scattered data into clear reporting systems that show what is working and where to act.',
+    cta: 'Explore Business Intelligence',
+    href: '/docs/business-intelligence',
   },
   {
-    number: '4',
     id: 'custom',
     title: 'Custom',
-    kicker: 'Build exactly what your business needs next',
-    intro:
+    description:
       'Need something beyond a standard website or funnel? We design and engineer custom products from concept to launch.',
-    points: [
-      'Specialized web applications',
-      'Custom websites and customer portals',
-      'MVP development for inventors and founders',
-      'Product architecture and implementation',
-      'Scalable handoff or long-term engineering support',
-    ],
-    outcome:
-      'A tailored digital product built around your goals, users, and execution timeline.',
-    when: [
-      'You have an idea but need an engineering partner',
-      'Off-the-shelf tools cannot support your workflow',
-      'You need to move quickly from concept to functional MVP',
-    ],
     cta: 'Explore Custom Services',
     href: '/services/custom',
-  },
-  {
-    number: '5',
-    id: 'ai-search-visibility',
-    title: 'AI Search Visibility',
-    kicker: 'Become a source search and AI systems can trust',
-    intro:
-      'We connect SEO, AEO, GEO, and LLMO so your expertise is easier to discover, understand, and cite.',
-    points: [
-      'Prompt and query benchmarking',
-      'Crawler and indexation review',
-      'Entity and structured-data clarity',
-      'Citation-ready expert content',
-      'AI visibility measurement',
-    ],
-    outcome:
-      'A prioritized path toward stronger visibility across search results and AI-generated answers.',
-    when: [
-      'Your buyers increasingly use AI to compare providers',
-      'Competitors appear in answers where your expertise belongs',
-      'Traditional rankings no longer show the full discovery picture',
-    ],
-    cta: 'Explore AI Search Visibility',
-    href: '/services/ai-search-visibility',
   },
 ];
 
@@ -140,50 +52,15 @@ export default function ServicesPage() {
   return (
     <>
       <main className="services-page">
-        <section className="services-hero container">
+        <ServiceBreadcrumbs />
+
+        <header className="services-catalog-header container">
           <div className="services-eyebrow-wrap">
             <p className="services-eyebrow">Services Hub</p>
             <img src="/alpath/sign.svg" alt="" />
           </div>
-          <h1>Systems that turn your digital presence into a revenue engine</h1>
-          <p className="services-subheadline">
-            We design and build integrated systems that attract, convert, and
-            inform, so your business doesn’t just exist online, it performs.
-          </p>
-        </section>
-
-        <section className="services-section container">
-          <h2>Overview</h2>
-          <p>
-            Most businesses don’t have a website problem, they have a system
-            problem.
-          </p>
-          <ul>
-            <li>Leads aren’t captured effectively</li>
-            <li>Opportunities aren’t followed up on</li>
-            <li>Decisions are made without clear data</li>
-          </ul>
-          <p>
-            We solve this by building connected systems, not isolated solutions.
-          </p>
-        </section>
-
-        <section className="services-section container">
-          <h2>Our Approach</h2>
-          <p>We work across three layers of your business:</p>
-          <div className="services-layer-grid">
-            {serviceLayers.map((layer, index) => (
-              <article key={layer.title} className="services-layer-card">
-                <span aria-hidden="true">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <h3>{layer.title}</h3>
-                <p>{layer.detail}</p>
-              </article>
-            ))}
-          </div>
-          <p>Each service builds on the last.</p>
-        </section>
+          <h1>Services</h1>
+        </header>
 
         <section
           className="services-cards container"
@@ -193,61 +70,16 @@ export default function ServicesPage() {
             <article
               key={service.title}
               id={service.id}
-              className="service-card"
+              className={`service-card${service.featured ? ' is-featured' : ''}`}
             >
-              <p className="service-number">
-                {service.number}. {service.title}
-              </p>
-              <h3>{service.kicker}</h3>
-              <p>{service.intro}</p>
-
-              <h4>We analyze and improve:</h4>
-              <ul>
-                {service.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-
-              <h4>Outcome:</h4>
-              <p>{service.outcome}</p>
-
-              <h4>When you need this:</h4>
-              <ul>
-                {service.when.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
 
               <a className="services-cta-link" href={service.href}>
-                → {service.cta}
+                {service.cta} <span aria-hidden="true">→</span>
               </a>
             </article>
           ))}
-        </section>
-
-        <section className="services-section container">
-          <h2>How It Fits Together</h2>
-          <p>These are not separate services. They are a connected system:</p>
-          <ul>
-            <li>A strong foundation enables effective automation</li>
-            <li>Automation generates data</li>
-            <li>Data enables better decisions and growth</li>
-          </ul>
-          <p>
-            You can enter at any point, but the full system is where the real
-            leverage happens.
-          </p>
-        </section>
-
-        <section className="services-section container" id="start-with-audit">
-          <h2>Not Sure Where to Start?</h2>
-          <p>Most clients begin with a system audit to identify:</p>
-          <ul>
-            <li>What’s working</li>
-            <li>What’s broken</li>
-            <li>What will drive the most impact</li>
-          </ul>
-          <p>From there, we map the right path forward.</p>
         </section>
 
         <section className="services-final-cta container">
