@@ -1332,7 +1332,40 @@
   }
 
   .section {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 0;
+  }
+
+  .section > .sectionHeading {
+    order: 1;
+  }
+
+  .section > .sectionIntro {
+    order: 2;
+  }
+
+  .section > .tourismExperience {
+    order: 3;
+  }
+
+  .section > .detailGrid {
+    order: 4;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    break-before: page;
+    break-inside: avoid;
+  }
+
+  .section > .detailGrid article {
+    min-height: 240px;
+  }
+
+  .section > .workHeading {
+    order: 5;
+  }
+
+  .section > .workGrid {
+    order: 6;
   }
 
   .letter .readingLayout {

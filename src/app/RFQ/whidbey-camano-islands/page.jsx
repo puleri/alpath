@@ -891,7 +891,7 @@ export default function WhidbeyCamanoRfqPage() {
             <p>
               The engagement anticipates approximately{' '}
               <strong>
-                24–30 hours of senior digital and technical availability per
+                24-30 hours of senior digital and technical availability per
                 month
               </strong>
               , with effort shifting according to program priorities.

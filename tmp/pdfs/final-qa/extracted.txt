@@ -1,0 +1,716 @@
+RFQ RESPONSE · DIGITAL SERVICES SPECIALIST       PRIVATE PROPOSAL · AUGUST 2026
+
+
+
+
+     Alpath Engineering                      ×
+
+
+
+PREPARED FOR                                                    SUBMITTED BY
+Whidbey & Camano Islands Tourism Program                        Alpath Engineering
+
+
+
+
+  OPERATOR
+
+        Matt Puleri
+
+
+  SUBMITTED
+
+        August 2026
+
+
+  ENGAGEMENT
+
+        Digital Services Specialist
+01
+LETTER OF INTEREST
+
+
+
+
+A technical partner who stays close to
+the visitor experience.
+Dear Lee Ann Mozes and the Whidbey &
+Camano Islands Tourism Program,
+
+
+
+
+Alpath Engineering is pleased to submit our qualifications for the Digital Services Specialist engagement.
+
+What interested us immediately is the breadth of the role: a digital partner who can keep the underlying platform
+healthy while continually improving how visitors discover, navigate, and engage with the destination.
+
+That intersection of web engineering, user experience, AI-search visibility, analytics, and emerging
+technology is where Alpath does its best work.
+
+We are a Pacific Northwest digital consultancy specializing in high-performance websites, technical modernization,
+search and AI-visibility optimization, analytics, and custom digital systems. Our work ranges from ongoing website
+stewardship to complex migrations and development projects, with an emphasis on creating digital experiences that are
+fast, understandable, measurable, and maintainable.
+
+We would be excited to work alongside the Tourism Program Manager and the program's content, creative, social, and
+public-relations partners to support that goal.
+
+
+Sincerely,
+
+Matt Puleri
+Founder & Operator · Alpath Engineering
+EXECUTIVE SUMMARY
+
+
+
+
+Dependable today. More useful with
+every iteration.
+Alpath proposes to serve as Whidbey & Camano Islands Tourism's technical and digital-services partner,
+responsible for the ongoing health, development, performance, accessibility, analytics, SEO, AEO/GEO, and
+technical optimization of the Tourism Program's website and related digital systems.
+
+Our role would complement the program's existing content, creative, social-media, and public-relations partners.
+While those teams lead storytelling, photography, design, social publishing, and PR, Alpath would focus on
+digital implementation: building and maintaining pages, improving visitor pathways, supporting campaigns,
+strengthening traditional and AI-search visibility, configuring analytics, and ensuring the underlying technology
+remains dependable.
+
+The work centers on four priorities: website and technical stewardship, visitor experience and conversion, search
+and digital discovery, and measurement and continuous optimization.
+02
+QUALIFICATIONS & EXPERIENCE
+
+
+
+
+Engineering depth, connected to the
+whole digital experience.
+Alpath combines software engineering expertise with web strategy, user experience, search optimization,
+branding, and digital marketing. Rather than treating these as separate disciplines, we use them together to
+improve the health, usefulness, and discoverability of digital experiences.
+
+Whether a problem requires development or configuration (i.e. a new feature, or a small fix to an existing
+system), we can investigate and implement the solution directly. Technical improvements are valuable when
+they make the visitor experience faster, easier to navigate, more discoverable, or more useful.
+
+
+
+
+TOURISM & DESTINATION-
+                               The three examples in this response are not tourism organizations. Their relevance
+MARKETING RELEVANCE
+                               lies in the same digital disciplines this engagement requires: local and intent-
+                               based search, clear journeys from discovery to action, campaign-ready pages,
+                               structured information, analytics, accessibility, performance, and dependable
+                               website stewardship. For Whidbey & Camano Islands Tourism, Alpath would pair
+                               that experience with personal familiarity with Island County and close
+                               collaboration with the program's tourism, content, creative, social, and public-
+                               relations partners.
+01                                                        02
+
+
+
+
+Website engineering
+                                                          Search & visibility
+Website development and ongoing management,
+CMS administration, HTML, CSS, JavaScript, React,         Technical SEO, site architecture, local search, structured
+Next.js, PHP, integrations, security, deployment, and     data and Schema.org implementation, plus AI Search
+technical troubleshooting.                                Visibility including AEO, GEO, and LLMO.
+
+
+
+03                                                        04
+
+
+
+
+                                                          Measurement &
+Experience & performance                                  emerging technology
+User experience, accessibility, responsive design, Core   Google Analytics, Search Console, performance
+Web Vitals, visitor-path analysis, conversion             monitoring, reporting, automation, and evaluation of
+opportunities, and website performance optimization.      emerging AI and search technologies.
+RELEVANT WORK
+
+
+
+
+Proof in performance, discovery,
+and stewardship.
+
+   01                                                                                                                             Co m p l e te d 2 02 6
+
+
+
+
+   Lockhart Suver
+   lockhartsuver.com
+
+
+   Alpath migrated the Seattle-based builder from WordPress to a modern Next.js platform while preserving the
+   existing user experience. The work included content and asset migration, custom development, optimization,
+   deployment, testing, and long-term technical ownership.
+
+
+
+
+   74      → 99
+   GOOGLE LIGHTHOUSE PERFORMANCE
+
+
+   Website migration · Performance optimization · Responsive development · Technical troubleshooting · CMS transition · SEO preservation
+   · Deployment
+02                                                                                                          Co m p l e te d 2 02 3
+
+
+
+
+Lennon Window Cleaning
+lennonwc.com
+
+
+Alpath rebuilt the digital presence of a new Greater Seattle service business around local search behavior,
+simplified navigation, clearer services, and a lower-friction estimate process.
+
+
+
+
+300+
+LEADS IN YEAR ONE
+
+
+Local SEO · Web strategy · UX · Conversion optimization · Analytics · Content architecture · Branding
+
+
+
+
+03                                                                                                          Co m p l e te d 2 02 5
+
+
+
+
+Distinctive Glass
+distinctiveglass.com
+
+
+Alpath stepped into an existing website after the previous developer was no longer available, learned the
+system, addressed immediate priorities, and became a dependable technical resource.
+
+
+
+
+Backfilling
+DIGITAL STEWARDSHIP
+
+
+Existing-site onboarding · Website maintenance · Troubleshooting · Content updates · Client communication
+03
+PROPOSED APPROACH
+
+
+
+
+Clear ownership. Close collaboration.
+Alpath would take primary responsibility for the website's development, maintenance, performance, accessibility,
+analytics, SEO, AEO/GEO, and related technical systems.
+
+Content, creative, social-media, and public-relations partners would continue to lead original content creation,
+photography, graphic production, social publishing, and PR. Alpath would focus on implementing that work
+effectively across the Tourism Program's digital platforms.
+
+Website hosting, domain registration, HTTPS certificate health, security products, and other program-owned
+subscriptions would remain owned and paid for by the Tourism Program. Alpath would coordinate with those
+providers and administer or troubleshoot the technical environment as needed.
+ALPATH LEADS
+
+
+
+
+Website & technical stewardship
+Development, CMS administration, maintenance, performance, accessibility, security, integrations, testing, deployment,
+hosting coordination, and troubleshooting.
+
+
+
+Search & digital discovery
+Technical SEO, local and destination search, structured data, AEO/GEO, AI-search visibility, and search-
+performance monitoring.
+
+
+
+Measurement & optimization
+Analytics, Search Console, Tag Manager, visitor behavior, campaign measurement, reporting, and ongoing
+technical recommendations.
+
+
+
+ALPATH COLLABORATES ON
+
+
+
+
+Visitor experience & campaign implementation
+Website architecture, navigation, internal linking, landing pages, calls to action, campaign implementation, email
+templates, visitor pathways, and conversion opportunities.
+
+
+
+PROGRAM PARTNERS LEAD
+
+
+
+
+Storytelling & outreach
+Original copywriting, photography, videography, primary graphic design, organic social-media management, public
+relations, and paid-media strategy unless separately requested.
+01
+PRIORITY ONE
+
+
+
+
+Website & technical stewardship
+The first responsibility is ensuring the tourism website remains dependable. During onboarding, Alpath would
+establish a technical baseline covering the health of the existing website and its supporting systems.
+
+Critical issues would be prioritized first, followed by an ongoing improvement backlog developed collaboratively
+with the Tourism Program Manager.
+
+
+
+
+   01
+
+
+
+
+   Platform health
+   CMS and plugin management · Security monitoring · Backups and recovery · Broken links and technical errors · Hosting
+   and integrations
+02
+
+
+
+
+Performance & accessibility
+Core Web Vitals · Mobile responsiveness · Accessibility · Browser and device testing · Site speed and performance
+
+
+
+03
+
+
+
+
+Development & deployment
+Routine development · Feature implementation · Testing · Deployment · Technical troubleshooting
+02
+PRIORITY TWO
+
+
+
+
+Visitor experience & website flow
+Some visitors know exactly where they want to go. Others may arrive after searching for a hike, ferry trip,
+restaurant, weekend escape, event, scenic drive, or family activity without initially knowing much about Whidbey
+or Camano.
+
+We would work closely with the content and creative teams rather than duplicate their responsibilities. Their
+expertise creates the story; ours helps ensure it is easy to find, experience, and act upon online.
+
+
+
+Discovery              →              Exploration                →              Planning                →          Visiting
+
+
+
+   01
+
+
+
+
+   Website flow
+   Navigation and information architecture · Internal linking · Related-content pathways · Itinerary discovery ·
+   Visitor resources
+02
+
+
+
+
+Seasons & events
+Landing pages · Calls to action · Event and seasonal experiences · High-intent visitor actions
+
+
+
+03
+
+
+
+
+Usability
+Mobile experience · Accessibility · Clear pathways from inspiration to planning and visitor information
+03
+PRIORITY THREE
+
+
+
+
+Search & digital discovery
+Traditional Google search remains important, but prospective visitors increasingly discover destinations through
+AI-generated answers, conversational search, map results, social platforms, and other recommendation systems.
+
+Alpath would manage traditional SEO and emerging AI discovery as one connected discipline.
+
+
+
+
+   01
+
+
+
+
+   Technical search
+   Crawlability and indexation · Metadata · Canonicalization · Sitemaps · Redirects · Internal links · Page performance
+02
+
+
+
+
+Local & destination search
+Geographic relevance · Destination and activity-based queries · Seasonal search behavior · Event opportunities ·
+Local discovery
+
+
+
+03
+
+
+
+
+Structured information
+Schema and structured data for destinations · Events · Attractions · Lodging · Organizations · Articles · FAQs
+
+
+
+04
+
+
+
+
+AI search visibility
+Entity clarity · Geographic relationships · Audience relevance · Seasonal availability · Community differentiation · AI
+discovery monitoring
+AI SEARCH VISIBILITY
+
+
+
+
+    This is where Alpath stands apart
+
+
+
+
+Structure important information for people
+and machines.
+•    What Whidbey and Camano Islands offer
+
+•    Where experiences are located
+
+•    Who particular experiences are appropriate for
+
+•    When activities are available
+
+•    How destinations relate geographically
+
+•    What makes individual communities and attractions distinct
+04
+PRIORITY FOUR
+
+
+
+
+Measurement, optimization
+& innovation
+During onboarding, we would review the existing measurement stack and determine what information is most
+useful to the Tourism Program. Tools may include Google Analytics, Google Search Console, Google Tag Manager,
+Microsoft Clarity, and appropriate search- and website-performance monitoring tools.
+
+Together with the Tourism Program Manager, we would establish a practical set of KPIs based on
+program priorities.
+
+
+
+
+   01
+
+
+
+
+   Search & discovery
+   Organic search visibility · Search-query performance · AI and referral traffic · Destination discovery
+   02
+
+
+
+
+   Visitor behavior
+   Visitor engagement · High-intent actions · Conversion paths · Landing-page behavior
+
+
+
+   03
+
+
+
+
+   Campaign performance
+   Email engagement · Referral sources · Campaign landing pages · QR, social, and partner traffic where appropriate
+
+
+
+
+MONTHLY REPORTING
+
+
+
+
+What happened?
+Why do we believe it happened?
+What should we do next?
+EMERGING TECHNOLOGY WITH PURPOSE
+
+
+
+Evaluate new tools against
+practical outcomes.
+
+Alpath stays current by reviewing official guidance and release notes from search, analytics, CMS, browser,
+accessibility, and security platforms; following changes to standards such as Schema.org and WCAG; and testing
+promising capabilities before recommending them. Findings that demonstrate practical value are documented
+and added to the shared improvement backlog.
+
+
+We would look beyond the immediate maintenance backlog and identify opportunities presented by AI search,
+automation, analytics, content workflows, CMS improvements, accessibility technology, performance tooling, and
+internal process improvements.
+
+
+•   Does it improve the visitor experience?
+
+•   Does it reduce unnecessary work?
+
+•   Can its impact be measured?
+
+•   Does it introduce security, privacy, accessibility, or maintenance concerns?
+
+•   Is it mature enough to justify implementation?
+05
+FAMILIARITY WITH ISLAND COUNTY
+
+
+
+
+A connection to the islands that is
+personal, not abstract.
+
+
+
+
+  Matt's wife and son playing at Nana and Bapa's house on Whidbey.
+My wife's family has lived on Whidbey Island for 30 years. They built their home on 10.5 acres of land, and
+with it a community. My wife's grandparents lived on Camano.
+
+
+
+
+Between my wife and me are two distinct experiences of Island County: hers as someone who knows the
+islands as home and mine as a visitor who gradually developed a lasting connection to the place and
+its people.
+
+
+
+
+      I've experienced the best outcome of touring the
+      islands. Finding home in them.
+COLLABORATION & COMMUNICATION
+
+
+
+
+A small senior team, directly involved.
+
+
+
+
+ MATT PULERI
+
+
+
+
+The people responsible for strategy are directly involved in implementation, which minimizes handoffs and
+makes it easier to move between technical questions, marketing questions, and implementation.
+
+Routine communication would generally receive a response within one business day. Urgent website
+issues affecting availability, security, or major visitor functionality would receive priority response as soon
+as practicable.
+01                                                         02
+
+
+
+
+                                                           Collaboration
+Planning
+                                                           Regular coordination with the Tourism Program
+Monthly planning meetings · Shared prioritization ·        Manager · Collaboration with content, social, creative,
+Ongoing improvement backlog                                and PR partners · Project-specific meetings as needed
+
+
+
+03
+
+
+
+
+Responsiveness
+Routine response within one business day · Priority
+response for issues affecting availability, security, or
+major visitor functionality
+06
+PROPOSED MONTHLY RETAINER
+
+
+
+
+$6,000 per month
+The fixed monthly retainer covers the ongoing Digital Services Specialist responsibilities described in
+this response.
+
+
+
+The engagement anticipates approximately 24-30 hours of senior digital and technical
+availability per month, with effort shifting according to program priorities.
+
+
+
+
+ANNUAL CONTRACT VALUE
+
+
+
+        $72,000
+
+
+   01
+
+
+
+
+   Website
+   Management · CMS administration · Development · Performance · Accessibility · Testing · Deployment
+02
+
+
+
+
+Visibility
+SEO · AEO/GEO · Structured data · Search Console · AI-search optimization
+
+
+
+03
+
+
+
+
+Measurement
+Analytics · Reporting · Campaign tracking · Visitor-path analysis
+
+
+
+04
+
+
+
+
+Support
+Technical troubleshooting · Email implementation · Monthly coordination · Emerging-technology evaluation
+ASSUMPTIONS & EXCLUSIONS
+
+
+
+Predictable stewardship,
+clearly scoped.
+
+•   Website hosting, domain registration, HTTPS certificate health, security products, and other program-owned
+    subscriptions remain paid directly by the Tourism Program.
+
+•   Alpath will coordinate with hosting and other technical providers as needed.
+
+•   Paid-media spend, paid-media buying, and ongoing organic social-media management are excluded.
+
+•   Original photography, videography, long-form content creation, public relations, and primary graphic-design
+    production remain with the appropriate Tourism Program partners.
+
+•   A complete redesign, replacement of the underlying CMS, a substantial standalone application, or a similarly large
+    initiative may require a separately approved scope if it exceeds committed availability.
+
+•   Third-party licensing costs require prior approval.
+
+•   Travel reasonably necessary to maintain destination familiarity is included within the proposed retainer.
+WHY ALPATH
+
+
+
+
+Strategy and implementation,
+held together.
+Whidbey & Camano Islands Tourism needs someone capable of moving comfortably between strategy and
+implementation. That may mean examining an analytics report in the morning, diagnosing a website issue that
+afternoon, improving structured data the next day, and working with the content team on the architecture of a
+seasonal landing page later that week.
+
+Island County also deserves someone connected to the place and willing to be present. That may mean joining a
+meeting in person, attending a local event, or simply experiencing the islands in the same ways visitors do.
+
+Lastly, you want someone dependable. All of our clients are repeat clients. People come back for our
+expertise, our rates, and our kindness.
+
+We are a technical company, but we are also family-owned. We would welcome the opportunity to help Whidbey
+& Camano Islands Tourism build a digital presence that becomes progressively more useful, discoverable,
+measurable, and resilient over the course of the engagement.
+PROFESSIONAL REFERENCES
+
+
+
+
+People who know our work.
+
+  01                                       Secure Back Office
+                                           Consultant
+              Brad Kulkin                  brad@securebackoffice.com
+                                           206-659-8490
+
+
+
+
+  02                                       Pro3 Accounting
+                                           Operator
+              Michael Neese                michael@pro3accounting.com
+                                           319-594-8979
+
+
+
+
+  03                                       Washington Small Business Development Center
+                                           Certified Business Advisor
+              Supo Techagumthorn           supo@wsu.edu
+                                           425-331-9775
+
+
+
+
+       Thank you for your consideration.                                                  ALPATH ENGINEERING · AUGUST 2026
+
