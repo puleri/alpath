@@ -41,8 +41,7 @@ export default function Footer() {
         <div className="footer-intro">
           <p className="footer-kicker">Experience momentum</p>
           <p className="footer-subtitle">
-            Keep your revenue systems coordinated, visible, and ready for the
-            next stage.
+            Keep your digital experience modern, performant, and visible.
           </p>
         </div>
         <div className="footer-links">

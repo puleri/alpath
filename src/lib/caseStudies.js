@@ -9,7 +9,7 @@ export const caseStudies = [
       'Lockhart Suver needed an exact 1:1 move off WordPress without losing the site experience, code, or media assets. WordPress did not provide a practical batch export path for the code and media, so a normal migration would have left gaps, missing files, or a rebuilt approximation.',
     systemApplied: [
       '1:1 WordPress-to-Next.js migration that preserved the existing site experience',
-      "Custom web-scraper bot built by Alpath's principal engineer and founder to crawl the full site",
+      "Custom web-scraper bot built by Alpath's operator and founder to crawl the full site",
       'Individual media extraction for every asset WordPress could not batch export cleanly',
       'Next.js rebuild with optimized assets, routing, and page structure',
       'Ownership handoff so Lockhart Suver retained control of its codebase and media library',
@@ -84,7 +84,7 @@ export const caseStudies = [
         {
           title: 'Phase 2: Custom scraper and media recovery',
           description:
-            "Alpath's principal engineer and founder built a custom web-scraper bot to crawl the full WordPress site and download every media asset individually. Take that, WordPress.",
+            "Alpath's operator and founder built a custom web-scraper bot to crawl the full WordPress site and download every media asset individually. Take that, WordPress.",
         },
         {
           title: 'Phase 3: Next.js rebuild and performance lift',

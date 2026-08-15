@@ -1,13 +1,13 @@
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/+$/, "");
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/+$/, '');
   }
 
   if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`.replace(/\/+$/, "");
+    return `https://${process.env.VERCEL_URL}`.replace(/\/+$/, '');
   }
 
-  return "http://localhost:3000";
+  return 'http://localhost:3000';
 }
 
 export default function robots() {
@@ -15,9 +15,9 @@ export default function robots() {
 
   return {
     rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/api/"],
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/api/', '/RFQ/'],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,

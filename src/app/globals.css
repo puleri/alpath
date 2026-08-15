@@ -1813,6 +1813,7 @@
 
 * {
   box-sizing: border-box;
+  text-wrap: pretty;
 }
 strong {
   font-weight: 800;
@@ -1826,11 +1827,10 @@ strong {
 }
 
 body {
-  text-wrap: pretty;
   margin: 0;
   background: #ffffff;
   color: inherit;
-  font-family: 'Inter', 'Anaheim Variable', 'Anaheim', system-ui, sans-serif;
+  font-family: 'Anaheim Variable', 'Anaheim', system-ui, sans-serif;
   font-weight: 400;
   font-synthesis: weight;
 }
@@ -2024,7 +2024,6 @@ html {
 }
 
 .cta-title {
-  text-wrap: balance;
   font-size: clamp(30px, 4vw, 48px);
   line-height: 1.15;
   margin: 0;
@@ -2421,7 +2420,6 @@ html {
   font-size: clamp(30px, 4vw, 52px);
   line-height: 1.08;
   letter-spacing: -0.03em;
-  text-wrap: balance;
 }
 
 .home-proof-copy p:not(.home-proof-eyebrow) {
@@ -2530,7 +2528,6 @@ html {
   font-size: clamp(32px, 4.6vw, 66px);
   line-height: 1.05;
   letter-spacing: 0;
-  text-wrap: balance;
 }
 
 .who-we-are-copy p {
@@ -3783,7 +3780,6 @@ html {
   line-height: 1.2;
   max-width: 800px;
   font-weight: 800;
-  text-wrap: balance;
 }
 
 .card-grid {
@@ -5131,7 +5127,6 @@ tbody tr:hover td {
 .docs-page h2,
 .docs-page h3 {
   margin: 0;
-  text-wrap: balance;
 }
 
 .docs-page h1 {
@@ -8414,7 +8409,6 @@ tbody tr:hover td {
   font-size: 5.5rem;
   line-height: 0.98;
   letter-spacing: 0;
-  text-wrap: balance;
 }
 
 .our-work-hero-copy > p:last-child {
@@ -8583,7 +8577,6 @@ tbody tr:hover td {
   font-size: 2.4rem;
   line-height: 1.12;
   letter-spacing: 0;
-  text-wrap: balance;
 }
 
 .work-feature-grid {
@@ -8798,7 +8791,6 @@ a.work-study-row:hover p {
   font-size: 3.35rem;
   line-height: 1.06;
   letter-spacing: 0;
-  text-wrap: balance;
 }
 
 .work-brand-cta-copy {
@@ -11518,7 +11510,37 @@ a.work-study-row:hover p {
 }
 
 .web-services-page > .cta-section .cta-card {
+  --cta-card-padding: clamp(32px, 4vw, 52px);
   border-radius: 0;
+}
+
+.web-services-page > .cta-section .cta-content {
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.55fr);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
+}
+
+.web-services-page > .cta-section .cta-copy {
+  gap: 14px;
+}
+
+.web-services-page > .cta-section .cta-actions {
+  margin-top: 8px;
+}
+
+.web-services-page > .cta-section .cta-spline {
+  min-height: clamp(220px, 24vw, 300px);
+}
+
+@media (max-width: 900px) {
+  .web-services-page > .cta-section .cta-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .web-services-page > .cta-section .cta-spline {
+    min-height: 180px;
+  }
 }
 
 /* Services system: strict black, white, and mesh-mark accents. */

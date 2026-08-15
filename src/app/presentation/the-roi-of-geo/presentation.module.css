@@ -189,7 +189,6 @@
   letter-spacing: -0.065em;
   line-height: 0.94;
   overflow-wrap: anywhere;
-  text-wrap: balance;
 }
 
 .sourceLine {
@@ -1935,7 +1934,6 @@
   font-weight: 500;
   letter-spacing: -0.075em;
   line-height: 0.86;
-  text-wrap: balance;
 }
 .closingCopy a {
   min-height: 50px;
