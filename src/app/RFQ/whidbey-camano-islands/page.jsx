@@ -1,6 +1,12 @@
+import { cookies } from 'next/headers';
 import Link from 'next/link';
+import { isProposalAccessCookieValid, PROPOSAL_ACCESS_COOKIE } from './access';
 import styles from './page.module.css';
 import ProposalDownloadMenu from './ProposalDownloadMenu';
+import ProposalPasswordGate from './ProposalPasswordGate';
+import ProposalScrollReset from './ProposalScrollReset';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'Whidbey & Camano Islands RFQ Response | Alpath Engineering',
@@ -71,7 +77,7 @@ const capabilities = [
 const work = [
   {
     name: 'Lockhart Suver',
-    status: 'Completed 2026',
+    status: '2026 - Ongoing Engagement',
     url: 'https://www.lockhartsuver.com/',
     displayUrl: 'lockhartsuver.com',
     metric: '74 → 99',
@@ -82,7 +88,7 @@ const work = [
   },
   {
     name: 'Lennon Window Cleaning',
-    status: 'Completed 2023',
+    status: '2023 - Ongoing Engagement',
     url: 'https://lennonwc.com/',
     displayUrl: 'lennonwc.com',
     metric: '300+',
@@ -93,7 +99,7 @@ const work = [
   },
   {
     name: 'Distinctive Glass',
-    status: 'Completed 2025',
+    status: '2025 - Ongoing Engagement',
     url: 'https://www.distinctiveglass.com/',
     displayUrl: 'distinctiveglass.com',
     metric: 'Backfilling',
@@ -242,9 +248,17 @@ function DetailGrid({ items, columns = 3 }) {
   );
 }
 
-export default function WhidbeyCamanoRfqPage() {
+export default async function WhidbeyCamanoRfqPage() {
+  const cookieStore = await cookies();
+  const accessCookie = cookieStore.get(PROPOSAL_ACCESS_COOKIE)?.value;
+
+  if (!isProposalAccessCookieValid(accessCookie)) {
+    return <ProposalPasswordGate />;
+  }
+
   return (
     <main className={styles.page}>
+      <ProposalScrollReset />
       <header className={`${styles.container} ${styles.hero}`}>
         <div className={styles.heroTopline}>
           <p>RFQ response · Digital Services Specialist</p>
