@@ -1301,6 +1301,10 @@
     overflow: visible;
   }
 
+  .container {
+    width: calc(100% - 32px);
+  }
+
   .hero {
     min-height: 100vh;
     padding-top: 54px;
@@ -1458,6 +1462,7 @@
   .references {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     padding-top: 48px;
     padding-bottom: 36px;

@@ -7,6 +7,9 @@ node_modules/
 # testing
 /coverage
 
+# generated artifacts
+/tmp/
+
 # next.js
 /.next/
 /out/
