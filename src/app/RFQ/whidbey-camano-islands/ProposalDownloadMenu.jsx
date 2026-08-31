@@ -3,9 +3,16 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import styles from './page.module.css';
 
-const PDF_PATH = '/RFQ/alpath-rfq-response-whidbey-camano.pdf';
+const DEFAULT_PDF_PATH = '/RFQ/alpath-rfq-response-whidbey-camano.pdf';
+const DEFAULT_DOWNLOAD_NAME =
+  'Alpath RFQ Response - Whidbey and Camano Islands.pdf';
 
-export default function ProposalDownloadMenu() {
+export default function ProposalDownloadMenu({
+  pdfPath = DEFAULT_PDF_PATH,
+  downloadName = DEFAULT_DOWNLOAD_NAME,
+  buttonLabel = 'Download',
+  pdfLabel = 'PDF',
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [copyStatus, setCopyStatus] = useState('Copy link');
   const menuId = useId();
@@ -58,18 +65,18 @@ export default function ProposalDownloadMenu() {
         onClick={() => setIsOpen((current) => !current)}
         type="button"
       >
-        Download
+        {buttonLabel}
         <span aria-hidden="true">{isOpen ? '↑' : '↓'}</span>
       </button>
       {isOpen ? (
         <div className={styles.downloadMenuPanel} id={menuId} role="menu">
           <a
-            download="Alpath RFQ Response - Whidbey and Camano Islands.pdf"
-            href={PDF_PATH}
+            download={downloadName}
+            href={pdfPath}
             onClick={() => setIsOpen(false)}
             role="menuitem"
           >
-            <span>PDF</span>
+            <span>{pdfLabel}</span>
             <span aria-hidden="true">↓</span>
           </a>
           <button onClick={copyLink} role="menuitem" type="button">

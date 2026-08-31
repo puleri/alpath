@@ -1,4 +1,4 @@
-# Contact background — iteration 2
+# Contact background - iteration 2
 
 Archived July 29, 2026. This iteration is intentionally dormant and is not
 imported by the live contact page.

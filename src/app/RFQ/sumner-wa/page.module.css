@@ -1,0 +1,718 @@
+.sumnerPage {
+  --ink: #102a2f;
+  --paper: #ffffff;
+  --wash: #eef6f3;
+}
+
+.screenProposal {
+  display: block;
+}
+
+.sumnerPartner {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.cityMark {
+  width: clamp(54px, 5.5vw, 76px);
+  height: clamp(62px, 6.3vw, 88px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  flex: 0 0 auto;
+  transform: skewY(-4deg);
+}
+
+.cityMark i {
+  display: block;
+}
+
+.cityMark i:nth-child(1) {
+  background: #c7b900;
+}
+
+.cityMark i:nth-child(2) {
+  background: #2cb9b5;
+}
+
+.cityMark i:nth-child(3) {
+  background: #f9ae32;
+}
+
+.cityName {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  line-height: 0.78;
+  text-transform: uppercase;
+}
+
+.cityName small {
+  font-size: clamp(9px, 1vw, 12px);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  line-height: 1;
+}
+
+.cityName strong {
+  margin: 7px 0 9px;
+  font-size: clamp(31px, 4.2vw, 58px);
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 0.72;
+}
+
+.sumnerPage .heroClosing > h1 {
+  max-width: 610px;
+  margin: 0;
+  font-size: clamp(24px, 2.8vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.projectPhone {
+  width: fit-content;
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-underline-offset: 3px;
+}
+
+.teamGrid {
+  display: grid;
+  gap: 0;
+  margin-top: clamp(100px, 12vw, 170px);
+  border-top: 1px solid var(--ink);
+}
+
+.teamMember {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.68fr) minmax(0, 1.32fr);
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.memberPortrait {
+  min-height: 520px;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  margin: 0;
+  border-right: 1px solid var(--ink);
+}
+
+.memberPortrait img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.memberPortrait figcaption {
+  border-top: 1px solid var(--ink);
+  padding: 12px 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.anthonyPortrait img {
+  object-position: center 32%;
+}
+
+.memberCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(30px, 5vw, 64px);
+}
+
+.memberCopy h2 {
+  margin: auto 0 0;
+  font-size: clamp(48px, 6vw, 80px);
+  letter-spacing: -0.052em;
+  line-height: 0.94;
+}
+
+.role {
+  margin: 18px 0 38px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.memberCopy > p:not(:first-child, .role, .memberSkills) {
+  max-width: 690px;
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.memberSkills {
+  max-width: 690px;
+  margin: 8px 0 0;
+  border-top: 1px solid var(--ink);
+  padding-top: 16px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.resumeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 28px;
+  border: 1px solid var(--ink);
+  padding: 12px 14px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.resumeLink:hover,
+.resumeLink:focus-visible {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.assuranceCallout,
+.acceptanceCallout {
+  background:
+    linear-gradient(90deg, #c7b900 0 7px, transparent 7px), var(--paper);
+}
+
+.acceptanceCallout {
+  background:
+    linear-gradient(90deg, #2cb9b5 0 7px, transparent 7px), var(--paper);
+}
+
+.competitionNote {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(36px, 6vw, 88px);
+  margin-top: clamp(64px, 9vw, 118px);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: clamp(34px, 5vw, 58px) 0;
+}
+
+.competitionNote h3 {
+  max-width: 520px;
+  margin-bottom: 0;
+  font-size: clamp(34px, 4.8vw, 62px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.competitionNoteCopy {
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+
+.competitionNoteCopy p {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.58;
+}
+
+@media (max-width: 760px) {
+  .sumnerPartner {
+    gap: 8px;
+  }
+
+  .cityMark {
+    width: clamp(28px, 8vw, 44px);
+    height: clamp(34px, 9vw, 52px);
+    gap: 2px;
+  }
+
+  .cityName small {
+    font-size: clamp(5px, 1.6vw, 8px);
+  }
+
+  .cityName strong {
+    margin: 5px 0 6px;
+    font-size: clamp(17px, 5.4vw, 30px);
+  }
+
+  .teamGrid {
+    margin-top: 100px;
+  }
+
+  .competitionNote {
+    grid-template-columns: 1fr;
+  }
+
+  .teamMember {
+    grid-template-columns: 1fr;
+  }
+
+  .memberPortrait {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .memberPortrait img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .anthonyPortrait img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .memberCopy {
+    min-height: 580px;
+  }
+
+  .memberCopy h2 {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .cityName small {
+    letter-spacing: 0.18em;
+  }
+}
+
+@media print {
+  .screenProposal {
+    display: none !important;
+  }
+
+  .teamSection {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+
+  .teamSection > header {
+    order: 1;
+  }
+
+  .teamIntro {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+    order: 2;
+    margin: 28px 0;
+  }
+
+  .teamIntro p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .teamSection > .capabilitiesGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    order: 3;
+    break-before: auto;
+  }
+
+  .teamSection .capabilitiesGrid article {
+    min-height: 190px;
+    padding: 16px;
+  }
+
+  .capabilitiesGrid article > p:first-child {
+    padding-bottom: 22px;
+  }
+
+  .capabilitiesGrid h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+  }
+
+  .capabilitiesGrid article > p:last-child {
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .teamAssurance {
+    grid-template-columns: 130px minmax(210px, 0.6fr) minmax(0, 1fr);
+    gap: 22px;
+    order: 4;
+    margin-top: 24px;
+    padding: 20px 24px;
+  }
+
+  .teamAssurance h3 {
+    font-size: 24px;
+  }
+
+  .teamAssurance li {
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+  .teamGrid {
+    order: 5;
+    margin-top: 0;
+    border-top: 0;
+    break-before: page;
+  }
+
+  .teamMember {
+    min-height: 100vh;
+    break-inside: avoid;
+  }
+
+  .teamMember + .teamMember {
+    break-before: page;
+  }
+
+  .memberPortrait {
+    min-height: 0;
+  }
+
+  .memberCopy {
+    min-height: 0;
+    padding: 38px;
+  }
+
+  .memberCopy h2 {
+    font-size: 56px;
+  }
+
+  .role {
+    margin: 14px 0 28px;
+  }
+
+  .memberCopy > p:not(:first-child, .role, .memberSkills) {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .resumeLink {
+    margin-top: 16px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  .experienceSection {
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+
+  .experienceInner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experienceInner > header {
+    order: 1;
+  }
+
+  .experienceInner > div:nth-child(2) {
+    order: 2;
+  }
+
+  .relevancePanel {
+    order: 3;
+    margin-top: 28px;
+  }
+
+  .projectGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    order: 4;
+    break-before: page;
+  }
+
+  .projectGrid article {
+    min-height: calc(100vh - 4px);
+    padding: 30px 18px;
+  }
+
+  .projectGrid h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  .projectGrid article > p:not(.metric, .workTags) {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .projectGrid .metric {
+    padding-top: 32px;
+  }
+
+  .projectGrid .metric strong {
+    font-size: 40px;
+  }
+
+  .projectGrid .workTags {
+    margin-top: 24px;
+    padding-top: 14px;
+    font-size: 9px;
+    line-height: 1.45;
+  }
+
+  .accessibilitySection {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .accessibilitySection > div:nth-child(2) {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .accessibilitySection > div:nth-child(2) p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .standardsGrid,
+  .testingGrid,
+  .cmsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accessibilitySection .standardsGrid article,
+  .accessibilitySection .testingGrid article {
+    min-height: 180px;
+    padding: 20px 24px;
+  }
+
+  .accessibilitySection .cmsGrid article {
+    min-height: 280px;
+    padding: 24px;
+  }
+
+  .standardsGrid article > p:first-child,
+  .testingGrid article > p:first-child,
+  .cmsGrid article > p:first-child {
+    padding-bottom: 28px;
+  }
+
+  .standardsGrid h3,
+  .testingGrid h3,
+  .cmsGrid h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .standardsGrid article > p:last-child,
+  .testingGrid article > p:last-child,
+  .cmsGrid article > p:last-child {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .auditHeading,
+  .cmsHeading {
+    break-before: page;
+    margin: 48px 0 30px;
+  }
+
+  .auditHeading h2,
+  .cmsHeading h2 {
+    font-size: 48px;
+  }
+
+  .acceptanceCallout {
+    gap: 22px;
+    margin-top: 24px;
+    padding: 22px 26px;
+  }
+
+  .acceptanceCallout h3 {
+    font-size: 28px;
+  }
+
+  .acceptanceCallout li {
+    font-size: 10.5px;
+  }
+
+  .deliverySection {
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+
+  .deliverySection > div > div:nth-child(2) {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .deliverySection > div > div:nth-child(2) p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .phasesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .deliverySection .phasesGrid article {
+    min-height: 215px;
+    padding: 18px;
+  }
+
+  .phasesGrid article > p:first-child {
+    padding-bottom: 22px;
+  }
+
+  .phasesGrid h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+  }
+
+  .phasesGrid article > p:last-child {
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
+
+  .controlsHeading {
+    break-before: page;
+    margin: 48px 0 28px;
+  }
+
+  .securityHeading {
+    margin: 42px 0 26px;
+  }
+
+  .controlsHeading h2,
+  .securityHeading h2 {
+    font-size: 42px;
+  }
+
+  .controlsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .deliverySection .controlsGrid article {
+    min-height: 220px;
+    padding: 20px;
+  }
+
+  .controlsGrid article > p:first-child,
+  .securityGrid article > p:first-child {
+    padding-bottom: 22px;
+  }
+
+  .controlsGrid h3,
+  .securityGrid h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  .controlsGrid article > p:last-child,
+  .securityGrid article > p:last-child {
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
+
+  .securityGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .deliverySection .securityGrid article {
+    min-height: 170px;
+    padding: 18px 20px;
+  }
+
+  .communicationPanel {
+    min-height: 100vh;
+    align-items: center;
+    break-before: page;
+    margin: 0;
+    padding: 54px;
+  }
+
+  .communicationPanel h3 {
+    font-size: 44px;
+  }
+
+  .communicationPanel > div:last-child > p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .communicationPanel li {
+    font-size: 12px;
+  }
+
+  .assurancesSection {
+    min-height: 100vh;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .assuranceIntro {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 190px;
+    gap: 34px;
+    margin: 34px 0;
+  }
+
+  .assuranceIntro > p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .assuranceIntro dl {
+    grid-column: auto;
+  }
+
+  .assurancesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .assurancesSection .assurancesGrid article {
+    min-height: 210px;
+    padding: 20px;
+  }
+
+  .assurancesGrid article > p:first-child {
+    padding-bottom: 24px;
+  }
+
+  .assurancesGrid h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  .assurancesGrid article > p:last-child {
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
+
+  .whySection {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .referencesSection {
+    min-height: 100vh;
+  }
+}

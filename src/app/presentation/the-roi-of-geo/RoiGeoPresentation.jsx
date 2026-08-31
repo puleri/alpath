@@ -770,7 +770,7 @@ export default function RoiGeoPresentation() {
               </article>
             </div>
             <p className={cx(styles.sourceLine, styles.reveal)}>
-              Source: Princeton University, Georgia Tech, and IIT Delhi —
+              Source: Princeton University, Georgia Tech, and IIT Delhi  - 
               Generative Engine Optimization, KDD 2024
             </p>
           </SlideFrame>

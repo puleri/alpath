@@ -71,7 +71,7 @@ export default function AboutPage() {
               src="/people/matt/matt-on-grey.png"
               alt="Matt, the operator behind Alpath"
             />
-            <figcaption>The operator behind Alpath</figcaption>
+            <figcaption>Matt, the operator behind Alpath</figcaption>
           </figure>
 
           <div className="about-operator-copy">
