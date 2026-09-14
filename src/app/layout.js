@@ -42,7 +42,9 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="apple-mobile-web-app-title" content="Alpath Engineering" />
       </head>
-      <body>
+      {/* Browser extensions such as Grammarly add body attributes before hydration.
+          Suppress only this element's attribute warning; descendants remain checked. */}
+      <body suppressHydrationWarning>
         <NavigationBar />
         {children}
         <Footer />
