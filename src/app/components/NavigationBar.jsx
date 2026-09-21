@@ -33,6 +33,10 @@ export default function NavigationBar() {
     };
   }, [isMenuOpen]);
 
+  if (pathname === '/proposal/union-street-cre/services-agreement') {
+    return null;
+  }
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };

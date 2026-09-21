@@ -807,18 +807,51 @@
   display: grid;
   place-items: center;
   padding: 60px 24px;
-  background: var(--wash);
+  background: #f2f6fb;
 }
 .passwordPanel {
   width: min(100%, 600px);
   padding: clamp(26px, 5vw, 60px);
   border: 1px solid var(--ink);
+  border-top: 4px solid #0a77c6;
   background: white;
+}
+.passwordPanel > .eyebrow {
+  color: #0868ad;
+}
+.gatePartners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 42px;
+}
+.gateAlpath {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+.gateAlpath img {
+  width: 25px;
+  height: 36px;
+  object-fit: contain;
+}
+.gatePartnerCross {
+  color: #0a77c6;
+  font-size: 24px;
+}
+.gateClientLogo {
+  width: min(210px, 100%);
+  height: 56px;
+  object-fit: contain;
+  object-position: left center;
 }
 .unionStreetLogoGate {
   display: block;
-  width: min(220px, 70%);
-  height: 58px;
+  width: min(260px, 85%);
+  height: 70px;
   margin-bottom: 42px;
   object-fit: contain;
   object-position: left center;

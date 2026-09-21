@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 
-export default function ProposalPasswordGate() {
+export default function ProposalPasswordGate({ isAgreement = false }) {
   const router = useRouter();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -55,24 +55,53 @@ export default function ProposalPasswordGate() {
     >
       {unlocked && (
         <p className={styles.unlockStatus} role="status">
-          You’re in. Opening our next steps…
+          {isAgreement
+            ? 'You’re in. Opening the draft agreement…'
+            : 'You’re in. Opening our next steps…'}
         </p>
       )}
       <section className={styles.passwordPanel} aria-labelledby="access-title">
-        <img
-          className={styles.unionStreetLogoGate}
-          src="/union-street/logo.avif"
-          alt="Union Street CRE"
-        />
-        <p className={styles.eyebrow}>A follow-up for Union Street CRE</p>
+        {isAgreement ? (
+          <div className={styles.gatePartners}>
+            <span className={styles.gateAlpath}>
+              <img src="/alpath/sign.svg" alt="" />
+              <span>
+                <strong>Alpath</strong> Engineering
+              </span>
+            </span>
+            <span
+              className={styles.gatePartnerCross}
+              aria-label="in partnership with"
+            >
+              ×
+            </span>
+            <img
+              className={styles.gateClientLogo}
+              src="/union-street/logo.avif"
+              alt="Union Street CRE"
+            />
+          </div>
+        ) : (
+          <img
+            className={styles.unionStreetLogoGate}
+            src="/union-street/logo.avif"
+            alt="Union Street CRE"
+          />
+        )}
+        <p className={styles.eyebrow}>
+          {isAgreement
+            ? 'Prepared for Union Street CRE'
+            : 'A follow-up for Union Street CRE'}
+        </p>
         <h1 id="access-title">
-          Private proposal
+          {isAgreement ? 'Services agreement' : 'Private proposal'}
           <br />
-          follow up
+          {isAgreement ? 'Draft for review' : 'follow up'}
         </h1>
         <p>
-          I’ve put our website rebuild options and next steps here. Enter the
-          password I shared to take a look.
+          {isAgreement
+            ? 'Use the same password as the proposal to review it.'
+            : 'I’ve put our website rebuild options and next steps here. Enter the password I shared to take a look.'}
         </p>
         <form onSubmit={unlock} aria-busy={busy}>
           <label htmlFor="proposal-password">Password</label>
@@ -96,7 +125,11 @@ export default function ProposalPasswordGate() {
             {error}
           </p>
           <button className={styles.button} disabled={busy} type="submit">
-            {busy ? 'Opening…' : 'View our next steps'}{' '}
+            {busy
+              ? 'Opening…'
+              : isAgreement
+                ? 'Review the draft agreement'
+                : 'View our next steps'}{' '}
             <span aria-hidden="true">↗</span>
           </button>
         </form>

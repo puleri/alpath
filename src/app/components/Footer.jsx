@@ -1,19 +1,21 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
-const primaryLinks = ["Docs"];
+const primaryLinks = ['Docs'];
 
-const secondaryLinks = ["Use Cases"];
+const secondaryLinks = ['Use Cases'];
 
-const legalLinks = ["About", "Privacy", "Terms"];
+const legalLinks = ['About', 'Privacy', 'Terms'];
 
-const toEndpoint = (label) => `/${label.toLowerCase().replace(/\s+/g, "-")}`;
+const toEndpoint = (label) => `/${label.toLowerCase().replace(/\s+/g, '-')}`;
 
 export default function Footer() {
   const wordmarkRef = useRef(null);
   const [isRaised, setIsRaised] = useState(false);
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
 
   useEffect(() => {
     const wordmark = wordmarkRef.current;
@@ -25,7 +27,7 @@ export default function Footer() {
       ([entry]) => {
         setIsRaised(entry.isIntersecting);
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     observer.observe(wordmark);
@@ -34,6 +36,10 @@ export default function Footer() {
       observer.disconnect();
     };
   }, []);
+
+  if (pathname === '/proposal/union-street-cre/services-agreement') {
+    return null;
+  }
 
   return (
     <footer className="footer-section">
@@ -64,7 +70,7 @@ export default function Footer() {
 
       <div ref={wordmarkRef} className="footer-wordmark">
         <span
-          className={`footer-wordmark-prefix${isRaised ? " is-raised" : ""}`}
+          className={`footer-wordmark-prefix${isRaised ? ' is-raised' : ''}`}
         >
           Al
         </span>
@@ -74,14 +80,13 @@ export default function Footer() {
       <div className="container footer-meta">
         <div className="footer-brand-wrap">
           <div>
-                        <span className="footer-brand">Alpath Engineering </span>
-          <span className="footer-rights">
-            © {currentYear} All Rights Reserved.
-          </span>
-
+            <span className="footer-brand">Alpath Engineering </span>
+            <span className="footer-rights">
+              © {currentYear} All Rights Reserved.
+            </span>
           </div>
           <div className="footer-contact-line">
-            <span className="footer-contact-label">Phone:</span>{" "}
+            <span className="footer-contact-label">Phone:</span>{' '}
             <a className="footer-phone" href="tel:+13604478757">
               (360) 447 8757
             </a>
