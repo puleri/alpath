@@ -330,7 +330,7 @@
 }
 .paymentGrid article {
   display: grid;
-  grid-template-columns: 24px 1fr 100px;
+  grid-template-columns: 24px minmax(0, 1fr) max-content;
   gap: 8px 16px;
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
@@ -343,13 +343,22 @@
   font-size: 19px;
 }
 .paymentAmount {
-  font-size: 25px;
+  font-size: clamp(23px, 2.5vw, 28px);
   text-align: right;
   line-height: 1.2;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
-.paymentGrid article > p:last-child {
+.paymentBreakdown,
+.paymentNote {
   grid-column: 2 / -1;
   font-size: 14px;
+  line-height: 1.45;
+}
+.paymentBreakdown {
+  color: var(--ink);
+}
+.paymentNote {
   color: #4f5968;
 }
 .hostingPanel {
@@ -537,11 +546,13 @@
     gap: 8px;
   }
   .paymentGrid article {
-    grid-template-columns: 18px 1fr 76px;
+    grid-template-columns: 18px minmax(0, 1fr);
     gap: 8px;
   }
   .paymentAmount {
+    grid-column: 2;
     font-size: 22px;
+    text-align: left;
   }
   .signatureGrid {
     grid-template-columns: 1fr;

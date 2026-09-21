@@ -62,17 +62,20 @@ const scopeGroups = [
 const payments = [
   {
     label: 'Project commencement',
-    amount: '$6,167',
+    amount: '$6,817.62',
+    taxBreakdown: '$6,167 fee + $650.62 estimated sales tax',
     note: 'Due upon signing to reserve the project and begin discovery.',
   },
   {
     label: 'Design approval milestone',
-    amount: '$6,167',
+    amount: '$6,817.62',
+    taxBreakdown: '$6,167 fee + $650.62 estimated sales tax',
     note: 'Due upon approval of the design direction and site architecture.',
   },
   {
     label: 'Final approval & launch',
-    amount: '$6,166',
+    amount: '$6,816.51',
+    taxBreakdown: '$6,166 fee + $650.51 estimated sales tax',
     note: 'Due before production launch and transfer of final project assets.',
   },
 ];
@@ -95,7 +98,7 @@ export default async function UnionStreetServicesAgreement() {
       project="Website modernization & digital growth"
       engagement="Tier 3 engagement"
       investment="$18,500"
-      paymentSummary="Three milestone payments"
+      paymentSummary="$20,451.75 estimated total with sales tax"
       duration="Estimated 6-8 weeks to launch"
       support="60 days post-launch"
       proposalHref="/proposal/union-street-cre"
@@ -274,10 +277,11 @@ export default async function UnionStreetServicesAgreement() {
         <SectionTitle
           number="04"
           eyebrow="Investment"
-          title="$18,500, divided across three milestones."
+          title="$20,451.75 estimated total, including sales tax."
         >
-          Payments are tied to visible project progress rather than calendar
-          dates alone.
+          The project fee is $18,500. Estimated Seattle sales tax at 10.55% adds
+          $1,951.75, for a total of $20,451.75. Payments are tied to visible
+          project progress rather than calendar dates alone.
         </SectionTitle>
 
         <div className={styles.paymentGrid}>
@@ -286,10 +290,19 @@ export default async function UnionStreetServicesAgreement() {
               <span>0{index + 1}</span>
               <h3>{payment.label}</h3>
               <p className={styles.paymentAmount}>{payment.amount}</p>
-              <p>{payment.note}</p>
+              <p className={styles.paymentBreakdown}>{payment.taxBreakdown}</p>
+              <p className={styles.paymentNote}>{payment.note}</p>
             </article>
           ))}
         </div>
+
+        <p className={styles.sectionIntro}>
+          Tax is estimated using Seattle’s current combined rate for the
+          supplied ZIP code, 98101. The final tax will be confirmed using the
+          service receipt address and the rate applicable when invoiced. Tax is
+          added to each milestone payment; third-party subscriptions are
+          separate.
+        </p>
 
         <div className={styles.hostingPanel}>
           <div>
@@ -436,11 +449,12 @@ export default async function UnionStreetServicesAgreement() {
               allocated across phases. Completed phases are valued at that
               allocation; partially completed phases are valued by their
               documented percentage of completion. Charges for the original
-              scope will not exceed the $18,500 project fee. Prior payments are
-              credited against the total, and Alpath will provide an itemized
-              reconciliation and refund any unearned balance within 30 days.
-              After any outstanding balance is paid, Alpath will provide
-              completed project materials in their then-current state.
+              scope will not exceed the $18,500 project fee, excluding
+              applicable sales tax. Prior payments are credited against the
+              total, and Alpath will provide an itemized reconciliation and
+              refund any unearned balance within 30 days. After any outstanding
+              balance is paid, Alpath will provide completed project materials
+              in their then-current state.
             </p>
           </article>
         </div>
