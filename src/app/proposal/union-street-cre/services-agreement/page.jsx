@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
   title: 'Union Street CRE - Services Agreement | Alpath Engineering',
   description:
-    'Draft website modernization and digital growth services agreement prepared for Union Street CRE.',
+    'Final website modernization and digital growth services agreement prepared for Union Street CRE.',
   robots: { index: false, follow: false },
 };
 
@@ -91,6 +91,7 @@ export default async function UnionStreetServicesAgreement() {
   return (
     <ServiceAgreementTemplate
       client="Union Street CRE"
+      status="Final"
       contact="Derek Hermsen"
       clientLogo="/union-street/logo.avif"
       largeClientLogo
@@ -484,7 +485,7 @@ export default async function UnionStreetServicesAgreement() {
             <p>Date</p>
           </div>
           <div>
-            <p className={styles.eyebrow}>Alpath Engineering</p>
+            <p className={styles.eyebrow}>Alpath Engineering LLC</p>
             <span className={styles.signatureLine} />
             <p>Matt Puleri / Authorized signature</p>
             <span className={styles.shortLine} />

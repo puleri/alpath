@@ -56,7 +56,7 @@ export default function ProposalPasswordGate({ isAgreement = false }) {
       {unlocked && (
         <p className={styles.unlockStatus} role="status">
           {isAgreement
-            ? 'You’re in. Opening the draft agreement…'
+            ? 'You’re in. Opening the final agreement…'
             : 'You’re in. Opening our next steps…'}
         </p>
       )}
@@ -96,7 +96,7 @@ export default function ProposalPasswordGate({ isAgreement = false }) {
         <h1 id="access-title">
           {isAgreement ? 'Services agreement' : 'Private proposal'}
           <br />
-          {isAgreement ? 'Draft for review' : 'follow up'}
+          {isAgreement ? 'Final agreement' : 'follow up'}
         </h1>
         <p>
           {isAgreement
@@ -128,7 +128,7 @@ export default function ProposalPasswordGate({ isAgreement = false }) {
             {busy
               ? 'Opening…'
               : isAgreement
-                ? 'Review the draft agreement'
+                ? 'Review the final agreement'
                 : 'View our next steps'}{' '}
             <span aria-hidden="true">↗</span>
           </button>
