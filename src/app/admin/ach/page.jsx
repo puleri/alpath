@@ -6,7 +6,7 @@ export const metadata = { title: 'Share ACH details | Alpath Engineering' };
 
 export default async function AchAdmin() {
   await requireAdmin();
-  const { ready, demo } = achConfig();
+  const { ready, demo, issues } = achConfig();
   return (
     <section>
       <h1>Share ACH details</h1>
@@ -21,10 +21,20 @@ export default async function AchAdmin() {
         </p>
       )}
       {!ready && (
-        <p role="alert">
-          ACH sharing is disabled until the banking fields and signing key are
-          configured.
-        </p>
+        <div role="alert">
+          <p>ACH sharing is disabled. Fix these environment settings:</p>
+          <ul>
+            {issues.map((issue) => (
+              <li key={issue}>{issue}</li>
+            ))}
+          </ul>
+          <p>
+            In Vercel, check that these variables apply to this deployment’s
+            environment (Production or Preview), then create a new deployment.
+            This check displays variable names only; banking values and keys are
+            never shown.
+          </p>
+        </div>
       )}
       <ShareForm ready={ready} />
       <p>

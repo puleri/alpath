@@ -6,11 +6,10 @@ import { issueLink } from '../../../lib/ach/tokens.mjs';
 
 export async function createAchLink(previous, form) {
   await requireAdmin();
-  const { ready, key } = achConfig();
+  const { ready, key, issues } = achConfig();
   if (!ready)
     return {
-      error:
-        'Add the ACH environment values and a random signing key before creating links.',
+      error: issues.join(' '),
     };
   try {
     const result = issueLink(Number(form.get('hours')), key);

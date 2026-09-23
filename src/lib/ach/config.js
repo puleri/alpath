@@ -1,4 +1,5 @@
 import 'server-only';
+import { achConfigIssues } from './config-check.mjs';
 
 export function achConfig() {
   const configured = (value) =>
@@ -21,11 +22,7 @@ export function achConfig() {
   };
   const key = process.env.ACH_LINK_SIGNING_KEY;
   const demo = process.env.ACH_DEMO_MODE === 'true';
-  const ready = Boolean(
-    key &&
-    key.length >= 43 &&
-    !key.startsWith('REPLACE_') &&
-    Object.values(requiredFields).every(configured),
-  );
-  return { fields, key, demo, ready };
+  const issues = achConfigIssues(process.env);
+  const ready = issues.length === 0;
+  return { fields, key, demo, ready, issues };
 }
