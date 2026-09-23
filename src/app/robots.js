@@ -17,7 +17,15 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/admin/', '/RFQ/', '/resumes/', '/people/anthony/'],
+      disallow: [
+        '/api/',
+        '/admin/',
+        '/sign/',
+        '/payment-details',
+        '/RFQ/',
+        '/resumes/',
+        '/people/anthony/',
+      ],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,

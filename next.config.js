@@ -13,8 +13,25 @@ const privateNoIndexHeaders = [
 
 const nextConfig = {
   reactStrictMode: true,
+  outputFileTracingIncludes: {
+    '/*': ['./public/agreements/anaheim-regular.ttf'],
+  },
   async headers() {
     return [
+      {
+        source: '/sign/:path*',
+        headers: [
+          ...privateNoIndexHeaders,
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+        ],
+      },
+      {
+        source: '/api/sign/:path*',
+        headers: [
+          ...privateNoIndexHeaders,
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+        ],
+      },
       {
         source: '/RFQ/:path*',
         headers: privateNoIndexHeaders,
